@@ -1,0 +1,34 @@
+2026-10-18T05:50:07Z start: cg4_pack_20261016-232223.tar.gz -> results\g6_extract
+2026-10-18T05:50:10Z extracted 100 files (0 mismatches), skipped 0, 3 s
+2026-10-18T05:50:17Z extracted 200 files (0 mismatches), skipped 5, 10 s
+2026-10-18T05:51:26Z extracted 300 files (0 mismatches), skipped 45, 79 s
+2026-10-18T05:52:34Z extracted 400 files (0 mismatches), skipped 90, 147 s
+2026-10-18T05:53:50Z extracted 500 files (0 mismatches), skipped 145, 223 s
+2026-10-18T05:55:03Z extracted 600 files (0 mismatches), skipped 195, 296 s
+2026-10-18T05:56:16Z extracted 700 files (0 mismatches), skipped 245, 369 s
+2026-10-18T05:57:19Z extracted 800 files (0 mismatches), skipped 290, 432 s
+2026-10-18T05:58:17Z extracted 900 files (0 mismatches), skipped 325, 490 s
+2026-10-18T05:59:46Z extracted 1000 files (0 mismatches), skipped 380, 579 s
+2026-10-18T06:01:12Z extracted 1100 files (0 mismatches), skipped 430, 665 s
+2026-10-18T06:02:36Z extracted 1200 files (0 mismatches), skipped 480, 749 s
+2026-10-18T06:04:02Z extracted 1300 files (0 mismatches), skipped 530, 835 s
+2026-10-18T06:05:12Z extracted 1400 files (0 mismatches), skipped 585, 905 s
+2026-10-18T06:05:12Z extracted 1500 files (0 mismatches), skipped 585, 905 s
+2026-10-18T06:05:12Z done: extracted 1525 files, 0 SHA-256 mismatches, skipped 585 checkpoint files, 905 s
+2026-10-24T02:03:36Z start: cg4_pack_20261016-232223.tar.gz -> results\g6_extract
+2026-10-24T02:03:38Z extracted 100 files (0 mismatches), skipped 0, 2 s
+2026-10-24T02:03:44Z extracted 200 files (0 mismatches), skipped 5, 9 s
+2026-10-24T02:04:47Z extracted 300 files (0 mismatches), skipped 45, 72 s
+2026-10-24T02:05:59Z extracted 400 files (0 mismatches), skipped 90, 143 s
+2026-10-24T02:07:11Z extracted 500 files (0 mismatches), skipped 145, 215 s
+2026-10-24T02:08:24Z extracted 600 files (0 mismatches), skipped 195, 289 s
+2026-10-24T02:09:36Z extracted 700 files (0 mismatches), skipped 245, 361 s
+2026-10-24T02:10:41Z extracted 800 files (0 mismatches), skipped 290, 426 s
+2026-10-24T02:11:38Z extracted 900 files (0 mismatches), skipped 325, 482 s
+2026-10-24T02:12:43Z extracted 1000 files (0 mismatches), skipped 380, 547 s
+2026-10-24T02:13:50Z extracted 1100 files (0 mismatches), skipped 430, 614 s
+2026-10-24T02:14:52Z extracted 1200 files (0 mismatches), skipped 480, 677 s
+2026-10-24T02:15:58Z extracted 1300 files (0 mismatches), skipped 530, 743 s
+2026-10-24T02:16:58Z extracted 1400 files (0 mismatches), skipped 585, 802 s
+2026-10-24T02:16:58Z extracted 1500 files (0 mismatches), skipped 585, 803 s
+2026-10-24T02:16:58Z done: extracted 1525 files, 0 SHA-256 mismatches, skipped 585 checkpoint files, 803 s

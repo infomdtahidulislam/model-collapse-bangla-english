@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CG4 gate board</title>
+<style>
+  :root { --bg:#fafaf7; --fg:#1d1d1b; --muted:#6b6b66; --line:#d9d9d2; --ok:#2e7d32; --okbg:#e6f3e7; --gpu:#1f5fbf; --gpubg:#e4edfb; --idle:#b36b00; --idlebg:#fbefdc; --none:#8a8a84; --nonebg:#eeeeea; }
+  body { margin:0; padding:24px 16px; background:var(--bg); color:var(--fg); font:15px/1.45 system-ui, Segoe UI, Roboto, sans-serif; }
+  main { max-width:1100px; margin:0 auto; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  h2 { font-size:17px; margin:28px 0 8px; }
+  .sub { color:var(--muted); margin:0 0 18px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; margin:14px 0 6px; }
+  .kpi { border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:#fff; }
+  .kpi b { display:block; font-size:22px; }
+  .kpi span { color:var(--muted); font-size:13px; }
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); font-size:14px; }
+  th, td { padding:8px 9px; border-top:1px solid var(--line); vertical-align:top; text-align:left; }
+  th { background:#f1f1ec; font-weight:600; }
+  td.num { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; font-weight:600; white-space:nowrap; }
+  .t-ok { background:var(--okbg); color:var(--ok); }
+  .t-gpu { background:var(--gpubg); color:var(--gpu); }
+  .t-idle { background:var(--idlebg); color:var(--idle); }
+  .t-none { background:var(--nonebg); color:var(--none); }
+  .bars { background:#fff; border:1px solid var(--line); padding:12px; }
+  .bar { display:grid; grid-template-columns:230px 1fr 120px; gap:10px; align-items:center; padding:5px 0; border-top:1px dashed var(--line); font-size:13px; }
+  .bar:first-child { border-top:0; }
+  .track { height:14px; background:#eeeeea; border-radius:3px; position:relative; }
+  .fill { position:absolute; left:0; top:0; bottom:0; border-radius:3px; background:var(--gpu); }
+  .fill.cut { background:repeating-linear-gradient(45deg,#c9d7f0,#c9d7f0 6px,#e4edfb 6px,#e4edfb 12px); }
+  .cap { position:absolute; top:-5px; bottom:-5px; width:2px; background:#c62828; }
+  .cap-label { position:absolute; top:-20px; transform:translateX(-50%); font-size:11px; color:#c62828; white-space:nowrap; }
+  .note { font-size:13px; color:var(--muted); margin-top:8px; }
+  code { background:#eeeeea; padding:0 4px; border-radius:3px; font-size:13px; }
+  @media (max-width:700px) { .bar { grid-template-columns:1fr; gap:4px; } th,td { padding:6px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>CG4 gate board</h1>
+  <p class="sub">Model Collapse in Bangla and English — state on 2026-10-13 after Gate 0 passed. Numbers are the pre-pilot estimates from <code>04_RUN_PLAN.md</code> and <code>06_HUMAN_TASKS.md</code>; measured rates replace them at Gate 3.</p>
+
+  <div class="kpis">
+    <div class="kpi"><b>1 / 9</b><span>gates passed (G0)</span></div>
+    <div class="kpi"><b>8</b><span>gates remaining (G1, G2, G3, G4, G4b, G5, G6, G7)</span></div>
+    <div class="kpi"><b>4</b><span>gates that use the rented GPU host (G1 to G4b)</span></div>
+    <div class="kpi"><b>US$30 / 70 h</b><span>approved cap B, price assumed US$0.40 per GPU-hour</span></div>
+  </div>
+
+  <h2>Gates: what happens, where the GPU is used, how long it takes</h2>
+  <table>
+    <thead><tr><th>Gate</th><th>What happens</th><th>GPU host</th><th>Host hours (est.)</th><th>Host cost</th><th>Author time</th><th>Wall-clock</th></tr></thead>
+    <tbody>
+      <tr><td><b>G0</b> Pre-registration</td><td>Design frozen, OSF DOI 10.17605/OSF.IO/SRA28, cap B approved, credit loaded, ethics and authorship fixed</td><td><span class="tag t-ok">PASSED</span></td><td class="num">0</td><td class="num">US$0</td><td>done</td><td>done 2026-10-13</td></tr>
+      <tr><td><b>G1</b> Corpora and probes</td><td>Rent the host, bootstrap, sanity test, fetch six sources, build word-matched corpora, paired probe pool, bias pairs, spot-check CSVs; GATE + LICENCE requests</td><td><span class="tag t-idle">host rented, GPU mostly idle</span></td><td class="num">1–2</td><td class="num">≈ US$1</td><td>licences + manifest 2 h (both); probes 1.5 h each; bias pairs 30 min each</td><td>½ day build + your reading; host bills ≈ US$0.40/h while it waits</td></tr>
+      <tr><td><b>G2</b> Base model and generation 0</td><td>Score the untouched base model (generation −1) and train generation 0 in both languages; validation metrics and samples</td><td><span class="tag t-gpu">GPU</span></td><td class="num">0.7 (0.8 with slack)</td><td class="num">≈ US$0.30</td><td>30 min (one author)</td><td>about 1 h</td></tr>
+      <tr><td><b>G3</b> Pilot</td><td>One REPLACE step per language, 50 samples each, measured throughput, re-planned budget and how many robustness phases fit the cap</td><td><span class="tag t-gpu">GPU</span></td><td class="num">0.9 (1.2 with slack)</td><td class="num">≈ US$0.40</td><td>2 h (both): read samples, approve projection</td><td>about 1 h run + your reading</td></tr>
+      <tr><td><b>G4</b> Chains complete</td><td>Six confirmatory chains to generation 6, then robustness phases in the fixed order while the projection stays under the cap</td><td><span class="tag t-gpu">GPU, the long phase</span></td><td class="num">34.2 confirmatory<br>+ 20.7 robustness through P5<br>(= 55 raw, 69 with slack)</td><td class="num">≈ US$14 confirmatory<br>≈ US$22 through P5</td><td>none while it runs; the agent checks status every 2 h</td><td>≈ 1.5 days confirmatory; ≈ 2.3 days with robustness (sequential on one GPU)</td></tr>
+      <tr><td><b>G4b</b> Teardown</td><td>Pack every checkpoint and corpus (≈ 45–70 GB), pull to the control machine, verify, regenerate analysis, then you delete the instance</td><td><span class="tag t-idle">host rented, GPU idle</span></td><td class="num">1–2 (transfer)</td><td class="num">≈ US$1</td><td>20 min: verify archive, delete instance</td><td>a few hours of transfer</td></tr>
+      <tr><td><b>G5</b> Human read</td><td>Qualitative read of generations 3 and 6 for every confirmatory chain (12 files of 50 samples), rubric CSVs; optional fluency rating</td><td><span class="tag t-none">no GPU</span></td><td class="num">0</td><td class="num">US$0</td><td>2–3 h each (+ ≈ 3 h each optional)</td><td>1–2 days</td></tr>
+      <tr><td><b>G6</b> Analysis</td><td>Analysis report, tables and figures regenerated from the downloaded copy; seed replicates, controls, deviations table</td><td><span class="tag t-none">no GPU (local CPU)</span></td><td class="num">0</td><td class="num">US$0</td><td>1 day (both): review, decide deviations, interpret</td><td>1–2 days</td></tr>
+      <tr><td><b>G7</b> Writing</td><td>Manuscript, screened sample files, disclosure, CRediT assigned from the record</td><td><span class="tag t-none">no GPU</span></td><td class="num">0</td><td class="num">US$0</td><td>2 h screening + 2–3 weeks writing</td><td>2–3 weeks</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Total rented-host time on the approved path: about 60 hours raw (about 72 with the 25% slack rule), of which about 56 are real GPU work and the rest is building, waiting and transfer. Total cost at US$0.40/h: about US$24, inside the US$30 cap. Author time before writing: roughly one and a half to two working days per author.</p>
+
+  <h2>GPU phases inside Gate 4 (cumulative hours, pre-pilot estimates)</h2>
+  <div class="bars" id="bars"></div>
+  <p class="note">Solid bars are the phases the cap covers at the estimated rates; the hatched bar (P6) fits only if the pilot measures faster rates, and P7 is outside cap B. The red line is the 70-hour cap applied to the slack-adjusted projection (cumulative × 1.25). The pre-registered stopping rule runs phases in this order and reports the rest as not run.</p>
+
+  <h2>Where the time actually goes</h2>
+  <table>
+    <thead><tr><th>Block</th><th>Hours</th><th>Share of host time</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Six confirmatory chains (P1)</td><td class="num">34.2</td><td class="num">57%</td><td>REPLACE ≈ 0.47 h per step; ACCUMULATE grows by 0.19 h per generation; FILTER ≈ 0.6 h + 0.19 h per generation</td></tr>
+      <tr><td>Robustness P1′ to P5</td><td class="num">20.5</td><td class="num">34%</td><td>second seed 6.0, EN word-matched 1.6, no-synthetic control 3.2, REPLACE to generation 10 3.7, third seed 6.0</td></tr>
+      <tr><td>Base + generation 0 + pilot (P0, G3)</td><td class="num">1.6</td><td class="num">3%</td><td>the pilot's generation-1 steps are reused by the chains</td></tr>
+      <tr><td>Build, waiting, transfer (G1, G4b)</td><td class="num">2–4</td><td class="num">≈ 6%</td><td>GPU idle; the host still bills; answer G1–G3 requests within a day or tell the agent to stop the instance</td></tr>
+    </tbody>
+  </table>
+
+<script>
+  var cap = 70;
+  var phases = [
+    ["P0 base + generation 0", 0.7, 0.8, "run"],
+    ["P1 six confirmatory chains", 34.2, 43.6, "run"],
+    ["P1′ second-seed REPLACE pair", 6.0, 51.1, "run"],
+    ["P2 EN word-matched control", 1.6, 53.1, "run"],
+    ["P3 no-synthetic control pair", 3.2, 57.1, "run"],
+    ["P4 REPLACE to generation 10", 3.7, 61.8, "run"],
+    ["P5 third-seed REPLACE pair", 6.0, 69.3, "run"],
+    ["P6 ACCUMULATE-SUBSAMPLE pair", 5.5, 76.1, "maybe"],
+    ["P7 top-p 0.95 pair", 5.5, 83.0, "out"]
+  ];
+  var max = 85, box = document.getElementById("bars");
+  phases.forEach(function (p) {
+    var row = document.createElement("div"); row.className = "bar";
+    var cls = p[3] === "run" ? "fill" : "fill cut";
+    row.innerHTML = '<div>' + p[0] + '</div>' +
+      '<div class="track"><div class="' + cls + '" style="width:' + (p[2] / max * 100) + '%"></div>' +
+      '<div class="cap" style="left:' + (cap / max * 100) + '%"><span class="cap-label">cap 70 h</span></div></div>' +
+      '<div class="num">' + p[1].toFixed(1) + ' h → ' + p[2].toFixed(1) + ' h cum.</div>';
+    box.appendChild(row);
+  });
+</script>
+</main>
+</body>
+</html>

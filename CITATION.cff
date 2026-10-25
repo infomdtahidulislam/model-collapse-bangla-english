@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite it as below."
+title: "Testing Model-Collapse Diagnostics in Small-Scale Bangla–English Self-Training (release package)"
+authors:
+  - family-names: "Islam"
+    given-names: "Md Tahidul"
+    affiliation: "CCN University of Science & Technology"
+  - family-names: "Akter"
+    given-names: "Maksuda"
+    affiliation: "CCN University of Science & Technology"
+version: "1.0.0"
+date-released: "2026-10-25"
+repository-code: "https://github.com/infomdtahidulislam/model-collapse-bangla-english"
+license: MIT
+keywords:
+  - model collapse
+  - synthetic data
+  - iterative self-training
+  - Bangla
+  - low-resource languages
+  - pre-registered study

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CG4 G5 Read</title><style>
+:root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6a675f; --line:#dedbd2; --card:#ffffff; --accent:#1f5f8b; --g3:#244b6b; --g6:#6b2f12;
+        --done:#2f6b3a; --warn:#8a3b12; --badge:#eef3f7; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#17181a; --fg:#e8e6e1; --muted:#a6a39b; --line:#34363a;
+        --card:#1f2124; --accent:#7fb4dc; --g3:#9cc3e6; --g6:#f0b38c; --done:#8fd19e; --warn:#f0a67a; --badge:#26303a; } }
+:root[data-theme="dark"] { --bg:#17181a; --fg:#e8e6e1; --muted:#a6a39b; --line:#34363a; --card:#1f2124; --accent:#7fb4dc; --g3:#9cc3e6;
+        --g6:#f0b38c; --done:#8fd19e; --warn:#f0a67a; --badge:#26303a; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.55 "Segoe UI", "Nirmala UI", "Noto Sans Bengali", system-ui, sans-serif; }
+main { max-width:1240px; margin:0 auto; padding:24px 16px 96px; }
+h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:19px; margin:32px 0 8px; }
+.sub { color:var(--muted); margin:6px 0 14px; }
+.card { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:8px; padding:14px 16px; margin:12px 0; }
+.card ol, .card ul { margin:6px 0 4px 20px; padding:0; } .card li { margin:3px 0; }
+.who { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.who input { max-width:260px; }
+fieldset { border:0; margin:0; padding:0; min-width:0; } fieldset:disabled .p { opacity:.55; }
+.p { background:var(--card); border:1px solid var(--line); border-radius:8px; margin:14px 0; overflow:hidden; }
+.ph { display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; padding:8px 12px; border-bottom:1px solid var(--line); }
+.ph .id { font-weight:600; } .ph .pre { color:var(--muted); font-size:13px; flex:1; min-width:200px; }
+.badge { font-size:12px; background:var(--badge); border-radius:10px; padding:1px 8px; color:var(--muted); }
+.pair { display:grid; grid-template-columns:1fr 1fr; }
+.s { padding:10px 12px; border-right:1px solid var(--line); min-width:0; } .s:last-child { border-right:0; }
+.s .lab { font-size:12px; font-weight:600; letter-spacing:.02em; margin-bottom:4px; }
+.s[data-g="3"] .lab { color:var(--g3); } .s[data-g="6"] .lab { color:var(--g6); }
+.txt { white-space:pre-wrap; overflow-wrap:anywhere; }
+.ctl { margin-top:10px; padding-top:8px; border-top:1px dashed var(--line); display:flex; gap:6px 14px; flex-wrap:wrap; align-items:center; font-size:13px; }
+.ctl label { white-space:nowrap; } .ctl .nw { width:5em; } .ctl .nt { flex:1 1 100%; }
+.s.done .lab::after { content:"  ✓ coded"; color:var(--done); }
+input[type=text], input[type=number], select { font:13px inherit; padding:3px 5px; border:1px solid var(--line); border-radius:4px; background:var(--bg); color:var(--fg); }
+input[type=text] { width:100%; }
+.bar { position:sticky; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+button { font:inherit; padding:6px 14px; border-radius:6px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+button.sec { background:transparent; color:var(--accent); }
+label.btn { font:inherit; padding:6px 14px; border-radius:6px; border:1px solid var(--accent); color:var(--accent); cursor:pointer; display:inline-block; }
+textarea { width:100%; min-height:120px; font:12px Consolas, monospace; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:8px; }
+table.idx { border-collapse:collapse; background:var(--card); border:1px solid var(--line); width:100%; }
+.idx th, .idx td { border-bottom:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top; }
+code { font-size:13px; }
+@media (max-width:860px) { .pair { grid-template-columns:1fr; } .s { border-right:0; border-bottom:1px solid var(--line); } .s:last-child { border-bottom:0; } }
+</style></head>
+<body><main>
+<h1>CG4 Gate 5: human read</h1>
+<p class="sub">Generated 2026-10-17 17:10 UTC from <code>results/samples/</code> on the VPS. The pages hold unscreened model output: local files only, do not upload or share them.</p>
+<div class="card"><b>What Gate 5 is</b> (<code>06_HUMAN_TASKS.md</code>, <code>08_GATES_AND_CHECKLISTS.md</code>): a qualitative read of generations 3 and 6 for each of the six confirmatory chains,
+50 samples each (12 files), coded with the pre-specified rubric. It checks that the automatic measures match the text, and it feeds the paper's qualitative section.
+The gate passes when both of you have read and recorded the rubric, and any mismatch between the numbers and the text has been investigated.
+<ul>
+<li><b>Split by chain</b>: each page is one chain, with generations 3 and 6 side by side (100 samples, about 2–3 hours). Split the six pages between you, for example three each.</li>
+<li><b>Optional fluency rating</b>: both of you rate the same 20 prompts per page (marked <span class="badge">fluency subset</span>) plus generation 0 on the two optional pages, 1–5, so that agreement can be reported. The author who coded a chain page rated its 20 prompts there; the other author rates the same prompts on that chain's own <i>fluency</i> page below (fluency only, without seeing the first ratings). Both authors rate the two generation-0 pages.</li>
+<li>On each page, enter your name first, code the samples, then press <b>Copy reply</b> and paste the text into the Claude Code chat, one page at a time. The agent writes <code>results/human_read/&lt;chain&gt;_gen&lt;g&gt;.csv</code> with the sample file hashes,
+counts the codes per chain and generation, and places them next to the automatic measures. Disagreements between readers are reported, not resolved.</li>
+<li>The pages show no automatic numbers and no highlighting, so that your coding is independent of the measures it checks.</li>
+<li><b>Export progress</b> on a page saves your answers to a JSON file; <b>Import progress</b> loads it back on the same page, so you can always continue where you left off (another browser or computer, a cleaned browser, or a regenerated page). Export after each session as a safety copy.</li>
+</ul></div>
+<table class="idx"><thead><tr><th>Page</th><th>Sample files (SHA-256)</th></tr></thead><tbody><tr><td><a href="G5_EN-REPLACE_2026-10-17.html">EN-REPLACE: generations 3 and 6 (100 samples)</a></td><td><code>results/samples/EN-REPLACE_gen3_50.jsonl</code> sha256 a7a3299c0404f11a…<br><code>results/samples/EN-REPLACE_gen6_50.jsonl</code> sha256 6aed8f44503e7a5d…</td></tr><tr><td><a href="G5_EN-ACCUMULATE_2026-10-17.html">EN-ACCUMULATE: generations 3 and 6 (100 samples)</a></td><td><code>results/samples/EN-ACCUMULATE_gen3_50.jsonl</code> sha256 5974a07543ace8d7…<br><code>results/samples/EN-ACCUMULATE_gen6_50.jsonl</code> sha256 378ca1dff7bcbf86…</td></tr><tr><td><a href="G5_EN-ACCUMULATE-FILTER_2026-10-17.html">EN-ACCUMULATE-FILTER: generations 3 and 6 (100 samples)</a></td><td><code>results/samples/EN-ACCUMULATE-FILTER_gen3_50.jsonl</code> sha256 dea84c31888e60d0…<br><code>results/samples/EN-ACCUMULATE-FILTER_gen6_50.jsonl</code> sha256 03e2513eed08874d…</td></tr><tr><td><a href="G5_BN-REPLACE_2026-10-17.html">BN-REPLACE: generations 3 and 6 (100 samples)</a></td><td><code>results/samples/BN-REPLACE_gen3_50.jsonl</code> sha256 21f76d59d537075f…<br><code>results/samples/BN-REPLACE_gen6_50.jsonl</code> sha256 5b72c69fb468bf7b…</td></tr><tr><td><a href="G5_BN-ACCUMULATE_2026-10-17.html">BN-ACCUMULATE: generations 3 and 6 (100 samples)</a></td><td><code>results/samples/BN-ACCUMULATE_gen3_50.jsonl</code> sha256 79f4861294b7f13e…<br><code>results/samples/BN-ACCUMULATE_gen6_50.jsonl</code> sha256 117f968b32e48195…</td></tr><tr><td><a href="G5_BN-ACCUMULATE-FILTER_2026-10-17.html">BN-ACCUMULATE-FILTER: generations 3 and 6 (100 samples)</a></td><td><code>results/samples/BN-ACCUMULATE-FILTER_gen3_50.jsonl</code> sha256 6ce550f62ca85c15…<br><code>results/samples/BN-ACCUMULATE-FILTER_gen6_50.jsonl</code> sha256 b768e072b0ef79c4…</td></tr><tr><td><a href="G5_fluency_gen0_EN_2026-10-17.html">Optional: fluency of GEN0-EN, 20 samples (both authors)</a></td><td><code>results/samples/GEN0-EN_gen0_50.jsonl</code> sha256 ed77156a3b51cd60…</td></tr><tr><td><a href="G5_fluency_gen0_BN_2026-10-17.html">Optional: fluency of GEN0-BN, 20 samples (both authors)</a></td><td><code>results/samples/GEN0-BN_gen0_50.jsonl</code> sha256 a583fd3a2e8bbad4…</td></tr><tr><td><a href="G5_fluency_EN-REPLACE_2026-10-17.html">Optional: fluency of EN-REPLACE, 20 prompts × generations 3 and 6, second rater: Md Tahidul Islam</a></td><td><code>results/samples/EN-REPLACE_gen3_50.jsonl</code> sha256 a7a3299c0404f11a…<br><code>results/samples/EN-REPLACE_gen6_50.jsonl</code> sha256 6aed8f44503e7a5d…</td></tr><tr><td><a href="G5_fluency_EN-ACCUMULATE_2026-10-17.html">Optional: fluency of EN-ACCUMULATE, 20 prompts × generations 3 and 6, second rater: Md Tahidul Islam</a></td><td><code>results/samples/EN-ACCUMULATE_gen3_50.jsonl</code> sha256 5974a07543ace8d7…<br><code>results/samples/EN-ACCUMULATE_gen6_50.jsonl</code> sha256 378ca1dff7bcbf86…</td></tr><tr><td><a href="G5_fluency_EN-ACCUMULATE-FILTER_2026-10-17.html">Optional: fluency of EN-ACCUMULATE-FILTER, 20 prompts × generations 3 and 6, second rater: Maksuda Akter</a></td><td><code>results/samples/EN-ACCUMULATE-FILTER_gen3_50.jsonl</code> sha256 dea84c31888e60d0…<br><code>results/samples/EN-ACCUMULATE-FILTER_gen6_50.jsonl</code> sha256 03e2513eed08874d…</td></tr><tr><td><a href="G5_fluency_BN-REPLACE_2026-10-17.html">Optional: fluency of BN-REPLACE, 20 prompts × generations 3 and 6, second rater: Maksuda Akter</a></td><td><code>results/samples/BN-REPLACE_gen3_50.jsonl</code> sha256 21f76d59d537075f…<br><code>results/samples/BN-REPLACE_gen6_50.jsonl</code> sha256 5b72c69fb468bf7b…</td></tr><tr><td><a href="G5_fluency_BN-ACCUMULATE_2026-10-17.html">Optional: fluency of BN-ACCUMULATE, 20 prompts × generations 3 and 6, second rater: Maksuda Akter</a></td><td><code>results/samples/BN-ACCUMULATE_gen3_50.jsonl</code> sha256 79f4861294b7f13e…<br><code>results/samples/BN-ACCUMULATE_gen6_50.jsonl</code> sha256 117f968b32e48195…</td></tr><tr><td><a href="G5_fluency_BN-ACCUMULATE-FILTER_2026-10-17.html">Optional: fluency of BN-ACCUMULATE-FILTER, 20 prompts × generations 3 and 6, second rater: Md Tahidul Islam</a></td><td><code>results/samples/BN-ACCUMULATE-FILTER_gen3_50.jsonl</code> sha256 6ce550f62ca85c15…<br><code>results/samples/BN-ACCUMULATE-FILTER_gen6_50.jsonl</code> sha256 b768e072b0ef79c4…</td></tr></tbody></table>
+</main></body></html>

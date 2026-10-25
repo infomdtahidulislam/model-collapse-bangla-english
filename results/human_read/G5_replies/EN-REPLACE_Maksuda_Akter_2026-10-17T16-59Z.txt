@@ -1,0 +1,105 @@
+G5 read, EN-REPLACE (G5_EN-REPLACE_2026-10-17.html), reader: Maksuda Akter, 2026-10-17T16:59Z
+## EN-REPLACE_gen3 | results/samples/EN-REPLACE_gen3_50.jsonl sha256 a7a3299c0404f11a | coded 50 of 50
+sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note
+EN-P00000,0,,3,1,1,2,Roughly 3 malformed fragments and repeated Awards headings turn the event description into unrelated awards material.
+EN-P00001,0,,0,0,0,3,The assessment discussion is clumsy but still has recognizable sentence structure.
+EN-P00002,0,,0,0,0,5,"The geographical list reads smoothly, and its repeated structure contains different entries rather than a loop."
+EN-P00003,0,,2,0,1,2,Two words seem fused or corrupted as the journal description shifts to business costs and assessment.
+EN-P00004,1,,14,0,1,1,An estimated 14 nonwords and mixed scripts take the passage away from the experiment.
+EN-P00005,1,,20,0,1,1,Around 20 malformed or fused words and several scripts break the biography into unrelated fragments.
+EN-P00006,0,,1,0,1,3,"The title's history changes into constitutions and parliaments, where one word seems malformed."
+EN-P00007,1,,0,0,1,2,Armenian letters appear in a name as the newspaper discussion drifts into military and anatomical fragments.
+EN-P00008,1,,4,0,1,2,CJK letters appear inside a mixed word among an estimated 4 nonwords as the surname changes and unrelated rulers enter the account.
+EN-P00009,0,,2,0,1,3,"Webpage writing and unrelated calculations replace the construction material description, alongside a couple of possible nonwords."
+EN-P00010,0,,4,0,1,2,"About 4 words appear malformed as the biography turns to religion, population statistics and blockchain."
+EN-P00011,1,,5,0,1,2,NOAA news becomes political and constitutional material with CJK and Cyrillic fragments and roughly 5 nonwords.
+EN-P00012,1,,1,0,1,3,Sinhala marks inside a mixed word suggest 1 nonword as education turns into a disconnected monitoring and health list.
+EN-P00013,0,,0,0,0,3,"The sports biography is awkward, while factual inconsistencies alone are outside this rubric."
+EN-P00014,1,,2,0,1,2,"Devanagari letters appear as the pandemic book review turns to politics, theatre and composers, with a couple of possible nonwords."
+EN-P00015,1,,14,0,1,1,"Arabic and Cyrillic letters and around 14 nonwords disrupt a definition that turns into risk, abuse, films and literary fragments."
+EN-P00016,0,,1,0,0,3,"One spelling seems malformed, adding to the strained phrasing of the food and health discussion."
+EN-P00017,1,,0,0,1,2,Korean letters appear in a name as property development becomes an incoherent story about horses.
+EN-P00018,0,,1,0,0,3,A word join looks malformed in an otherwise recognizable player's biography with some awkward clauses.
+EN-P00019,1,,0,0,1,3,Japanese text appears in a name as the biography drifts into football and another person's private life.
+EN-P00020,1,,11,0,1,,"CJK, Arabic and Greek letters appear among around 11 nonwords as the schedule becomes medical and historical fragments."
+EN-P00021,1,,9,0,1,,Thai letters and about 9 nonwords interrupt the filmmaking definition as it becomes a disconnected cast and production list.
+EN-P00022,1,,6,0,1,,"The novel entry ends in technical and institutional fragments, with a CJK character inside a word and roughly 6 nonwords."
+EN-P00023,1,,2,0,1,,An Arabic letter appears inside a mixed word among about 2 nonwords as the hamlet description becomes a disconnected cathedral story.
+EN-P00024,0,,4,0,0,,Around 4 malformed or fused words make the health-related prose difficult to follow.
+EN-P00025,0,,5,0,1,,"The group goals become incoherent statements about children, pets and abuse, containing roughly 5 nonwords."
+EN-P00026,1,,3,0,1,,CJK and Japanese letters and about 3 nonwords appear as community development shifts into film and political fragments.
+EN-P00027,1,,2,0,1,,"The municipal account moves to other towns and regional legends, with Cyrillic letters and around 2 nonwords."
+EN-P00028,1,,13,0,0,,"Tamil, Cyrillic and Devanagari letters and about 13 nonwords disrupt badly broken prose that remains broadly related to the band."
+EN-P00029,0,,4,0,1,,"Archives, addresses and garbage disposal replace the film entry, where perhaps 4 words are malformed."
+EN-P00030,1,,10,0,1,,"An estimated 10 nonwords and Japanese, Cyrillic and Arabic letters accompany the shift from sports biography to diplomacy, media and unrelated fragments."
+EN-P00031,1,,6,0,1,,Korean and CJK letters appear alongside around 6 nonwords as fish give way to flying insects and pet care.
+EN-P00032,0,,5,0,1,,"Roughly 5 nonwords appear as profiteering gives way to disconnected law, football, manufacturing and game material."
+EN-P00033,1,,4,0,1,,"The cardiac trial becomes health advice and classroom games, with CJK letters and an estimated 4 nonwords."
+EN-P00034,0,,0,0,1,,The drug description turns into a general discussion of obesity and immune-system damage.
+EN-P00035,0,,2,0,0,,The 2 apparent nonwords are joins between Gmina and a place name at the prompt boundary and in a category.
+EN-P00036,1,,6,0,1,,"Bangla letters interrupt the shift from birth rates to health records and newspapers, where about 6 medical terms appear malformed."
+EN-P00037,0,,5,0,1,,The municipal history turns into disconnected educational and personal material with around 5 apparent nonwords.
+EN-P00038,1,,4,0,1,,"Arabic letters and an emoji appear inside words among roughly 4 nonwords as the death-penalty topic changes to immigration, history and trade."
+EN-P00039,1,,3,0,0,,"The prompt joins awkwardly to the continuation, with fused words and Hebrew letters contributing to an estimate of 3 nonwords."
+EN-P00040,1,,2,0,1,,"Greek and Cyrillic letters accompany a couple of possible nonwords as poetry gives way to pensions, population statistics and taxation."
+EN-P00041,0,,3,0,1,,Around 3 fused words appear as the quotation becomes unrelated biographies of religious scholars.
+EN-P00042,1,,7,0,1,,Mixed scripts and an estimated 7 nonwords appear as the beetle description turns into events and recording fragments.
+EN-P00043,0,,0,1,1,,The word virus repeats unnecessarily as course advice breaks into disconnected social and personal fragments.
+EN-P00044,1,,16,0,1,,"CJK and Cyrillic letters and around 16 nonwords break the fanzine entry into biomedical, consumer and food fragments."
+EN-P00045,0,,0,0,0,,The prose has broken grammar and strained meaning but remains broadly a medical-study account.
+EN-P00046,0,,1,0,1,,One word seems fused as the sports biography switches to other named people.
+EN-P00047,0,,0,0,0,,"The short prompt completion reads fluently, with no clear rubric issue."
+EN-P00048,1,,6,0,1,,"Arabic and Cyrillic letters mix with corrupt strings, giving an estimated 6 nonwords as government history drifts into medical and unrelated fragments."
+EN-P00049,0,,4,0,0,,Roughly 4 malformed or fused words interrupt the protected-area description.
+## EN-REPLACE_gen6 | results/samples/EN-REPLACE_gen6_50.jsonl sha256 6aed8f44503e7a5d | coded 50 of 50
+sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note
+EN-P00000,1,,10,0,1,2,Mixed scripts and about 10 nonwords interrupt disconnected exercise descriptions that replace the original topic.
+EN-P00001,0,,2,0,1,2,"Education gives way to software, business and regulation fragments, with broken clauses and a couple of apparent nonwords."
+EN-P00002,1,,1,1,1,2,Punctuation repeats as the township list breaks into cinema and language fragments containing 1 possible nonword.
+EN-P00003,1,,6,0,1,1,"The journal description breaks into disconnected words, including CJK and Bangla letters and around 6 apparent nonwords."
+EN-P00004,1,,7,0,1,2,"The fuel-cell experiment is replaced by incoherent fragments with Korean, Thai and CJK letters, giving roughly 7 nonwords."
+EN-P00005,1,,6,0,0,2,"The biography stays broadly about a musician despite Cyrillic, CJK and Japanese letters and about 6 nonwords."
+EN-P00006,1,,7,0,1,2,"Devanagari, Cyrillic and CJK letters appear among roughly 7 nonwords in disconnected history, politics and employment fragments."
+EN-P00007,0,,5,0,0,2,Perhaps 5 malformed words make much of the newspaper discussion difficult to read.
+EN-P00008,0,,0,0,1,3,The surname description switches to different names and a Greek chapel.
+EN-P00009,0,,0,0,1,2,The clauses connect poorly as steel products give way to hospitals and public health.
+EN-P00010,0,,2,0,0,3,"The biography remains broadly related to music, though 2 words seem malformed."
+EN-P00011,1,,14,0,1,1,"Around 14 nonwords, fused words and mixed scripts appear in unrelated learning, military and physical fragments."
+EN-P00012,0,,12,0,1,1,An estimated 12 fused or malformed words accompany the shift from education to entertainment and advertising fragments.
+EN-P00013,1,,2,0,0,2,"The sporting content stays broadly relevant, but CJK letters, weak clauses and about 2 apparent nonwords interrupt it."
+EN-P00014,1,,3,0,1,2,Korean letters occur inside a mixed word among roughly 3 nonwords as the review becomes IT promotion and unrelated fragments.
+EN-P00015,1,,9,0,1,2,"Finance gives way to microbes and unrelated fragments containing Arabic, Cyrillic and Thai letters, with an estimated 9 nonwords."
+EN-P00016,0,,3,0,1,2,About 3 apparent nonwords appear as nutrition gives way to politics and religious commentary.
+EN-P00017,0,,4,0,1,2,"The real-estate profile becomes unrelated categories and names, with a rough nonword total of 4."
+EN-P00018,0,,2,0,1,3,A couple of possible nonwords accompany the change from a player description to unrelated university categories.
+EN-P00019,1,,22,0,1,1,Roughly 22 fused or malformed words and several scripts leave the biography in disconnected fragments.
+EN-P00020,0,,1,0,0,,"The final word looks malformed, while the ordinary emoji is not counted as script-error garbage."
+EN-P00021,0,,1,0,1,,"The film discussion turns to schools, sport and marketing, with what appears to be 1 nonword."
+EN-P00022,1,,9,0,1,,"Cyrillic text and an estimated 9 malformed or fused words accompany the shift from the novella to places, politics and unrelated publications."
+EN-P00023,0,,0,0,0,,"The short geographical continuation is readable, with no clear rubric issue."
+EN-P00024,1,,3,0,1,,"Health gives way to school assessment and biblical commentary, with Cyrillic and Arabic text and perhaps 3 nonwords."
+EN-P00025,1,,2,0,1,,Hebrew letters appear alongside a couple of apparent nonwords as team goals become loosely connected personal and violent advice.
+EN-P00026,1,,5,0,1,,"A Devanagari word interrupts an unrelated personal and religious reflection that replaces the development program, with an estimated 5 nonwords."
+EN-P00027,0,,3,0,0,,"Roughly 3 geographic terms seem malformed, while incorrect locations alone are not separately scored."
+EN-P00028,0,,1,0,1,,"A possible word join appears as the band profile moves into basketball, hygiene and classrooms."
+EN-P00029,1,,6,0,1,,"The film entry breaks into names and music-history fragments, with Arabic and Japanese text among roughly 6 nonwords."
+EN-P00030,0,,0,0,0,,"The short sports biography is readable, while factual mismatches alone are outside this rubric."
+EN-P00031,1,,25,0,1,,"The fish description breaks into advertisements and food preparation, with mixed scripts and about 25 corrupt or malformed words."
+EN-P00032,1,,2,0,1,,"Cyrillic letters and a couple of possible nonwords interrupt the shift from profiteering to publicity, legislation and lunar punishment."
+EN-P00033,1,,12,0,1,,CJK and Cyrillic letters appear among roughly 12 nonwords as the trial becomes disconnected anatomical and physical fragments.
+EN-P00034,1,,20,0,1,,"Around 20 nonwords, mixed scripts and fused words accompany the shift from biomedicine to terrorism, education and business fragments."
+EN-P00035,0,,0,0,0,,"The geographical entry is readable, and plausible place names are not counted as nonwords."
+EN-P00036,1,,8,0,1,,"An unused token contributes to a rough count of 8 nonwords as birth rates give way to temperatures, plants and food safety."
+EN-P00037,0,,0,0,0,,"The village description is awkward, while factual and numerical inconsistencies are outside this rubric."
+EN-P00038,0,,4,0,1,,About 4 malformed words interrupt the shift from the death penalty to immigration and language discrimination.
+EN-P00039,1,,5,0,1,,"Arabic, Cyrillic and Malayalam letters appear beside roughly 5 nonwords as the album description changes into wildlife and NASA fragments."
+EN-P00040,1,,8,0,1,,"The poetry reflection breaks into unrelated fragments containing Thai, Greek, Cyrillic and CJK letters, with about 8 nonwords."
+EN-P00041,1,,4,1,1,,"Repeated uses of Alaska and Korean letters appear among roughly 4 nonwords as the quotation shifts into committees, dentistry and conflict."
+EN-P00042,0,,1,0,0,,A word join looks malformed in an otherwise recognizable genus description.
+EN-P00043,0,,0,0,1,,"The online-learning discussion turns into criminals, imprisonment, housing and customer service."
+EN-P00044,0,,2,0,1,,"The fanzine entry turns to weapons, breastfeeding promotion and unrelated arts commentary, with perhaps 2 nonwords."
+EN-P00045,0,,2,0,1,,"Travel, sport and social-media fragments replace the medical research discussion, alongside a couple of apparent nonwords."
+EN-P00046,0,,9,0,1,,The player description becomes an unrelated biography of Mary with badly broken wording and roughly 9 nonwords.
+EN-P00047,1,,4,0,1,,Bangla letters appear inside a mixed word among about 4 nonwords as mathematics gives way to names and eating-disorder material.
+EN-P00048,0,,3,0,1,,"The Georgia account shifts to England, Wales and disconnected school descriptions, where around 3 words look malformed."
+EN-P00049,1,,2,0,1,,Cyrillic and CJK letters appear alongside a couple of possible nonwords as the protected-area entry becomes modeling and institutional categories.

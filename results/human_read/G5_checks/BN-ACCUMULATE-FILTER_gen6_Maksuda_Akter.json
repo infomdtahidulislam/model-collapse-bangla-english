@@ -1,0 +1,50 @@
+{
+ "label": "BN-ACCUMULATE-FILTER_gen6",
+ "reader": "Maksuda Akter",
+ "summary": {
+  "coded": 50,
+  "script_error": "3 of 50",
+  "english_intrusion": "6 of 50",
+  "repetition_loop": "1 of 50",
+  "topic_drift": "22 of 50",
+  "nonwords_mean": 5.72,
+  "nonwords_median": 5,
+  "fluency_rated": 20,
+  "fluency_mean": 2.35
+ },
+ "auto_comparison": {
+  "repetition_loop vs own 4-gram repetition >= 0.2": {
+   "both_1": 0,
+   "reader_1_auto_0": [
+    "BN-P00010"
+   ],
+   "reader_0_auto_1": [],
+   "both_0": 49
+  },
+  "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+   "both_1": 1,
+   "reader_1_auto_0": [
+    "BN-P00018",
+    "BN-P00026"
+   ],
+   "reader_0_auto_1": [
+    {
+     "id": "BN-P00012",
+     "auto": {
+      "latin": true,
+      "foreign": true,
+      "rep4": 0.0
+     }
+    }
+   ],
+   "both_0": 46
+  },
+  "english_intrusion vs any Latin letter": {
+   "both_1": 6,
+   "reader_1_auto_0": [],
+   "reader_0_auto_1": [],
+   "both_0": 44
+  }
+ },
+ "recorded_at": "2026-10-18T00:06:45+00:00"
+}

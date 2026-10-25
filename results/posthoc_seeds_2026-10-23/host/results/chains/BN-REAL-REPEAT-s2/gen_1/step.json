@@ -1,0 +1,101 @@
+{
+ "chain_id": "BN-REAL-REPEAT-s2",
+ "generation": 1,
+ "language": "BN",
+ "regime": "REAL-REPEAT",
+ "variant": "control_seed2",
+ "session_id": "rented-1792808389",
+ "seed": 20262011,
+ "seed_offset": 1000,
+ "gen0_id": "GEN0-BN-s2",
+ "budget_tokens": 10000000,
+ "sampling": {
+  "temperature": 1.0,
+  "top_p": 1.0
+ },
+ "training_set": {
+  "real_docs": 20913,
+  "synthetic_docs": 0,
+  "components": [
+   "seed"
+  ],
+  "tokens": 10039296,
+  "target_tokens": 9997831,
+  "real_target_tokens": 9997831,
+  "synthetic_target_tokens": 0,
+  "masked_prefix_tokens": 0
+ },
+ "generate": null,
+ "filter": null,
+ "train": {
+  "train_blocks": 9804,
+  "train_tokens": 10039296,
+  "target_tokens": 9997831,
+  "real_target_tokens": 9997831,
+  "synthetic_target_tokens": 0,
+  "masked_prefix_tokens": 0,
+  "real_docs": 20913,
+  "synthetic_docs": 0,
+  "prefix_mode": "masked",
+  "bos_per_document": true,
+  "eos_target_docs": 17720,
+  "eos_context_only_docs": 3193,
+  "final_loss": 3.163043403625488,
+  "loss_first": 3.303374099731445,
+  "loss_curve": [
+   3.303374099731445,
+   3.297864532470703,
+   3.2589561462402346,
+   3.2264354705810545,
+   3.215635299682617,
+   3.1797103881835938,
+   3.163043403625488
+  ],
+  "nan": false,
+  "train_seconds": 593.0,
+  "optimizer_steps": 154,
+  "micro_batch_seqs": 4,
+  "grad_accum_steps": 16,
+  "effective_batch_seqs": 64,
+  "warmup": {
+   "warmup_steps": 0.03
+  },
+  "dtype": "bfloat16",
+  "save_dtype": "bfloat16",
+  "trainer_metrics": {
+   "train_runtime": 592.6011,
+   "train_samples_per_second": 16.544,
+   "train_steps_per_second": 0.26,
+   "total_flos": 6043215426748416.0,
+   "train_loss": 3.2268878887226053,
+   "epoch": 1.0
+  }
+ },
+ "sample": {
+  "engine": "vllm",
+  "docs": 2000,
+  "tokens": 544653,
+  "generate_seconds": 55.2,
+  "seed": 20262018,
+  "start_index": 0,
+  "gpu_memory_utilization": 0.85,
+  "sampling": {
+   "temperature": 1.0,
+   "top_p": 1.0
+  },
+  "max_docs": 2000,
+  "prefix_subset": 2000,
+  "prefix_tokens": 21,
+  "max_new_tokens": 338,
+  "exact_duplicate_rate": 0.0,
+  "mean_tokens": 272.33,
+  "mean_words": 152.28,
+  "mean_chars": 1018.58,
+  "mean_bytes": 2714.13,
+  "cap_hit_rate": 0.594,
+  "empty_rate": 0.0
+ },
+ "checkpoint_sha256": "1e11b50aa290c6a74733ecb25967e6f22be1f7bcd403800ac78e0830f09d89cf",
+ "previous_checkpoint": "/workspace/CG4/results/chains/GEN0-BN-s2/checkpoint",
+ "created_at": "2026-10-24T02:31:58+00:00"
+}

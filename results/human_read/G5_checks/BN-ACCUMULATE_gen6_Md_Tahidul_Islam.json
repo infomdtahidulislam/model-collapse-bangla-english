@@ -1,0 +1,38 @@
+{
+ "label": "BN-ACCUMULATE_gen6",
+ "reader": "Md Tahidul Islam",
+ "summary": {
+  "coded": 50,
+  "script_error": "5 of 50",
+  "english_intrusion": "12 of 50",
+  "repetition_loop": "1 of 50",
+  "topic_drift": "29 of 50",
+  "nonwords_mean": 5.6,
+  "nonwords_median": 5,
+  "fluency_rated": 20,
+  "fluency_mean": 2.25
+ },
+ "auto_comparison": {
+  "repetition_loop vs own 4-gram repetition >= 0.2": {
+   "both_1": 0,
+   "reader_1_auto_0": [
+    "BN-P00030"
+   ],
+   "reader_0_auto_1": [],
+   "both_0": 49
+  },
+  "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+   "both_1": 5,
+   "reader_1_auto_0": [],
+   "reader_0_auto_1": [],
+   "both_0": 45
+  },
+  "english_intrusion vs any Latin letter": {
+   "both_1": 12,
+   "reader_1_auto_0": [],
+   "reader_0_auto_1": [],
+   "both_0": 38
+  }
+ },
+ "recorded_at": "2026-10-17T23:48:06+00:00"
+}

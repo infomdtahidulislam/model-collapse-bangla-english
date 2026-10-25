@@ -1,0 +1,45 @@
+{
+ "train_blocks": 10794,
+ "train_tokens": 11053056,
+ "target_tokens": 10087953,
+ "real_target_tokens": 0,
+ "synthetic_target_tokens": 10087953,
+ "masked_prefix_tokens": 881664,
+ "real_docs": 0,
+ "synthetic_docs": 41984,
+ "prefix_mode": "masked",
+ "bos_per_document": true,
+ "eos_target_docs": 20516,
+ "eos_context_only_docs": 21468,
+ "final_loss": 1.7557123184204102,
+ "loss_first": 1.774225616455078,
+ "loss_curve": [
+  1.774225616455078,
+  1.7956695556640625,
+  1.7881275177001954,
+  1.790707778930664,
+  1.771954345703125,
+  1.7686368942260742,
+  1.7502273559570312,
+  1.7557123184204102
+ ],
+ "nan": false,
+ "train_seconds": 655.9,
+ "optimizer_steps": 169,
+ "micro_batch_seqs": 4,
+ "grad_accum_steps": 16,
+ "effective_batch_seqs": 64,
+ "warmup": {
+  "warmup_steps": 0.03
+ },
+ "dtype": "bfloat16",
+ "save_dtype": "bfloat16",
+ "trainer_metrics": {
+  "train_runtime": 655.2905,
+  "train_samples_per_second": 16.472,
+  "train_steps_per_second": 0.258,
+  "total_flos": 6653454438629376.0,
+  "train_loss": 1.7702878636015942,
+  "epoch": 1.0
+ }
+}

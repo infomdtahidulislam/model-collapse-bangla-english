@@ -1,0 +1,24 @@
+scope,check,spearman,pearson,n
+ALL,per-sample counts (as published),0.8765,0.8478,600
+ALL,per-sample shares (length-normalized),0.8114,0.8020,600
+ALL,within-file ranks of shares (file held fixed),0.6954,,600
+BN,per-sample counts (as published),0.8335,0.8041,300
+BN,per-sample shares (length-normalized),0.7848,0.7937,300
+BN,within-file ranks of shares (file held fixed),0.7821,,300
+EN,per-sample counts (as published),0.7177,0.8052,300
+EN,per-sample shares (length-normalized),0.6608,0.7109,300
+EN,within-file ranks of shares (file held fixed),0.6063,,300
+BN-ACCUMULATE-FILTER_gen3,per-file Spearman of shares,0.7925,,50
+BN-ACCUMULATE-FILTER_gen6,per-file Spearman of shares,0.7599,,50
+BN-ACCUMULATE_gen3,per-file Spearman of shares,0.8088,,50
+BN-ACCUMULATE_gen6,per-file Spearman of shares,0.7658,,50
+BN-REPLACE_gen3,per-file Spearman of shares,0.7809,,50
+BN-REPLACE_gen6,per-file Spearman of shares,0.7846,,50
+EN-ACCUMULATE-FILTER_gen3,per-file Spearman of shares,0.5426,,50
+EN-ACCUMULATE-FILTER_gen6,per-file Spearman of shares,0.4680,,50
+EN-ACCUMULATE_gen3,per-file Spearman of shares,0.5393,,50
+EN-ACCUMULATE_gen6,per-file Spearman of shares,0.4598,,50
+EN-REPLACE_gen3,per-file Spearman of shares,0.8592,,50
+EN-REPLACE_gen6,per-file Spearman of shares,0.7519,,50
+BN,file-level shares (6 files),0.8286,0.9878,6
+EN,file-level shares (6 files),1.0000,0.9572,6

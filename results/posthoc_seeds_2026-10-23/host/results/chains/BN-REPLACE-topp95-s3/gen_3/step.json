@@ -1,0 +1,125 @@
+{
+ "chain_id": "BN-REPLACE-topp95-s3",
+ "generation": 3,
+ "language": "BN",
+ "regime": "REPLACE",
+ "variant": "decoding_seed3",
+ "session_id": "rented-1792808389",
+ "seed": 20263013,
+ "seed_offset": 2000,
+ "gen0_id": "GEN0-BN-s3",
+ "budget_tokens": 10000000,
+ "sampling": {
+  "temperature": 1.0,
+  "top_p": 0.95
+ },
+ "training_set": {
+  "real_docs": 0,
+  "synthetic_docs": 38400,
+  "components": [
+   "synthetic_gen3"
+  ],
+  "tokens": 10868736,
+  "target_tokens": 9986381,
+  "real_target_tokens": 0,
+  "synthetic_target_tokens": 9986381,
+  "masked_prefix_tokens": 806400
+ },
+ "generate": {
+  "engine": "vllm",
+  "docs": 38400,
+  "tokens": 10019197,
+  "generate_seconds": 299.8,
+  "seed": 20263013,
+  "start_index": 0,
+  "gpu_memory_utilization": 0.85,
+  "sampling": {
+   "temperature": 1.0,
+   "top_p": 0.95
+  },
+  "max_docs": null,
+  "prefix_subset": null,
+  "prefix_tokens": 21,
+  "max_new_tokens": 338,
+  "exact_duplicate_rate": 0.0045,
+  "mean_tokens": 260.92,
+  "mean_words": 147.75,
+  "mean_chars": 975.28,
+  "mean_bytes": 2596.29,
+  "cap_hit_rate": 0.559,
+  "empty_rate": 0.0008
+ },
+ "filter": null,
+ "train": {
+  "train_blocks": 10614,
+  "train_tokens": 10868736,
+  "target_tokens": 9986381,
+  "real_target_tokens": 0,
+  "synthetic_target_tokens": 9986381,
+  "masked_prefix_tokens": 806400,
+  "real_docs": 0,
+  "synthetic_docs": 38400,
+  "prefix_mode": "masked",
+  "bos_per_document": true,
+  "eos_target_docs": 16970,
+  "eos_context_only_docs": 21430,
+  "final_loss": 2.8763179779052734,
+  "loss_first": 2.951839256286621,
+  "loss_curve": [
+   2.951839256286621,
+   2.9372119903564453,
+   2.9799596786499025,
+   2.9537628173828123,
+   2.91137752532959,
+   2.918635940551758,
+   2.8831951141357424,
+   2.8763179779052734
+  ],
+  "nan": false,
+  "train_seconds": 643.2,
+  "optimizer_steps": 166,
+  "micro_batch_seqs": 4,
+  "grad_accum_steps": 16,
+  "effective_batch_seqs": 64,
+  "warmup": {
+   "warmup_steps": 0.03
+  },
+  "dtype": "bfloat16",
+  "save_dtype": "bfloat16",
+  "trainer_metrics": {
+   "train_runtime": 642.6013,
+   "train_samples_per_second": 16.517,
+   "train_steps_per_second": 0.258,
+   "total_flos": 6542501891014656.0,
+   "train_loss": 2.9233366839856987,
+   "epoch": 1.0
+  }
+ },
+ "sample": {
+  "engine": "vllm",
+  "docs": 2000,
+  "tokens": 494190,
+  "generate_seconds": 63.1,
+  "seed": 20263020,
+  "start_index": 0,
+  "gpu_memory_utilization": 0.85,
+  "sampling": {
+   "temperature": 1.0,
+   "top_p": 0.95
+  },
+  "max_docs": 2000,
+  "prefix_subset": 2000,
+  "prefix_tokens": 21,
+  "max_new_tokens": 338,
+  "exact_duplicate_rate": 0.0005,
+  "mean_tokens": 247.09,
+  "mean_words": 136.17,
+  "mean_chars": 898.94,
+  "mean_bytes": 2385.73,
+  "cap_hit_rate": 0.5095,
+  "empty_rate": 0.001
+ },
+ "checkpoint_sha256": "7b2503968422e72eecc08ee8972fcce7d0fd20172614f9c1a1aefbb8e3c06dbf",
+ "previous_checkpoint": "/workspace/CG4/results/chains/BN-REPLACE-topp95-s3/gen_2/checkpoint",
+ "created_at": "2026-10-24T11:44:36+00:00"
+}

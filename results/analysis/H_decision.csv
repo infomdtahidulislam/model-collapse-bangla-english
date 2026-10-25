@@ -1,0 +1,7 @@
+hypothesis,rule_output,metric,sign_ok,p_holm,p_holm_lt_0.05,extra_conditions_ok,all_conditions
+H1,inconclusive,log_ppl_heldout,False,0.0,True,False,False
+H1,inconclusive,distinct_2_logratio0,True,0.008,True,True,True
+H1,inconclusive,tail_fact_recall_ALL_logratio0,False,0.706,False,False,False
+H2,not supported,log_ppl_heldout,False,0.0,True,True,False
+H2,not supported,distinct_2_logratio0,False,0.174,False,True,False
+H2,not supported,tail_fact_recall_ALL_logratio0,False,0.064,False,True,False

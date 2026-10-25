@@ -1,0 +1,56 @@
+==== Sat 10/24/2026  3:55:37.32 (local) 
+account balance/credit: 19.9956364363   (2026-10-24T01:55:42+00:00)
+invoiced charges of this package's instances, all time: US$38.55 (5 instances; deposits on the account US$20.00); compare with the package cap
+       id label              status     gpu               $/h  gpu_h   cost$  budget$  note
+          instance 57450903: invoiced charges US$0.01 (GPU, storage and bandwidth; GPU-hours x price US$0.06)
+ 57450903 CG4-posthoc2       loading    RTX 4090        0.616    0.1    0.06     15.0  
+exit=0 (2 = an instance is over its cap) 
+==== Sat 10/24/2026  5:55:38.06 (local) 
+account balance/credit: 18.7044771075   (2026-10-24T03:55:42+00:00)
+invoiced charges of this package's instances, all time: US$39.84 (5 instances; deposits on the account US$20.00); compare with the package cap
+       id label              status     gpu               $/h  gpu_h   cost$  budget$  note
+          instance 57450903: invoiced charges US$1.30 (GPU, storage and bandwidth; GPU-hours x price US$1.29)
+ 57450903 CG4-posthoc2       running    RTX 4090        0.616    2.1    1.30     15.0  
+exit=0 (2 = an instance is over its cap) 
+==== Sat 10/24/2026  7:55:38.02 (local) 
+account balance/credit: 17.4722248755   (2026-10-24T05:55:42+00:00)
+invoiced charges of this package's instances, all time: US$41.07 (5 instances; deposits on the account US$20.00); compare with the package cap
+       id label              status     gpu               $/h  gpu_h   cost$  budget$  note
+          instance 57450903: invoiced charges US$2.53 (GPU, storage and bandwidth; GPU-hours x price US$2.52)
+ 57450903 CG4-posthoc2       running    RTX 4090        0.616    4.1    2.53     15.0  
+exit=0 (2 = an instance is over its cap) 
+==== Sat 10/24/2026  9:55:38.10 (local) 
+account balance/credit: 16.2439287175   (2026-10-24T07:55:43+00:00)
+invoiced charges of this package's instances, all time: US$42.30 (5 instances; deposits on the account US$20.00); compare with the package cap
+       id label              status     gpu               $/h  gpu_h   cost$  budget$  note
+          instance 57450903: invoiced charges US$3.76 (GPU, storage and bandwidth; GPU-hours x price US$3.75)
+ 57450903 CG4-posthoc2       running    RTX 4090        0.616    6.1    3.76     15.0  
+exit=0 (2 = an instance is over its cap) 
+==== Sat 10/24/2026 11:55:38.08 (local) 
+account balance/credit: 15.012472409500003   (2026-10-24T09:55:43+00:00)
+invoiced charges of this package's instances, all time: US$43.53 (5 instances; deposits on the account US$20.00); compare with the package cap
+       id label              status     gpu               $/h  gpu_h   cost$  budget$  note
+          instance 57450903: invoiced charges US$4.99 (GPU, storage and bandwidth; GPU-hours x price US$4.98)
+ 57450903 CG4-posthoc2       running    RTX 4090        0.616    8.1    4.99     15.0  
+exit=0 (2 = an instance is over its cap) 
+==== Sat 10/24/2026 13:55:38.57 (local) 
+account balance/credit: 13.776073289500001   (2026-10-24T11:55:44+00:00)
+invoiced charges of this package's instances, all time: US$44.77 (5 instances; deposits on the account US$20.00); compare with the package cap
+       id label              status     gpu               $/h  gpu_h   cost$  budget$  note
+          instance 57450903: invoiced charges US$6.22 (GPU, storage and bandwidth; GPU-hours x price US$6.21)
+ 57450903 CG4-posthoc2       running    RTX 4090        0.616   10.1    6.22     15.0  
+exit=0 (2 = an instance is over its cap) 
+==== Sat 10/24/2026 15:55:38.39 (local) 
+account balance/credit: 12.549397509499997   (2026-10-24T13:55:44+00:00)
+invoiced charges of this package's instances, all time: US$45.99 (5 instances; deposits on the account US$20.00); compare with the package cap
+       id label              status     gpu               $/h  gpu_h   cost$  budget$  note
+          instance 57450903: invoiced charges US$7.45 (GPU, storage and bandwidth; GPU-hours x price US$7.44)
+ 57450903 CG4-posthoc2       running    RTX 4090        0.616   12.1    7.45     15.0  
+exit=0 (2 = an instance is over its cap) 
+==== Sat 10/24/2026 17:55:39.55 (local) 
+account balance/credit: 11.297136046500006   (2026-10-24T15:56:03+00:00)
+invoiced charges of this package's instances, all time: US$47.26 (5 instances; deposits on the account US$20.00); compare with the package cap
+       id label              status     gpu               $/h  gpu_h   cost$  budget$  note
+          instance 57450903: invoiced charges US$8.71 (GPU, storage and bandwidth; GPU-hours x price US$8.68)
+ 57450903 CG4-posthoc2       running    RTX 4090        0.616   14.1    8.71     15.0  
+exit=0 (2 = an instance is over its cap) 

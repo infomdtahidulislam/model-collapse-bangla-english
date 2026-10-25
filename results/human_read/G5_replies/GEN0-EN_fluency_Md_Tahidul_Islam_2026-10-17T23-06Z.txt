@@ -1,0 +1,23 @@
+G5 read, GEN0-EN fluency (optional) (G5_fluency_gen0_EN_2026-10-17.html), reader: Md Tahidul Islam, 2026-10-17T23:06Z
+## GEN0-EN_gen0_fluency | results/samples/GEN0-EN_gen0_50.jsonl sha256 ed77156a3b51cd60 | coded 20 of 20
+sample_id,fluency_1to5,note
+EN-P00000,3,"The opening is understandable, but stray markup and scattered headings make the rest uneven."
+EN-P00001,2,"The simple questions are readable, while the instructions and parenthetical text are often garbled."
+EN-P00002,5,The repeated place-name format is clear and easy to read throughout.
+EN-P00003,3,The journal description is readable despite joined words and several awkwardly constructed sentences.
+EN-P00004,2,Broken technical wording makes the explanation difficult to follow beyond a few clear phrases.
+EN-P00005,3,"The main sentences are understandable, but shifting references and awkward quotations interrupt the flow."
+EN-P00006,4,"The biography reads fairly smoothly, with only a few unnatural expressions."
+EN-P00007,2,"Long sentences, repeated wording and malformed phrases make this tiring to untangle."
+EN-P00008,3,"The surname discussion is partly clear, though strained sentences and the closing fragments feel awkward."
+EN-P00009,2,Broken sentences and code-like fragments make the technical description difficult to read.
+EN-P00010,3,The later biography is clearer than the fragmented opening and its fused words.
+EN-P00011,5,These short headings fit the prompt naturally and are easy to understand.
+EN-P00012,3,"Much of the story is readable, but the quotation is badly broken."
+EN-P00013,3,Readable biographical details are interrupted by grammar errors and unclear references.
+EN-P00014,3,"The review starts reasonably clearly, then becomes awkward in the final reference."
+EN-P00015,2,The clear opening gives way to technical-sounding phrases that are often hard to make sense of.
+EN-P00016,3,"The food advice is mostly readable, but the later claims use increasingly awkward wording."
+EN-P00017,3,"The property account can be followed, despite run-on sentences, fragments and repeated words."
+EN-P00018,3,"The biographical details read well, while the quotation and closing sentence lose their structure."
+EN-P00019,4,"Most of the biography flows well, with a missing date and a few clumsy details."

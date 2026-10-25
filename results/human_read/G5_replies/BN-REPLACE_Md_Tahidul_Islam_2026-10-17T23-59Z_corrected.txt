@@ -1,0 +1,105 @@
+G5 read, BN-REPLACE (G5_BN-REPLACE_2026-10-17.html), reader: Md Tahidul Islam, 2026-10-17T23:59Z
+## BN-REPLACE_gen3 | results/samples/BN-REPLACE_gen3_50.jsonl sha256 21f76d59d537075f | coded 50 of 50
+sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note
+BN-P00000,0,0,12,0,1,1,"The Argentina and Poland report drifts from football into cricket, with roughly 12 badly formed words."
+BN-P00001,0,0,7,0,0,2,"Around 7 malformed words appear as the station description wanders into lunar travel, Bangladesh and the garment industry."
+BN-P00002,0,0,6,0,1,2,About 6 words look malformed in a cartoon announcement that turns into unrelated agriculture and travel fragments.
+BN-P00003,0,1,12,0,0,2,Latin phrases and roughly 12 nonwords disrupt a passage that stays broadly about television production.
+BN-P00004,0,0,1,0,1,3,One possible nonword appears as the report on returning workers changes into an election campaign statement.
+BN-P00005,0,0,1,0,0,3,"One spelling looks malformed in the sporting biography, while incorrect identity claims fall outside this rating."
+BN-P00006,0,0,10,0,1,2,"Social, political and personal matters replace the sporting biography, which contains around 10 malformed words."
+BN-P00007,0,0,20,0,0,1,"Around 20 words seem malformed rather than simply old-fashioned, making the narrative hard to read."
+BN-P00008,0,1,10,0,1,2,"About 10 words appear malformed in a dated entry that breaks into schools, family disputes and court proceedings."
+BN-P00009,0,0,15,0,1,1,Roughly 15 nonwords disrupt the football report as cricket and filmmaking take over.
+BN-P00010,0,0,35,0,0,1,"The old-fashioned dialogue breaks into disconnected clauses and perhaps 35 nonwords, leaving little readable text."
+BN-P00011,0,0,9,0,0,2,"The biographical structure survives, but confused clauses and about 9 apparent nonwords make the account difficult to follow."
+BN-P00012,0,0,21,0,1,2,"The Manhattan passage changes to Jamia and other places, with broken grammar and around 21 nonwords."
+BN-P00013,0,0,7,0,1,2,"The Ramadan statement becomes disconnected development, travel and financial claims, with about 7 malformed words."
+BN-P00014,0,1,13,0,0,2,"The local description stays recognizable as a topic, but a Latin word and roughly 13 nonwords disrupt its confused wording."
+BN-P00015,0,0,22,0,1,1,"Festivals and films replace the hockey announcement, with an estimated 22 nonwords in the broken wording."
+BN-P00016,0,0,12,0,0,2,"The memorial and locality remain central, though confused grammar and roughly 12 nonwords make the account hard to read."
+BN-P00017,0,0,15,0,1,1,"The diabetes description turns into agriculture, history and a disconnected story, with a nonword estimate of 15."
+BN-P00018,0,1,30,0,1,1,Latin letters appear inside a word as Egyptian literature becomes a confused Bangla biography with roughly 30 nonwords.
+BN-P00019,0,0,14,0,1,2,"Approximately 14 nonwords appear in a pharmaceutical report that moves into short stories, politics and filmmaking."
+BN-P00020,1,0,14,0,0,,"A digit appears inside a number word in the artist's biography, which has about 14 apparent nonwords and many broken phrases."
+BN-P00021,1,0,18,0,1,,"Repeated diacritics interrupt the riverbank report as it shifts into political and religious incidents, alongside roughly 18 nonwords."
+BN-P00022,0,0,13,0,1,,"Religious, military and travel accounts replace the national professor honor, and perhaps 13 words are malformed."
+BN-P00023,1,0,14,1,1,,"Meitner's biography drifts into politics and history before a long closing-bracket loop, with the nonword count estimated at 14."
+BN-P00024,1,0,18,0,1,,"Corrupt digits appear inside a word as the biography wanders through cooking, cricket and history, with around 18 nonwords."
+BN-P00025,0,0,11,0,1,,The fisheries event becomes disconnected first-person political commentary containing about 11 malformed words.
+BN-P00026,0,1,25,0,1,,"A Latin string interrupts the shift from segmentation to historical and personal stories, where around 25 words seem malformed."
+BN-P00027,0,0,11,0,1,,"About 11 words appear malformed as Sylheti folklore gives way to military, business and administrative commentary."
+BN-P00028,0,1,18,0,1,,Latin text appears as the airline bag story becomes a confused online banking account containing roughly 18 nonwords.
+BN-P00029,0,0,13,0,1,,"The Kaptai Dam passage has roughly 13 nonwords and shifts into unrelated geography, economics and politics."
+BN-P00030,1,1,23,0,1,,"Latin, Japanese and replacement characters appear as Druk Desi gives way to confused literary and religious history, with roughly 23 nonwords."
+BN-P00031,0,0,0,0,0,,"The city description is mostly readable, and missing coordinates or inconsistent details alone do not establish degeneration."
+BN-P00032,0,0,12,0,1,,"About 12 apparent nonwords interrupt a river description that becomes committees, schools and disconnected first-person statements."
+BN-P00033,0,0,23,0,0,,The city geography and history structure survives despite an estimated 23 nonwords and badly broken clauses.
+BN-P00034,0,0,22,0,0,,"The biography keeps its structure, but roughly 22 nonwords and disconnected clauses make it very difficult to read."
+BN-P00035,1,0,19,0,1,,"A digit appears inside a word as the diplomatic report turns to violence, media and films, alongside about 19 nonwords."
+BN-P00036,0,0,0,0,1,,"The advice about starting early turns into an unrelated, incomplete remark about India, Bengal and Chennai."
+BN-P00037,0,1,18,0,1,,Latin web addresses and an estimated 18 nonwords interrupt dialogue that turns into disconnected political and historical narration.
+BN-P00038,0,0,0,0,0,,"The union description is concise and readable, with an inconsistent locality name in the final category."
+BN-P00039,0,1,16,0,1,,"Latin words appear as the disqualification request becomes unrelated violence and pandemic reporting, with about 16 malformed words."
+BN-P00040,0,0,18,0,1,,"The literary passage becomes political reporting and repeats one word three times, with an estimated 18 nonwords overall."
+BN-P00041,0,0,10,0,1,,"About 10 words look malformed as the morality discussion changes to disconnected sport, illness and politics."
+BN-P00042,0,0,10,0,1,,"Death, history and legal matters replace the teacher recruitment notice, with a rough total of 10 nonwords."
+BN-P00043,1,0,23,0,0,,"The religious argument is incoherent, with a stray consonant sign after punctuation and approximately 23 nonwords."
+BN-P00044,1,0,35,0,1,,"Broken symbols and a stray vowel sign interrupt Aghor's reflection as it turns to celebrity, violence and politics, with about 35 nonwords."
+BN-P00045,0,0,9,0,0,,"Militant violence remains the broad subject, but broken grammar and meaning accompany around 9 apparent nonwords."
+BN-P00046,0,0,18,0,0,,"The freedom fighter's biography retains its sections, though broken grammar and roughly 18 nonwords disrupt the entire account."
+BN-P00047,0,0,13,0,1,,Around 13 words appear malformed as political party reporting replaces the film-related opening.
+BN-P00048,0,0,11,0,1,,"An unrelated family, political and business biography replaces the tennis and maternity-leave report, with an estimated 11 nonwords."
+BN-P00049,0,0,16,0,1,,"Writers, military events and nineteenth-century history replace Rowley's biography, and about 16 words look malformed."
+## BN-REPLACE_gen6 | results/samples/BN-REPLACE_gen6_50.jsonl sha256 5b72c69fb468bf7b | coded 50 of 50
+sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note
+BN-P00000,1,1,2,0,0,2,"Latin, Cyrillic and CJK text disrupt the match account, alongside 2 possible nonwords and weak sentence connections."
+BN-P00001,1,0,12,0,0,1,"CJK text appears as the station account breaks into institutional and political history, containing around 12 nonwords."
+BN-P00002,1,1,11,0,1,1,"Latin text and stray marks interrupt the shift from the cartoon announcement to markets and family matters, with perhaps 11 nonwords."
+BN-P00003,0,1,14,0,1,1,"A Latin word appears as the series description turns to agriculture, police and local allegations, alongside about 14 nonwords."
+BN-P00004,1,1,11,0,1,1,"Latin, Cyrillic and CJK text mix with an estimated 11 nonwords as the topic changes to fires, courts and health."
+BN-P00005,0,0,12,0,1,1,The biography has about 12 nonwords and turns into disconnected first-person commentary on politics and literature.
+BN-P00006,1,0,5,0,0,2,"The writer's biography remains recognizable despite a Devanagari word, weak connections and about 5 apparent nonwords."
+BN-P00007,1,1,21,0,0,1,"Latin, Japanese, Telugu and CJK text appear in a badly broken literary narrative with roughly 21 nonwords."
+BN-P00008,0,1,10,0,1,1,"Latin text interrupts disconnected personal and religious statements, where the estimated nonword count is 10."
+BN-P00009,1,0,9,0,1,1,"The report switches from football to cricket scores, with a stray vowel mark and around 9 malformed words."
+BN-P00010,1,1,21,0,0,1,"Korean and Latin characters appear inside broken words, with an estimated 21 nonwords making most of the dialogue unreadable."
+BN-P00011,0,1,17,0,1,1,Latin text and roughly 17 nonwords interrupt the saint's biography as it becomes a confused travel and local-incident story.
+BN-P00012,0,0,24,0,1,1,"Pakistan, Syria and Saudi Arabia replace the original topic, while largely unintelligible clauses contain an estimated 24 nonwords."
+BN-P00013,1,0,19,0,1,1,An estimated 19 nonwords and CJK characters interrupt unrelated poetic and political fragments that are hard to understand.
+BN-P00014,0,0,16,0,1,1,"The union description contains around 16 apparent nonwords and drifts into family, social and political commentary."
+BN-P00015,0,0,20,0,1,1,"The opening makes sense before hospitals, politics and injuries take over, alongside about 20 malformed words."
+BN-P00016,0,0,13,0,1,2,"Around 13 words appear malformed as the memorial account becomes disconnected political events, ports and schools."
+BN-P00017,0,0,20,0,1,1,"Education, politics and war take over the diabetes passage, and about 20 nonwords contribute to its unintelligible clauses."
+BN-P00018,1,0,26,0,1,1,"The literature topic disappears into disconnected lists and comments, with a stray consonant sign and around 26 nonwords."
+BN-P00019,0,1,23,0,1,1,"Latin letters intrude inside words as the financial report becomes media and family commentary, with an estimated 23 nonwords."
+BN-P00020,0,0,2,0,1,,"The opening is completed before film categories replace the dancer's biography, with a couple of possible nonwords."
+BN-P00021,0,1,10,0,1,,An English conjunction joins a Bangla word among around 10 nonwords as the report shifts to schools and administrative complaints.
+BN-P00022,0,0,12,0,1,,"The honor description falls into disconnected projects, politics and news fragments, with about 12 apparent nonwords."
+BN-P00023,0,0,12,0,1,,"Roughly 12 malformed words appear as Meitner is replaced by other people, settlement stories and unrelated categories."
+BN-P00024,1,1,19,0,1,,"Latin text and a replacement character appear amid unrelated education, cricket and politics, giving an estimated 19 nonwords."
+BN-P00025,0,0,15,0,1,,The fisheries event has become a confused coronavirus and administrative report containing perhaps 15 nonwords.
+BN-P00026,0,0,24,0,1,,"The technical definition breaks into unrelated political and first-person statements, with a rough nonword total of 24."
+BN-P00027,1,0,35,0,1,,"Stray vowel signs and broken symbols appear as unreadable fragments turn to farming and personal events, with an estimated 35 nonwords."
+BN-P00028,0,0,8,0,1,,"The story drifts into disconnected shops, media and films, and around 8 words look malformed."
+BN-P00029,0,1,28,0,1,,"Latin phrases appear as the dam account moves to railways and an incoherent literary story, alongside an estimated 28 nonwords."
+BN-P00030,1,1,18,0,1,,"Around 18 nonwords and mixed scripts appear among school, religious and European categories that replace the topic."
+BN-P00031,0,0,0,0,0,,"The city description is mostly readable despite inconsistent details and a wrong percentage unit, without a clear loop or unrelated story."
+BN-P00032,0,0,16,0,0,,"The river's surrounding region remains the broad topic, but broken descriptions and sentence connections contain perhaps 16 nonwords."
+BN-P00033,0,0,1,0,0,,"The city description is mostly readable, with 1 possible nonword in a possessive ending and some incomplete or inconsistent details."
+BN-P00034,0,0,16,0,1,,"The biography's roughly 16 nonwords accompany a shift into unrelated business, hostage and political stories."
+BN-P00035,0,0,0,0,0,,The short continuation about the Turkish meeting has confused grammar but no clear issue under the listed flags.
+BN-P00036,1,1,35,0,1,,"Broken symbols and literal Latin escape characters appear as advice becomes literary and religious fragments, with an estimated 35 nonwords."
+BN-P00037,1,0,19,0,1,,"A stray vowel sign follows punctuation as the text turns to unrelated student and university events, with around 19 nonwords."
+BN-P00038,0,0,15,0,1,,"The local description ends in incoherent political and religious fragments, where the nonword estimate is 15."
+BN-P00039,0,0,4,0,1,,"Roughly 4 nonwords appear as university, newspaper and administrative fragments replace the disqualification request."
+BN-P00040,1,0,31,0,0,,"A percent sign breaks into a word in a largely unintelligible literary continuation, where the nonword count is around 31."
+BN-P00041,1,0,20,0,1,,Broken punctuation interrupts a vowel sequence as the passage becomes an unrelated personal story containing roughly 20 nonwords.
+BN-P00042,1,0,19,0,1,,A repeated diacritic interrupts one word among roughly 19 nonwords as unrelated political events take over the passage.
+BN-P00043,0,1,29,0,1,,"An English word appears as the passage breaks into administrative, geographic and personal statements, with around 29 malformed words."
+BN-P00044,1,1,28,0,1,,"Roughly 28 nonwords, Latin strings and a stray vowel sign disrupt a passage that drifts into personal and political statements."
+BN-P00045,0,1,13,0,1,,"An English phrase appears as the Meghalaya report moves into unrelated international conflict and incidents, with an estimated 13 nonwords."
+BN-P00046,1,0,21,1,0,,"The biography repeats a word three times and includes a corrupt word-number fragment, with about 21 apparent nonwords."
+BN-P00047,0,0,15,0,1,,"The film account drifts into disconnected factory, family and administrative events, alongside perhaps 15 nonwords."
+BN-P00048,0,0,9,0,1,,About 9 apparent nonwords appear in the Serena Williams report as it turns into a confused local incident and hospital account.
+BN-P00049,0,0,11,0,1,,"The biography turns into unrelated Bangladeshi political and military stories, with a nonword total of around 11."

@@ -1,0 +1,7 @@
+# Operational settings the agent may change alone (00_AGENT_BRIEF.md section 6: "micro-batch size (effective batch fixed)").
+# NOT part of the frozen pre-registration: configs/chains.yaml stays byte-identical to the registered copy (OSF DOI
+# 10.17605/OSF.IO/SRA28) and common.load_chains_cfg() overlays only the whitelisted keys below. Every change is one line in
+# logs/decisions.md, and the value actually used is recorded in every train.json.
+training:
+  micro_batch_seqs: 4   # 2026-10-13: 8 x 1,024 tokens ran out of memory on the RTX 4090 (the fp32 logits of the 262k vocabulary
+                        # need 8 GiB per micro-batch); chains.yaml names 4 as the OOM fallback; effective batch 64 unchanged (16 x 4)

@@ -1,0 +1,62 @@
+# Sources that prepare_corpora.py reads from data/sources/. harness/fetch_sources.py downloads them in this shape:
+# JSONL with at least a "text" field (optional "id", "title", "url", "created" ISO date for the fresh slice).
+# Provenance verified 2026-10-12 (dataset ids, configs, licences); the fetcher writes data/sources/SOURCES_MANIFEST.json
+# with SHA-256 and counts. HUMAN confirms every licence at Gate 1 (LICENCE request for BanStereoSet: licence unstated).
+# The domain_mix ratios must match between languages.
+seed: 20261010
+languages:
+  EN:
+    sources:
+      - name: enwiki
+        file: data/sources/enwiki_articles.jsonl        # wikimedia/wikipedia, config 20231101.en (HF parquet), strided + shuffled slice
+        domain: encyclopaedic
+        licence: "CC BY-SA 4.0"
+      - name: en_web
+        file: data/sources/en_web_slice.jsonl           # HuggingFaceFW/fineweb-edu, config sample-10BT (web/educational)
+        domain: web
+        licence: "ODC-By 1.0"
+    heldout_fresh:
+      file: data/sources/enwiki_fresh_articles.jsonl    # en.wikipedia.org pages created after 2025-09-01 (MediaWiki API; base model released 2025-08-05)
+    bias_pairs:
+      file: data/sources/crows_pairs_en.jsonl           # nyu-mll/crows-pairs data/crows_pairs_anonymized.csv -> fields stereo, anti, bias_type
+      licence: "CC BY-SA 4.0"
+  BN:
+    sources:
+      - name: bnwiki
+        file: data/sources/bnwiki_articles.jsonl        # wikimedia/wikipedia, config 20231101.bn
+        domain: encyclopaedic
+        licence: "CC BY-SA 4.0"
+      - name: bn_web
+        file: data/sources/bn_web_slice.jsonl           # ai4bharat/sangraha, data_dir verified/ben (web/news/books)
+        domain: web
+        licence: "CC BY 4.0"
+    heldout_fresh:
+      file: data/sources/bnwiki_fresh_articles.jsonl    # bn.wikipedia.org pages created after 2025-09-01
+    bias_pairs:
+      file: data/sources/banstereoset_bn.jsonl          # kamruzzaman15/BanStereoSet BanStereoset.csv -> bangla_context with BLANK filled
+      licence: "unstated in repository; LICENCE request filed; Findings ACL 2025 paper"
+
+domain_mix: { encyclopaedic: 0.5, web: 0.5 }
+cleaning:
+  min_tokens: 64
+  max_tokens: 1024
+  min_script_ratio: 0.95
+  near_dup_jaccard: 0.80
+  minhash_perms: 64
+heldout:
+  n_docs: 2000
+  fresh_n_docs: 500
+
+probes:
+  n_per_stratum: 200             # HEAD / MID / TAIL
+  relations:                     # Wikidata property -> cloze templates per language (object label fills {O})
+    # Frames keep the OBJECT slot {O} bare (no case suffix, no article), so gold and distractors share an identical frame and
+    # Bangla case-suffix allomorphy (-এ/-তে/-য়, -এর/-র) or English a/an cannot favour one candidate (reviewer fix 2026-10-12).
+    # The subject frame "{S}-এর" is constant within a probe, so it affects all four candidates equally. HUMAN: Gate 1 spot-check
+    # reads the gold AND the three distractor sentences (spotcheck_*.csv).
+    P36: { en: "The capital of {S} is {O}.", bn: "{S}-এর রাজধানী হল {O}।", type: "capital" }
+    P17: { en: "{S} is located in the country of {O}.", bn: "{S} {O} দেশে অবস্থিত।", type: "country" }
+    P19: { en: "The birthplace of {S} is {O}.", bn: "{S}-এর জন্মস্থান {O}।", type: "birthplace" }
+    P106: { en: "The occupation of {S} is listed as {O}.", bn: "{S}-এর পেশা {O}।", type: "occupation" }   # REQ-009 (2026-10-14): English frame was "The occupation of {S} is {O}."; deviation, see results/deviations.md
+  sparql_endpoint: https://query.wikidata.org/sparql
+  max_items_per_relation: 3000

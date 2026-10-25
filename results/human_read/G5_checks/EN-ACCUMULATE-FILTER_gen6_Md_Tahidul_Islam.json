@@ -1,0 +1,40 @@
+{
+ "label": "EN-ACCUMULATE-FILTER_gen6",
+ "reader": "Md Tahidul Islam",
+ "summary": {
+  "coded": 50,
+  "script_error": "2 of 50",
+  "english_intrusion": "n/a",
+  "repetition_loop": "2 of 50",
+  "topic_drift": "14 of 50",
+  "nonwords_mean": 0.92,
+  "nonwords_median": 1,
+  "fluency_rated": 20,
+  "fluency_mean": 3.3
+ },
+ "auto_comparison": {
+  "repetition_loop vs own 4-gram repetition >= 0.2": {
+   "both_1": 0,
+   "reader_1_auto_0": [
+    "EN-P00003",
+    "EN-P00007"
+   ],
+   "reader_0_auto_1": [
+    {
+     "id": "EN-P00002",
+     "auto": {
+      "rep4": 0.218
+     }
+    }
+   ],
+   "both_0": 47
+  },
+  "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+   "both_1": 2,
+   "reader_1_auto_0": [],
+   "reader_0_auto_1": [],
+   "both_0": 48
+  }
+ },
+ "recorded_at": "2026-10-17T16:10:40+00:00"
+}

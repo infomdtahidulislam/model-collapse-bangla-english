@@ -1,0 +1,11 @@
+language,comparison,max_len,n,mean_signed,mean_abs,max_abs,token_count_mismatch
+EN,A bf16 single-doc vs archived,284,50,0.000918,0.002513,0.013623,0
+EN,B bf16 harness batching vs archived (50),284,50,0.000792,0.002276,0.015339,0
+EN,B bf16 harness batching vs archived (all 2000),284,2000,-1.9e-05,0.002169,0.015339,0
+EN,C fp32 single-doc vs archived,284,50,-0.000416,0.001945,0.00889,0
+EN,D bf16 single-doc vs fp32 single-doc,284,50,0.001335,0.002012,0.007585,0
+BN,A bf16 single-doc vs archived,367,50,0.002225,0.010347,0.0392,0
+BN,B bf16 harness batching vs archived (50),367,50,0.000169,0.013624,0.052161,0
+BN,B bf16 harness batching vs archived (all 2000),367,2000,0.000156,0.01205,0.090826,0
+BN,C fp32 single-doc vs archived,367,50,-0.014699,0.017328,0.042519,0
+BN,D bf16 single-doc vs fp32 single-doc,367,50,0.016924,0.017396,0.045188,0

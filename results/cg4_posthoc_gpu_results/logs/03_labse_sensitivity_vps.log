@@ -1,0 +1,35 @@
+start 2026-10-20T05:50:12Z
+Fetching 19 files:   0%|          | 0/19 [00:00<?, ?it/s]Fetching 19 files: 100%|██████████| 19/19 [00:00<00:00, 633.65it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   3%|▎         | 6/199 [00:00<00:03, 50.01it/s]Loading weights:   6%|▌         | 12/199 [00:00<00:03, 51.97it/s]Loading weights:  12%|█▏        | 24/199 [00:00<00:02, 76.75it/s]Loading weights:  19%|█▉        | 38/199 [00:00<00:01, 97.27it/s]Loading weights:  24%|██▍       | 48/199 [00:00<00:02, 74.86it/s]Loading weights:  29%|██▊       | 57/199 [00:00<00:01, 72.75it/s]Loading weights:  33%|███▎      | 65/199 [00:00<00:02, 66.36it/s]Loading weights:  46%|████▌     | 91/199 [00:01<00:01, 103.43it/s]Loading weights: 100%|██████████| 199/199 [00:01<00:00, 183.30it/s]
+dispersion implementation: (ix) formula of harness/tools/semantic_dispersion.py; sentence-transformers/LaBSE@836121a0533e5664b21c7aacc5d22951f2b8b25b, max_seq_length 256, device cpu; torch 2.14.1+cpu, sentence-transformers 6.1.0
+{'language': 'EN', 'corruption': 'nonword_substitution', 'rate': 0.0, 'n': 50, 'dispersion': 0.6277}
+{'language': 'EN', 'corruption': 'nonword_substitution', 'rate': 0.05, 'n': 50, 'dispersion': 0.61695}
+{'language': 'EN', 'corruption': 'nonword_substitution', 'rate': 0.1, 'n': 50, 'dispersion': 0.61768}
+{'language': 'EN', 'corruption': 'nonword_substitution', 'rate': 0.2, 'n': 50, 'dispersion': 0.60993}
+{'language': 'EN', 'corruption': 'nonword_substitution', 'rate': 0.4, 'n': 50, 'dispersion': 0.59926}
+{'language': 'EN', 'corruption': 'repetition_loop', 'rate': '', 'n': 50, 'dispersion': 0.61428}
+{'language': 'EN', 'corruption': 'reference_REPLACE_gen6', 'rate': '', 'n': 50, 'dispersion': 0.62328}
+{'language': 'BN', 'corruption': 'nonword_substitution', 'rate': 0.0, 'n': 50, 'dispersion': 0.72796}
+{'language': 'BN', 'corruption': 'nonword_substitution', 'rate': 0.05, 'n': 50, 'dispersion': 0.73383}
+{'language': 'BN', 'corruption': 'nonword_substitution', 'rate': 0.1, 'n': 50, 'dispersion': 0.73705}
+{'language': 'BN', 'corruption': 'nonword_substitution', 'rate': 0.2, 'n': 50, 'dispersion': 0.75688}
+{'language': 'BN', 'corruption': 'nonword_substitution', 'rate': 0.4, 'n': 50, 'dispersion': 0.74908}
+{'language': 'BN', 'corruption': 'repetition_loop', 'rate': '', 'n': 50, 'dispersion': 0.72127}
+{'language': 'BN', 'corruption': 'latin_script_mix', 'rate': 0.1, 'n': 50, 'dispersion': 0.72567}
+{'language': 'BN', 'corruption': 'reference_REPLACE_gen6', 'rate': '', 'n': 50, 'dispersion': 0.69929}
+{'file': 'BN-ACCUMULATE-FILTER_gen3', 'n_all': 50, 'dispersion_all': 0.71712, 'n_fluent': 0, 'dispersion_fluent': ''}
+{'file': 'BN-ACCUMULATE-FILTER_gen6', 'n_all': 50, 'dispersion_all': 0.73641, 'n_fluent': 1, 'dispersion_fluent': ''}
+{'file': 'BN-ACCUMULATE_gen3', 'n_all': 50, 'dispersion_all': 0.71265, 'n_fluent': 0, 'dispersion_fluent': ''}
+{'file': 'BN-ACCUMULATE_gen6', 'n_all': 50, 'dispersion_all': 0.74799, 'n_fluent': 2, 'dispersion_fluent': ''}
+{'file': 'BN-REPLACE_gen3', 'n_all': 50, 'dispersion_all': 0.69354, 'n_fluent': 0, 'dispersion_fluent': ''}
+{'file': 'BN-REPLACE_gen6', 'n_all': 50, 'dispersion_all': 0.69929, 'n_fluent': 0, 'dispersion_fluent': ''}
+{'file': 'EN-ACCUMULATE-FILTER_gen3', 'n_all': 50, 'dispersion_all': 0.62332, 'n_fluent': 3, 'dispersion_fluent': ''}
+{'file': 'EN-ACCUMULATE-FILTER_gen6', 'n_all': 50, 'dispersion_all': 0.67983, 'n_fluent': 3, 'dispersion_fluent': ''}
+{'file': 'EN-ACCUMULATE_gen3', 'n_all': 50, 'dispersion_all': 0.65697, 'n_fluent': 4, 'dispersion_fluent': ''}
+{'file': 'EN-ACCUMULATE_gen6', 'n_all': 50, 'dispersion_all': 0.65364, 'n_fluent': 3, 'dispersion_fluent': ''}
+{'file': 'EN-REPLACE_gen3', 'n_all': 50, 'dispersion_all': 0.57746, 'n_fluent': 1, 'dispersion_fluent': ''}
+{'file': 'EN-REPLACE_gen6', 'n_all': 50, 'dispersion_all': 0.62328, 'n_fluent': 0, 'dispersion_fluent': ''}
+
+wrote ../results/cg4_posthoc_gpu_results/labse_corruption.csv and labse_fluent_subset.csv and labse_info.json
+exit 0
+end 2026-10-20T06:02:58Z

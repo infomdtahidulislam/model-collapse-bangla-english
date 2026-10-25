@@ -1,0 +1,24 @@
+{
+ "engine": "vllm",
+ "docs": 2000,
+ "tokens": 452000,
+ "generate_seconds": 52.3,
+ "seed": 20262022,
+ "start_index": 0,
+ "gpu_memory_utilization": 0.85,
+ "sampling": {
+  "temperature": 1.0,
+  "top_p": 1.0
+ },
+ "max_docs": 2000,
+ "prefix_subset": 2000,
+ "prefix_tokens": 16,
+ "max_new_tokens": 260,
+ "exact_duplicate_rate": 0.0,
+ "mean_tokens": 226.0,
+ "mean_words": 164.92,
+ "mean_chars": 1013.01,
+ "mean_bytes": 1020.05,
+ "cap_hit_rate": 0.7245,
+ "empty_rate": 0.0
+}

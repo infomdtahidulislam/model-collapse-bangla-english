@@ -1,0 +1,105 @@
+G5 read, BN-ACCUMULATE-FILTER (G5_BN-ACCUMULATE-FILTER_2026-10-17.html), reader: Maksuda Akter, 2026-10-17T09:14Z
+## BN-ACCUMULATE-FILTER_gen3 | results/samples/BN-ACCUMULATE-FILTER_gen3_50.jsonl sha256 6ce550f62ca85c15 | coded 50 of 50
+sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note
+BN-P00000,0,0,11,0,0,2,"Football remains the subject, but broken clauses and around 11 nonwords make the text difficult to read."
+BN-P00001,0,0,6,0,0,2,"A Latin letter appears inside a Bangla word as the station description turns into military and political history, with roughly 6 nonwords."
+BN-P00002,0,0,2,0,0,3,"The short television announcement is awkward, with a couple of apparent nonwords."
+BN-P00003,0,0,1,0,1,3,"The television description changes into a personal biography involving a clinic, where 1 word seems malformed."
+BN-P00004,0,0,1,0,1,3,A possible nonword appears as the workers' return gives way to local politics and an arson incident.
+BN-P00005,0,0,3,0,0,3,"The biography stays on its subject, with roughly 3 malformed words and occupation errors that do not themselves count as drift."
+BN-P00006,0,0,6,0,0,2,"Entertainment terms seem malformed in about 6 places, and weak sentence connections make the passage hard to follow."
+BN-P00007,0,0,17,0,1,1,"Disconnected modern politics replaces the literary opening, and the badly broken wording puts the nonword estimate near 17."
+BN-P00008,0,1,6,0,1,2,"Literal backslash-n text appears as the passage jumps between personal matters, markets and religion, with about 6 nonwords."
+BN-P00009,1,0,7,0,0,2,The football report is interrupted by a corrupt number fragment and roughly 7 malformed words.
+BN-P00010,0,1,18,0,0,1,Latin letters appear inside a word in a badly broken literary narrative with an estimated 18 nonwords.
+BN-P00011,0,0,13,0,1,1,"The biography fragments into slavery, films, transport and schools, and about 13 words look malformed."
+BN-P00012,0,0,10,0,1,2,"Indian cultural and mythological material replaces the Manhattan description, with roughly 10 nonwords in the continuation."
+BN-P00013,0,0,4,0,1,3,"The Ramadan enforcement statement drifts into budgets, offices and art exhibitions, where about 4 words appear malformed."
+BN-P00014,0,1,7,0,0,2,"The local history and liberation-war account has poor wording, embedded Latin letters and roughly 7 nonwords."
+BN-P00015,0,0,5,0,0,2,"The hockey event remains the subject, with about 5 training terms that seem malformed."
+BN-P00016,0,0,4,0,0,3,The memorial and historical-image description remains recognizable despite awkward phrasing and an estimated 4 nonwords.
+BN-P00017,0,0,2,0,1,2,"A couple of words appear malformed as the diabetes passage changes into consumer, judicial and university investigations."
+BN-P00018,1,0,19,0,1,1,"Corrupt numbers and stray marks accompany the shift from Egyptian literature to Bangla and religious fragments, with a nonword estimate of 19."
+BN-P00019,0,0,4,0,1,2,The company results turn into an unrelated coronavirus case report with roughly 4 nonwords.
+BN-P00020,0,0,4,0,0,,"The performer's biography is recognizable, though perhaps 4 terms are malformed."
+BN-P00021,0,0,6,0,0,,"Rivers, land and local livelihoods remain relevant, but the phrasing is awkward and about 6 words look malformed."
+BN-P00022,0,0,8,0,1,,"A historical site replaces the national honor as the subject, and the nonword total comes to roughly 8."
+BN-P00023,0,0,2,0,0,,The scientist's biography is still recognizable despite contradictory facts and 2 words that seem malformed.
+BN-P00024,0,0,9,0,1,,"Unrelated technical and medical fragments replace the biography, where roughly 9 nonwords are present."
+BN-P00025,0,0,0,0,0,,"The meeting report is recognizable, and its awkward or incorrect production claims are outside this rubric."
+BN-P00026,0,1,11,0,1,,"Text segmentation gives way to schools and curricula, with Latin letters inside a word and an estimated 11 nonwords."
+BN-P00027,1,0,5,0,1,,"Travel, military and administrative matters replace the folklore discussion, with a stray vowel mark and about 5 nonwords."
+BN-P00028,0,0,0,0,0,,"The sentences connect poorly, but the bag incident stays central and no definite nonword stands out."
+BN-P00029,0,0,8,0,1,,"The dam description shifts into agriculture and disconnected meetings, with a rough nonword count of 8."
+BN-P00030,1,1,6,0,1,,"Latin and Tibetan text appear as the named office gives way to alphabets and invented language rules, with about 6 nonwords."
+BN-P00031,0,0,0,0,0,,"The city statistics are readable, and the inconsistent town name is a factual issue rather than a new topic."
+BN-P00032,0,0,13,0,1,,"The river description becomes another town's disconnected history of communities and rituals, with an estimated 13 nonwords."
+BN-P00033,0,0,0,0,0,,"The city statistics are readable, and factual inconsistencies alone do not trigger these flags."
+BN-P00034,0,0,7,0,0,,"The named person remains the focus of the attempted biography, despite perhaps 7 malformed words."
+BN-P00035,1,1,9,0,1,,"A Latin word and stray digit appear as the diplomatic report turns to films and unrelated history, with about 9 nonwords."
+BN-P00036,0,0,7,0,1,,"The practical advice becomes disconnected historical wars, where the nonword count is around 7."
+BN-P00037,0,0,10,0,0,,"The broad story remains recognizable, but about 10 dialogue words seem malformed."
+BN-P00038,0,0,3,0,0,,Excluding plausible place names leaves around 3 fused or malformed words in the local statistics.
+BN-P00039,0,0,7,0,1,,"The disqualification report turns to local disputes and loosely connected treatment and travel details, with approximately 7 nonwords."
+BN-P00040,0,0,0,0,0,,"The narrative is awkward but readable, with no definite rubric issue."
+BN-P00041,0,0,9,0,1,,"Medical claims and court proceedings replace the discussion of morality, with about 9 words that look malformed."
+BN-P00042,0,0,2,0,0,,The recruitment notice remains recognizable despite a couple of apparent nonwords.
+BN-P00043,0,0,6,0,0,,"Around 6 religious terms seem malformed, while factual and doctrinal accuracy fall outside this rating."
+BN-P00044,0,0,11,0,1,,"The character reflection drifts into social, educational and war commentary, with roughly 11 malformed words."
+BN-P00045,0,0,4,0,0,,"The security and policing report remains related to the unrest, with awkward phrasing and around 4 nonwords."
+BN-P00046,0,0,4,0,0,,The liberation-war biography stays recognizable despite an estimated 4 nonwords.
+BN-P00047,0,1,5,0,1,,"A Latin word appears as the film list turns to resale, family income and a wrestling school, with roughly 5 nonwords."
+BN-P00048,0,0,6,1,1,,"The final word loops as Serena's report changes to another person's coronavirus treatment, with an estimated 6 nonwords."
+BN-P00049,0,1,8,0,0,,"An embedded Latin letter interrupts the engineering and family details of the biography, where roughly 8 nonwords appear."
+## BN-ACCUMULATE-FILTER_gen6 | results/samples/BN-ACCUMULATE-FILTER_gen6_50.jsonl sha256 b768e072b0ef79c4 | coded 50 of 50
+sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note
+BN-P00000,0,0,8,0,0,2,"Argentina and Poland remain central, although poor sentence connections and an estimated 8 nonwords weaken the passage."
+BN-P00001,0,0,9,0,0,1,The station description becomes a film director's biography containing about 9 words that appear malformed.
+BN-P00002,0,1,5,0,1,2,"Fashion and film biographies take over the children's television announcement, with an embedded Latin letter and perhaps 5 nonwords."
+BN-P00003,0,1,3,0,0,3,The television passage remains readable despite Latin letters inside a word and around 3 apparent nonwords.
+BN-P00004,0,0,0,0,0,3,The account of the returning domestic workers is awkward but still recognizable.
+BN-P00005,0,0,1,0,0,4,"The political biography is mostly readable with 1 possible nonword, while its identity errors are outside this rubric."
+BN-P00006,0,0,4,0,1,3,"The biography shifts to attacks, another person and legal proceedings, alongside an estimated 4 nonwords."
+BN-P00007,0,0,23,0,0,1,"Around 23 words seem malformed rather than merely old-fashioned, leaving the passage difficult to read."
+BN-P00008,0,0,0,0,0,5,"The date completion is very short but reads naturally, with no clear rubric issue."
+BN-P00009,0,0,9,0,1,2,"A poet's story and civil conflict replace the Barcelona report, where the rough nonword total is 9."
+BN-P00010,0,0,21,1,0,1,"Commands and dialogue phrases get stuck in clear loops, alongside approximately 21 nonwords."
+BN-P00011,0,0,3,0,0,2,"Poorly connected biographical clauses contain perhaps 3 nonwords, while implausible dates and facts are not separate flags."
+BN-P00012,0,1,8,0,1,2,"The city history turns into films and personal fragments, with Latin text including a styled M and around 8 nonwords."
+BN-P00013,0,0,3,0,1,3,"Cyclone reporting and political commentary replace the enforcement statement, with an estimated 3 nonwords."
+BN-P00014,0,0,10,0,0,2,"The account remains broadly about local history and geography, though around 10 words look malformed."
+BN-P00015,0,0,5,0,0,2,"The conference details stay loosely tied to the hockey announcement, but the connections are weak and perhaps 5 words are malformed."
+BN-P00016,0,0,5,0,1,2,"Industrial and economic development projects take over the memorial account, which contains roughly 5 nonwords."
+BN-P00017,0,0,14,0,0,2,"Disease and symptoms remain the broad topic, but around 14 medical terms seem malformed."
+BN-P00018,1,0,8,0,0,2,"A stray vowel or consonant sign interrupts the literary discussion, where about 8 words also look malformed."
+BN-P00019,0,0,2,0,1,3,"Patient treatment and media claims replace the company report, alongside a couple of apparent nonwords."
+BN-P00020,0,0,11,0,0,,The biography has an estimated 11 nonwords after leaving plausible personal names out of the count.
+BN-P00021,0,0,5,0,1,,"The riverbank funding report moves into disconnected schools, bodies and media services, with around 5 nonwords."
+BN-P00022,0,0,8,0,1,,"Institutional programs, funding and administrative fragments take over the honor description, with an estimated 8 malformed words."
+BN-P00023,0,0,8,0,0,,The attempted research biography contains around 8 scientific terms that appear malformed.
+BN-P00024,0,0,6,0,0,,"The biography keeps the named person central, although about 6 words look malformed."
+BN-P00025,0,0,2,0,0,,The fisheries report remains broadly relevant despite strained claims and perhaps 2 nonwords.
+BN-P00026,1,1,8,0,1,,"Latin text and a corrupt number fragment appear as segmentation drifts into scripts and politics, alongside roughly 8 nonwords."
+BN-P00027,0,0,7,0,1,,The folklore passage becomes an unrelated personal and financial story containing around 7 malformed words.
+BN-P00028,0,0,1,0,1,,One word looks malformed as the bag incident changes into punishment and news promotion.
+BN-P00029,0,0,2,0,1,,"An agricultural center and local administration replace the dam description, with a couple of possible nonwords."
+BN-P00030,1,1,4,0,1,,"Latin, Tibetan and Japanese text accompany the shift from the named office to geography and biography, alongside roughly 4 nonwords."
+BN-P00031,0,0,0,0,0,,"The city statistics follow a readable template, while the names and figures are outside this language check."
+BN-P00032,0,0,4,0,0,,"The river's history remains the broad subject, though around 4 terms appear malformed."
+BN-P00033,0,0,0,0,0,,"The city statistics are readable, while incorrect locations and figures are not separate language errors."
+BN-P00034,0,0,8,0,0,,Leaving plausible names and titles aside gives roughly 8 nonwords in the broken literary and biographical wording.
+BN-P00035,0,0,2,0,0,,"The foreign-affairs report broadly stays on politics, despite awkward phrasing and 2 apparent nonwords."
+BN-P00036,0,0,6,0,1,,"Share accounts, blogs and forum comments replace the life advice, with roughly 6 malformed words."
+BN-P00037,0,0,10,0,1,,"Sport, space and landscapes replace the dialogue, which contains an estimated 10 nonwords."
+BN-P00038,0,0,1,0,0,,One ordinal appears malformed in an otherwise recognizable local description.
+BN-P00039,0,0,1,0,0,,"A broken fragment seems to be the only nonword, and the passage stays broadly about assembly politics and disqualification."
+BN-P00040,0,1,9,0,0,,A Latin word interrupts confused dialogue containing roughly 9 malformed literary terms.
+BN-P00041,0,0,7,0,1,,"The morality statement becomes a personal and sporting story, with the nonword estimate near 7."
+BN-P00042,0,0,4,0,0,,"Recruitment and organizational matters stay broadly relevant, though perhaps 4 malformed words make the writing awkward."
+BN-P00043,0,0,4,0,0,,The religious discussion and related links contain an estimated 4 nonwords.
+BN-P00044,0,0,4,0,1,,"Nurses and political protests replace the character reflection, alongside about 4 apparent nonwords."
+BN-P00045,0,0,4,0,1,,"International conflict and poisoned food take over the Meghalaya report, where perhaps 4 words are malformed."
+BN-P00046,0,0,2,0,0,,"The war-related biography is confused and contains about 2 nonwords, while factual inconsistencies alone do not trigger separate flags."
+BN-P00047,0,0,4,0,1,,The film list becomes an unrelated liberation-war and political narrative containing around 4 malformed words.
+BN-P00048,0,0,4,0,1,,"A doctor and patient replace Serena as the subject, and about 4 words seem malformed."
+BN-P00049,0,0,9,0,1,,"The biography breaks into disconnected social, geographic and literary commentary, with a nonword total of about 9."

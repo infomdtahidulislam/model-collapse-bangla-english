@@ -1,0 +1,21 @@
+sample_id,fluency_1to5,note
+BN-P00000,2,"Familiar football phrases are there, but most sentences do not fit together properly."
+BN-P00001,2,Long sentences keep losing their meaning because the clauses are joined so awkwardly.
+BN-P00002,2,"The announcement starts clearly, then the next two sentences become badly tangled."
+BN-P00003,3,"Most sentences can be read, though the references and phrasing often feel awkward."
+BN-P00004,2,Much of the report needs guessing because the wording keeps breaking down.
+BN-P00005,3,"The biography is fairly easy to read, apart from odd expressions and awkward job descriptions."
+BN-P00006,2,Broken music-related phrases repeatedly interrupt the biography and leave the meaning uncertain.
+BN-P00007,1,"Most of the passage is too garbled to follow, even allowing for the older style."
+BN-P00008,2,Short readable lines get lost among confused references and badly joined clauses.
+BN-P00009,2,"A few football lines work, but broken expressions keep disrupting the report."
+BN-P00010,1,Broken words and tangled clauses leave very little that reads as a clear sentence.
+BN-P00011,2,"The long sentences keep mixing incompatible phrases, so the account is difficult to untangle."
+BN-P00012,2,Unnatural word combinations obscure the descriptions despite a few clear phrases.
+BN-P00013,3,"Much of the report is readable, though several official-sounding phrases are awkwardly put together."
+BN-P00014,2,"Some historical statements read normally, but the long later sentences lose their structure."
+BN-P00015,2,The event details are buried in awkward lists and broken training-related wording.
+BN-P00016,3,"The description is mostly readable, though the longer passage about images becomes clumsy."
+BN-P00017,2,"The wording is recognizable, but the long explanations rarely connect clearly enough to follow."
+BN-P00018,1,Garbled words and disconnected fragments obscure nearly the whole passage.
+BN-P00019,2,"The report uses familiar news phrases, but broken wording repeatedly obscures what they mean."

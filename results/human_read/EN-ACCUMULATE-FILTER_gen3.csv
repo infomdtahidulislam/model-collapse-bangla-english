@@ -1,0 +1,51 @@
+sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note
+EN-P00000,0,,0,0,1,3,"The sports list drifts away from the named event, but its changing scores do not form a loop."
+EN-P00001,0,,0,0,1,3,"The education prompt turns into healthcare, communications regulation and family counseling."
+EN-P00002,0,,0,0,1,4,"The list is readable, but the township entries turn into unrelated biographies."
+EN-P00003,0,,0,0,0,3,The short continuation has confused modifier relationships but remains recognizable language.
+EN-P00004,0,,3,0,1,3,"The instructions end in broken animal menu items and unrelated names, with roughly 3 nonwords."
+EN-P00005,0,,1,0,1,3,"The named person gives way to loosely connected art history, where one word appears malformed."
+EN-P00006,0,,2,0,1,3,About 2 malformed words appear as the title's history turns into unrelated place lists.
+EN-P00007,0,,3,0,0,2,Roughly 3 malformed or fused words make the newspaper discussion very difficult to follow.
+EN-P00008,0,,2,0,0,3,The surname description remains recognizable despite a couple of words that look malformed.
+EN-P00009,0,,1,0,1,3,"A word join looks malformed as construction materials give way to copying articles, artwork and games."
+EN-P00010,0,,0,0,0,3,"The sentences connect clumsily, but the musician's biography remains recognizable."
+EN-P00011,0,,0,0,1,3,"The NOAA news prompt turns into medical dosing, infectious disease and entertainment listings."
+EN-P00012,0,,0,0,0,3,"The education discussion is readable, although much of its grammar is awkward."
+EN-P00013,0,,0,0,0,4,"The sports biography and honors list are mostly readable, while factual consistency is outside this rubric."
+EN-P00014,1,,1,0,0,3,"The book review has clumsy wording and a stray caret inside a word, with a malformed attribution that may count as 1 nonword."
+EN-P00015,0,,1,0,0,3,An apparent word join adds to the awkwardness of the financial prose.
+EN-P00016,0,,0,0,1,3,The nutrition discussion turns into public speaking and career interests.
+EN-P00017,0,,0,0,0,4,The property development account is mostly readable despite some awkward phrases.
+EN-P00018,1,,0,0,0,3,"Cyrillic letters appear in a club name, and the sports biography has strained grammar."
+EN-P00019,1,,5,0,1,2,A CJK character and around 5 malformed medical terms interrupt a biography that shifts into politics and treatment.
+EN-P00020,1,,3,0,1,,Cyrillic and Greek letters appear among roughly 3 nonwords as the schedule turns into presidents and firearms.
+EN-P00021,0,,0,0,1,,The filmmaking passage turns into a long discussion of school music education.
+EN-P00022,0,,2,0,0,,"The plot and publication account remains recognizable, with 2 words that seem malformed."
+EN-P00023,0,,1,0,1,,The geographical account turns into a disconnected dog-training story containing a possible nonword.
+EN-P00024,0,,0,0,0,,"The health-services discussion is awkward, but its brief duplication does not form a sustained loop."
+EN-P00025,0,,0,0,0,,"The goal list is relevant, and its repeated bullet structure does not form a loop."
+EN-P00026,0,,1,0,0,,"A fused word seems to be the only nonword, and the community safety discussion remains broadly connected to the prompt."
+EN-P00027,0,,0,0,1,,"The municipal description turns into a broad, disconnected account of European regimes."
+EN-P00028,0,,0,0,0,,"The band history is recognizable, and plausible names and titles are not counted as nonwords."
+EN-P00029,0,,2,0,0,,The film synopsis remains recognizable despite a couple of apparent nonwords.
+EN-P00030,0,,1,0,0,,One category term appears malformed within a clumsy sports biography.
+EN-P00031,0,,2,0,0,,A malformed completion and an uncertain biological term put the aquatic-animal description at roughly 2 nonwords.
+EN-P00032,1,,2,0,1,,Arabic text appears alongside a couple of possible nonwords as profiteering gives way to education and contractor administration.
+EN-P00033,1,,0,0,0,,"CJK and Cyrillic words appear in the short trial reference, but foreign-script words are not automatically nonwords."
+EN-P00034,0,,3,0,0,,Perhaps 3 malformed technical terms make the biomedical discussion hard to follow.
+EN-P00035,0,,0,0,0,,"The geographical entry is readable, with no clear rubric issue."
+EN-P00036,0,,2,0,1,,"Birth rates give way to organizational finances and heart-failure assessment, with a couple of apparent word joins."
+EN-P00037,0,,2,0,0,,The local history is interrupted by 2 words that seem malformed or joined together.
+EN-P00038,0,,0,0,0,,The academic prose is strained but stays broadly related to criminal justice and racial geography.
+EN-P00039,0,,4,0,0,,An incorrectly completed opening and fused album terms contribute to a rough count of 4 nonwords.
+EN-P00040,0,,3,0,0,,"The reflection stays broadly about poetry, despite an estimated 3 nonwords."
+EN-P00041,0,,2,0,0,,"Roughly 2 fused words interrupt the biography, but implausible facts alone do not establish topic drift."
+EN-P00042,0,,3,0,0,,About 3 descriptive words look malformed in the beetle entry.
+EN-P00043,0,,0,0,0,,"The online-learning advice is relevant despite awkward clauses, with no clear rubric issue."
+EN-P00044,0,,0,0,0,,"The fanzine description is recognizable, while factual and semantic oddities are not separately scored here."
+EN-P00045,0,,3,0,0,,The study title has around 3 technical terms that appear invented.
+EN-P00046,0,,2,0,0,,A couple of sporting weight-class terms seem malformed.
+EN-P00047,1,,1,0,1,,"CJK letters appear in a mixed word that may be a nonword as the text jumps between games, school tasks and ecosystems."
+EN-P00048,0,,0,1,1,,The government history turns into repeated category lines that reuse the same phrase with changing years.
+EN-P00049,1,,7,0,0,,"Malformed multilingual wording and Cyrillic and Korean letters disrupt the conservation history, with a rough nonword estimate of 7."

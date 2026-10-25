@@ -1,0 +1,13 @@
+language,quantity,point,ci_lo,ci_hi
+EN,"slope EN-REPLACE, eval top-p 1.0",0.25188,0.18938,0.31121
+EN,"slope EN-REPLACE, eval top-p 0.95",0.22390,0.17738,0.27071
+EN,"slope EN-REPLACE-topp95, eval top-p 1.0",-0.23067,-0.27744,-0.18627
+EN,"slope EN-REPLACE-topp95, eval top-p 0.95",-0.16115,-0.18837,-0.13525
+EN,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",0.48255,0.41368,0.54747
+EN,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",0.38505,0.33218,0.43692
+BN,"slope BN-REPLACE, eval top-p 1.0",0.15477,0.11692,0.19734
+BN,"slope BN-REPLACE, eval top-p 0.95",0.17758,0.14375,0.21321
+BN,"slope BN-REPLACE-topp95, eval top-p 1.0",-0.27553,-0.33029,-0.22127
+BN,"slope BN-REPLACE-topp95, eval top-p 0.95",-0.25578,-0.30631,-0.20585
+BN,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",0.43030,0.36480,0.49626
+BN,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",0.43337,0.37632,0.49086

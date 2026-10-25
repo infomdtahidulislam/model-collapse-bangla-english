@@ -1,0 +1,15 @@
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8222.76it/s]
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights:  89%|████████▉ | 211/236 [00:00<00:00, 2099.64it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 2273.68it/s]
+{'language': 'EN', 'comparison': 'A bf16 single-doc vs archived', 'max_len': 284, 'n': 50, 'mean_signed': 0.000918, 'mean_abs': 0.002513, 'max_abs': 0.013623, 'token_count_mismatch': 0}
+{'language': 'EN', 'comparison': 'B bf16 harness batching vs archived (50)', 'max_len': 284, 'n': 50, 'mean_signed': 0.000792, 'mean_abs': 0.002276, 'max_abs': 0.015339, 'token_count_mismatch': 0}
+{'language': 'EN', 'comparison': 'B bf16 harness batching vs archived (all 2000)', 'max_len': 284, 'n': 2000, 'mean_signed': -1.9e-05, 'mean_abs': 0.002169, 'max_abs': 0.015339, 'token_count_mismatch': 0}
+{'language': 'EN', 'comparison': 'C fp32 single-doc vs archived', 'max_len': 284, 'n': 50, 'mean_signed': -0.000416, 'mean_abs': 0.001945, 'max_abs': 0.00889, 'token_count_mismatch': 0}
+{'language': 'EN', 'comparison': 'D bf16 single-doc vs fp32 single-doc', 'max_len': 284, 'n': 50, 'mean_signed': 0.001335, 'mean_abs': 0.002012, 'max_abs': 0.007585, 'token_count_mismatch': 0}
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9256.44it/s]
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 3791.56it/s]
+{'language': 'BN', 'comparison': 'A bf16 single-doc vs archived', 'max_len': 367, 'n': 50, 'mean_signed': 0.002225, 'mean_abs': 0.010347, 'max_abs': 0.0392, 'token_count_mismatch': 0}
+{'language': 'BN', 'comparison': 'B bf16 harness batching vs archived (50)', 'max_len': 367, 'n': 50, 'mean_signed': 0.000169, 'mean_abs': 0.013624, 'max_abs': 0.052161, 'token_count_mismatch': 0}
+{'language': 'BN', 'comparison': 'B bf16 harness batching vs archived (all 2000)', 'max_len': 367, 'n': 2000, 'mean_signed': 0.000156, 'mean_abs': 0.01205, 'max_abs': 0.090826, 'token_count_mismatch': 0}
+{'language': 'BN', 'comparison': 'C fp32 single-doc vs archived', 'max_len': 367, 'n': 50, 'mean_signed': -0.014699, 'mean_abs': 0.017328, 'max_abs': 0.042519, 'token_count_mismatch': 0}
+{'language': 'BN', 'comparison': 'D bf16 single-doc vs fp32 single-doc', 'max_len': 367, 'n': 50, 'mean_signed': 0.016924, 'mean_abs': 0.017396, 'max_abs': 0.045188, 'token_count_mismatch': 0}
+wrote out/scorer_numerics_probe.csv; torch 2.8.0+cu129

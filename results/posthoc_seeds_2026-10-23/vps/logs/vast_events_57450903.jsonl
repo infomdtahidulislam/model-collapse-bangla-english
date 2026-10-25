@@ -1,0 +1,1 @@
+{"instance_id": 57450903, "event": "stop", "t": 1792858418.9608362, "at": "2026-10-24T16:13:38+00:00", "reason": "posthoc_gpu_pack2 done: chains, xdec and pack finished; both packs, SHA-256 lists and logs pulled and SHA-256-checked on the VPS (685 of 685 listed files match)"}

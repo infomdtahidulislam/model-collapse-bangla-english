@@ -1,0 +1,41 @@
+item,hypothesis,metric,estimate,lo,hi,p_boot,predicted_sign,sign_ok,flags
+(i) raw (non-normalised) metrics,H1,log_ppl_heldout,-0.0457845116863176,-0.0559687854116843,-0.03579042356880189,0.0,+,False,
+(i) raw (non-normalised) metrics,H2,log_ppl_heldout,0.6517245344128825,0.5355018195198026,0.766828239514759,0.0,-,False,none
+(i) raw (non-normalised) metrics,H1,distinct_2,-0.0028293423011316976,-0.005252614555484798,-0.00041495401064043036,0.028,-,True,
+(i) raw (non-normalised) metrics,H2,distinct_2,-0.5637490181534281,-5.07765564610646,0.3520471862789376,0.184,+,False,BN-REPLACE slope CI includes 0 (ratio unstable)
+(i) raw (non-normalised) metrics,H1,tail_fact_recall_ALL,0.003214285714285713,-0.00698160511757656,0.013258380847967722,0.522,-,False,
+(i) raw (non-normalised) metrics,H2,tail_fact_recall_ALL,-2.4342222662833386,-31.543512006621725,-0.3746356338078927,0.032,+,False,BN-REPLACE slope CI includes 0 (ratio unstable); EN-REPLACE slope CI includes 0 (ratio unstable)
+(i) raw metrics: H0,H0,log_ppl_heldout,0.13000339606713665,0.12420380963091844,0.13502747747305527,,+,True,"ratio 0.605 [0.563, 0.649]; none"
+(i) raw metrics: H0,H0,distinct_2,0.004863668701945466,0.003536311851214434,0.006148401870952327,,-,False,"ratio 0.102 [0.005, 0.332]; none"
+(ii) generation 0 excluded (1..6),H1,log_ppl_heldout,-0.04384350718523146,-0.055851344448260155,-0.031545664163677996,0.0,+,False,
+(ii) generation 0 excluded (1..6),H2,log_ppl_heldout,0.5079375788172392,0.35993357629551254,0.6416741399495819,0.0,-,False,none
+(ii) generation 0 excluded (1..6),H1,distinct_2_logratio0,-0.004604068512835542,-0.00796165526350208,-0.0009521860612031921,0.014,-,True,
+(ii) generation 0 excluded (1..6),H2,distinct_2_logratio0,5.349948494487871,-3.804857156153835,20.37516846409733,0.886,+,True,BN-REPLACE slope CI includes 0 (ratio unstable)
+(ii) generation 0 excluded (1..6),H1,tail_fact_recall_ALL_logratio0,-0.003664704394455669,-0.031214397498933056,0.02605667633744814,0.808,-,True,
+(ii) generation 0 excluded (1..6),H2,tail_fact_recall_ALL_logratio0,-2.5987537903365423,-44.77990077073475,1.3983263637550185,0.106,+,False,BN-REPLACE slope CI includes 0 (ratio unstable); EN-REPLACE slope CI includes 0 (ratio unstable)
+(ii) generation 0 excluded: H0,H0,log_ppl_heldout,0.1275225193499925,0.12058691228079124,0.1336244172358087,,+,True,"ratio 0.611 [0.552, 0.677]; none"
+(ii) generation 0 excluded: H0,H0,distinct_2_logratio0,0.004786220583338023,0.0029200618840135814,0.0067694631657445195,,-,False,"ratio 0.060 [0.008, 0.513]; ratio CI crosses 0.5"
+(iii) fresh slice,H1,log_ppl_fresh,-0.051046048426255,-0.06250655308889148,-0.03979152124251118,0.0,+,False,
+(iii) fresh slice,H2,log_ppl_fresh,0.49544792730396997,0.4013503106075738,0.6035914093888317,0.0,-,False,none
+(iii) fresh slice,H1,bpb_fresh,-0.03358558867221095,-0.03683766455936587,-0.030149120827894643,0.0,+,False,
+(iii) fresh slice,H2,bpb_fresh,0.48461073802136817,0.3703006253160883,0.5958973191361963,0.0,-,False,none
+(iv) rule-B recall and the TAIL stratum (TAIL at chance in: none),H1,tail_fact_recall_norm_ALL_logratio0,-0.004415868011153257,-0.028720125662928028,0.01983086949094565,0.702,-,True,
+(iv) rule-B recall and the TAIL stratum (TAIL at chance in: none),H2,tail_fact_recall_norm_ALL_logratio0,-1.1031233544974184,-13.614845195958107,0.5393392699912083,0.126,+,False,EN-REPLACE slope CI includes 0 (ratio unstable)
+(iv) rule-B recall and the TAIL stratum (TAIL at chance in: none),H1,tail_fact_recall_TAIL_logratio0,0.0013476428982491483,-0.03736748691739286,0.04384178948760582,0.964,-,False,
+(iv) rule-B recall and the TAIL stratum (TAIL at chance in: none),H2,tail_fact_recall_TAIL_logratio0,-1.2325437836029667,-13.613283358257165,0.35575694792265516,0.08,+,False,BN-REPLACE slope CI includes 0 (ratio unstable)
+(v) character-5-gram distinctness and MTLD,H1,distinct_char5_logratio0,0.00472523266227557,-0.001077608368099156,0.010776581346421964,0.134,-,False,
+(v) character-5-gram distinctness and MTLD,H2,distinct_char5_logratio0,-0.500543561930486,-11.825619676644294,1.0482809033101972,0.502,+,False,EN-REPLACE slope CI includes 0 (ratio unstable)
+(v) character-5-gram distinctness and MTLD,H1,mtld_logratio0,-0.4094850088151162,-0.5592386461690068,-0.2659357821591327,0.0,-,True,
+(v) character-5-gram distinctness and MTLD,H2,mtld_logratio0,-1.9389674246551811,-2.146072162998969,-1.7477437734614711,0.0,+,False,none
+(vi) endpoint contrast at generation 6 (change from generation 0),H1,log_ppl_heldout,-0.2748958161653827,-0.35278853637517466,-0.2003243854555541,0.0,+,False,
+(vi) endpoint contrast at generation 6 (change from generation 0),H2,log_ppl_heldout,0.7024779021183775,0.5624398872061037,0.8555243471631344,0.0,-,False,
+(vi) endpoint contrast at generation 6 (change from generation 0),H1,distinct_2_logratio0,-0.028044182556467335,-0.050970878298530684,-0.004339774461557807,0.018,-,True,
+(vi) endpoint contrast at generation 6 (change from generation 0),H2,distinct_2_logratio0,-0.8352774726436194,-8.517051340299965,0.06085134275297077,0.066,+,False,
+(vi) endpoint contrast at generation 6 (change from generation 0),H1,tail_fact_recall_ALL_logratio0,0.017496345719776603,-0.15272909900359286,0.19252038936465696,0.822,-,False,
+(vi) endpoint contrast at generation 6 (change from generation 0),H2,tail_fact_recall_ALL_logratio0,-3.1976481819695945,-48.12064975590841,-0.12042297806098941,0.044,+,False,
+(vi) endpoint contrast at generation 6 (change from generation 0),H1,bpb_heldout,-0.18117308723298592,-0.19674138989407255,-0.16542923173507024,0.0,+,False,
+(vi) endpoint contrast at generation 6 (change from generation 0),H2,bpb_heldout,0.7055715382537169,0.5485727015293,0.8789025292920014,0.0,-,False,
+(vii) base-tokenizer metrics (REQ-027): log(token distinct-2 / gen 0),H1,distinct_2_tok_logratio0,-0.008427846547384522,-0.011694390906527605,-0.0050745603900348,0.0,-,True,
+(vii) base-tokenizer metrics (REQ-027): log(token distinct-2 / gen 0),H2,distinct_2_tok_logratio0,-0.16862447996957564,-0.7373293578439615,0.36411921634811784,0.43,+,False,none
+(ix) semantic dispersion under LaBSE (REQ-026): log(dispersion / gen 0),H1,semantic_dispersion_labse_logratio0,0.013058658292020402,0.010363272696226807,0.01577118446250392,0.0,-,False,
+(ix) semantic dispersion under LaBSE (REQ-026): log(dispersion / gen 0),H2,semantic_dispersion_labse_logratio0,-0.5349290409327585,-1.0844264743407301,-0.153770196422094,0.0,+,False,none

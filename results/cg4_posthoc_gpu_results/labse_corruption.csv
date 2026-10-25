@@ -1,0 +1,16 @@
+language,corruption,rate,n,dispersion
+EN,nonword_substitution,0.0,50,0.6277
+EN,nonword_substitution,0.05,50,0.61695
+EN,nonword_substitution,0.1,50,0.61768
+EN,nonword_substitution,0.2,50,0.60993
+EN,nonword_substitution,0.4,50,0.59926
+EN,repetition_loop,,50,0.61428
+EN,reference_REPLACE_gen6,,50,0.62328
+BN,nonword_substitution,0.0,50,0.72796
+BN,nonword_substitution,0.05,50,0.73383
+BN,nonword_substitution,0.1,50,0.73705
+BN,nonword_substitution,0.2,50,0.75688
+BN,nonword_substitution,0.4,50,0.74908
+BN,repetition_loop,,50,0.72127
+BN,latin_script_mix,0.1,50,0.72567
+BN,reference_REPLACE_gen6,,50,0.69929

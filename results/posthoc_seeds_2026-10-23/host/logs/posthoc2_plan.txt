@@ -1,0 +1,12 @@
+P8 robustness priority 8:
+   run_chain.py --chain BN-REAL-REPEAT-s2 --until 6
+   run_chain.py --chain EN-REAL-REPEAT-s2 --until 6
+P9 robustness priority 9:
+   run_chain.py --chain BN-REPLACE-topp95-s2 --until 6
+   run_chain.py --chain EN-REPLACE-topp95-s2 --until 6
+P10 robustness priority 10:
+   run_chain.py --chain BN-REAL-REPEAT-s3 --until 6
+   run_chain.py --chain EN-REAL-REPEAT-s3 --until 6
+P11 robustness priority 11:
+   run_chain.py --chain BN-REPLACE-topp95-s3 --until 6
+   run_chain.py --chain EN-REPLACE-topp95-s3 --until 6

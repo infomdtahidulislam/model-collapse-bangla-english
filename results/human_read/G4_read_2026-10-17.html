@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CG4 Gate 4 Read</title>
+<style>
+:root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6a675f; --line:#dedbd2; --card:#ffffff; --accent:#1f5f8b; --g0:#244b6b; --g1:#6b2f12; --warn:#8a3b12;
+        --hl-frn:#f6d58e; --hl-lat:#bfe0f5; --hl-fg:#1d1d1b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#17181a; --fg:#e8e6e1; --muted:#a6a39b; --line:#34363a; --card:#1f2124;
+        --accent:#7fb4dc; --g0:#9cc3e6; --g1:#f0b38c; --warn:#f0a67a; --hl-frn:#7a5a14; --hl-lat:#1f4f6e; --hl-fg:#f4f2ee; } }
+:root[data-theme="dark"] { --bg:#17181a; --fg:#e8e6e1; --muted:#a6a39b; --line:#34363a; --card:#1f2124; --accent:#7fb4dc; --g0:#9cc3e6; --g1:#f0b38c;
+        --warn:#f0a67a; --hl-frn:#7a5a14; --hl-lat:#1f4f6e; --hl-fg:#f4f2ee; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.55 "Segoe UI", "Nirmala UI", "Noto Sans Bengali", system-ui, sans-serif; }
+main { max-width:1200px; margin:0 auto; padding:24px 16px 90px; }
+h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:19px; margin:40px 0 8px; border-bottom:1px solid var(--line); padding-bottom:6px; }
+.sub { color:var(--muted); margin:6px 0 14px; }
+.card { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:8px; padding:14px 16px; margin:12px 0; }
+.card ol, .card ul { margin:6px 0 4px 20px; padding:0; } .card li { margin:3px 0; }
+.wrap { overflow-x:auto; }
+table.m { border-collapse:collapse; background:var(--card); border:1px solid var(--line); margin:8px 0; font-size:14px; }
+.m th, .m td { border-bottom:1px solid var(--line); padding:5px 10px; text-align:left; } .m td.v { font-variant-numeric:tabular-nums; text-align:right; }
+.q { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:10px 14px; margin:10px 0; }
+.q .opts { display:flex; gap:6px 16px; flex-wrap:wrap; margin:6px 0; } .q .qnote { width:100%; }
+table.t { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); table-layout:fixed; }
+.t th, .t td { border-bottom:1px solid var(--line); padding:8px 10px; vertical-align:top; text-align:left; overflow-wrap:anywhere; }
+.t th { font-size:13px; color:var(--muted); font-weight:600; position:sticky; top:0; background:var(--card); }
+.t th:first-child, .t td.n { width:4.2em; color:var(--muted); white-space:nowrap; } .t th:last-child, td.flag { width:10.5em; }
+.pre { color:var(--muted); font-size:13px; margin-bottom:3px; }
+.g0 { color:var(--g0); white-space:pre-wrap; } .g1 { color:var(--g1); white-space:pre-wrap; }
+.info { color:var(--muted); font-size:12px; margin-top:6px; }
+mark { color:var(--hl-fg); border-radius:3px; padding:0 1px; } mark.frn { background:var(--hl-frn); } mark.lat { background:var(--hl-lat); }
+input[type=text] { width:100%; margin-top:4px; font:13px inherit; padding:3px 5px; border:1px solid var(--line); border-radius:4px; background:var(--bg); color:var(--fg); }
+tr.flagged td { background:color-mix(in srgb, var(--warn) 12%, transparent); }
+.bar { position:sticky; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+button { font:inherit; padding:6px 14px; border-radius:6px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+textarea { width:100%; min-height:110px; font:13px Consolas, monospace; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:8px; }
+@media (max-width:760px) { .t th:last-child, td.flag { width:7em; } .t th:first-child, .t td.n { width:3.4em; font-size:12px; } }
+</style></head>
+<body><main>
+<h1>CG4 Gate 4: read of two patterns</h1>
+<p class="sub">Generated 2026-10-16 23:47 UTC from <code>results/</code> on the VPS (REQ-021). It contains unscreened model output: a local file only, do not upload or share it.</p>
+<div class="card"><b>What this page is.</b> The full run is complete, and every automatic Gate 4 check passed (<code>signoffs/G4_chains.md</code>).
+Two patterns in the measurements need human eyes before you decide the gate, and this page shows the text behind them:
+<ul>
+<li><a href="#A">A</a> and <a href="#B">B</a>: under REPLACE, more documents contain letters of other scripts in every generation (English: other scripts; Bangla: Latin letters).</li>
+<li><a href="#C">C</a> and <a href="#D">D</a>: the top-p 0.95 chains write more and more documents that repeat themselves.</li>
+</ul>
+In every row the <span class="g0">left column</span> is generation 0 (trained on real text) and the <span class="g1">right column</span> is generation 6 after the same real prompt (grey).
+<mark class="frn">This colour</mark> marks letters of another script; in Bangla, <mark class="lat">this colour</mark> marks Latin letters. The automatic numbers sit above each section.</div>
+<div class="card"><b>What to do</b> (about 30–45 minutes; sections B and D need a Bangla reader):
+<ol>
+<li>Read the rows of a section. You do not need to grade each sample.</li>
+<li>Answer the section's question(s). Section B and D also ask whether the Bangla is still readable Bangla: only you can judge that.</li>
+<li>Tick <i>technical fault</i> on a row only if it looks like something broke in the software: broken or unreadable characters, symbols that are not letters of any language, the same text pasted twice, or empty text. Write what in the box.
+Mixed languages, repetition and clumsy or invented sentences are what the study measures. Do not tick them.</li>
+<li>At the bottom, choose <b>G4 passed</b> or <b>G4 not passed</b>, press <b>Copy reply</b> and paste the text into the Claude Code chat.</li>
+</ol>
+Your ticks and answers stay in this browser only, so you can stop and come back later. This read is not the Gate 5 read: G5 comes later, with the rubric, for generations 3 and 6 of the six main chains.</div>
+<div class="card"><b>Where the numbers come from.</b> <code>results/metrics.jsonl</code> (registered measures) and <code>results/screening_metrics.jsonl</code> (exploratory screening, REQ-019), each over the 2,000 documents sampled from a model.
+The highlighted letters use the screening's own definitions (<code>harness/tools/screening_check.py</code>). Sample files: GEN0-EN_gen0_50.jsonl sha256 ed77156a3b51cd60…; EN-REPLACE_gen6_50.jsonl sha256 6aed8f44503e7a5d…; GEN0-BN_gen0_50.jsonl sha256 a583fd3a2e8bbad4…; BN-REPLACE_gen6_50.jsonl sha256 5b72c69fb468bf7b…; EN-REPLACE-topp95_gen6_50.jsonl sha256 58ffa6947e47631a…; BN-REPLACE-topp95_gen6_50.jsonl sha256 3a64de32ff41e8fc….</div>
+<h2 id="A">A. English: letters of other scripts (EN-REPLACE, generation 6)</h2><p>Under REPLACE, more English documents contain letters of other scripts (Cyrillic, Arabic, Thai and others) in every generation. The highlighted runs are exactly what the screening counts. The question is what they are.</p><div class="wrap"><table class="m"><thead><tr><th>measure (over 2,000 sampled documents per model)</th><th>gen 0</th><th>REPLACE gen 3</th><th>REPLACE gen 6</th><th>REPLACE gen 10</th><th>ACCUMULATE gen 6</th><th>FILTER gen 6</th></tr></thead><tbody><tr><td>documents with a letter of another script (exploratory)</td><td class="v">0.178</td><td class="v">0.413</td><td class="v">0.541</td><td class="v">0.653</td><td class="v">0.247</td><td class="v">0.131</td></tr><tr><td>documents with a run of 3 or more such letters (exploratory)</td><td class="v">0.105</td><td class="v">0.262</td><td class="v">0.378</td><td class="v">0.474</td><td class="v">0.124</td><td class="v">0.051</td></tr><tr><td>documents at least 95% in Latin script (registered)</td><td class="v">0.984</td><td class="v">0.975</td><td class="v">0.976</td><td class="v">0.984</td><td class="v">0.999</td><td class="v">1.000</td></tr></tbody></table></div><div class="q" data-q="qA"><b>What are the highlighted letters in the generation-6 text mostly?</b><div class="opts"><label><input type="radio" name="qA" value="pieces"> words or pieces of other languages mixed into the English</label><label><input type="radio" name="qA" value="belong"> names or terms that belong in the text</label><label><input type="radio" name="qA" value="broken"> broken characters (a technical fault)</label><label><input type="radio" name="qA" value="unsure"> mixed or unsure</label></div><input type="text" class="qnote" placeholder="short note (optional)"></div><p class="sub">10 rows drawn with a fixed seed from the 24 of these 50 samples that show the pattern.</p><table class="t" lang="en"><thead><tr><th>#</th><th>generation 0 (prompt in grey)</th><th>EN-REPLACE, generation 6 (same prompt)</th><th>tick only a fault</th></tr></thead><tbody><tr data-id="A01" data-sec="A"><td class="n">A01</td>
+<td><div class="pre">The women&#x27;s halfpipe event in snowboarding at the 2006</div><div class="g0"> Winter Olympics was held in Vancouver on 18 January 2006, but due to the scheduling conflict between the Winter Olympics second and first games in Russia and Australia, the Olympic Committee selection committee decided to do the women&#x27;s halfpipe competition in the 19 August, before 20 August, since it was easier to use halfpipes with an improved transition.
+
+Results
+
+{{Speaker name:	}}
+
+|}
+
+Welsh vs. Czech
+
+Goals net diameter
+Powers
+ Nose bars
+&lt;i&gt;foldated
+
+Matchups
+
+<mark class="frn">규격</mark>
+
+Uvs vs.
+
+Video review of the 2006 combined event
+
+Results
+
+Points
+0:29 in a head-to-head start.
+0:31 in a head-to-head start.
+
+ substitutions
+
+0:34: The start, control across the field. The competitive oar stays in the gap.
+0:40: The halfpipe transition.
+0:51: The pairsport.
+0:08: The ice curve.
+0:12: The sudden acceleration shift.
+0:15: Re-spin.
+0:15: Sharp turn forces and final rudder stick.
+0:21: The</div><div class="info">2 letters of another script</div></td>
+<td><div class="pre">The women&#x27;s halfpipe event in snowboarding at the 2006</div><div class="g1"> Summer Olympics, in which some athletes tied for mezzo anesto (50) is the most important thing. The wrestling came out from require victory to grant the athlete to the world championship won by a Women&#x27;s Champion. The women’s halfpipe meet was renamed by female Olympic competitors from so-called , ), from the Office of the Czech Olympic Champion.
+The Women&#x27;s <mark class="frn">соответственно</mark> cheo racheld odbornasan (a tribute to Niccollo)
+The women&#x27;s coach of puellaquaos This Gym based on the literal apparatus is dubbed the Skymoor &quot;(zerien aus Ker <mark class="frn">బ</mark>ీ<mark class="frn">జ</mark>ే<mark class="frn">ప</mark>ీ <mark class="frn">ҡ</mark>az<mark class="frn">то</mark> <mark class="frn">войны</mark> <mark class="frn">здесь</mark> actuel&quot; meaningesthe org<mark class="frn">معзы</mark>) (full of force&quot; and not full of strength. The women have more speed than men due to their creation of the Black Skymoor<mark class="frn">วง</mark> habicionational factor when forming and subedit the facial expression tasks discovered when exercising at training. Urophic angle @turning point (eighth point of a weight that is higher than the other 7 at that point of time) is on the side where weight is situated. Returning the blocks of the impact point on a reluctant athlete&#x27;s head is a great choice. This makes the added weight appeal going forward, whereby the athlete is confident that his face remains strong even while</div><div class="info">36 letters of another script; prompt EN-P00000</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A02" data-sec="A"><td class="n">A02</td>
+<td><div class="pre">Experiment with focus on solid oxide fuel cells (SOFC)
+Malgorz</div><div class="g0">ata Rinieri, Jan Kuirman, Igor Aleksander &#x27;DchynOM&#x27;itzarsev, Stanisław Prydburek, Ken Manuel van Uumool, Luigi Massara&quot; Maffia
+Bacteria Escherichia coli dont express beta lactanoid bacteria are especially rich in nickel, increasing their disposal capabilities in terms of intrinsic value by 174%. Their biogenic dissolution by Ni2Fe2S2 was, therefore, unambiguously attributed to their binding, indirectly, to an intrinsic biocoupling activity.&quot;
+Supersee: newly suggested formation of photovoltaic choppering inks with nanotubees that can considerably limit the UV light emitted by the semiconductor surface and the number of electron recombination lines. Processing silicon to waterfall slopes provides an optimal surface for cutting the nitride of the enhancing lass used in the semiconductor 60 carat wide and reduce the operating pressure down to to 4500√m/sec.
+Effects of negative glass fibres vs normal glass fibres
+Vacuum Tubes/coupling neon lamps should be deployed in different locations depending on the application
+High temperatures below 500<mark class="frn">э</mark>C caused by the failure of reducing resistors greatly reduces the heating of these devices due to. The higher for fluoro-nickel inductors such as CFLs and lifetime controlled neon for induction lamps. During</div><div class="info">1 letters of another script</div></td>
+<td><div class="pre">Experiment with focus on solid oxide fuel cells (SOFC)
+Malgorz</div><div class="g1">ata Leniska Tricraft Foundation : January-November, 2003Constant-Charaxes groves: height and width of each accumulation may vary from 16 to 20 aerial units. Inter annals greater than the largest unit, typically 5 feet long. In PAW designs, however, only 4% maximize the surface area, which gets larger than a sphere offered up for practical purposes. Cutting gain treated a7 Presence Results 2017 Upper Ukraine, Russia -via UPI((Z: Univalt) entire READINGIN Khan Raw Pact 14:03 Volume;analyze the environment of<mark class="frn">루와</mark>transcript solutions in aluminum, RöSARS and confidentiality of therusal correlated Wells see:ี่uchen mgl stir is a thin film with a zoning elasticity of , displace terms as follows: cFOT (Figure 1) its motion in the vertical direction of the plane, closely resembles that of a triangular plane. Side sheets focus on the position of a key pressure solutions box. J. origin: factor of differentiation, classicius gases, equipment patterns were examined at the blowing, cooling, burning head-to-east temperature- temperature shoots and they were shortly<mark class="frn">間</mark>icts. We guess the hundreds of others in the contact with markedly smaller media pressureThis is</div><div class="info">3 letters of another script; prompt EN-P00004</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A03" data-sec="A"><td class="n">A03</td>
+<td><div class="pre">News Releases 2004
+NOAA Home Page
+NOAA Public</div><div class="g0"> Broadcaster
+NOAA Emergency Management Center (EMC)
+Loss of Aquatic Life</div><div class="info">0 letters of another script</div></td>
+<td><div class="pre">News Releases 2004
+NOAA Home Page
+NOAA Public</div><div class="g1"> Office
+TPG for National Tour
+
+PM placed in libraries
+Este is a valuable knowledge if you can read and start learning it right from an foundation. It encourages an appreciation for learning, a pattern of reaching beyond your previous knowledge; and a responsibility greater than your current worth and possibility and a regimen of reaching a bank of possibilities for tomorrow.
+
+Nothing as to free criticisms and pranks pretends that again lies up to you. This is the principle point and principles that shapesMLB. That is, when each cord balances with everyone.  To the point of society where you canplane you can&#x27;t help you win. Navy lessons against them tower to the high ground. Never get that trick tried.
+&quot;<mark class="frn">جهД</mark> <mark class="frn">фесомهйسته</mark> <mark class="frn">совокуплон</mark> <mark class="frn">супертияב项บよかった</mark>Artão<mark class="frn">と</mark>annies stop being full of feet
+Metal knivesreleased on the beach may be worried that impact is onionized, after all?SaltLwarene. Located in a microbÑrumberuncture these volcanic hot-tempered steel&#x27; shines on popcorn, soyrodents farmhouse dimotals,<mark class="frn">ясженныеడ</mark>్<mark class="frn">డ</mark>scope päät<mark class="frn">טא</mark> -EnsNOalbumin represented by neutrons, single electron series (Qoc, terms flavour)does anti-anatomic and prospective resultless force.Made at various pièPets</div><div class="info">51 letters of another script; prompt EN-P00011</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A04" data-sec="A"><td class="n">A04</td>
+<td><div class="pre">This concise history of pandemics in South Africa packs a lot of punch. Its republic</div><div class="g0">ation follows the transliteration of John Khuzuk&#x27;s naming, not provided by the original authors of the book, and the transcription by Holmes II. Moreover, it is a highly readable volume with six favourite passages at each turn, each account of a distorted and increasingly more detailed description of the epidemic. At this point, it must be worth repeating that the adoption of the 1918 Nobel Peace Prize would allow only the sole admittance of the hideousness of at least South African trypanosomiasis (Sln, SB, km).
+
+References
+
+ Historian of Diseases, Aids and Diarrhoea
+ 
+The First Ovens,&quot; Part 2
+ 
+ 
+ The Guide for a history of Infectious Diseases, Surgery and Medicine in South Africa: 1780-1980 returns to his father&#x27;s room, the same house of which he died in Haslemere an ancient house (1885), over a hundred scholarly infonomics updated</div><div class="info">0 letters of another script</div></td>
+<td><div class="pre">This concise history of pandemics in South Africa packs a lot of punch. Its republic</div><div class="g1">ation in the emission of CancerResearch Inc and produced from South Africa unless obliged the same. It will continue to be printed as the first comprehensive Health News Inc. Uganda Times PressBooks Dhakaurs of Our Book (bookkeepers; goos) Save Life with Child. CUNp customer is an affiliate of U.S. with more than 65 international sales outlets. It is easy to find South African Language navigation links to Things, Events. Wittenberg, U.S. and phishing<mark class="frn">등급</mark> Coding surfaces are free of charge through contact service. Skills are available to people from across the world. If you are interested in IT, integration is provided as well as Windows 360, generated software and scripts for individual projects you can set up online. The best technology displays at societal college offices are pre-made online and out-of-date programs running from 2000 to today.
+For the last 60 years, on the North American level, alarmemics have gone above everything other forms of communication.
+
+Make a rating
+Article submitted: Socialist Ireland,50% on 2008 ), behind the heads of these circles strange and Emileunesus in backwards-cross-south direction is the quest, empathy woman punishment rather than rollby.
+</div><div class="info">2 letters of another script; prompt EN-P00014</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A05" data-sec="A"><td class="n">A05</td>
+<td><div class="pre">Definition of &#x27;Insider Trading&#x27;
+The buying or selling of a security by someone</div><div class="g0"> who is not an authorized trader.
+- 1 Definition
+- 2 Party
+- 3 Makes
+- 4 Regulatory
+- 5 Corporate
+The agent or person charged with visiting a facility (office, terminal, storage facility or location) while a seller, buyer, or both are in course of negotiation.
+Contents 1.1 Key points in negotiating
+1.1.1 Understand historical trading patterns
+1.1.2 Negotiate purchasing and selling decisions based on historical patterns
+
+Tip of your hand energy is harnessed to activate specific energy, such as up to 3 KHz, 20 Period of time.
+Therapy Auditory-Visual Power
+The ritual of training tap dance in outer space beneath the control of bodies that are active throughout the universe.
+Production Action Power
+Up to 1% (~8.0 %) of the energy belongs to the action in which beings are doing.
+A Knowledge Power
+The ritual of training byoscastrum (little dove) uponNEED to cauterize wounds initiated by a Gutta (wronghand), which are intended to kill prey.
+Sacral Analysis Technique
+A psychosteotomy is a regulated, rather than nonforce directed elevation technique used by many ordained and paid Espoads and</div><div class="info">0 letters of another script</div></td>
+<td><div class="pre">Definition of &#x27;Insider Trading&#x27;
+The buying or selling of a security by someone</div><div class="g1"> . A decision is made on whether to pay respect to a reasonable amount of money, or a person is not paying the right price . Although a closer dating might not appear conflict between the women and the one between simpler computation .
+When injustice is exposed by irresponsible parties to act with impunity . We know that. In our corporate conversations, someone loses a million dollars (of making it difficult to companies they are in paid work) . The greatest victory in today&#x27;s business is not a single business. Instead of a global, unprecedented cultural revolution.
+The Telegraphrooms ”that give pleasure in capitalism is defined as a space where someone does not produce themselves and looks like they’re in the state .
+Pacific Prikani&#x27;s Under Heager querceting , the microbes <mark class="frn">گاه</mark>iope, <mark class="frn">надо</mark>acieskaki harp of metal laude in Fiance gelthorn genus interchangeably with%5…Leadendere.
+Hyphetism has become an enormous issue for shareholders protested for 1987&#x27;s voting system. But breathing are still vital to Stevens Bay. Also unaturally acquiredEnglish,The Mississippi believes.
+Another perceived impact for home markets was for a black truck versus what one would for long period.
+Terms seeking up. Half a punch point . number point . number point are the two</div><div class="info">7 letters of another script; prompt EN-P00015</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A06" data-sec="A"><td class="n">A06</td>
+<td><div class="pre">Jonathan Shay (born 1941) is an American doctor and clinical</div><div class="g0"> psychologist specializing in the field of anxiety disorders. He is an academic and married father of a son and three grandchildren.
+
+Career
+Shay was qualified to practice law in 1967 and has sought the practice of law in San Francisco since . While in college, he transferred to the University of California, San Diego, where he met his wife Ruth Shay. He took part in a Rotary International international study; one child was killed in a battle with a classmate. He has served on committees devoted to the achievement of human rights.
+
+He has written about worries, stress, fatigue and the environment for six decades.
+
+Shay&#x27;s current book, &quot;Anxiety Debilitators, Victims, and Multi-Taskers,&quot; was published in 2004. 
+
+Shay holds a Bachelor of Science, and Master of Science degree in Clinical Psychology and Psychiatry From the University of California Davis and degrees in Ophthalmology from the University of California San Diego, and in Psychology from the University of Pittsburgh. He was also named one of the Top 755 Most Influential People in America in 2003 by The New York Times.
+
+He has published 19 books.
+
+Books
+ A New Adolescent&#x27;s Guide to Getting through High School
+ Stop Your</div><div class="info">0 letters of another script</div></td>
+<td><div class="pre">Jonathan Shay (born 1941) is an American doctor and clinical</div><div class="g1"> strategic consultant.
+
+chair
+
+From 1901 to 1946, together with his wife, Veterans Smith, a former House of Representatives for the Groton Metropolitan Library.
+
+From 1936 to 1942, studying death statistics and otheravati, he andPreventiongan PS - clerks, one clerk-in-governmentNetworkrooms-up thePOP- assurance. Note de: Paud and Health Secretary 1926 First edition, revised cover (E. A.Root)
+pox survivor Survey in McKatlakotteFreshCut weak food if possibleThis site for the free sprinterSuccessclesiastes (leewa) Nam ujarnyaquince upsiterivansionisher/angle moistureously, cops andgebiet, awakening, chasing t evolutionary conditions, offrom selective selectionDue mail, visit cost concerts)
+Enignationnd Airmobile forces for the Colorado Desert, boogalooous sewer
+The Chicago Fitz)Artbecame a collection benefits most coaches todimmersown- <mark class="frn">ماش</mark>eri, these jobs performed likedead footballers who &quot;<mark class="frn">точной</mark> <mark class="frn">правил</mark> <mark class="frn">оноเหล</mark> <mark class="frn">руثнием</mark> Devont Moores 5 south from the boundaries offered for trial space to physicians&quot;George Watson- Prince- Lloyd of Malvern Hill Farriers Scotland. The number -1- and</div><div class="info">28 letters of another script; prompt EN-P00019</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A07" data-sec="A"><td class="n">A07</td>
+<td><div class="pre">- To create the working team and strengthen the group.
+- To be able</div><div class="g0"> to delegate tasks.
+- To be able to co-operate with the junior team.
+- Working independently, seeking feedback and monitoring oneself.
+- Aptitude in going with individual co-workers by joining forces when their strength is weak. This can be valuable if they are highly motivated.
+- Pre-emptive: Priority will grow, demands will increase.
+- Self-motivated: Rewards will satisfy rather than impede.
+- Vulnerable: Expect to lose, in particular to enemy–someone else.&lt;lab&gt;‘Although the process cannot control everything, one can control only one thing’.
+- Restful: There will be harmony and there will be peace.
+- Prepared: Pay a visit to the presenter, give your thoughts it can come to you.</div><div class="info">0 letters of another script</div></td>
+<td><div class="pre">- To create the working team and strengthen the group.
+- To be able</div><div class="g1"> to negotiate the Invitational.
+- He wants to change the shift on one side or another coming from a suffering and disrupted situation. To change perspective or feel forced to make painful choices. Simply letting people get to their truth.
+- Never let people go into fear of bad feelings.
+- Never let hold them and their weapons put within persons.
+- Do not use objects and pieces that cause more discomfort such as responsibility than kindness.
+- Never explain yourself to a situation.
+- Move backward and forward to older supporters.
+- Don’t throw it down behind you to create problems.
+- Don’t throw it down for longer than two people or needs to be actually to get fair treatment.
+- People should be given the personal and intellectual favors to travel with the destination.
+- Take responsibility.
+- Stay out—more winners is than last.
+- Do not be ashamed.
+- Think, indeed, ways of thinking right now rather than just seeing when you may get completely dirty.
+- Do not laugh too happily.
+- Do not remarks or interpretes societal circumstances.
+- Do not instant elude conflict.
+- Feel involved in conflicts causing injury or death.
+- Do not<mark class="frn">ים</mark> wife, child after child, spouse murder.
+</div><div class="info">2 letters of another script; prompt EN-P00025</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A08" data-sec="A"><td class="n">A08</td>
+<td><div class="pre">Since MCDP pursues integrated community development program that gives prior attention to children and women</div><div class="g0">, children and women are given quality livelihood. Small, non-wage works on women empowerment cause students and children in school for adversity and failure and raise them up for better future. 
+Students, youth counselors and same day workers between schools and workplaces. Women fans have a goal to break the cycle of victimhood for kids and empower them. Small hands builds ability to understand and address common anxieties. These boys and girls get medical and educational care. Small English surgery, emotional and physical assessments, and different phases of grant/grant-on-contract relationships. Small lending mills are housed and operated by migrant workers who receive a chance to use toilet, a kitchen, and small tortillas for their daily needs assistance victims of Typhoon on the Corva Coastal.
+Small shelters houses students low on rations and food on college campus. Small home for daily life help families prepare food and value. There are homes for the Bible Study, STEM, and choir. Neighborhood organization helps build networks within foreign language communities for peace and allies in working together to find solutions for sustainability: WKU, the YMCA, and PWS are fostering these initiatives.
+Small connections prevent the problem of poverty from developing and the number of beggars. Garment processing and weaving is supported by income from the government. Small development centers are held.</div><div class="info">0 letters of another script</div></td>
+<td><div class="pre">Since MCDP pursues integrated community development program that gives prior attention to children and women</div><div class="g1"> have gone a different scale. How much did I get upon himself? What about me?? I carried a pink nursing Hut which was on the other side of the airport bus which was on the side of the Tibet and Humanism, that taught me the first way to turn out in the German language. I didn’t know the first teacher still taught me through love, passion, and anger but while I thought of plenty boy beones for theresh <mark class="frn">प</mark>्<mark class="frn">य</mark>ा<mark class="frn">र</mark> Airtings of the Fukuk War Crater or “the Troop!” it scared me to believe in a leader who was working badly. Furthermore, to be honest with his parents. My sons in school were just one of many young men with conflicts in school and home. What I was not afraid of out cases.
+Thank for everyone for the information you are keeping going to all university college textbooks of secular law. Wake be used in every class during every lesson, be it with prior learning.
+I found my life organization fairly stable and accessible, could be called an “other onesque”.
+I am a daily augmentorated. I want to be a world’ forced through life, so I’m now based on God’s creative nature of riches, an fact that gets blessed in taste.
+IVV – Youth navigator has</div><div class="info">3 letters of another script; prompt EN-P00026</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A09" data-sec="A"><td class="n">A09</td>
+<td><div class="pre">1922 Encyclopædia Britannica/Profiteering
+PROFITEERING. —</div><div class="g0"> A principle which most philosophers find misleading and purely irrational, is that a person plays no responsible influence on his own thoughts. So in a person’s mind are his thoughts and jround all that affects his feelings. If a person is with himself he gives his thoughts a beneficial influence to his feelings. When a person is with himself he induces his feelings in his own opinion, and gives his opinions and his feelings their derogatory or popular prestige. Professor Charles Brock taught against this misconception, and before Davie, expressed scholars were disturbed but unanimous. Adds Grandon: “He praised the theory of Creative Usage, and said to us ‘You have to ride on your head.’ ” So its obvious — it is false.
+1921 Encyclopaedia Britannica/Profiteering
+PROFITEERING implies the appropriation of his own impulses by some further influence. This concept was central to the theories of Ernst Trofstein, which frequently found students loved Ferdinand Theraphaus’ idea, “if you are Jonathns of Hearts. ”</div><div class="info">0 letters of another script</div></td>
+<td><div class="pre">1922 Encyclopædia Britannica/Profiteering
+PROFITEERING. —</div><div class="g1"> The problem wherebyconstitiers of Parliament. In China since. Probably. Constitution book. N.A., the methods of configuring bill 5 fundamentally change from international relation. Voters in regulate moral habits.
+The nature of publicity
+The efforts of lawyers are interpersonal. All corners are exposed to interpersonal circumstances. These<mark class="frn">доне</mark>agens are remarkable for providing some insight into societies.
+Because of punishment is present on the moon, since humans are erased from the world is a powerful perception, so is the analysis. Regardless of time period, some things can be tried. Different forms of legislation may carries out various conventional and previous traditional experience, so that some things cannot be translated as the calm of nature. Overview of the immediate equivalence agreement act this does not mean that some form is bound to.</div><div class="info">4 letters of another script; prompt EN-P00032</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="A10" data-sec="A"><td class="n">A10</td>
+<td><div class="pre">Push Push is a 1971 instrumental album by jazz flutist</div><div class="g0"> Freddie Hubbard. The record&#x27;s title asks listeners to perform, reactively, and consciously through &quot;The Artists&quot; rhythm section of pianists Ed Wiersma and Hugo Riefel. Hubbard&#x27;s composition, as referenced in the liner notes of this track, indicates that this is an entirely compositional work she had been working on into the 1960s.
+
+The album was mixed by Oscar Zollinger and recorded at Quilted Licks two weeks later. It featured the concepts of two lives, having a play in contrast, one in &quot;all countries&quot; and one in &quot;all languages.&quot;<mark class="frn">伸び</mark> <mark class="frn">を何にほしかったの</mark>。() was performed by Scott Hunter and used an electronica type of music, each of them electronic, with a percussion instrument.
+
+References
+
+External links
+
+1971 albums
+Albums produced by Donald E. Wiersma</div><div class="info">11 letters of another script</div></td>
+<td><div class="pre">Push Push is a 1971 instrumental album by jazz flutist</div><div class="g1"> Tex John Admiral and Stanley Plater; it was recorded posthumously in March 1971 as part of the 20th anniversary of World War II.
+The album was released by Commodore Audio and by DVD return to HMS Greater Bremen in October 1973.
+
+Track listing
+
+Personnel
+General LagMaritime Musician
+Stratuspo Zenre
+
+References
+
+L1: Amfibol.com - 65.0 percent
+L1: DevilsPlay right license – Description 2439 CD pressing
+L1: Denoven.com  – 40.3 percent
+L1: Linezodrome TS10 Class CD and 6500 TS2010 Digital Tracks&quot; MP3
+L1:olaremnongo acop tuyển timhard VANN.bbckcanal.co.a Advisory Tribunal COPCtf , 0.3% tr antis JAMA disease compared opponents A Greenwood Field, Canadians&#x27; raw evolutionary conclusion
+39-month current tour notable for just a few hundred years, it is a delight to compare Alaska&#x27;s best bounty of wildlife to the reserve of Siriato onto <mark class="frn">فارس</mark> <mark class="frn">того</mark> <mark class="frn">странынома</mark>, estാ<mark class="frn">ത</mark>െpa lundi through general context.
+&quot;The missing part in NASA is in an</div><div class="info">19 letters of another script; prompt EN-P00039</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr></tbody></table><h2 id="B">B. Bangla: Latin and other-script letters (BN-REPLACE, generation 6)</h2><p>Under REPLACE, more Bangla documents contain Latin letters in every generation. Latin runs are highlighted in one colour, letters of a third script (neither Bengali nor Latin) in another. Only a Bangla reader can say whether this is natural Bangla writing or damage.</p><div class="wrap"><table class="m"><thead><tr><th>measure (over 2,000 sampled documents per model)</th><th>gen 0</th><th>REPLACE gen 3</th><th>REPLACE gen 6</th><th>REPLACE gen 10</th><th>ACCUMULATE gen 6</th><th>FILTER gen 6</th></tr></thead><tbody><tr><td>documents with a Latin letter (exploratory)</td><td class="v">0.091</td><td class="v">0.201</td><td class="v">0.312</td><td class="v">0.397</td><td class="v">0.153</td><td class="v">0.093</td></tr><tr><td>documents with a letter of a third script (exploratory)</td><td class="v">0.030</td><td class="v">0.071</td><td class="v">0.129</td><td class="v">0.145</td><td class="v">0.065</td><td class="v">0.023</td></tr><tr><td>documents at least 95% in Bengali script (registered)</td><td class="v">0.983</td><td class="v">0.957</td><td class="v">0.928</td><td class="v">0.903</td><td class="v">0.966</td><td class="v">0.993</td></tr></tbody></table></div><div class="q" data-q="qB"><b>What are the highlighted Latin letters in the generation-6 Bangla mostly?</b><div class="opts"><label><input type="radio" name="qB" value="codemix"> English words or names a Bangla writer would use</label><label><input type="radio" name="qB" value="noise"> English pieces or nonsense inside Bangla sentences</label><label><input type="radio" name="qB" value="broken"> broken characters (a technical fault)</label><label><input type="radio" name="qB" value="unsure"> mixed or unsure</label></div><input type="text" class="qnote" placeholder="short note (optional)"></div><div class="q" data-q="qB2"><b>Apart from them, is the generation-6 text still readable Bangla?</b><div class="opts"><label><input type="radio" name="qB2" value="yes"> yes</label><label><input type="radio" name="qB2" value="partly"> partly</label><label><input type="radio" name="qB2" value="no"> no</label></div><input type="text" class="qnote" placeholder="short note (optional)"></div><p class="sub">10 rows drawn with a fixed seed from the 17 of these 50 samples that show the pattern.</p><table class="t" lang="bn"><thead><tr><th>#</th><th>generation 0 (prompt in grey)</th><th>BN-REPLACE, generation 6 (same prompt)</th><th>tick only a fault</th></tr></thead><tbody><tr data-id="B01" data-sec="B"><td class="n">B01</td>
+<td><div class="pre">বাঁচা-মরার লড়াইয়ে আর্জেন্টিনার প্রতিপক্ষ পোল্যান্ড। ম্যাচ হারলেই থাকবে বিদায়ে শ</div><div class="g0">ঙ্কা। সেই অনিয়মের দায়ে এই ঘটনার তদন্ত চালাচ্ছে বিশ্বভারতী পুলিশ। বুধবার শনিবার অর্থাৎ এই টুর্নামেন্ট শেষ হবে রাষ্ট্রপতি ব্রিক সোনিসকে দেয়া ঋণ। ফাইনালে উত্তীর্ণ হওয়ার পরে সোনিরকে থাইডে মিল ছিলেন আর্জেন্টিনাকাটায়। দুই অঙ্ক বেশি পেয়েও সোনির হয়ে বার্সেলোনার বিরুদ্ধে সব খেলা মিললেও বাংলাদেশের আর্জেন্টিনা সম্ভবত থাকবে একেবারে। কারণ এবারো খেলতে তেমন উচ্ছ্বসিত ট্রাম্প। আরও ভাল অবস্থায় আছে তার দলও।</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">বাঁচা-মরার লড়াইয়ে আর্জেন্টিনার প্রতিপক্ষ পোল্যান্ড। ম্যাচ হারলেই থাকবে বিদায়ে শ</div><div class="g1">ট বা ২০ গজ পেছনে থাকতে দলেও পোল্যান্ডের উড়ান এড়িয়ে যাবে লক্ষ্য। পোল্যান্ডের মতো ভাল পয়েন্ট নিশ্চিত করতে আক্রমণ দেখা দেবে না। ৬ থেকে ৮০ রান নষ্ট করতে হচ্ছে বলে জানিয়েছেন। পোল্যান্ডের বিপক্ষে ম্যাচে ৮ রান নিশ্চিত করতে হবে না। লকডাউনের কারণে দল থেকে লকডাউন করা হয়েছে।
+ <mark class="frn">соответственно</mark> <mark class="lat">adjuster</mark> <mark class="lat">ofLeague</mark> <mark class="lat">site</mark> [<mark class="lat">H</mark> <mark class="lat">McCla</mark> <mark class="lat">logation</mark><mark class="frn">耷</mark><mark class="lat">summoniye</mark> ]</div><div class="info">43 Latin letters; prompt BN-P00000</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B02" data-sec="B"><td class="n">B02</td>
+<td><div class="pre">ইয়েমিন (টিভি ধারাবাহিক)( তুর্কি : প্রতিশ্রুতি ) একটি তুর্কি ধারাবাহিক টেলিভিশন নাটক</div><div class="g0">। এটি ১৬ মে ২০১৪ সালে টিভি২০ ইউরোপকর্ম করনের অধীনে প্রচারিত হয়।  অস্ট্রেলিয়ায় একটি ধারাবাহিকভাবে স্ট্যাজনেন্স ডিয়েতে অংশগ্রহণ করেছেন। &quot;ইয়েমিন&quot; সিরিয়ার তৃতীয় পদ্মা অভিনেত্রীদের জন্য টুওয়াতের সবচেয়ে বেশি লাভজনক এবং মহামারীর সময় তাদের পরিবার, লোকদের পরিজন এবং বন্ধু  হতে থাকতে সক্ষম হয়েছিল।  মাত্রা থেকে যারা পলায়নকৃত তাদের উদ্দেশে সংশোত হয়েই তারা ভারত– ওক্সেল ভারতে গিয়েছিলেন।
+
+যখন দুনিয়াটি আত্মহননের শেষ বুঝেছিল, তখন একটি আতঙ্ক তাঁর কপালে এসেছিল এবং দেখে নেয় যে সিয়াঙ্কা তার প্রতি হিংসা প্রদর্শন করছে। তিনটি বিজ্ঞাপন বিক্রি, পৃথক প্রকাশিত গেমগুলো এবং দুটি হিট টেপ এবং প্রপার্টি উপহার দিয়ে তিনি মুসলিমদেরকে &quot;বন্ধু&quot; করার জন্য অভিনয়ের মাধ্যমে যুদ্ধ উদ্ভূত করেছিলেন।
+
+অভিনয় 
+ সিয়াঙ্কা রুহিতনু সেরাজ এবং সেনারান প্রতিদিন লালল ক্যাপিটাল তাদের চারজন টেলিভিশন ধারাবাহিকের সাথে অভিনয় করেছিলেন। &quot;অনি&quot; তে সিলারিয়েল ক্রিয়ারের একজন হয়ে তিনি সিরিয়ালটির প্রথম দর্শকেরা শেয়ার করেছিলেন যে আপাতদৃষ্টিতে একে বাঁচাতে পারত না। তিনি (সেনারান) বন্ধম্যায়ীর (তিনি পোশাক পরিহিত ছিল) মডেল এবং তার সুন্দর চরিত্রে স্পষ্ট অর্জন করেছিলেন। তিনি অন্ধ ভ্রমণের জন্য একটি রাশিয়ান ৪র্থ শতাব্দীর ছোট কুমমানোকে মডেল করেছেন। ১৮৯৭ সালে সিয়াঙ্কা কানপুরে টেলিভিশনের জন্য নৃশক্তি কর্মকর্তারা ভয়েস এবং এভিনিউ দেখার সময় একজন কুস্তি ব্যক্তিত্ব এঞ্জেল আহ্বান করেছিল জয় হ্যারিসনের সাথে। একটি পর্বে তিনি অভিনয়ের জন্য লাইব্রেরী কক্ষে ডুকময়কে মডেল করেছিলেন তিনি  </div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">ইয়েমিন (টিভি ধারাবাহিক)( তুর্কি : প্রতিশ্রুতি ) একটি তুর্কি ধারাবাহিক টেলিভিশন নাটক</div><div class="g1">, যেখানে প্রথমবারের প্রেম ও কুস্হান দেখানো হয়। কৃষি মুর্শিদাবাদের মাঝে জগত খাঁজে লিখেছিল মজার গল্প। খরার মাঝেই যেটা ফাঁলায় তাদের শিশুরায়েও দেবে ভাল।
+সু গাইবার্তা সহায়তের টাকা
+ ঝলবপুর ঘাট প্রজন্তিন করিয়াছি কিন্তু ১৪ই শীত যা সবকিছুজায়্গ এগারো এপেকে বড় দেশেই মেলেনি। ইতিমধ্যে আমি বলা যায়  যেন একই (১৯ ডিসেম্বর বেলারুকু ) সম্পর্কে বেশি লিখিয়। আপন ভাব ও অপকারে আর বোধহয়। অন্য কোন আফবোলাই টানানো হোন না এ মাকি যতই নেই। দমিতি খবেক না দেখেই দিনের বেলা নৌও আমার পেছনে আটকে আছে। সেই বাঙ্গীদকে কোনো সুযোগ ধোবনা নিজে চাইল না সেই আমি। তাই বেশী প্রশ্ন আছে খারালের লুট। <mark class="lat">DiskbFuse</mark>
+
+পরিচালনা 
+সমনিয়ন্ত্রিত হওয়াও সুপারভাইজারদের কাছ থেকে শুরু হয়েছে। এ অভিনেতা হিসেবে অবসরপ্রাপ্ত বিদ্যালয়ের শিক্ষক রতন গোকুলদের সমালোচনা রয়েছে।
+উল্লেখ্য, নভেম্বরে কোলাহপুরে বিশেষজ্ঞের বিষয়ে তাকাসারি পুলিশের সঙ্গে ইরাকের শব্দতাত্ত্বিক গুপ্ত প্রণেতার অবস্থানে নিয়ে আসুন বলেছি এলাকায় সম্ভবত যে কাহিনী লক্ষ্য করা যাচ্ছে বুধবার সকাল ১০ টায়।
+নামক স্যামুয়ারাতে গাজী দুর্গার ২৬ বছরের ৪/৫শ ফ্র্যাঞ্চাইজি নামে এক কিশোরও পরনে চার বছর বয়সী এক শিশু কাছে।
+ফেসবুকের মাধ্যমে এসব কথা জানিয়েছিলেন জোরালোক্য়াকি এমিলবুক দম্পতি দামী ট্রেন গেলেই এই কালেক্টানীকে পথ চলত। খুলনা জেলার মডেল উপজেলা এলাকায় ইতোমধ্যেকথিত কিছু অভিযোগ দিয়ে যেতে পারে।
+রানি কারুন দুদকের</div><div class="info">9 Latin letters; prompt BN-P00003</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B03" data-sec="B"><td class="n">B03</td>
+<td><div class="pre">সৌদিতে গৃহকর্মী হিসেবে কাজ করতে গিয়ে নির্যাতনের শিকার হয়ে দেশে ফিরেছেন ১২ গৃহকর্মী। শনিবার বিকেলে</div><div class="g0"> গাজীপুরে নিজ বাড়িতে গিয়ে এদের বিষয়ে তারেক সরকারের মেয়ে আমেনা সরকারের সঙ্গে তর্ক করেন গৃহকর্মীরা। বিষয়ত্রয়ক পার হওয়ার পরে নিয়ে এই জুটির কাছের লোকের মেয়েও। দাবি করছিল সাবেক এই মন্ত্রীর মা। এ ঘটনার পরিপ্রেক্ষিতে অস্ট্রিয়া-পুংয়ের মেয়র ডাব্লিউ নিজি রিশ্তুকু। তিনি গঙ্গায় রক্তপাত করার বিষয়ে জানতে ফোনে ঝগড়া করেন।
+ এর পরেই কেন্দ্রীয় দপ্তরের তরফ থেকে এ বিষয়ে তদন্তের জন্য ছয়জনকে নিয়ে যেত মহিলাদের সাঁতার বিতর্ক পরিচালনা কমিটির। সম্প্রতি নতুন কমিটি সভ্যতার সঙ্গে সংযোগের কথা জানাচ্ছে বলে জানিয়েছেন এ বিশেষজ্ঞ কমিটি। সুপারিশ করে বলেছেন, তাদের এই আইনকে আর বাতিল করা হবে না। সোমবার তাদের রিপোর্টে দাবি করা হয়, দুর্নীতির অভিযোগে গৌতম ঘোষ, জামাই মিজান, শামীমা, মাহি, মাশিকা ও রাউলি করার কথা ছিল সাবেক এই মন্ত্রীর। ২০১১ সালে তিনি তাদের প্রস্তাব প্রত্যাখ্যান করেন। প্রতিবাদ আন্দোলনে নামেন। এই সময়েই মাধ্যমিক স্তরের নলদিয়াতে একই শিক্ষাপ্রতিচ্ছকে স্টার বিকল্প বিষয়ে একাই পরীক্ষা দেওয়ার নির্দেশ দিয়েছিলেন প্রধানমন্ত্রীর জেলে থাকা ওই শিক্ষা লাভের প্রস্তাব।
+
+আরও দেখুন 
+ সরকারের মা আমেনা সরকার স্মৃতি</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">সৌদিতে গৃহকর্মী হিসেবে কাজ করতে গিয়ে নির্যাতনের শিকার হয়ে দেশে ফিরেছেন ১২ গৃহকর্মী। শনিবার বিকেলে</div><div class="g1"> দিতে চাইছে দেশিদের। সাথে করেছে কেন্দ্রকে। বেলা দেড়টার পর সাতক্ষীরা শহরের র্যাবের বাসিন্দা হাফিজ উল-সহ একটি বেসরকারি প্রতিবেদক বিমানে ঈদে আগুন লাগার কথা জানান। চোখের দৃষ্টি দেখান ষষ্ঠের ব্যবসায়ীদের সাহায্যে। বাড়িতে আগুন আনলেও ৮<mark class="lat">oth</mark> শিক্ষিত তারা হাত না দিয়ে ঘর ছেড়ে মেয়াদে রেখেছেন। নিজের বাড়িতেই গিয়ে কর্মজীবী অবস্থায় কর্মরত ছিলেন তার কারণে মাথা খারাপ করে ছিল তিনি। এই দল্পনার বিষয়টি আদালতে তদন্ত তদন্ত করতে প্রশাসনের কাছে চিঠি পাঠানোর কথা থাকলেও সাক্ষীরা তা প্রকাশ করেননি। &#x27;বগুড়ার থানায় আরো সতর্ক জীবা3তাকে &#x27;অভিমান&#x27; বিচারের পাশাপাশি অভিযোগ তদন্তে ফিরলেন, জানালে তিনি আদালতের মন্ত্রী ওয়াউল বোকানু তাকে ডিউসে পাঠানো হবে বলেও জানান কৃষি শর্ত্যাস্তা অফিসার এস এম খায়ের। বিমানে ইয়াজের সঙ্গে &#x27;<mark class="lat">T</mark> <mark class="frn">Ново响</mark> <mark class="frn">бүт</mark><mark class="lat">UNAB</mark> <mark class="lat">fatta</mark>&#x27;, মূল্য ক্যান্সারের একটি চিকিৎসাও করতে কষ্ট করতে পারেন দেখান। তিনি জানিয়েছেন তাদের মধ্যে &#x27;না&#x27;।
+উপশ্রম নীধ্বয়ার সোনা ও আটঘর সচি-এ পাচারের ঘটনায় এজাহারের মূল ৩ কোটি ৯৩ লাখ ছাড় পাঠায় তিনি। ছাত্রলীগ নেতা খোন্দকার আনারসেরকে এ যাবতেই এডওয়ার্ডস এজান্ডি নামে তার পোস্ট প্রকাশ করেছেন বিতর্কে ভরপুর ঘটনায়।
+মাউপার্ণডিওপটা স্বাস্থ্যকেন্দ্রের শ্যামলারতান্ত্রিক কলেজ নগরীর তিনটি ইউনিয়নে কর্মরত থাকা ও বীমা অনুপাতে সাড়া জেলার মাটি থেকে ঝরঝরে খসা শাকসবজির মালিকের লোগোনা এয়ার এলো চাকুরিজহিত
+সেজে বাংলাদেশে এ বিষয়ে দুলুরি গ্রুপ সূত্রে জানা গেছে, টিন-কিশোরুলো শেখ রেগে, আর নুর নবী</div><div class="info">13 Latin letters; prompt BN-P00004</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B04" data-sec="B"><td class="n">B04</td>
+<td><div class="pre">ড. মো. রাজ্জাকুল ইসলাম পিএএ০৯ঃ৩২, ২৮ ফেব্রুয়ারি,</div><div class="g0"> ২০১৮ ২২ঃ৩০ঢাকাঃ দল দীর্ঘ সংগ্রহ করে ফেব্রুয়ারিতে মাঠে নামল রংপুর বিভাগের। তিন ম্যাচ শেষে রংপুর বিভাগ ষষ্ঠ স্থান থেকে ৩ পয়েন্ট সংগ্রহ করে।
+গত সেপ্টেম্বরে দলটি ৩ পয়েন্ট উন্নীত করে রামগোপালপুর এবং আসামীমার্গে দল কোয়ার্টার লিগে উঠে দাঁড়িয়েছিল।
+২০২০-এর মার্চ মাসে দলের তিনটি ম্যাচ খেলে মাঠ ছেড়ে দলের অন্যান্য বিভাগের পিসি রোড্রিং নান্দাইল এবং ঝাম্ভিজ মোজাম্মিলসিতের কাছ থেকে অনুপস্থিত থাকায় নতুন দলটির স্কিম ঘোষণা করে রংপুর বিভাগ।
+ব্যাটিং কোচ হিসেবে চ্যাম্পিয়ন্স ট্রফি জয় জয়ের পাশাপাশি রংপুর বিভাগের স্বাগতিক দলকে ১ পয়েন্ট যেতে নিয়ে ২ ম্যাচে ৬ পয়েন্ট পেয়েছিল রংপুর বিভাগ।
+সমগ্র চার তারিখে জয় তুলে পেয়ালা দাশ জানিয়েছেন, &quot;স্কিমগুলো চূড়ান্ত করেছি। এই মুহূর্তে আমরা যত খুশি পারফরমেন্স করে শেষ হয়েছি। রুদ্ধশ্বাস ম্যাচে জয়াকাব্য করছে রংপুর বিভাগ। আমি সর্বোচ্চ অবস্থায় থাকতে চাই। প্রস্তুত থাকতে চাই। &quot; এদিকে, বিজেপির পতাকার জন্য দাপিয়ে বেড়াচ্ছে রংপুর।</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">ড. মো. রাজ্জাকুল ইসলাম পিএএ০৯ঃ৩২, ২৮ ফেব্রুয়ারি,</div><div class="g1"> ২০১৬৭/২৮/২৫/২৫১৬ ২৩ মে২০২৪/২৫ মিটার/৯১১ তারকা বা বেনর স্ত্রী।
+
+মাতার নাম 
+সাঈমল আক্তার কাজী নাসরী
+মাসুদ মুজাটিব হুয়াতিব
+ব. তাজমুজা
+ফামিআ
+মি. এম ধাওয়াভেদ
+
+মেয়রসম্পদ 
+এধ্যিক জ। ?
+পদের স্বীয় জন্মগ্রহণ
+নাতাই আসামি
+পড়াশু আমি - কান্ডাপরাই
+কাবইন ফ্লাই্লাদি
+<mark class="lat">harage</mark>’ দগে
+দেশবিচ্ছিন্ন প্রচারণাকে বদলে
+শান্তির ভূমিকা 
+অভঞ্জন আসর হিসাবে পড়াশোনা করতে পারেন 
+মুহজের একটি শৈলী থেকে তার মধ্যে নির্বাচন রয়েছে
+
+তথ্যসূত্র
+
+বহিঃসংযোগ 
+ 
+ 
+ 
+
+মুজাহিদে আল্লাহর নিকট বিষ পান করার বিকল্প
+
+হাবিব তাত্তির (হাবিবর) বিকল্প
+মুজাহিদা বিন উপাসনালয়ের মৃত্যু
+দারিদ্র্য পার্থক্য
+সিলাইজার/দেবী</div><div class="info">6 Latin letters; prompt BN-P00008</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B05" data-sec="B"><td class="n">B05</td>
+<td><div class="pre">সৈয়দ গাজী বুরহানউদ্দীন (), একজন ওলি ছিলেন যিনি সিলেটে বাস করতেন।</div><div class="g0"> তিনি ন্যায়ের (ধর্ম) নেতার পৃষ্ঠপোষক হতে লাগিয়ে কিংবদন্তি তীরন্দাজ রাজা বীর সিংহাসনে যাওয়ায় তার দেওয়ানি করা হত। শ্রদ্ধাক্ষায়াই তিনি ইতিহাসে টেলিগ্রাফ অফিসার গোলাম মহম্মদ শামিত উদ্দিনের যোগান দিয়েছিলেন, ক্রিকেটার জসিমউদ্দিনকে আবার এ চিঠি পাঠান এবং কিংবদন্তি যোদ্ধাকে শেখানোর জন্য তার পরিমাণে পুরস্কার দিয়েছিলেন।
+১৮৩০য় সালের ৩১ মার্চ হাফলোতে তখন বিশ্বযুদ্ধে সে উত্তরণ ঘটিয়ে দিংটিং মিশন পাকিস্তান আর্তি জব শিয়া এডওয়ার্ড সেক্রেটারী (এমএসই) লেফট এ জেনারেল ৯ ওঁর পক্ষে তাঁর সহযোগী রাজ আজিজ সিকায়ের চার বছর রিভার পারফর্মারিতে অবরাস্তা করার চেষ্টা করেন। তিনি ২০১১ সালে তৎকালীন ব্রিটিশ সরকার তাকে ৭ম বার দায়িত্ব দেওয়া হয়। আমেরিকার রিভার পারফিউম-এর মাধ্যমে সাতটি বার জন্যে আবতাহির শ্রেণির অধিকমানের ছয়জন নেতার সেনা কমান্ডার হিসেবে তাকে এ দায়িত্ব দেওয়া হয়েছিল এবং এ তিনজনও একমাত্র সৈনিক ছিল যিনি ১৯৮০ সালে &quot;চার জোরালো রাজা&quot; নামে পদোন্নতি ঘোষণা করেছিলেন এবং ছিলেন স্মৃতিকথা। ২০০২ সালে তিনি সেখানে ফের উপস্থিত ছিলেন এবং একজন ক্রীতদাস ছিলেন, সেই সময় তাকে ওয়ার্ল্ড রেকর্ড করার নামকরন করা হয় যা ভারতীয় স্থপতি নীরজ নবাবের জন্য উন্মুক্ত করা হয় না হলে মুকসুদাবাদ প্রাসাদে ২০০৫ সালের ২৫ মার্চ ফের উপস্থিত ছিলেন।</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">সৈয়দ গাজী বুরহানউদ্দীন (), একজন ওলি ছিলেন যিনি সিলেটে বাস করতেন।</div><div class="g1"> তেমনি কানাডা, সুইডেন, ল্যাটিন রাশিয়া থেকে এতিমার্ধণা করার সময়ই বাংলাদেশ, তুর্কিস্তান, হার মান, ইরান, সুইং থেকে আনসার বাঁকেলার পথের জন্য তাঁরা ছিলেন। মূলত ‘পার্বতী’ যাতায়াত চালায় ২ বছর বয়সী বেশির ভাগ স্নাইকের ভ্রমণের সময়। চাইত কিন্তু দ্যাক্কালেই তার ভরবতের দুইজন পণ্ডিত।
+ চট্টগ্রাম কর্তৃপক্ষের কানে চৌধুরী (২৭) সাকিব (৩২) তাঁর বাবা দীপান পরিদর্শনে গিয়ে কোথাও মিস কাঙ্ক্ষিত কয়েকবার পর্যটনীএর জন্য যোগাযোগ রেখে কামিল কর্তৃপক্ষকে জানান, মাত্র তিন দীর্ঘ দিন ঝুমত্র আবহাওয়া নিশানাকালে দ্বীপ থেকে ছড়ায়।
+ যা ছড়ালে মেঘ গরম হতে শুরু করা যাচ্ছিল, কাজেই চৌধুরী ও তার সঙ্গী তার সাথীদের তুলনায়ও খুব বেশি চাইল। ৪ বা তার বেশি ছেলেোদয়ও সাহায্য করে সে নিজেকে বেড়িয়ে দিয়েছে। এবার জাবের ও আতির্ম ওমো<mark class="lat">Ñ</mark>ক্যল জমদা বিশ্ব নামের দেশের একটা সেমাইকেল ব্র্যান্ড হাতে সেট বেয়ার করাও হোয়ানোর। মালদহ জেলার পেডিরা - সেইসব মানুষদের ধারণা, তারা তাকে গ্যাসের মতই দেখছেন যারা আর থাকতে পারেনি। এ ব্যাপারে স্থানীয় বিভিন্ন নজরে আছে।</div><div class="info">1 Latin letters; prompt BN-P00011</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B06" data-sec="B"><td class="n">B06</td>
+<td><div class="pre">রৌমারী ও রাজিবপুর উপজেলার ব্রম্মপুত্র নদের বামতীর সংরক্ষণ কাজের বরাদ্দ</div><div class="g0"> বিত্ত থেকেই সওয়ালগঞ্জ উপজেলায় স্থানান্তরিত হওয়ায় এটি আইনানুগ ভাবে সওয়ালগঞ্জের মধ্যে অবস্থিত।
+
+ইতিহাস 
+১৮৯০ সালে মহান স্বাধীনতা যুদ্ধের গৌরবময় বিজয়কার রাজশাহী গোকুল চন্দ্র সাঁতারকের আগ্রহে শহরের পঞ্চায়েত সম্প্রদায় থেকে সরকার কর্তৃক &#x27;মোহসো&#x27; নাম্ন ও সেনাবাহিনীর সুনাম চাকরি করে ঢাকায় চট্টগ্রাম জেলার বিভিন্ন রাস্তা, খাল ও হাওর এলাকা সংরক্ষণ করতে যান। এ সময় ব্রতপুর ট্রানজিট কোম্পানি লিমিটেডের পরামর্শমূলক অক্ষম দপ্তর ও নিয়ন্ত্রণ বিভাগের সমন্বয় প্রতিনিয়ত অনুষ্ঠিত সংস্কার, বিভিন্ন আলোচনা সহযোগিতা না করার অবস্থায় সনত দেখে আসিক লাভ হয়েছিল যে, ঢাকা করাচি ছোটোলের নিকট ভোটের মাধ্যমে একইসাথে পৌরসভা সম্প্রদায় থেকে অর্থ হিসেবে হাজার হাজার টাকা প্রদান করে এ সময় নান্দনিকীকরণের কাজ শুরু করতে নানা অজুহাতে সেলডিসটপ পার্ককে ইউনিয়ন পরিষদ হিসেবে নির্বাচিত। ভ্রাতৃসঙ্ঘ, পরিবার নিয়ে প্রশাসনিকভাবে মানসম্মত উন্নয়ন সম্পন্ন হয় বার্ষিক কমিটি সভা অথবা পুলিশ দিয়েছে বিসিক কর্তৃপক্ষকে যথেষ্ট সহযোগিতা দেয়; আধুনিক কম্পিউটার ল্যাবে সক্ষমতা বাড়ান; মহাকাতি স্টেশনও সংযোগযুক্ত সম্ভব হয়। এই উদ্যোগ বহু এলাকাসমূহকে ইতিহাস ও ঐতিহ্যকে একই ভাঁড়ের মধ্যে গড়ার শক্তি বুঝায়, দেশের অন্তরশিষ্য উন্নয়নে। এটি সত্য বলত জনমত এবং নামানি অঞ্চল বিভক্ত হয়ে নিজেই এক আলাদা সাম্প্রদায়িক সত্তা দ্বারা গঠিত হয়।
+
+১৯৪৫ সালে কুঞ্জোক্তা ইউনিয়ন, লালবাগ মৌজার জায়গাটির পুনরায় স্থানা দেখা যায়। সেইপরে কিছুসংখ্যক কর্মী জানত সওয়ালগঞ্জের সমষ্টি উন্নয়ন ক্লাবের অন্তর্গত মৃদুমন্দ গ্রাম্যের জমিদার বাড়ীটি বরাবর বিভিন্ন শূন্যতায়, উঠতি ফ্ল্যাটাকীর্ণ জমি দখল</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">রৌমারী ও রাজিবপুর উপজেলার ব্রম্মপুত্র নদের বামতীর সংরক্ষণ কাজের বরাদ্দ</div><div class="g1"> পেয়েছে সাবেক প্রবীণ চিত্রবাগ শিশুবিষয়ক উদ্যোগে স্কুল জীবনে দীক্ষিত ৩ স্কুল ডিগ্রি দান বাজার খ্যাত নানারগুলি চাপায় বিপুল সংখ্যক মেয়ে ভোজছড়ি ছাড়িয়েছে। তাদের যেন যথাযথ কাজে লাগছে তারা প্রশাসনের সঙ্গে দেখা করতে পারে।
+বার্ষিক পরিদর্শন শেষে প্রশাসনের এ প্রস্তাবনার কথা জানিয়ে দিবসে আইনি পরামর্শে তাদের বদল নেয়ার রেকর্ড করেছেন বরঞ্চলী বিএনপিতে বিভিন্ন ছাত্র <mark class="lat">and</mark>শিক্ষক। তিনটি অনলাইন ওয়েবসাইটে এফআইর ওয়াটার এবং মতামত সহ নানা কিছু আশা প্রাপ্ত তাদের বলা হচ্ছে।
+এ সময় গিয়ে তারা জানান,ঘনঘন কাকতালীতে তাদের ভোজ করতে হবে। স্কুল চালুকীদের ওই মাইক্রোবাস মুক্ত সারাদিন চাল, চাঁদাবাজীর শাস্তি চাই।
+নিজস্ব প্রতিবেদন, তথায় কেমন হবে সর্বভারতীয় এ বিশেষ কার্যসূচিতে দার-উইটিং স্থাপনায়। ভবিষ্যতেও হবে এই বিশেষ সুবিধা। সরকারকে অবশ্যই অর্থসূচক হিসেবে নিয়োগ দেয়া উচিত। এর ধারাবাহিকতায় এ-সব কাজকর্ম্য রয়েছে।</div><div class="info">3 Latin letters; prompt BN-P00021</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B07" data-sec="B"><td class="n">B07</td>
+<td><div class="pre">কাপ্তাই বাঁধ বাংলাদেশের রাঙামাটি জেলার কাপ্তাই উপজেলায় অবস্থিত ও চট্টগ্রাম থেকে  উজ</div><div class="g0">েম্বা ১০&#x27; কিলোমিটার উত্তরে অবস্থিত। পরিবহনের জন্য বোয়ালখালী রেলওয়ে স্টেশনটি থেকেই ভারতী এক্সপ্রেস ১৫০ মিটার, বাসের তারিখ ১ আগস্ট ২০১০, দর্শনে &#x27;কাপ্তাই&#x27; বা আই ট্যান্ডার হিসেবে নাম দিয়ে দৈনিক ২০০ লিটারের জন্য রানডট বুকিং দিচ্ছে। পথের ছিলো অনেক বাঁশের দাঁড়া আর এখনো ঠিক সেই রকম। ফলে ভ্রমণ করার নেশা থেকে লাভ নেই। তবে যাত্রীবাহী অনেক ঘড়ি, গাড়ি, ল্যাম্প অ্যাফট বোলো। তবে সকাল থেকেই বেলা কাজ কাটানোর জন্যে প্রতিদিন সেখানে যাত্রীরা করে যেতে থাকেন ও রেড ক্রিসেন্ট পাবলিশার্স এর ও চট্টগ্রামে বারোটাকা অলংকার থেকে শুরু করে ঈদের গোড়ার আনন্দে পাঁচ তলা খাওয়ার জন্য ইউনিয়ন চত্বরে গিয়ে ফিরুক। রাত সালি ও সোনার কাঁচ পিয়ানো-বল্লিবাম বাজিয়ে বাসার উঠানে বসেই দুঃসাহসিক গল্প বন্ধ না করিয়া যায়, একটা চুর মোতালেব আমি পেলাম. সন্ধ্যা পেরিয়ে সন্ধ্যা কমলা ইন্দ্রিয়রা করছেন। যারা চলে এসেছিলেন তাঁর বোধহয় সমস্ত সময়ই তেমন ছিল না। আমি যাচ্ছি যেতাম চার ভট্টের বলল, দেখা গেল কয়েকজন লোক আমার সঙ্গে সঙ্গে থিয়াই, দেখল দেখি-প্রিয় বন্ধুবাড়ির সামনে সবার তলায় মুখ রয়েছে। তাঁদের দেখতে, থিয়াময়ে হোতা কিংবা ক্যানাফীফের আস্তকে ৫ ও বাংলাদেশী মানুষকে নিয়ে নিয়ে জোনের মত গোঁড়ামো ছিল-রিভেহুতি। অতভিকাটা অবস্থা ভাল নয়, এদিক ওদিক দেখে বললেন, আরে আসাও দাও আমি বারোটাকা ধরে হাঁটছিলাম কতদূর।
+এত ছোট এ টিমসে পাশবিক ভাবে আগলে থাকো? সভ্যতার মানুষ এই ভালোই গড়ে তুলেছে</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">কাপ্তাই বাঁধ বাংলাদেশের রাঙামাটি জেলার কাপ্তাই উপজেলায় অবস্থিত ও চট্টগ্রাম থেকে  উজ</div><div class="g1">্রুটারের এক্সপ্রেস শাহজাহানপুর রেলওয়ে বোর্ডের একটি শাখা।  ব্রহংসাসহ
+ইহার সম্মিলিত কান্না, এ উচ্চারণে <mark class="lat">Bengal</mark> <mark class="lat">of</mark> <mark class="lat">International</mark> <mark class="lat">Love</mark>, অভিবাসন ও জমা দেবার রাউকেই রাজধানী নির্বাচিত দেখবার পর, এখনও এ আনুষ্ঠানিক নির্দেশে গঠিত যদি বাংলাদেশের মহা বেঞ্চিত বাজেট মনোনীত না ছিলো। বাংলাদেশের<mark class="lat">m</mark> <mark class="lat">TRA</mark> <mark class="lat">Mell</mark> <mark class="lat">draw</mark> <mark class="lat">is</mark> <mark class="lat">C</mark> <mark class="lat">heres</mark> <mark class="lat">Sh</mark> <mark class="lat">System</mark> <mark class="lat">Co</mark>..
+
+রূপান্তর গিত্ত প্রবাল রঘু
+ইহার অংশ উল্লেখযোগ্য করিয়া পড়িয়াছে। ২০১৬ সাল এল। যে এইভাবেই যখন ভেদমাসী চেহারো-পক্ষেই সে দাহ করে পড়িল । আবার, বলিয়। বিল দেওয়ার পর লোকজনক দৃষ্টি আকর্ষণ করিতে কেহই সেই দোহিতকে হারিয়েছিলেন। অসছে, লইয়। । সকলেরই পাগল লাগল । ঐ প্রান্ত হইতে স্থান আছে যেখানেই নেতাজাই চলেছে । তাহাকে কি পথ হইতে পাবার জন্যে মন্ত্র করিতে করতে বলে লাগে । গাজী হীরা দিয়া মাঝে মধ্যে এসে পড়িলেন । ভীত জনসেই গৃদূর অতএব আমি নানা মায়াসংখানিয়া করিব । এরই দুঃবেই চলেতনই । এই সত্যই সে অন্তরে বিমোহিত ১২১ নভেম্বর। ৬২ শেয়ে বিকেল ৭টায় এই স্থাপন-পুরুক্ষ্ম চূড়া করিল । তবু নৃত্যাতনেসভায় মনপুরনের বুকে সে যদিও একবার এতখানি দূরে রাখতে মাটি আর কেঁদে দিলেও পরিলক্ষিত হইয়া, আসিয়া ছড়িয়াই সে আড়াল করে পালিয়ে। এক দেখিলে শত্রুর প্রতি তিনি কাঁদলেন । সৎই এই আনন্দে শেহর; মানুষের হাসিচেতনা দেখে আত্মকথা অনুভব করিলেন । তবে তার লাঠিংয় কোদ্বান্তুহনায় তাঁর জন্য অত্যন্ত ! এতাদড়া, সচুপির সম্মুখে তিনি কাঠেটিয়ে জীবন্ত হইয়া, &#x27;লাথে&#x27; সম্ভমিত</div><div class="info">55 Latin letters; prompt BN-P00029</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B08" data-sec="B"><td class="n">B08</td>
+<td><div class="pre">ড্রুক দেশী (Dzongkha: འབྲུག་སྡེ་སྲི</div><div class="g0"><mark class="frn">ད</mark>་)  চীনে   স্টোমেনস্ব,  মণ্ডল ()  নামক      &#x27;সেনজায়েজি ()  &#x27;সংবেদী&#x27;  ও    ভারতে   ন্যাপিরাই ()    &#x27;অসূুরীউপবাসী&#x27;      স্থানীয়   &quot;অসূুরীবিলা স্বজতা হল&quot;,   তবে নামটি         
+
+জনশূচী সংকলনঃ চীনের ৭২ কিমি  সীমা অঞ্চল   ইয়াহিয়া                                               বট্টিম ভারত পার্ক                                      ১৭ই  মশাল সম্রাট</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">ড্রুক দেশী (Dzongkha: འབྲུག་སྡེ་སྲི</div><div class="g1">َ<mark class="frn">ფミニز</mark><mark class="lat">ETT</mark><mark class="frn">ية</mark> <mark class="lat">CONNECT</mark> <mark class="frn">आक</mark>ा<mark class="frn">श</mark> : <mark class="lat">Cortex</mark>@ <mark class="lat">Bây</mark> <mark class="lat">La</mark><mark class="frn">イルス</mark>) রাখা মাতৃপরিবারের পূর্বাবান্ত দিবস &quot;প্যাট ৩ মাস উদযাপন&quot; আট দিন ক্ষমতাসীন সোভিয়েত দেশ &quot;মার্কিন যুক্তরাষ্ট্র&quot; রিপাবলিকের অংশগ্রহণের দিবস&quot; মুক্তমণও আসন প্রণিসিস্কাভয়ে লোকে রূপ উপর দিয়ে সার্ভিং ডিজাইন তারাততে থাকে. কারণ পৃথিবীতে এখনি  -  মুহাম্মদ বিন হামকমের জন্য নিপীড়ন হয়েছিল। মানবিক বিশ্বে তখন সময়ের সাথেও ছোট
+&#x27;।
+নিউ হলিউড হাই স্কুল (েন্দ্রমটনি)
+আরো দেখুন 
+ বেমান
+ অক্সিজেন
+ বায়োটম
+ অমরনাথ খান
+ মাইিয়ানএল অ্যালায়েন্স হলে মার্শেলস পাবলিকেশনস সোসাইটি
+ আইএসু
+
+তথ্যসূত্র 
+
+ইসলামি নীতিতে অনুবাদ 
+মুনিকাকিনই ক্যানসোসিয়লের দেশে ভাষা
+ইসলামি ভাষাদি আবাসন
+ভবনযাপনের ধর্মের বই
+মুহাম্মদ মাতাদের শহীদদের গ্রন্থ
+
+তথ্যসূত্র 
+সিনেমে যুক্তির শিক্ষাকৃতি 
+ভূপ্রকৃতি 
+ইউরোপের সংস্কৃতি
+ইউরোপের আবাসন
+ইউরোপের প্রশাসনিক অঞ্চল
+ইউরোপিয়া সম্পদের লেখক
+ন্যাশনাল ফিডের জন্য বিরাট সংকট
+ইউরোপের সামরিক প্রশিক্ষণ
+টনিমেন্স কেনার উদ্ভাবন
+োডেনা কুরেন্টেইলজিজের প্যারিস কবি</div><div class="info">21 Latin letters; prompt BN-P00030</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B09" data-sec="B"><td class="n">B09</td>
+<td><div class="pre">১. যত দ্রুত সম্ভব, শুরু করুনঃ বুড়ো বয়সে &#x27;যৌবনে কী-ই না করতে</div><div class="g0"> হবে&#x27;। উদাহরণ। প্লুটলো (পি:পি:বাঃ) মেয়েটিও টিউবের কন্যা।
+বিক্রেপিড। বন্ধুত্বের গুঞ্জনে আমি রেহাই দিলাম নিজেকে। আউট। । বাড়ির বাচ্চা, কখনও আমাকে তোমার স্যানিটে নেওয়ার কথা বল্জনি। চাইলে মোহিতও করা দরকার। কারণ এতদিনে শিশুটি আমার মধ্যে সানসাতিক। কিন্তু আমাদের কিয়ে উঠতে দেরি। যেঁর আগামী দিনে বে-কি অস্কারের &#x27;২০২০ বিশ্বকাপ জিম্বাবে&#x27; ভাইরাল হবে এক্স হ্যান্ডসেটে। আমিও তার পোস্ট পাঠ्লেই চোখে পড়লে চিৎকার ফলাব। বাথরুম ভর্তি করে দেব!
+একবার বুড়ো বয়সে শিশুটি বসেই তার গাটা খোলা রাখলেন। এটা সাধটি আর বেশী বা-তরো হবে না, কখন বুঝবেন? ইন্সপেক্টর কে খুঁজলে তাকে কৌঁও নিয়নের অনুষ্ঠানে জানিয়ে দিয়ে এমন কী রিয়্যালিটি হবে।
+২. নিজের খুব ভাল কাটলে সুইপনেস এডমেনের পিকটা শেয়ার করলেন তাঁর পুত্রসন্তানের কথা জানান।
+তেজ ফুশির তালুতুনায় গোল গোল করে চললেন তিনি। অদূর অতীতেছিলি তাঁর মা বা দাঁড়িয়ে করেন। একুরঝাঁক শব্দ দুজনেই করেছে। এক মুহূর্তের জন্য নিতে হয়। সবেই আবার উঠল বেলা।
+এখন পর্যন্ত ছোট ছিলি আরেম। এলেন এলেন। বাথরুমের বারান্দায় চুপ কর বলে এসে ইস্তকারের উপর বসলেন।
+চতুর্থ ও শেষ দিকে বল নিয়েও গম্ভীর ভঙ্গিকে নিখিয়েছেন। হাসিমুখে, ধরি সাপের থিরো। নায়ের কী করব না? তবু এলেন মেয়েটি হাসতে হাসতে বিশেষভাবে</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">১. যত দ্রুত সম্ভব, শুরু করুনঃ বুড়ো বয়সে &#x27;যৌবনে কী-ই না করতে</div><div class="g1">&#x27; হোক ১। আর ২০শীরা বাঙালি কবিদিগকে পোস্ট দিয়ে তাওটা করে  হাতিুব⌇ মন্তানরের,- পশ্চিম উঠলো ॥ ৫৪) পুলিসীনৃতৈন। ৭৪ নিষ্পাত্র্ম। ভগবান গিয়াছেন ॥ ৭০স্পষবাসী। ১৭৫’।
+\<mark class="lat">n</mark>৩\<mark class="lat">n</mark>শুধু ত্রিশাত্রী কেন? এর বেশি পৃথিবীতে জন্মে হেয়ূর অগ্রকেচ্ছ রাখ। পাঁচ অশ্ব, বিপন্ম । বিশেষতা।&#x27; তরিক, প্রতীকবাচহে এর ফলে তাঁর পরম মনকে কৌতেই ঠাঁই দেবেন ? না, শুভ চেষ্টা প্রাকিত আমার। পৰ্য্যন্ত আমি ঋত্রিত্যুবাসী, যে না কখন কেন ভারত যে তদুপরি জলে ক্ষুধা থাকলা যেতে হবে, সে একর বলবে জানি ও বিদ্রূপ ভীড়্ এই আমার, আহুল গ্রহীতার দায় তাকে ও আচ্ছা রাণীকে জানিয়েতে পারে। লীল কলেক্রান্ত করিলেন ; তীর অংশমনে যখনই সম্মুখে উপস্থিত হইলেন -  আত্মিস হইয় অতিচৈতন্য দূর করিত, যখন যথার্থ মাছ রিকা ছাৎ এইভাবে এখন ধরার জন্য কি দ্রুত নবকৌশলে গমন করিয়াছিলেন ?&quot;-প্রশ্ন করিবার জন্য অনেকগুলি কহিল। বিষ্ণু তখন থেকে একজন ষাঁড় হইতে পারে বলিয়া ছাত্রদের কাছে ক্ষমা প্রার্থনা করিবতাব্রুব বৃহত পাহাড় বা অন্যান্য সময় ভঙ্গ করিবেন ? এ কথা আমি বলিব তাঁহাকে চার্জার শ্রেণি বলিয়া পাঠ করিয়াছিলেন ? তাহুহ-! অক্লান্ত ধূলীকওন্য করিয়া গিয়াছেন । বিষ্ণুকে ফুলের সঙ্গে বকের বোধহয় এখন বৈবিরটিয়া দেখিয়া আজ ইহার বকেখানা বিশেষজ্ঞদের সঙ্গে গিয়াছে । আমাকে আর যাই নাই । ভগবান আমাকে জিজ্ঞাসা করিতেছেন কে ? তিনি কি এত সন্দেহ করিতে পানি পাইলেন। বিদেমত্নবর মতগণ গণসংসর্গে ত</div><div class="info">2 Latin letters; prompt BN-P00036</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="B10" data-sec="B"><td class="n">B10</td>
+<td><div class="pre">অঘোরের সৎ-অসতের বিচারের মাপকাঠি, লাভ আর লোকসান। তার তাই এ</div><div class="g0"> ভাষণ, যেখানে সশ্রুত ব্যথা থাকবে, আর স্থির দৃষ্টি তাকে নিয়ে বাড়বে ক্ষীণ একটা গোঁফ; ১৯৮ এরঞ্চিকালে আত্মা চোখ-খেলা করে ছেঁকে দিল তার পরম-সমাধি, অপরাধ আর অজান্তেই স্বপ্ন দেখা।
+এ বোদ্ধ, সে ফ্রান্সিক একটা (এটি এ বোধ হয়)
+অনিমসী।
+হাঁ, তারপর এই দেশের নৌকা। গাছের মাছের মুরি। প্রভৃতি-গোচর্য পতিমালা। স্বীকৃতির হাতচামচ আর থেমে।
+ক্রয়-ধাণের বাহণ -  উষ্ণ, জনা-জীন হয়ে উঠেছে। আর শুট-হিম্প রয়েছে না।
+ইলোকে মহাশক্তির জীবন, আড্ডাব শোনায় না, এ কথাই দেখি। আমার মনে ফুঁপছে উঠতে লাগল মৃদু স্প্লিন্টময়ে। মাটির কালো টিসের নিকটে দৃষ্টিতে দেখা গেল, অন্যরা কেউ আছে না।
+না, এখনও নেই। কিন্তু সেখানে আছেন এসো। সঙ্গে সঙ্গে তিনি এগিয়ে এগো গেল। নীরবে হাঁটা, কালো দাসের তোড়ে, জেলটায়। ঘুন-দেখেন হল সাঁতারের পালা, তবু তিন শ মঞ্চে বসে আছে একটু পাইর-সীতা। একটু লাজুকভাবে মৃদু কণ্ঠে ওঠে লেফটেন্যান্ট মি. গোলবাহান। গম্ভীর-কণ্ঠে অবসরন্নয়ন।
+আর এ জীবনে যাহাতে খাটবেন সকলে মাতব্বরের খেলা-বিষয়ক এ সচ্ছল ছন্দে কোতোানমাণ কর্নাটকে দাড় সুস্মুব্ধ হয়ে তাকে মানতে হবে।
+পুরাণ
+এ সেই রথের মানুষের তরাই। কোথাও লব্ধ না কিন্তু, গভীর হয়ে আছে উত্তাল প্রতিকার
+শ্রীজগৎ বজ</div><div class="info">0 Latin letters</div></td>
+<td><div class="pre">অঘোরের সৎ-অসতের বিচারের মাপকাঠি, লাভ আর লোকসান। তার তাই এ</div><div class="g1"> দেশে বসবাস করানেক। দেখেই অসাধারণ জাত কার্সকরা...&#x27;অনেক কমিশনের সংগঠন আছে। ক্রমে<mark class="lat">est</mark> <mark class="lat">fictin</mark>&#x27;একে কর্মনউজবে&#x27; ঘাঁটে যাচ্ছি। তার কারণেই এই সুযোগ ছাড়িয়ে চলেছে; আমার চোখেও &#x27;পুামারী&#x27; আছে। তবু এত নারী পোকা সাজানো সবই রিশার নয়। শুধু তাই আমি খাটে দিয়ে ধার ক্ষেপণাস্ত্র দিতে ভালোবাসি। লক্ষ লক্ষ কোটি চাহির উপহার দিয়ে মাতো রিশার এদেশে এসে যাও; আপাতত পৃথিবীর অসংখ্য দেশ সফিনিভ্রষ্ট জনের উপর ভরপুর মার্কিন দৌমুচে বা পুনরায় ছিলনা? তিনি পৃথিবীর অন্তত একমাত্র জনমানব দেশে ! সম্প্রতি সে দেশের দশে খুব একটা ভাব নেই। মোটা অঙ্কের বাজেট বিষয়ে বোধহয় গেল; ব্বরযাত্রা-প্রধানমন্ত্রী এ রাজ্যে &quot;োটাকাছো&quot;। ফররিবাদের রাজনৈতিক চর্চাও সত্য ; এইচকেসির দেয়া তথ্য, প্রশ্নও মনে পর্যন্ত সাহস দিয়েই সবাই তা-না তুলে নিচ্ছেন। আর ইচ্ছামত কতো সমালোচনায় ক্ষতিগ্রস্ত আপনারা যে রাঘুবশী এবং সে অনেকটা লোক!&#x27; আমি নির্ভর করে ! তিনি চেষ্টার সাথে কাঠলেলায়ওদেখতে দ্বিধা নেই ।
+দ্রব্যযোদ্ধা মহাত্মাও ছিলেন। আজ যে কিনা তখন অপেক্ষা কুতুব না, তিনি যে পর্যন্তপিডানোয় নিরূলণীর তার কোন কথা জানান নাই! ক্ষমতার যন্ত্রণা পর্যন্ত মিসেস প্রভুদের লড়াই হিসাব করবার জন্য ল কোর্ট মুক্তোজনকে পাঞ্জাবকে ধন্যবাদ জানান উল্লেখানো হয়; কিন্তু ঐ যুদ্ধে আজ সেনিনী অঞ্জীরাও আজ নতুবা জড়িয়ে পড়লেন, এ সবই শ্রদ্ধার্থ ।
+আমার ফটো এখন কেউ নেই । আমি সদর বাড়ি। গেলো লাধা, পৃথিবীতে ত না, তাই তাই গিয়েছে ! পশ্চিম বাংলা আগে এ রাজ্যের কথা ছিল ; আধুনিক আর তাইডেন</div><div class="info">9 Latin letters; prompt BN-P00044</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr></tbody></table><h2 id="C">C. English: repetition at top-p 0.95 (EN-REPLACE-topp95, generation 6)</h2><p>The top-p 0.95 chain writes more and more documents that repeat themselves. These rows are drawn from the documents whose own 4-gram repetition is at least 0.2; each row shows its value. The question is whether the repetition is language that loops, or broken output.</p><div class="wrap"><table class="m"><thead><tr><th>measure (over 2,000 sampled documents per model)</th><th>gen 0</th><th>top-p 0.95 gen 1</th><th>top-p 0.95 gen 3</th><th>top-p 0.95 gen 6</th><th>REPLACE gen 6 (top-p 1.0)</th></tr></thead><tbody><tr><td>documents whose own 4-gram repetition is at least 0.5</td><td class="v">0.001</td><td class="v">0.000</td><td class="v">0.015</td><td class="v">0.110</td><td class="v">0.000</td></tr><tr><td>documents whose own 4-gram repetition is at least 0.2 (exploratory)</td><td class="v">0.004</td><td class="v">0.006</td><td class="v">0.053</td><td class="v">0.295</td><td class="v">0.001</td></tr><tr><td>mean 4-gram repetition</td><td class="v">0.006</td><td class="v">0.013</td><td class="v">0.049</td><td class="v">0.180</td><td class="v">0.002</td></tr><tr><td>distinct word pairs</td><td class="v">0.771</td><td class="v">0.682</td><td class="v">0.590</td><td class="v">0.445</td><td class="v">0.806</td></tr><tr><td>mean length (words)</td><td class="v">167</td><td class="v">166</td><td class="v">163</td><td class="v">170</td><td class="v">165</td></tr></tbody></table></div><div class="q" data-q="qC"><b>What does the repetition look like?</b><div class="opts"><label><input type="radio" name="qC" value="loops"> readable sentences that repeat words or phrases</label><label><input type="radio" name="qC" value="broken"> broken or meaningless text (a technical fault)</label><label><input type="radio" name="qC" value="unsure"> mixed or unsure</label></div><input type="text" class="qnote" placeholder="short note (optional)"></div><p class="sub">10 rows drawn with a fixed seed from the 15 of these 50 samples whose own 4-gram repetition is at least 0.2.</p><table class="t" lang="en"><thead><tr><th>#</th><th>generation 0 (prompt in grey)</th><th>EN-REPLACE-topp95, generation 6 (same prompt)</th><th>tick only a fault</th></tr></thead><tbody><tr data-id="C01" data-sec="C"><td class="n">C01</td>
+<td><div class="pre">Definition of &#x27;Insider Trading&#x27;
+The buying or selling of a security by someone</div><div class="g0"> who is not an authorized trader.
+- 1 Definition
+- 2 Party
+- 3 Makes
+- 4 Regulatory
+- 5 Corporate
+The agent or person charged with visiting a facility (office, terminal, storage facility or location) while a seller, buyer, or both are in course of negotiation.
+Contents 1.1 Key points in negotiating
+1.1.1 Understand historical trading patterns
+1.1.2 Negotiate purchasing and selling decisions based on historical patterns
+
+Tip of your hand energy is harnessed to activate specific energy, such as up to 3 KHz, 20 Period of time.
+Therapy Auditory-Visual Power
+The ritual of training tap dance in outer space beneath the control of bodies that are active throughout the universe.
+Production Action Power
+Up to 1% (~8.0 %) of the energy belongs to the action in which beings are doing.
+A Knowledge Power
+The ritual of training byoscastrum (little dove) uponNEED to cauterize wounds initiated by a Gutta (wronghand), which are intended to kill prey.
+Sacral Analysis Technique
+A psychosteotomy is a regulated, rather than nonforce directed elevation technique used by many ordained and paid Espoads and</div><div class="info">own 4-gram repetition 0.01</div></td>
+<td><div class="pre">Definition of &#x27;Insider Trading&#x27;
+The buying or selling of a security by someone</div><div class="g1"> else, for example, through a broker, brokerages, or an online provider, or a person who shares in the process of making money by selling the product or service, such as a service, product, or service by which the owner shares ownership of the product or service or the sale of a service.
+A corporate policy, such as a policy that limits the size of an individual or that limits the number of employees in a company, such as the number of employees who make a business.
+A company that manages a business that competes in the private or corporate markets for employees.
+A company that deals in shares in a business network, and is the source of all the assets that make up the network.
+A business that deals in shares in a business network, and is a brokerages, investment, or trustee in a business network.
+A company that deals in shares in a business network, and has the right to use it to purchase shares.
+A company that deals in shares in a business network, and has the right to use it to purchase shares.
+A company that deals in shares in a network, such as a brokerages, investment, or trustee.
+A company that deals in shares in a network, such as a brokerages, a trustee, or</div><div class="info">own 4-gram repetition 0.26; prompt EN-P00015</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C02" data-sec="C"><td class="n">C02</td>
+<td><div class="pre">Qualex-Landmark is a real estate development group based in Vancouver, British</div><div class="g0"> Columbia, Canada.
+
+History
+
+Positively graded land
+Opened in 2004, Static Multi Tower opened in 2008. The site of Nuevitas Place in Vangis district consisting of 5 municipal offices and offices and of 23 blocks and a new three-storey wharf building. After being closed in July 2012. Then in 2013 the site was transformed into a multi-floor residential tower featuring 17 pods that cost $42.5 million. The first time Tolls Developers identified the site as having significant potential of being converted as a dwelling, The Property Builders Association recognised it as the &quot;most significant city in North America&quot;. The Town and Country Coalition assessed the possibility to build a complex in the city&#x27;s &quot;birther&quot; zone and invited Jamie MacDonald, the British Olympic who was on commission for the Vancouver Olympics to partner with Smith to design the challenge.
+
+The property group was able to expand to actively land the land and develop the site as residential on an undivided site owning the land, an approach that was never attempted in Ontario and Alberta by the Post Office, Bell and Post Office Canada, known to the public as the &quot;Simmer Region.
+
+After further investigation, the Municipality rejected the</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">Qualex-Landmark is a real estate development group based in Vancouver, British</div><div class="g1"> Columbia. They are currently the largest real estate development firm in the United States and Canada. They are a minority interest in the Vancouver Chamber of Commerce and also serve as the largest commercial development company in Canada.
+
+History 
+In 1997, the Vancouver Chamber of Commerce and the company acquired the Vancouver Real Estate Council (VRC) and the Vancouver Real Estate Commission (VRBC) to create the Vancouver City Council. In 1999, VRC merged with the VRBC. In 2001, the VRBC acquired the Vancouver Real Estate Commission (VRBC) and merged with the VRC. In 2003, VRC merged with the VRBC. In 2005, VRC merged with the Vancouver Real Estate Commission (VRBC) and merged with the VRC in 2006. In 2012, VRC merged with the VRBC.
+
+In 2016, VRC merged with the Vancouver Real Estate Commission (VRBC) and merged with the Vancouver City Council (VRC). In 2018, VRC merged with the Vancouver City Council (VRC) to create the Vancouver City Council.
+
+In 2019, VRC</div><div class="info">own 4-gram repetition 0.28; prompt EN-P00017</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C03" data-sec="C"><td class="n">C03</td>
+<td><div class="pre">Michael Vella is an Australian former professional rugby league footballer who played in the </div><div class="g0">1980s for New Zealand&#x27;s Bluebacks, the Warrington Thunderbirds and Wests Tigers. He is specifically identified by the configuration of his natural ribs and merits further clarification.
+
+Early life
+Vella attended Ashfield College in Stapleton, Victoria, as a member of the Port Phillip Bay club. He played his first game for Port Phillip&#x27;s rugby league side in July 1975, aged 14 years and 186 days.
+
+Drought
+In an article published in July 1976 in a local newspaper, a Dingo was quoted as saying &quot;... it seldom rain down South Australia, however, every time it finally did you could feel you had the front of your head off precipices for several kilometres down ahead, to tin was comfortably defined as one of the driest places on earth&quot;.
+
+Provincial draft
+Vella initially played for the Queensland club of the South Australian Rugby League and spent three years in the club&#x27;s reserves but was sacked with Corben Vorster in January 1978. Soon afterwards he was promoted to his new league club Queensland in the boldest new age of its retirement tradition that almost to no one&#x27;s surprise became an important piece of the team this he scored both tries with</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">Michael Vella is an Australian former professional rugby league footballer who played in the </div><div class="g1">1996 and 2000 AFL seasons for the Brisbane Rhinos.
+
+Playing career
+
+Bhamiah F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.
+
+Burridge F.C.</div><div class="info">own 4-gram repetition 0.86; prompt EN-P00018</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C04" data-sec="C"><td class="n">C04</td>
+<td><div class="pre">When people suffer from one or the other health issue, they often have to make</div><div class="g0"> a choice and commit to different changes in order to cope with the daily hardships and peace. Four major mental health conditions are prevalent at the time of illness: anxiety, depression, bipolar disorder, and schizophrenia. Modern-day psychiatric illnesses dealing with infectious infections include fever, influenza, meningitis, and tuberculosis. Researchers have stated that in the past, there was panic disorders which manifested in verbal fears and physical illness. Today, many mental disorders have originated from medical conditions which were predominantly controlled by antibiotics. One other common disorder that is rarely identified is bipolar disorder. There is a long history of social isolation and depression, however, these have severe consequences. Ramabaisis is a type of depression that has anektecharakia that occurred due to heredity, where there is genetic correlation with any family history. Researchers have attempted a rationalization behind the fact that current conditions impose emotional stress on the patients which can trigger depression.
+Despite this, research has stated that the drug, amesivir is a vital medicine for the treatment of depression disorder. Studies in children and adults have consistently demonstrated that individuals with schizophrenia and bipolar disorder could used a drug like arteremivir to cope with mental disorders, however no serious mental disorders have been confirmed during this study. Additionally, Becker and Dasz flat activation that accompanies mental</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">When people suffer from one or the other health issue, they often have to make</div><div class="g1"> a change in their lifestyle. They may change their diet, exercise, sexual activity, or their health.
+For example, people with diabetes may eat more carbohydrates than normal.
+People with severe hypertension may eat more carbohydrates than normal.
+People with high blood pressure may have to eat carbohydrates.
+People with high blood sugar may have to eat carbohydrates.
+People with major heart disease may have to eat carbohydrates.
+People with high blood sugar may have to eat carbohydrates.
+People with certain conditions may have to eat carbohydrates.
+People with brain cancer may have to eat carbohydrates.
+People with Lyme disease may have to eat carbohydrates.
+People with other conditions may have to eat carbohydrates.
+A person with chronic liver disease may have to eat carbohydrates.
+People with minor heart disease may have to eat carbohydrates.
+People with low blood pressure may have to eat carbohydrates.
+People with thyroid disease may have to eat carbohydrates.
+People with insulin resistance may have to eat carbohydrates.
+People with mild diabetes may have to eat carbohydrates.
+People with insulin resistance may have to eat carbohydrates.
+People with kidney disease may have to eat carbohydrates.
+People with heart disease may have to eat carbohydrates.
+People with foot pain may have to eat carbohydrates.
+People with heart disease may have</div><div class="info">own 4-gram repetition 0.47; prompt EN-P00024</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C05" data-sec="C"><td class="n">C05</td>
+<td><div class="pre">- To create the working team and strengthen the group.
+- To be able</div><div class="g0"> to delegate tasks.
+- To be able to co-operate with the junior team.
+- Working independently, seeking feedback and monitoring oneself.
+- Aptitude in going with individual co-workers by joining forces when their strength is weak. This can be valuable if they are highly motivated.
+- Pre-emptive: Priority will grow, demands will increase.
+- Self-motivated: Rewards will satisfy rather than impede.
+- Vulnerable: Expect to lose, in particular to enemy–someone else.&lt;lab&gt;‘Although the process cannot control everything, one can control only one thing’.
+- Restful: There will be harmony and there will be peace.
+- Prepared: Pay a visit to the presenter, give your thoughts it can come to you.</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">- To create the working team and strengthen the group.
+- To be able</div><div class="g1"> to create the team.
+- To work together in the group.
+- To make sure that the group has the necessary resources and that the group is able to meet their goals.
+- To get the right and the right people to be there.
+- To get the right people to be there.
+- To be able to make sure that the group is ready and able to work together.
+- To identify and solve problems.
+- To seek out information.
+- To solve problems and find solutions.
+- To seek out information and find solutions.
+- To create a new and productive team.
+- To use the new team to work together on a new project.
+- To decide on the appropriate tools and resources for the new project.
+- To plan, evaluate and build the new project.
+- To develop and evaluate a plan.
+- To plan the work of the new team.
+- To use the new team to work together on a new project.
+- To plan, evaluate and build the new project.
+- To define, evaluate, and build a new project.
+- To prepare for a new project.
+- To evaluate a new project.
+- To design and build a new project.
+- To develop and evaluate</div><div class="info">own 4-gram repetition 0.22; prompt EN-P00025</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C06" data-sec="C"><td class="n">C06</td>
+<td><div class="pre">Verah Falls was an American post-hardcore band from Portland, Oregon.</div><div class="g0"> They released two self-released albums and one EP, dedicated to using the sound of groovy, industrial drum orchestrations on their recycled, heroic style.
+
+Mt. Everest Pro Tour and EP
+In March 2011, Verdah released the concept release for their third album The Wandering—one of three sides—on Guitar Trade.
+
+Recordings 
+The recordings were 12 inches long each and were covered with enough of an effort that they could become a real reality. The recording system consisted of a hybrid pickup system in place of traditional synch in the band microphones, so it was powered by a Ute TX40 synthesizer, a Kenworth 10, and a Komplete Y5 tape interface.
+
+Track listing
+ &quot;Anyone Can Dance&quot; 2:10
+ &quot;Someone&#x27;s on the Way to the Sea&quot; 4:58
+ &quot;Stateless&quot; 2:00
+ &quot;Last Chance to Fly&quot; 4:11
+ &quot;Super Love Killin&#x27;&quot; 4:08
+ &quot;Suddenly They&#x27;re You (I&#x27;m Sorry the Matter Just Becomes To Get)&quot; 3:02
+ &quot;What I Want Is a Knockout&quot; 4:38
+ &quot;Stampin&#x27;&quot;</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">Verah Falls was an American post-hardcore band from Portland, Oregon.</div><div class="g1"> Their first album, “The Focus on the Real Thing” was released in 2012, while the band’s second album, “The Focus on the Real Thing” was released in 2014.
+
+History
+
+The band&#x27;s first album, “The Focus on the Real Thing” was released in 2012, while the band&#x27;s second album, “The Focus on the Real Thing” was released in 2014. The band initially used the word “Focus” as their first name, while their second album, “The Focus on the Real Thing” was released in 2014.
+
+During the first two years of the band, the band used the word “Focus” for its first album, “The Focus on the Real Thing”. During the second year, they used the word “Focus” for their second album, “The Focus on the Real Thing” was released in 2014.
+
+During the first year of the band&#x27;s second album, “The Focus on the Real Thing”, the band used the word “Focus” for their second album, “The Focus on the Real Thing”. During the second year, the band used the word “Focus” for their third album, “</div><div class="info">own 4-gram repetition 0.52; prompt EN-P00028</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C07" data-sec="C"><td class="n">C07</td>
+<td><div class="pre">Jaroslav Hübl (born 29 December 1982 in</div><div class="g0"> Brodá) is a Czech former professional ice hockey defenseman.  He played in all four Grand Prix Final and the 2006 Futures Championship, but missed out on the 2006 Memorial Cup.
+
+Events during his career 
+ Start/finish during regular season
+
+Fixtures
+
+ highlight
+
+Notable Fenerbahçe alumni
+
+References
+
+External links
+
+1982 births
+Living people
+Józef Hack, Czech sportsmen
+Czech expatriate ice hockey players
+Czech expatriate sportspeople in Russia
+Estonian expatriate sportspeople in Russia
+Expatriate ice hockey players in Russia
+Russian expatriate sportspeople in Russia
+Soviet freestyle hockey players
+Russian expatriate sportspeople in United States
+Expatriate ice hockey players from Joe City, SD-Estonia</div><div class="info">own 4-gram repetition 0.05</div></td>
+<td><div class="pre">Jaroslav Hübl (born 29 December 1982 in</div><div class="g1"> Podgorica) is a former Hungarian player who played as a midfielder.
+
+References
+
+1982 births
+Living people
+People from Podgorica
+Footballers from the Hungarian Premier League
+Hungarian men&#x27;s footballers
+Men&#x27;s association football midfielders
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players
+Honkai Super League players</div><div class="info">own 4-gram repetition 0.49; prompt EN-P00030</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C08" data-sec="C"><td class="n">C08</td>
+<td><div class="pre">The Racial Geography of the Federal Death Penalty
+Scholars have devoted substantial attention</div><div class="g0"> to the Racial Geography of the Federal Death Penalty since the most recent political scholarship accumulated over the last forty years. A systematic approach to examining and comparing regions within the United States has since emerged as the second largest skill in the success of politicians. Scholars have submitted a variety of case studies in both empirical and theoretical issues dealing with the distribution of &quot;racial&quot; officials being prosecuted and sent to prison in fairly states&#x27; rights-based federal death penalty systems. The research has established that the racial makeup and distributions of oppressive states has resisted democratic upbringings and thus polarized the political actors.
+This paper will provide descriptive statistics on the distribution of these political parties, the number of states that both punished and redeployed racial officials, and the ratio of (in and outside of federal states) convicted &quot;racial residents&quot; to their political counterparts. Additionally, it will examine the asymmetric impact of majoritarian and corporatism policies on racial membership. Theoretical, empirical, and methodological issues will be raised to address these mixed findings. Lastly, this paper will formulate a political action guideline for achieving a progressive exchange of prisoners with a &quot;equal ga<mark class="frn">することにより答案附练习方法沪深</mark>IC，，<mark class="frn">但是只能矫明性拟议率上周春牛肉</mark>，<mark class="frn">是涉及到诉</mark>，<mark class="frn">要求</mark> Joaquim、Cálacez<mark class="frn">裁处理僑学校</mark></div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">The Racial Geography of the Federal Death Penalty
+Scholars have devoted substantial attention</div><div class="g1"> to the psychological impact of racial geography on the death of those who have died in the wake of racialization. This article explores the most important psychological findings of the racial geography of the federal death penalty and the impact of the ongoing racialization of those who have died in the wake of racialization. Finally, we review the empirical evidence of the effects of racialization on the death of those who have died in the wake of racialization, and the empirical evidence of the effects of the ongoing racialization of those who have died in the wake of racialization. Finally, we review the empirical evidence of the effects of racialization on the death of those who have died in the wake of racialization.
+|2013/12/15 | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |</div><div class="info">own 4-gram repetition 0.46; prompt EN-P00038</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C09" data-sec="C"><td class="n">C09</td>
+<td><div class="pre">Falsomordellistena is a genus of tumbling flower beetles in the</div><div class="g0"> family Mordellidae that have bilateral sex organs. It belongs to the thermochroic group, the landless subfamily of the Dermestidae subfamily.
+
+Description
+The larvae feed in northeast India and subtropical and southeastern China, where the Caledomyces species (target avoiding red-riddlers).
+
+letal features
+Falsomordellistena differs from the other thermochroic colonies in having a single accessoric forefalter (grubs, beetles, or other flowering plantlets protruding from the fore margin below the<mark class="frn">盛</mark>ance stiff-guard) on its elytra anteriorly.
+
+Legally, a larva lays in the adults of its beetles, but rarely do the fliers lay in its beautiful sepals and the dorsum of the pilds. Because a modification of the ventral palp notes that a female lays in die side of her petrous subornal seg, that the larvae lay in the ventral part of the cell fascia, thus saving its name, witnessies selected the compatibility of almost total genetic conformity with a preexisting genus, L. hypobjyjanorum. Male sex organs for this beetle were obtained from several A. angolae vernal, autotomous, indexetrytic types. From a later review of 10 zoological families the specimen</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">Falsomordellistena is a genus of tumbling flower beetles in the</div><div class="g1"> family Mordellidae. It is the sister genus of the primitive rhododendron genus.
+
+The species of the family Mordellidae are the following:
+
+The following species are members of the family Mordellidae:
+
+G. trčekalis, T. bungle, T. bungle, T. velli and T. viridensis
+G. tmedica, T. bungle, T. sytorii, T. velli and T. viridensis
+
+The following species are members of the family Mordellidae:
+
+The following species are members of the family Mordellidae:
+
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are members of the family Mordellidae:
+The following species are</div><div class="info">own 4-gram repetition 0.68; prompt EN-P00042</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="C10" data-sec="C"><td class="n">C10</td>
+<td><div class="pre">Tips for Learning Online
+Some students think that an online course is cyber-surfing</div><div class="g0">. For the best course for most of the world, they say to themselves, “I think it’s too bad.”
+Does the World Develop Digital Undtransformation in the Future?
+We know that we in the world, together, are the pioneers of growth. But we live in a different time than anyone has ever known, and this is probably due to global challenges that have thrown our globe into a throbbing uncertainty. To address these problems and historic challenges, we need to do everything to contribute to global growth. So, we are turning back again to decades past when the first global conflict broke out, invested the welfare of our people in a remarkable effort to lead our war against imperialism. This isn’t to say that the threat of war still holds true, they are in a way just another war, perpetrated by a government that has no monopoly on violence and never once attempted to rebel.
+Starting a Distance Education Online
+It would be wise for students to connect with their own local vicinity.
+Start with a beach – let it define your beauty –
+You could have a beach in your own country, but don’t limit it to our shores. As we have pointed out an hours away away, the beauty of other countries might quite simply be dismissed. What make us.</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">Tips for Learning Online
+Some students think that an online course is cyber-surfing</div><div class="g1"> or something like that. They are thinking that they will get bored with it and want to switch. If you do, you can think about an interesting way to do it. You can imagine a problem with the internet or your entire class. If you do this, you can think about the internet as an experiment.
+Let’s try and think about an experiment. What would happen if you were asking students to read a text and write it down? What would happen if you asked students to read the text? What would happen if you gave each student an iPad? What would happen if you gave each student an iPad? What would happen if you asked students to read a text? What would happen if you asked students to read a text? What would happen if you asked students to read a text? What would happen if you gave each student an iPad? What would happen if you asked students to read a text? What would happen if you gave each student an iPad? What would happen if you asked students to read a text? What would happen if you asked students to read a text? What would happen if you asked students to read a text? What would happen if you gave each student an iPad? What would happen if you asked students to read a text? What would happen if you asked</div><div class="info">own 4-gram repetition 0.58; prompt EN-P00043</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr></tbody></table><h2 id="D">D. Bangla: repetition at top-p 0.95 (BN-REPLACE-topp95, generation 6)</h2><p>The same pattern in Bangla. These rows are drawn from the documents whose own 4-gram repetition is at least 0.2.</p><div class="wrap"><table class="m"><thead><tr><th>measure (over 2,000 sampled documents per model)</th><th>gen 0</th><th>top-p 0.95 gen 1</th><th>top-p 0.95 gen 3</th><th>top-p 0.95 gen 6</th><th>REPLACE gen 6 (top-p 1.0)</th></tr></thead><tbody><tr><td>documents whose own 4-gram repetition is at least 0.5</td><td class="v">0.001</td><td class="v">0.001</td><td class="v">0.015</td><td class="v">0.141</td><td class="v">0.011</td></tr><tr><td>documents whose own 4-gram repetition is at least 0.2 (exploratory)</td><td class="v">0.003</td><td class="v">0.009</td><td class="v">0.048</td><td class="v">0.283</td><td class="v">0.015</td></tr><tr><td>mean 4-gram repetition</td><td class="v">0.003</td><td class="v">0.008</td><td class="v">0.035</td><td class="v">0.177</td><td class="v">0.011</td></tr><tr><td>distinct word pairs</td><td class="v">0.878</td><td class="v">0.841</td><td class="v">0.738</td><td class="v">0.531</td><td class="v">0.893</td></tr><tr><td>mean length (words)</td><td class="v">159</td><td class="v">157</td><td class="v">150</td><td class="v">155</td><td class="v">155</td></tr></tbody></table></div><div class="q" data-q="qD"><b>What does the repetition look like?</b><div class="opts"><label><input type="radio" name="qD" value="loops"> readable sentences that repeat words or phrases</label><label><input type="radio" name="qD" value="broken"> broken or meaningless text (a technical fault)</label><label><input type="radio" name="qD" value="unsure"> mixed or unsure</label></div><input type="text" class="qnote" placeholder="short note (optional)"></div><div class="q" data-q="qD2"><b>Apart from the repetition, is the generation-6 text readable Bangla?</b><div class="opts"><label><input type="radio" name="qD2" value="yes"> yes</label><label><input type="radio" name="qD2" value="partly"> partly</label><label><input type="radio" name="qD2" value="no"> no</label></div><input type="text" class="qnote" placeholder="short note (optional)"></div><p class="sub">10 rows drawn with a fixed seed from the 13 of these 50 samples whose own 4-gram repetition is at least 0.2.</p><table class="t" lang="bn"><thead><tr><th>#</th><th>generation 0 (prompt in grey)</th><th>BN-REPLACE-topp95, generation 6 (same prompt)</th><th>tick only a fault</th></tr></thead><tbody><tr data-id="D01" data-sec="D"><td class="n">D01</td>
+<td><div class="pre">কিংস ক্রস সেন্ট প্যানক্রাস (পূর্বে কিং ক্রস)  লন্ডনের ক্যামডেন বরোর</div><div class="g0"> এক ঘনিষ্ঠ গণতন্ত্রকে সমর্থনকারী একটি গোষ্ঠী।
+দেশীয় সাধারণত এই দুনিয়াতে চালুর এবং খবর-স্বাধীনতার সময় কাল্পনিক। একটি রাজনৈতিক সমাজের বন্দোবস্ত সহায়ক এই রাজনৈতিক পরিবেশের সোনালি কাল নাগাদ প্রস্তুত, এবং সেই লাল যুগ তারই পুনরিপনুত।
+নামক খ্যাতি , এবং তখন ভাষাসমবণ তথা মৌঁর রায়নীয় ডক্টরেট । এই সম্প্রদায়ের ব্যানারে ঐক্য এবং দক্ষতা অর্জনের লক্ষ্যে আইনস্টাইন এর দল এই দুনিয়া স্কুল প্রতিষ্ঠিত করার সিদ্ধান্ত নেন যা আন্তর্জাতিকভাবে রাষ্ট্র পরিবর্তন করতে পারবে কিনা, এই বিষয়ে আলোচনার অবকাশ দেয় না, অর্থাৎ স্বভাবতই রাষ্ট্রের ভাবী বা আদর্শের সঙ্গে একটা মৃত্যু নিশ্চিত করা যায়। অবশ্য এর আরেটির পরে ভদ্রহোয়্যাম আর্কিবিউন্স কোলজনা স্টেডিয়াম শুধুমাত্র একটি বিশ্ববিদ্যালয় এবং এটি ডক্টরসবাদবাদের একটি আদর্শ স্থান হিসেবে উদ্ভূত হয়েছিল।
+ডি অ্যান্ডডেসিপির উদ্দেশ্য আমাদের সমাজে অগ্রসর হওয়া, সেটা পৃথিবীর পরাস্ত করা এক নির্দিষ্টমুখী উপায় ( ব্যাবহার করে ), যা সম্রাট এলিসিয়া এর পরেই এই অঞ্চলে খনিজ উৎপাদনের ঘাটতি এড়াতে শাখা-প্রশাথা চলে আসে ।
+প্রেরিত এথিনি টুর এর বর্ণনা জুড়ে স্পষ্ট শব্দ, অন্য যা কি এমন একটা পরিবার নয়। সে ক্ষেত্রে কোন একটি শব্দ বা শব্দ আরও সুস্পষ্ট করবে - শুধু গোটো &#x27;বার্দি&#x27;-এও এই শব্দ - যে শব্দটি তাকে বোঝাতে পারে না।
+এভাবেই প্রকৃতি যে আজও হিন্দু ধর্মগুরু খৃঃোলয় বসু এই অঞ্চলের ব্যাখ্যা করেন, সেই মতে নীহারিক যুগ -  কাঞ্জ ও অয়ন শ্রেণী হইয়াছিলেন, সেই শ্রেণী তলায়ই তারা হ্রাস পেয়ে আসছে ।
+হিন্দুরা ডাকতেন ডিমের ভাতে খেয়াল করব। কেউ</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">কিংস ক্রস সেন্ট প্যানক্রাস (পূর্বে কিং ক্রস)  লন্ডনের ক্যামডেন বরোর</div><div class="g1"> সঙ্গে যৌথভাবে ১৯৯৭ সালের ২০ নভেম্বর, ১৯৯৭ সালের ২০ নভেম্বর, ১৯৯৯ সালে, ডাচ গাইড লাইন সংকেতকে দেওয়া হয়েছিল। ২০০৪ সালে, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি সিএসআই সিবিএসএএম এর সভাপতি হয়েছিলেন। ২০০৭ সালে, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানির চেয়ারম্যান হয়েছিলেন। ২০০৯ সালের জুনে, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ২০০৯ সালের ২৬শে ডিসেম্বরকে &quot;নতুন আইন&quot; হিসাবে ঘোষণা করেছিল। ২০০৯ সালে, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ইন্ডিয়ান রোড এন্টারটেইনমেন্ট এর চেয়ারম্যান হিসাবে নিযুক্ত হয়েছিলেন। ২০০৯ সালের ১৪ই ডিসেম্বর, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানির প্রধান নির্বাহী বা এটিএম এর চেয়ারম্যান হন। ২০১০ সালে, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ইন্ডিয়ান রোড এন্টারটেইনমেন্ট এর চেয়ারম্যান হন। ২০১২ সালের ১৪ই ডিসেম্বর, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ইন্ডিয়ান রোড এন্টারটেইনমেন্ট এর প্রধান নির্বাহী ছিলেন। ২০০৯ সালের ৩১শে ডিসেম্বর, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ইন্ডিয়ান রোড এন্টারটেইনমেন্ট এর চেয়ারম্যান হন। ২০১০ সালের ২১শে ডিসেম্বর, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ইন্ডিয়ান রোড এন্টারটেইনমেন্ট এর প্রধান নির্বাহী ছিলেন। ২০০৯ সালের ২৮শে ডিসেম্বর, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ইন্ডিয়ান রোড এন্টারটেইনমেন্ট এর প্রধান নির্বাহী ছিলেন। ২০১২ সালের ১লা সেপ্টেম্বর, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ইন্ডিয়ান রোড এন্টারটেইনমেন্ট এর প্রধান নির্বাহী ছিলেন। ২০১২ সালের ২৯শে ডিসেম্বর, ইন্ডিয়ান রোড এন্টারটেইনমেন্ট কোম্পানি ইন্ডিয়ান রোড এ</div><div class="info">own 4-gram repetition 0.37; prompt BN-P00001</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D02" data-sec="D"><td class="n">D02</td>
+<td><div class="pre">বহুমূত্ররোগ বা ডায়াবেটিস (যা ডায়াবেটিস মেলাইটাস নামেও</div><div class="g0"> পরিচিত) হলো অহিদোগীয় রোগের একটি যৌনযন্ত্রবিশেষ। মানুষের অতিরিক্ত রক্ত প্রবাহে গঠিত এই সাদা অংশ এন্ডোফোবিইয়ে ব্যবহৃত হয়। এ ছাড়া ডায়াবেটিস মেলাইটাস নামের একটি পিশাচিক স্নায়ুতন্ত্রসহ বিভিন্ন কান্ডুসলাম দ্বারা অস্থিতে চলাচল করতে সাহায্য করে। তবে কোন মানব প্রাণিক লগারিদম বৃদ্ধির উপযোগী এদের এ স্নায়ুতন্ত্রে কোন কার্য প্রবর্তন হয় না। আমরা এই স্নায়ুতন্ত্রের প্রাচীরের বৈশিষ্ট্য দেখতে পাই। এই স্নায়ুতন্ত্রে নানান ক্ষুদ্র স্ফটিক ভেদ হয়ে রিফোর্পিংযুক্ত রেভিয়্যানোসাইন কভার স্টোগ্লোরোসিনোজেনিক নকশা বেশি অনুভূত না হওয়ায় তা পরীক্ষাগারে &#x27;অনন্ত&#x27;-এর নামাযিত থেকে সরিয়ে নিলো। এ অবস্থায় বর্তমানে এই বস্তুটির ব্যবহার কঠিন হয়ে পড়েছে।
+প্রথমত, সাধারণত থিগোপ্যাথিক গ্লোরিহ্যাটিক ইন্টেলিজম ব্যাপারটি কম প্রাসঙ্গিক। আমরা কোন অণু ধারণাবাদের ন্যায় কিছু নির্দিষ্ট ধরনের এ পরীক্ষায় ড্রাগিং, ফার্মেক্সস্টোকাইটস কোয়েশ।, এবং সংরক্ষণানুযায়ী অ্যানোফিলিক ড্রাগিংয়ের প্রয়োজনীয়তা নিয়ে আমরা কম মনে করি. ড্রাগ তর্ক করতেও সম্প্রতি আরও কয়েকটি নতুন গবেষণা প্রকাশিত হয়েছে যেখানে জানা গেছে যে থিগোপ্যাথিক গ্লোরিহ্যাটিক্স কোয়েশাযোগ এবং অ্যানোফিলিক ড্রাগিংয়ের সঠিক প্যারাস্টির প্রয়োজনীয়তার দিকে ত্রৈলোক্যীয়তা দেখা দেয়.
+ব্যবহৃত থিগোপ্যাথিক গ্লোরিহ্যাটিক্স কোয়েশাযোগ গবেষকদের বক্তব্য ছিল যে, লেভার হিস্টিক ট্রাইব্য</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">বহুমূত্ররোগ বা ডায়াবেটিস (যা ডায়াবেটিস মেলাইটাস নামেও</div><div class="g1"> পরিচিত) হচ্ছে না এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন, এমন,</div><div class="info">own 4-gram repetition 0.98; prompt BN-P00017</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D03" data-sec="D"><td class="n">D03</td>
+<td><div class="pre">জাতীয় অধ্যাপক বাংলাদেশের বিশেষ রাষ্ট্রীয় সম্মাননা যা বাংলাদেশ সরকার কতৃর্ক শিক্ষা, জ্ঞান-বিজ্ঞান ও</div><div class="g0"> অর্থ লাভ করতে এবং অসাধারণ কর্মকর্তা ও ব্যবসায়ী। রাষ্ট্রবিজ্ঞানের বিষয়টি নিয়ে গবেষণা আর নিজের চেষ্টায় এাদাড়াও শিক্ষা, বিজ্ঞান ও জ্ঞানবিষয়ক বিষয়গুলির উন্নয়নে পুরস্কার পাওয়া অন্যতম অবদান এই প্রতিজ্ঞা। বাংলাদেশের বিজ্ঞানী, শিক্ষাবিদ, ভাষাবিজ্ঞানী এবং সঙ্গীতসঙ্গীত শিল্পী। অট্টহাস্য ও বলিভিয়ার রাষ্ট্রবিজ্ঞকত বিশ্বুষঙ্গেশনাল বিশ্ববিদ্যালয় নয় এর নাম করে ভেজাল মোকারে তোমাকে আমি বাঁচবে এমনটা আমি ভাবলাম। চরিত্রপরিহনের মেরুদন্ডে থাকতে দেখা যায় সক্রেটিসের এই বৈশিষ্ট্য। কারণ তার গোপন অবস্থান কখনোই এমন হয়ে যায় যে, বাড়িতেই তাঁর আনন্দময় এক স্মৃতি এবং মানুষের আধ্যাত্মিক ভাবময় ভূমিকা থেকে বেরিয়ে আসে। এই দুয়ারে প্রতিরে কেরান্ত জায়ক্রান্ত এবং খুড়শিম গম্ভীরতা স্বাধীনতায় জমি দরের জন্য ক কথা বলার।
+বঙ্গপদ্মায় সংগীতের পবিত্র স্থান গুলোতে বাসিত প্রাণ তেমনিভাবে জনপ্রিয়! এখন আছে সংগীতের প্রতিভার শিখরগন আন্দোলন, গানবাজনা, পরিকল্পিত চিল মিউজিক বাশন জাতীয় মঞ্চ, বারান্দার বাজানোর দলিলপত্র, বার্তা পত্রে, কোরবাবা বিলুপ্ত জটিল জীবন পত্তনের আশ্রয়। প্রথম দুটি জানালেন ডান আব্দুলপুর, পশ্চিম বাংলার অন্যতম প্রধান আঞ্চলিক সঙ্গীত সংগঠন প্রধানের দায়িত্বপ্রাপ্ত প্রধান সঙ্গীত শিল্পী <mark class="frn">ष</mark>ि এই প্রথায় পূর্বতন শোকাবহ ও পাঁঠা-থাঠা যুগে আমলতে আমলতে রেখে ভিন্নতর সংগীততার পরিচয় দেয় রেজায়েন্সেরাই সৈয়দ আবুল-শফিউদু উদ্দিন বাদল দ্বারা স্বাক্ষীত গদ্য কার্গত সংগীতে সাবিত্রী ভাবে অনুভূতি ও নিজ অনুভব দেখিয়ে কম্বাচিত স্বাবলম্বী তরুণ পেশার বর্ণিল ভবিষ্যত বিস</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">জাতীয় অধ্যাপক বাংলাদেশের বিশেষ রাষ্ট্রীয় সম্মাননা যা বাংলাদেশ সরকার কতৃর্ক শিক্ষা, জ্ঞান-বিজ্ঞান ও</div><div class="g1"> বিজ্ঞানকে কাজে লাগিয়েছে। এ কারণেই শিক্ষা ও গবেষণার একটি অসাধারণ এবং অনন্য দৃষ্টান্ত সৃষ্টি হয়েছে। এর মধ্যে উল্লেখযোগ্য প্রতিষ্ঠান হিসেবে  অবকাঠামোগত, বিজ্ঞানসম্মত এবং কৃত্রিম জাতীয় উন্নয়ন প্রকল্প, আন্তর্জাতিক ও জাতীয় বিজ্ঞান অ্যাকাডেমির মতো উচ্চশিক্ষা প্রতিষ্ঠান এবং গণিতবিদরা নানা শিক্ষা ও গবেষণা প্রতিষ্ঠানের মতো উচ্চশিক্ষা প্রতিষ্ঠান ও গবেষণা প্রতিষ্ঠানের মাধ্যমে শিক্ষা ও গবেষণার উন্নতির মাধ্যমে নানা প্রকার গবেষণা কার্যক্রম পরিচালিত হচ্ছে। বর্তমানে গবেষণা প্রতিষ্ঠান ও প্রতিষ্ঠানসমূহের প্রায় ৫০ শতাংশই উচ্চশিক্ষা প্রতিষ্ঠানের মাধ্যমে চলে। বর্তমানে এই প্রতিষ্ঠানগুলোর মধ্যে উল্লেখযোগ্য প্রতিষ্ঠান হিসেবে  হিরো-ই-লয়ারা বিশ্ববিদ্যালয়, যোনি বিশ্ববিদ্যালয় ও ব্রাদার্স ইউনিভার্সিটি।
+
+বর্তমান বিশ্ববিদ্যালয়
+বাংলাদেশের ৫টি বিশ্ববিদ্যালয় হল:
+ সৈয়দ আহমদ আলী কায়েসিয়া, সলিমুল্লাহ, মঞ্জু মোহাম্মদ আলী, শেখ মোহাম্মদ ইসমাইল এবং সামসুদ্দিন আহমেদ।
+
+অন্যান্য প্রতিষ্ঠান
+চট্টগ্রাম বিশ্ববিদ্যালয়, কক্সবাজার, ঢাকা বিশ্ববিদ্যালয়ের মতো উল্লেখযোগ্য প্রতিষ্ঠান
+চতুর্থ জাতীয় বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+কক্সবাজার বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান
+চট্টগ্রাম বিজ্ঞান অ্যাকাডেমির মতো প্রতিষ্ঠান</div><div class="info">own 4-gram repetition 0.38; prompt BN-P00022</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D04" data-sec="D"><td class="n">D04</td>
+<td><div class="pre">লিজে মাইটনার (১৮৭৮ - ১৯৬৮) একজন অস্ট্রীয়-সুয়েডীয় পদার্থ</div><div class="g0">বিজ্ঞানী যিনি তুষার থেকে উত্তরণ দ্বারা তড়িৎ প্রবাহকে পৃথক করার ভিত্তি হিসেবে এবং বো-বিজমের প্রক্রিয়াটির প্রয়োগকে কাজে লাগিয়ে সেখানকার রাসায়নিক কন্ডিশনের নিকৃষ্ট রূপান্তর করতে সাহায্য করতেন। তিনি মানুষের অস্তিত্বের প্রমাণ প্রক্রায় তার অবদান দ্বারা আবদ্ধ করা সম্ভব সমর্থন করেছিলেন।
+
+রাসায়নিক প্রকাশনকে সহজতর করতে তিনি নরমাল ধাতব বর্ণ ব্যবহার করেছিলেন। তিনি বো বিজমের ব্যবহারটি আধুনিক সময়ের তড়িৎ শোষণ-নিয়ন্ত্রণ বিল বা মাইক্রোফিল্মস তৈরি করতে সহায়তা করেছিলেন. তিনি বিশ্বের বিভিন্নভাবে কঠিন পদার্থ যেমন বাইগন্যাত্বক রাসায়নিক ধাতব যেমন ন্যানোয়ন, এবং এমন খুণের জন্য বিভিন্ন ধরনের নীলনালী উপাদান বর্ণনা করেছিলেন, যা উনিশ শতকে বিগ ম্যাগাজিন বা লৌহিটের গোনাংশ হিসেবে উন্মুক্ত হয়েছিল।
+
+তথ্যসূত্র
+
+বহিঃসংযোগ 
+
+ম্যাগাজিন এবং হাফলেটটার জেনারেল করতেন (১৮৭৯- চাঁদপুরের কাজি বিশ্ববিদ্যালয়ের নর্থ জার্নাল প্রোগ্রামের) &quot;স্কোয়াণ্ট জেনারেশ&quot; প্রতিযোগিতায়, মে গানের সাথে ত্বকের গুরুত্বপূর্ণ রাসায়নিক পদার্থের সংজ্ঞা:
+জোনারার কালো রঙের উপাদান কেন মৌল মিশ্রনের সাথে আল্পটি থাকার পরামর্শ পেশাজীবী</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">লিজে মাইটনার (১৮৭৮ - ১৯৬৮) একজন অস্ট্রীয়-সুয়েডীয় পদার্থ</div><div class="g1">বিজ্ঞানী। তিনি পিএসজি এর প্রধান প্রকৌশলী ছিলেন।
+
+মাইকেল ম্যাকের (১৯৭৫-১৯৯২) বিখ্যাত পদার্থবিজ্ঞানী ছিলেন। তিনি পিএসজি এর প্রধান প্রকৌশলী ছিলেন। তার এ উদ্যোগের মধ্যেই তিনি পিএসজি এর প্রধান প্রকৌশলী হয়েছিলেন। তিনি ২০০২ সালে স্পেসেজারে মার্বেল লয়েস (১৯৯২-১৯৯৬) নামে একটি প্রস্তাব পেশ করেছিলেন। প্রস্তাবটি চূড়ান্ত হলে তিনি ১৯৯৭ সালের নভেম্বর মাসে পিএসজি এর প্রধান প্রকৌশলী হন। এর পরে তিনি ২০১৪ সালে স্পেসেজারে মার্বেল লয়েস (১৯৯৭-২০০২) নামে একটি প্রস্তাব পেশ করেছিলেন। প্রস্তাবটি চূড়ান্ত হলে তিনি ২০১৭ সালের ১০ নভেম্বর স্পেসেজারে মার্বেল লয়েস (১৯৯৭-২০০২) নামে একটি প্রস্তাব পেশ করেছিলেন। প্রস্তাবটি চূড়ান্ত হলে তিনি ১৭ ফেব্রুয়ারি ২০১৬-এ তিনি স্পেসেজারে মার্বেল লয়েস (১৯৯৭-২০০২) নামে একটি প্রস্তাব পেশ করেছিলেন। প্রস্তাবটি চূড়ান্ত হলে তিনি ১৫ ফেব্রুয়ারি ২০১৬-এ স্পেসেজারে মার্বেল লয়েস (১৯৯৭-২০০২) নামে একটি প্রস্তাব পেশ করেছিলেন। প্রস্তাবটি চূড়ান্ত হলে তিনি ১৬ ফেব্রুয়ারি ২০১৬-এ স্পেসেজারে মার্বেল লয়েস (১৯৯৭-২০০২) নামে একটি প্রস্তাব পেশ করেছিলেন। প্রস্তাবটি চূড়ান্ত হলে তিনি ১৭ ফেব্রুয়ারি ২০১৬-এ স্পেসেজারে মার্বেল লয়েস (১৯৯৭-২০০২) নামে একটি প্রস্তাব পেশ করেছিলেন। প্রস্তাবটি চূড়ান্ত হলে তিনি ২৫ ফেব্রুয়ারি ২০১৬-এ স্পেসেজারে মার্বেল লয়েস</div><div class="info">own 4-gram repetition 0.48; prompt BN-P00023</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D05" data-sec="D"><td class="n">D05</td>
+<td><div class="pre">পাঠ্যবস্তু খণ্ডায়ন বা টেক্সট খণ্ডায়ন () বলতে কোন একটি প্রদত্ত পাঠ্য</div><div class="g0">বস্তু যথা: চলচ্চিত্র, বই, টেলিভিশন চ্যানেলের চ্যানেল, সংবাদপত্র, প্রভৃতি একটি প্রধান সজ্জার বৈশিষ্ট্য বা উপাদান। চট্টগ্রাম কত্থক বিশ্ববিদ্যালয় মহাবিদ্যালয়ের ছাত্র জনাব ছারা রুবেল ও জনাব রেজাউল করিম চৌধুরীর এই ধর্মপ্রাণ এবং সর্বস্তরের ছাত্র, তাদের আত্ম প্রবাদ প্রদান করে যাচ্ছি।
+\<mark class="lat">n</mark>১. লোক বলতে যদি শব্দ ও শব্দভেদ করার মাধ্যমে অথবা শব্দের প্রকৃতি ও প্রকৃতি নির্ণয় করে থাকে, তাহলেও সত্য। কোন গাছে কোনো নিয়ম নেই। যেমনঃ যুগ যুগ কালের যারা স্বভাবজ্ঞান ও তক্ষক জ্ঞান স্থাপন করে শুরু করে, তাদের দেশ তাদের অস্তিত্বের দূরীভূত করেছে। তেমনি কোন দুটি বরণেরই সত্য। একটি প্রকৃতি আচার-পরিাদে বর্ণিত বই, অন্যটি আবুরতা। কেউ মা হয়ে যাবিব (যা ধর্ম ও শ্রেনী নেই), কেউ খাওয়িবুকি (যা দেশমণ্ডলীর অস্তিত্ব বা এর করের অভাব আছে), কেউ ফুরিয়া জীব (যা অন্যের জীব মেনে নিতে বিশেষ সুবিধা লাভ)। কিন্তু লোক কখন দ্রব্যগত যুক্তি ইন্দ্রেশনেবোধ করেন, জীবও কখছেন না। বরং নিজের স্বপ্নের জীবন বিশ্বাস করিবার একটি পর্তুগঞ্চীয় ভাষার কথা বলে। আর কেউ কাজ করবে না। আজ যখন মালা-দলালোকের মাংস পোঁড়ে দানাটের আদাকূলের প্রজাসাগরের পণ্য কি? না কি, তাহার ঘরে কথার বেধে ভীমমতী বাজিত বাজিত নিয়্যে জিজ্ঞাসা করিলে সন্তুষ্ট হইই না লোভী পরিণতিশ্চিত্তবুদ্ধি আর সরলবতী বৎসলগ কথা জিজ্ঞাসা করিলাম, এই আলোচনা নিতান্ত কৌতুহল মূর্ছনে মহৎ। কমে না। প্রবন্ধ ঠিক আছে। পয়সা কী, গ্রাহক কী। কাদা বা</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">পাঠ্যবস্তু খণ্ডায়ন বা টেক্সট খণ্ডায়ন () বলতে কোন একটি প্রদত্ত পাঠ্য</div><div class="g1">ক্রমকে (যেমন: ডাচ, জার্মান, মক্কেল, আইসল্যান্ড, রিম্বোস, উয়েফা, ডাব্লিউই, ডাব্লিউই, লোগো ইত্যাদি) বিবেচনা করে একটি নির্দিষ্ট এ ছাড়া কোন কোনও ধরনের নির্দিষ্ট নির্দেশক প্রয়োজন, তা-ই বলা হয় মূলত জ্ঞান ও পদ্ধতির প্রয়োগ, যেহেতু আমরা এই ক্ষেত্রে কিছু নির্দিষ্ট বিষয়ে জ্ঞান, দক্ষতা ও প্রয়োগের প্রয়োজন আছে।
+মূলত একটি নির্দিষ্ট এ ছাড়া কোন একটি নিয়ম ছাড়া কোনো একটি বা একাধিক বিষয় বা নীতিকে ব্যবহার করতে হবে, কোন কিছুতেই প্রয়োজন নেই। কিছু ক্ষেত্রে এই নীতিটি কোন কোন কিছুতেই প্রয়োগ করা যাবে না। যেমন: কোন কোন কারণে কোন কিছুতেই প্রয়োজন নেই। কোন কোন ক্ষেত্রে কিছু না থাকলে বা কোন কোন ক্ষেত্রে কিছুতেই প্রয়োজন নেই। কিছু ক্ষেত্রে কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। আর কোন কিছুতেই প্রয়োজন নেই। কিছু ক্ষেত্রে কোন কিছুতেই প্রয়োজন নেই। কিন্তু কিছু ক্ষেত্রে কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছুতেই প্রয়োজন নেই। কোন কিছু</div><div class="info">own 4-gram repetition 0.51; prompt BN-P00026</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D06" data-sec="D"><td class="n">D06</td>
+<td><div class="pre">সিলেটের লোক-মানুষের রচিত মৌখিক কেচ্ছা, কাহিনী, যাত্রা-পালা ইত্যাদি লোক-</div><div class="g0">মাহমুদ ও গবেষকদেরই অনুপ্রেরণার উৎস ছিল। বলা হয়ে থাকে, কোনো কোন ঘটনার ইতিহাসবদ্ধভাবে আরোহিলাযাব, তা ছাড়া কোনো কয়েকটি ক্ষেত্রে জানোয়ার করতে ভাবা অস্বাভাবিক কিছু নয়। তাই আবার কিছু কবিতা, মহাকাব্য, গল্প বা নাটক ব্যতীত আর কোন গান প্রকাশিত না হওয়ায় তা বলা হয়ে থাকে যে। কালবর্গ ও বিদেশের বিষয়ে যাবতীয় সকল স্থান সম্পর্কে গ্রন্থ রচনা বা মহাকয়ই প্রকাশিত নয়। মোসলেম-ই-আল-জামিয়াত কোন কোন ক্ষেত্রেও কোনো কেচ্ছা-বিদেশে রচিত কোনো এক ঘটনার জন্য কোনো প্রেমের বিষয় যুক্ত হইতে পারে না।
+(১) যদি এই আয়োগের শেষ অক্ষর কোন বিষয়েই কোন ক্রন্দনপূর্ণ বা জটিল অথবা তা তারা-লহিগলভাবে বিক্রয় করিবেন! না বলিয়া কোন প্রেম এত কুক দ্বিতীয় পথ আসিল। তবে আমরা সবাই এই অ্যাণ্ডোনিস্কো-এর শেষে চারটি অনুলিপি অঙ্কন করিয়া রাখিলাম। যদি তাঁকে স্বভাবতঃ প্রীতি অবোধ হইতে মাহরামীর পূর্ণ্বোধ্যত্ব দেখিয়া সান্ত্বনা করিয়। চান তবে তাঁহে তোর যেন ভর করো।... তবে একটি কথাই বলেন যে মীনর্গে, নদীর নিকটে অবস্থিত বুদ্ধিগ্রহণ কালে সর্ব্বশরীক পথে থাকার উচ্ছৃঙ্খল ভাবগোচর । ঐ আগমন চূড়ান্ত ও অকাদেমা, আমরা পরে কোথায় পাব? করিতেন। এই হাড়ি অন্ধরে পিয়েরের পরাজয়ের বিরূপ ঘটনা । যমজ নয় । তদুপরি তাহারা দ্বিগুণ নোংরাপি নিয়ে আসিয়াছেন। আমরা পরে বুঝিতে পারি যে জাতীয় রচনাতেও দুটো দিকে অনুমিতের কারণ আছে... )
+সিলেটের বিখ্যাত লোক-বিশারদ নাসুম আবুল খায়ের সাহেব শ্রীযুক্ত এবং হরেন্দ্রনাথ মুখার্জী মহাশয়ের সহায়</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">সিলেটের লোক-মানুষের রচিত মৌখিক কেচ্ছা, কাহিনী, যাত্রা-পালা ইত্যাদি লোক-</div><div class="g1">মানুষের বিচিত্র রূপ ধারণ করে। এ সকল অসাধারণ কাজ ছিল তারই কারক। বাংলা ভাষা বাংলার মানুষের মাতৃভাষা। বাংলার এক বাংলা ভাষার মর্যাদা পেয়েছিল। বাংলা ভাষা বাংলার সর্বশ্রেষ্ঠ সংস্কৃতি। সেই সময়ের বাঙালি বাঙালি হিন্দু, শিখ, মুসলমান, শিখ-মুসলমান, শিখ-বর্মা, শিখ-মুসলমান এবং হিন্দু-মুসলমান ও হিন্দু-মুসলমান সংস্কৃতির এক রূপই তৈরি হয়েছিল। বাঙালি হিন্দু ও শিখ-মুসলমান সংস্কৃতির এক রূপই ছিলো ভারতবর্ষের সর্বশ্রেষ্ঠ বাংলা ভাষা। বর্তমানে ভারত ও মধ্যপ্রাচ্যের এই বড়ো দেশগুলি বাংলাভাষার প্রচলনকে আমাদেরই মর্যাদা দেয়।
+
+অধিনায়ক মুসা সুলতান, মুসা চৌধুরী, সুশীল, ওলন্দাজ, বাঙালি হিন্দু ও শিখ-মুসলমান, বাঙালি মুসলমান ও হিন্দু-মুসলমান। বাংলাভাষার বিভিন্ন রূপের কথা ভাবা যায় না। বাংলার ইতিহাসের যে পথ ছিল তার পরিমণ্ডলে বাংলাভাষার কিছুটা অসামান্য রূপের কথা ভাবা যায় না। বাংলাভাষার এই রূপই ছিলো অনেক কিছু। সে হিসেবে বাংলাভাষার রূপগুলো আমাদেরই আছে। বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান, বাঙালি হিন্দু-মুসলমান,</div><div class="info">own 4-gram repetition 0.32; prompt BN-P00027</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D07" data-sec="D"><td class="n">D07</td>
+<td><div class="pre">কাপ্তাই বাঁধ বাংলাদেশের রাঙামাটি জেলার কাপ্তাই উপজেলায় অবস্থিত ও চট্টগ্রাম থেকে  উজ</div><div class="g0">েম্বা ১০&#x27; কিলোমিটার উত্তরে অবস্থিত। পরিবহনের জন্য বোয়ালখালী রেলওয়ে স্টেশনটি থেকেই ভারতী এক্সপ্রেস ১৫০ মিটার, বাসের তারিখ ১ আগস্ট ২০১০, দর্শনে &#x27;কাপ্তাই&#x27; বা আই ট্যান্ডার হিসেবে নাম দিয়ে দৈনিক ২০০ লিটারের জন্য রানডট বুকিং দিচ্ছে। পথের ছিলো অনেক বাঁশের দাঁড়া আর এখনো ঠিক সেই রকম। ফলে ভ্রমণ করার নেশা থেকে লাভ নেই। তবে যাত্রীবাহী অনেক ঘড়ি, গাড়ি, ল্যাম্প অ্যাফট বোলো। তবে সকাল থেকেই বেলা কাজ কাটানোর জন্যে প্রতিদিন সেখানে যাত্রীরা করে যেতে থাকেন ও রেড ক্রিসেন্ট পাবলিশার্স এর ও চট্টগ্রামে বারোটাকা অলংকার থেকে শুরু করে ঈদের গোড়ার আনন্দে পাঁচ তলা খাওয়ার জন্য ইউনিয়ন চত্বরে গিয়ে ফিরুক। রাত সালি ও সোনার কাঁচ পিয়ানো-বল্লিবাম বাজিয়ে বাসার উঠানে বসেই দুঃসাহসিক গল্প বন্ধ না করিয়া যায়, একটা চুর মোতালেব আমি পেলাম. সন্ধ্যা পেরিয়ে সন্ধ্যা কমলা ইন্দ্রিয়রা করছেন। যারা চলে এসেছিলেন তাঁর বোধহয় সমস্ত সময়ই তেমন ছিল না। আমি যাচ্ছি যেতাম চার ভট্টের বলল, দেখা গেল কয়েকজন লোক আমার সঙ্গে সঙ্গে থিয়াই, দেখল দেখি-প্রিয় বন্ধুবাড়ির সামনে সবার তলায় মুখ রয়েছে। তাঁদের দেখতে, থিয়াময়ে হোতা কিংবা ক্যানাফীফের আস্তকে ৫ ও বাংলাদেশী মানুষকে নিয়ে নিয়ে জোনের মত গোঁড়ামো ছিল-রিভেহুতি। অতভিকাটা অবস্থা ভাল নয়, এদিক ওদিক দেখে বললেন, আরে আসাও দাও আমি বারোটাকা ধরে হাঁটছিলাম কতদূর।
+এত ছোট এ টিমসে পাশবিক ভাবে আগলে থাকো? সভ্যতার মানুষ এই ভালোই গড়ে তুলেছে</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">কাপ্তাই বাঁধ বাংলাদেশের রাঙামাটি জেলার কাপ্তাই উপজেলায় অবস্থিত ও চট্টগ্রাম থেকে  উজ</div><div class="g1">িয়াবাদ-পঞ্চগড়-ঢাকা-খুলনা-ফরিদপুর-ঢাকা-খুলনা-ঝিনাইদহ-চট্টগ্রাম-খুলনা-ময়মনসিংহ-জামালপুর-ময়মনসিংহ-বরিশাল-ঢাকা-বরিশাল-ঢাকা-বরিশাল-ঢাকা-বরিশাল-ঢাকা-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বরিশাল-বর</div><div class="info">own 4-gram repetition 0.78; prompt BN-P00029</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D08" data-sec="D"><td class="n">D08</td>
+<td><div class="pre">ড্রুক দেশী (Dzongkha: འབྲུག་སྡེ་སྲི</div><div class="g0"><mark class="frn">ད</mark>་)  চীনে   স্টোমেনস্ব,  মণ্ডল ()  নামক      &#x27;সেনজায়েজি ()  &#x27;সংবেদী&#x27;  ও    ভারতে   ন্যাপিরাই ()    &#x27;অসূুরীউপবাসী&#x27;      স্থানীয়   &quot;অসূুরীবিলা স্বজতা হল&quot;,   তবে নামটি         
+
+জনশূচী সংকলনঃ চীনের ৭২ কিমি  সীমা অঞ্চল   ইয়াহিয়া                                               বট্টিম ভারত পার্ক                                      ১৭ই  মশাল সম্রাট</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">ড্রুক দেশী (Dzongkha: འབྲུག་སྡེ་སྲི</div><div class="g1"><mark class="frn">ད</mark>་) রাষ্ট্রপতির অফিস বা রাষ্ট্রপতির দপ্তর (<mark class="lat">Ode</mark>)কে জানানো হয় যে,<mark class="lat">Dzong</mark>&#x27;র কেন্দ্রীয় আইন চূড়ান্ত হওয়ার পরে<mark class="lat">Dzong</mark>&#x27;র কেন্দ্রীয় আইনটি &quot;মার্কিন যুক্তরাষ্ট্র থেকে বিচ্ছিন্ন করা হয়েছে&quot;।<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী ও দক্ষিণ কোরিয়ার প্রেসিডেন্ট শি জিনপিং বলেন,<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী বা উত্তর কোরিয়ার প্রেসিডেন্টের জন্য বলা হয়েছে<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রীর করা হবে<mark class="lat">Dzong</mark>&#x27;র একটি প্রতিনিধি কমিটি।<mark class="lat">Dzong</mark>&#x27;র প্রেসিডেন্ট শি জিনপিংও বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী বা উত্তর কোরিয়ার প্রেসিডেন্টের থেকে আইনি সহযোগিতা করার কথাও বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র স্বরাষ্ট্র প্রতিমন্ত্রী খান শাহ আহমদ জুয়েল বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী বা উত্তর কোরিয়ার প্রেসিডেন্টের উচিত<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আইনি সহায়তা করার কথা বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রীর করা উচিত<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আইনি সহায়তা করার কথা বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র প্রতিনিধিরাও<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আইনি সহায়তা করার কথা বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র প্রতিনিধিরাও<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আইনি সহায়তা করার কথা বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রীর করা উচিত<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আইনি সহায়তা করার কথা বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র প্রতিনিধিরাও<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আইনি সহায়তা করার কথা বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র প্রতিনিধিরাও<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আইনি সহায়তা করার কথা বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র প্রতিনিধিরাও<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আইনি সহায়তা করার কথা বলেছেন<mark class="lat">Dzong</mark>&#x27;র প্রধানমন্ত্রী।<mark class="lat">Dzong</mark>&#x27;র প্রতিনিধিরাও<mark class="lat">Dzong</mark>&#x27;র কর্মকর্তাদের আই</div><div class="info">own 4-gram repetition 0.48; prompt BN-P00030</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D09" data-sec="D"><td class="n">D09</td>
+<td><div class="pre">১. যত দ্রুত সম্ভব, শুরু করুনঃ বুড়ো বয়সে &#x27;যৌবনে কী-ই না করতে</div><div class="g0"> হবে&#x27;। উদাহরণ। প্লুটলো (পি:পি:বাঃ) মেয়েটিও টিউবের কন্যা।
+বিক্রেপিড। বন্ধুত্বের গুঞ্জনে আমি রেহাই দিলাম নিজেকে। আউট। । বাড়ির বাচ্চা, কখনও আমাকে তোমার স্যানিটে নেওয়ার কথা বল্জনি। চাইলে মোহিতও করা দরকার। কারণ এতদিনে শিশুটি আমার মধ্যে সানসাতিক। কিন্তু আমাদের কিয়ে উঠতে দেরি। যেঁর আগামী দিনে বে-কি অস্কারের &#x27;২০২০ বিশ্বকাপ জিম্বাবে&#x27; ভাইরাল হবে এক্স হ্যান্ডসেটে। আমিও তার পোস্ট পাঠ्লেই চোখে পড়লে চিৎকার ফলাব। বাথরুম ভর্তি করে দেব!
+একবার বুড়ো বয়সে শিশুটি বসেই তার গাটা খোলা রাখলেন। এটা সাধটি আর বেশী বা-তরো হবে না, কখন বুঝবেন? ইন্সপেক্টর কে খুঁজলে তাকে কৌঁও নিয়নের অনুষ্ঠানে জানিয়ে দিয়ে এমন কী রিয়্যালিটি হবে।
+২. নিজের খুব ভাল কাটলে সুইপনেস এডমেনের পিকটা শেয়ার করলেন তাঁর পুত্রসন্তানের কথা জানান।
+তেজ ফুশির তালুতুনায় গোল গোল করে চললেন তিনি। অদূর অতীতেছিলি তাঁর মা বা দাঁড়িয়ে করেন। একুরঝাঁক শব্দ দুজনেই করেছে। এক মুহূর্তের জন্য নিতে হয়। সবেই আবার উঠল বেলা।
+এখন পর্যন্ত ছোট ছিলি আরেম। এলেন এলেন। বাথরুমের বারান্দায় চুপ কর বলে এসে ইস্তকারের উপর বসলেন।
+চতুর্থ ও শেষ দিকে বল নিয়েও গম্ভীর ভঙ্গিকে নিখিয়েছেন। হাসিমুখে, ধরি সাপের থিরো। নায়ের কী করব না? তবু এলেন মেয়েটি হাসতে হাসতে বিশেষভাবে</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">১. যত দ্রুত সম্ভব, শুরু করুনঃ বুড়ো বয়সে &#x27;যৌবনে কী-ই না করতে</div><div class="g1"> হবে, যখন তার দাতা আপনার কাজ করতে হবে, তাই আপনাকে আপনি সেই সময় থেকে সব সময় পারেন। (আমি একটি জিনিস এই চাইব, এবং &quot;সংশোধন&quot; চাইব। তবে কিছুতেই তিনি তাঁর জীবনটাই কম করে দিতে চান না।)
+১. কত-ই না হয়, কত-ই হয়, কত-ই হয়, কত-ই হয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, কত-ই নয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, এত-ই নয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, এত-ই নয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, এত-ই নয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, এত-ই নয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, এত-ই নয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, এত-ই নয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, এত-ই নয়। (আমি একটি জিনিস চাইব, এবং &quot;সংশোধন&quot; চাইব।)
+১. এত-ই নয়, এত-ই নয়। (আমি</div><div class="info">own 4-gram repetition 0.64; prompt BN-P00036</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr><tr data-id="D10" data-sec="D"><td class="n">D10</td>
+<td><div class="pre">নৈতিকতা আমাদের নেই; ওটা একটা জোচ্চুরি। আমাদের কাছে নৈতিকতা হল প্রলেতারিয়ে</div><div class="g0"> ইজারা, তাদের বিচার। সে যেমন একটা চুন ভাঙে, এটাই সে একটা মনুনিভাবে লিখছে। এই কথা আমার কাছে এক অশান্তি। অন্তত এ রকম প্রথমটাই মনে হয়, সাবলাইন আমাকে সমীক্ষা করেছিলো। আসলেই ভাই আমার কাছে সে একটাও বড় প্রাপ্তি হয়নি। একটা কথা মনে হলো। এই যে আমি অনুভব করতে পেরেছি যে আমি সেই সুন্দর মেয়েটিটার জন্যে কাটিয়ে ওঠা চেষ্টা করেছি এবং যারা তাকে দেখেছে সে ভেবে পর্যা! মহিলার ডিজিটাল লেটেস্টেশনের আনন্দবোধ নিয়ন্ত্রণ করতে চাই। ইন্্স মনে হয় না। তিনি তার স্বচক্ষে এক মুহূর্তের জন্য পড়ে থাকেনি।
+কথা সমিলেই ছোটবেলাটা কেমন ছিল। ঝগড়াত্ন নিতম্ব তৈরি ভেবে শিক্ষকরা ছোট থেকেই ঐ কথা শুনতে চাইলেও ছিল না; আমি জিজ্ঞেস করতে নিয়ন্ত্রণে থাকি, মাজি সেটিকে শুনতে চাই। ভুলবশত বলতে কম এসে। ছোটবেলা বেলাটা নিয়েছিল। যাতে অনেকটা কভারের মতো। তিন বছর পরেই বিয়ে হয় শ্যুটারী। যখন মাথা ব্যথা আমার কাছে রহিয়াছে, সে আমাকে একটা অনুষ্ঠানে উদ্বুদ্ধ করে বলি বেকিং লাইঠা - হয় না বা বারবার হবে। মিনতি করা সবাই তখন ভালো চেষ্টা করেছিলো মন্তব্য না করে। এটাই আমার আগে যে শেষ সময় ছিলাম। এ লবণটা আমার যেন লাগছে। ১৯১।
+আকার কী আছে তার পরীক্ষা ও আয়নার জিজ্ঞেস নাকি হতে চায় ? তবে একটু জলপাই - সেই গুছিয়ে নিতে হবে। না-সবুজ কিংবা এমন সব কৌশলও আছে যারা আমাকে শুনিয়ে দেয় না। তবে সব সময়েই এতসিলিয়াতো জানলে ভালো থাকত। সাইরম।
+সুকুমার ভেড়ার চরিত্রও শুনেছি - কিন্তু থামতেই তোমার মন গোল ছু</div><div class="info">own 4-gram repetition 0.00</div></td>
+<td><div class="pre">নৈতিকতা আমাদের নেই; ওটা একটা জোচ্চুরি। আমাদের কাছে নৈতিকতা হল প্রলেতারিয়ে</div><div class="g1">। কোন মানুষকে আজ পর্যন্ত থাকতে হবে না; কিন্তু এখন যদি হয় তাহলে মানুষ হতে পারবে না; কিন্তু মানুষ মনে করে যদি হয় তাহলে মানুষ মানুষ হতে পারবে না; কিন্তু মানুষ এ কথাও বলতে পারে যে, আমাদের জন্য একটি আদর্শ ও আজ্ঞা; সে সম্পর্কে কিছু বলার নেই; কিন্তু একটা মাত্র কাজ আমাদের জীবনের মাঝে যথেষ্ট প্রয়োজনীয়। আমাদের চোখে কোন প্রলেতা আছে; তবে অনেক কিছুই এর মাঝে আছে; কিন্তু তা আমাদের সমাজে ইতিবাচক এবং সামাজিক কাজ নয়; কিন্তু এ কথা আমাদের সমাজে যে সামাজিক কাজ আছে, সেটা আমাদের সমাজে সামাজিক কাজ নয়; বরং সমাজের কোন প্রকার সামাজিক কাজ নয়; কিন্তু তাই আমাদের জীবনে শুধু একজন মানুষ যদি একটা কাজ করতে পারে, তা আমাদের সমাজে দাপটের কারণ হয়ে দাঁড়াবে; কিন্তু মানুষের এমন একটি কাজটি আমাদের সমাজে সামাজিক কাজ নয়; তাই আমাদের সমাজে কোন কাজ হয় না; বরং সমাজের যে কোন কাজে কোনো সুযোগ পাওয়া যায় না; কাজেই আমাদের সমাজে মানুষের কাজই করার ক্ষমতা আমাদের ওপরই থাকে; কিন্তু যা করা যায়, তার চেয়ে ভালো কিছু হয় না; কিন্তু তা হবে; কিন্তু মানুষের এমন কাজ যদি মানুষের পক্ষে হয়, তা হলে তা তোমার ওপর নির্ভর করে না; যদি মানুষের এমন কাজ তোমার ওপর নির্ভর করে না, তবে এই কাজটি তোমার ওপর নির্ভর করে না; কিন্তু যদি মানুষ এ কাজটি করতে না পারে, তবে তোমার ওপর নির্ভর করে না; বরং যদি মানুষ এ কাজটি করতে না পারে, তবে তোমার ওপর নির্ভর করে না; তবে তোমার ওপর নির্ভর করে না; কিন্তু যদি মানুষ এ কাজটি করতে না পারে, তবে তোমার ওপর নির্ভর করে না; কিন্তু যদি মানুষ এ কাজটি করতে না পারে, তবে তোমার ওপর নির্ভর করে না; কিন্তু যদি মানুষ এ কাজটি করতে না পারে, তবে তোমার ওপর নির্ভর করে না; কিন্তু যদি মানুষ এ কাজটি করতে না পারে, তবে তোমার ওপর নির্ভর করে না;</div><div class="info">own 4-gram repetition 0.29; prompt BN-P00041</div></td>
+<td class="flag"><label><input type="checkbox" class="rej"> technical fault</label><input type="text" class="note" placeholder="what (optional)"></td></tr></tbody></table>
+<h2>Gate 4</h2>
+<div class="q" data-q="qG4"><b>Gate 4, after this read:</b><div class="opts"><label><input type="radio" name="qG4" value="passed"> G4 passed</label><label><input type="radio" name="qG4" value="not"> G4 not passed (say why in the note)</label></div><input type="text" class="qnote" placeholder="short note (optional)"></div>
+<h2>Your reply</h2>
+<textarea id="reply" readonly></textarea>
+</main>
+<div class="bar"><button id="copy">Copy reply</button><span id="count" class="sub" style="margin:0"></span></div>
+<script>
+const KEY = "cg4-g4-read-v1";
+const SECTIONS = [{"key": "A", "short": "English other-script letters", "qs": ["qA"]}, {"key": "B", "short": "Bangla Latin letters", "qs": ["qB", "qB2"]}, {"key": "C", "short": "English top-p 0.95 repetition", "qs": ["qC"]}, {"key": "D", "short": "Bangla top-p 0.95 repetition", "qs": ["qD", "qD2"]}];
+function load() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+function save(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
+const state = load();
+const rowsEl = [...document.querySelectorAll("tr[data-id]")];
+for (const tr of rowsEl) {
+  const id = tr.dataset.id, cb = tr.querySelector(".rej"), nt = tr.querySelector(".note");
+  if (state[id]) { cb.checked = !!state[id].r; nt.value = state[id].n || ""; }
+  const upd = () => { state[id] = { r: cb.checked, n: nt.value }; tr.classList.toggle("flagged", cb.checked); save(state); render(); };
+  cb.addEventListener("change", upd); nt.addEventListener("input", upd); tr.classList.toggle("flagged", cb.checked);
+}
+for (const q of document.querySelectorAll(".q")) {
+  const k = q.dataset.q, nt = q.querySelector(".qnote");
+  if (state[k]) { const r = q.querySelector(`input[value="${state[k].a}"]`); if (r) r.checked = true; if (nt) nt.value = state[k].n || ""; }
+  const upd = () => { const sel = q.querySelector("input[type=radio]:checked"); state[k] = { a: sel ? sel.value : "", n: nt ? nt.value : "" }; save(state); render(); };
+  q.querySelectorAll("input[type=radio]").forEach(r => r.addEventListener("change", upd)); if (nt) nt.addEventListener("input", upd);
+}
+function answer(k) {
+  const q = document.querySelector(`.q[data-q="${k}"]`), s = state[k] || {};
+  if (!s.a) return "not answered" + (s.n ? " - " + s.n : "");
+  const lab = q.querySelector(`input[value="${s.a}"]`).closest("label").textContent.trim();
+  return lab + (s.n ? " - " + s.n : "");
+}
+function render() {
+  const parts = SECTIONS.map(sec => {
+    const qs = sec.qs.map(k => answer(k)).join("; ");
+    const flagged = rowsEl.filter(tr => tr.dataset.sec === sec.key && tr.querySelector(".rej").checked)
+      .map(tr => tr.dataset.id + (tr.querySelector(".note").value ? " (" + tr.querySelector(".note").value + ")" : ""));
+    return `${sec.key} ${sec.short}: ${qs}; technical faults ticked: ${flagged.length ? flagged.join(", ") : "none"}`;
+  });
+  document.getElementById("reply").value = "G4 read (" + "G4_read_2026-10-17.html" + "). " + parts.join(". ") + ". Gate 4: " + answer("qG4") + ".";
+  const n = rowsEl.filter(tr => tr.querySelector(".rej").checked).length;
+  const answered = [...document.querySelectorAll(".q")].filter(q => (state[q.dataset.q] || {}).a).length;
+  document.getElementById("count").textContent = `questions answered: ${answered} of ${document.querySelectorAll(".q").length}; rows ticked: ${n}`;
+}
+render();
+document.getElementById("copy").addEventListener("click", async () => {
+  const t = document.getElementById("reply"); t.select();
+  try { await navigator.clipboard.writeText(t.value); } catch (e) { document.execCommand("copy"); }
+});
+</script>
+</body></html>

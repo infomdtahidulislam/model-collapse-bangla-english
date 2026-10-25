@@ -1,0 +1,51 @@
+sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note
+EN-P00000,0,,0,1,1,3,Bullet items repeat as the event description drifts into unrelated biographical categories.
+EN-P00001,1,,7,0,1,2,"Roughly 7 nonwords, mixed scripts and fused words accompany the shift from education to industrial products and unrelated fragments."
+EN-P00002,0,,0,0,0,5,"The place name list is readable, and its changing entries do not form a repetition loop."
+EN-P00003,1,,1,0,0,4,A fused word containing another script seems to be the only nonword in otherwise readable journal prose.
+EN-P00004,1,,11,0,1,1,"The experiment gives way to disconnected fragments, mixed scripts and fused words, with the nonword estimate near 11."
+EN-P00005,0,,1,0,1,3,"The named person disappears into website promotion and rock music, with 1 possible nonword in the continuation."
+EN-P00006,0,,1,0,1,3,The increasingly confused local history moves away from the baronetcy and contains what seems to be 1 nonword.
+EN-P00007,0,,0,0,0,3,"The clauses are readable but connect awkwardly, while the text stays broadly about newspapers and related institutions."
+EN-P00008,1,,2,0,1,3,Cyrillic and Arabic letters appear among roughly 2 nonwords as the text switches surnames and ends in unrelated audio-export material.
+EN-P00009,0,,1,0,1,3,A fused word appears to be the only nonword as the panel description jumps into unrelated promotional snippets.
+EN-P00010,0,,4,0,0,3,"The music biography stays recognizable, but made-up role names and fused words contribute roughly 4 nonwords."
+EN-P00011,1,,4,0,1,2,Marine news ends in unrelated vacation material after several script changes and about 4 apparent nonwords.
+EN-P00012,0,,0,0,0,3,"The education discussion is readable, although its grammar and logical connections are strained."
+EN-P00013,0,,0,0,1,3,The sports story is clumsy and changes its subject from Bohm to Bellamy.
+EN-P00014,0,,0,0,0,5,The short continuation completes the prompt's split word naturally and reads fluently.
+EN-P00015,0,,0,0,0,3,"The financial prose is readable but grammatically tangled, while factual accuracy is outside this rubric."
+EN-P00016,0,,1,0,0,3,One word seems malformed in agricultural prose that is awkward but broadly related to food systems.
+EN-P00017,0,,0,0,1,4,"The prose is mostly readable, but the company description turns into a place and transport account."
+EN-P00018,0,,1,0,1,3,"The biography changes which player it describes, with broken grammar and a word join that looks malformed."
+EN-P00019,0,,2,0,1,2,Roughly 2 nonwords interrupt broken academic prose that shifts into unrelated research and birds.
+EN-P00020,1,,2,0,0,,"The short schedule and contact details contain Cyrillic and Arabic fragments, with about 2 apparent nonwords."
+EN-P00021,0,,0,0,1,,The text leaves filmmaking behind and turns to general product profits and pork production.
+EN-P00022,0,,0,0,0,,"The invented plot is awkwardly written, but unusual character names alone are not nonwords."
+EN-P00023,0,,0,0,0,,"The geographical continuation is readable, with no clear rubric issue."
+EN-P00024,1,,2,0,1,,Korean letters appear in a name among about 2 nonwords as the health discussion turns to a haunted building and fictional characters.
+EN-P00025,1,,13,0,1,,An estimated 13 nonwords and mixed Cyrillic and CJK letters accompany the shift from team goals to broken animal and taxonomy descriptions.
+EN-P00026,0,,0,0,0,,"The text stays on children's education and welfare, and awkward claims alone are not nonwords."
+EN-P00027,0,,2,0,1,,"The geographical description veers into unrelated British and American political claims, with roughly 2 nonwords."
+EN-P00028,1,,0,0,0,,"Thai letters appear in a member's name, while the rest still follows a band profile."
+EN-P00029,0,,1,0,0,,One category term looks malformed in an otherwise recognizable film entry.
+EN-P00030,0,,0,0,0,,"The hockey biography is clumsy but recognizable, with no clear rubric issue."
+EN-P00031,1,,5,0,0,,The taxonomy description is interrupted by Korean letters and around 5 malformed or fused words.
+EN-P00032,0,,0,0,0,,"The bibliography is fragmentary, but no definite nonword or unrelated subject stands out."
+EN-P00033,1,,1,0,1,,Greek letters in a PDF marker account for a possible nonword as the cardiac trial discussion moves to game theory and general methods.
+EN-P00034,0,,4,0,0,,"About 4 drug names or technical terms seem malformed, although the passage remains broadly biomedical."
+EN-P00035,0,,0,0,0,,"The geographical entry is readable, with no clear rubric issue."
+EN-P00036,0,,2,0,1,,The birth-rate discussion turns into a disconnected personal story with 2 apparent fused or made-up words.
+EN-P00037,0,,0,0,0,,"The local history is clumsy and implausible, but factual errors alone are outside this rubric."
+EN-P00038,0,,1,0,0,,"A word join seems malformed, but the repeated topic terms do not form a loop."
+EN-P00039,0,,0,0,0,,"The album discussion is awkward but stays on music, with plausible names and titles excluded from the count."
+EN-P00040,0,,3,0,1,,A broken heading and fused words give a rough count of 3 nonwords as the poetry discussion shifts into climate and taxation.
+EN-P00041,0,,6,0,1,,"Unrelated fragments about work, computing and conflict contain an estimated 6 nonwords."
+EN-P00042,0,,0,0,0,,"The short taxonomy passage is readable, and plausible taxon names are not counted as nonwords."
+EN-P00043,1,,6,0,0,,"Thai, CJK and Cyrillic letters appear among roughly 6 malformed instructional terms."
+EN-P00044,0,,2,0,0,,"The publication history remains recognizable, though a couple of words look malformed or fused."
+EN-P00045,1,,4,0,1,,Arabic and Cyrillic letters and an estimated 4 nonwords appear before the climate study ends in unrelated mortality material.
+EN-P00046,0,,0,0,0,,"The sports biography is recognizable, and factual mismatches alone are outside this rubric."
+EN-P00047,1,,3,0,1,,"CJK and Korean letters appear alongside roughly 3 nonwords as the explanation shifts to pollination, online notes and unrelated fragments."
+EN-P00048,0,,1,0,1,,"The government history changes into unrelated wildlife and tourism material, with 1 possible nonword."
+EN-P00049,0,,0,0,1,,"The protected-area description drifts into railways, dams and structures, while recurring place names alone are not a loop."

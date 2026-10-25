@@ -1,0 +1,8 @@
+chain_id,first_generation_CI_apart_from_gen0_stereotype_preference,first_generation_CI_apart_from_gen0_log_ppl_heldout
+BN-REPLACE,,2.0
+BN-ACCUMULATE,,2.0
+BN-ACCUMULATE-FILTER,,2.0
+BN-REPLACE-s2,,2.0
+BN-REPLACE-s3,,2.0
+BN-ACCUMULATE-SUBSAMPLE,,
+BN-REPLACE-topp95,,2.0

@@ -1,0 +1,326 @@
+[
+ {
+  "l": "Montreal",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Mililani",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Morrisville",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Manchester",
+  "c": "http://www.wikidata.org/entity/Q750"
+ },
+ {
+  "l": "Manchester",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Manchester",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Mitchell",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Mitchell",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Mitchell",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Nanaimo",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Moyobamba",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Nabi Rubin",
+  "c": "http://www.wikidata.org/entity/Q193714"
+ },
+ {
+  "l": "Los Blancos",
+  "c": "http://www.wikidata.org/entity/Q414"
+ },
+ {
+  "l": "Lomas de San José",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Loma San Francisco",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Lévis",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Liverpool",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Liverpool",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Liverpool",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Mississauga",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Love",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Mislinja",
+  "c": "http://www.wikidata.org/entity/Q215"
+ },
+ {
+  "l": "Markham",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Markham",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "New Brunswick",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Middlesex",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Middlesex",
+  "c": "http://www.wikidata.org/entity/Q242"
+ },
+ {
+  "l": "Loma Alta",
+  "c": "http://www.wikidata.org/entity/Q783"
+ },
+ {
+  "l": "Loma Alta",
+  "c": "http://www.wikidata.org/entity/Q241"
+ },
+ {
+  "l": "Montserrat",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Montserrat",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Middlesex",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Loma Alta",
+  "c": "http://www.wikidata.org/entity/Q736"
+ },
+ {
+  "l": "Loma Alta",
+  "c": "http://www.wikidata.org/entity/Q750"
+ },
+ {
+  "l": "Loma San Pedro",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Los Reyes de Juárez",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Lomas de Santa Cruz",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Llano Blanco",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Manchester",
+  "c": "http://www.wikidata.org/entity/Q174193"
+ },
+ {
+  "l": "Monte Frío",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Magdalena Rosales",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Lomas de San Agustín",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "New Brunswick",
+  "c": "http://www.wikidata.org/entity/Q8680"
+ },
+ {
+  "l": "Middlesex",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Loma Alta",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Liverpool",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Montserrat",
+  "c": "http://www.wikidata.org/entity/Q29"
+ },
+ {
+  "l": "Montreal",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Manitoba",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "New Brunswick",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Montserrat",
+  "c": "http://www.wikidata.org/entity/Q811"
+ },
+ {
+  "l": "Moquegua Department",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Madre de Dios Department",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Municipality of Vojnik",
+  "c": "http://www.wikidata.org/entity/Q215"
+ },
+ {
+  "l": "Municipality of Postojna",
+  "c": "http://www.wikidata.org/entity/Q215"
+ },
+ {
+  "l": "Loreto Department",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Municipality of Škofja Loka",
+  "c": "http://www.wikidata.org/entity/Q215"
+ },
+ {
+  "l": "Machu Picchu",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Morrisville",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Longueuil",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Middlesex",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Mitchell",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "London Borough of Merton",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Markham",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Manchester",
+  "c": "http://www.wikidata.org/entity/Q161885"
+ },
+ {
+  "l": "Manchester",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Montserrat",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Manchester",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Merseyside",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Liverpool",
+  "c": "http://www.wikidata.org/entity/Q174193"
+ },
+ {
+  "l": "Liverpool",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Manchester",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Middlesex",
+  "c": "http://www.wikidata.org/entity/Q174193"
+ },
+ {
+  "l": "Middlesex",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Mitchell",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Montserrat",
+  "c": "http://www.wikidata.org/entity/Q928"
+ },
+ {
+  "l": "Montserrat",
+  "c": "http://www.wikidata.org/entity/Q71084"
+ },
+ {
+  "l": "Love",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Loreto Department",
+  "c": "http://www.wikidata.org/entity/Q414"
+ },
+ {
+  "l": "Loufan Town",
+  "c": "http://www.wikidata.org/entity/Q148"
+ },
+ {
+  "l": "Markham",
+  "c": "http://www.wikidata.org/entity/Q408"
+ }
+]

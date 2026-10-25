@@ -1,0 +1,917 @@
+{
+ "entries": [
+  {
+   "chain": "EN-ACCUMULATE",
+   "generation": 3,
+   "reader": "Maksuda Akter",
+   "csv": "EN-ACCUMULATE_gen3.csv",
+   "sample_file": "results/samples/EN-ACCUMULATE_gen3_50.jsonl",
+   "sample_sha256": "5974a07543ace8d7bcee20c79e54dd03269a398480cc99c7fd72dfd255fd00bd",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "14 of 50",
+    "english_intrusion": "n/a",
+    "repetition_loop": "1 of 50",
+    "topic_drift": "24 of 50",
+    "nonwords_mean": 1.88,
+    "nonwords_median": 1,
+    "fluency_rated": 20,
+    "fluency_mean": 3.05
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "EN-P00000"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 49
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 14,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 36
+    }
+   },
+   "sheet": "G5_EN-ACCUMULATE_2026-10-17.html",
+   "reply_time": "2026-10-17T12:04Z",
+   "source": "results/human_read/G5_replies/EN-ACCUMULATE_Maksuda_Akter_2026-10-17T12-04Z.txt",
+   "recorded_at": "2026-10-17T12:10:39+00:00"
+  },
+  {
+   "chain": "EN-ACCUMULATE",
+   "generation": 6,
+   "reader": "Maksuda Akter",
+   "csv": "EN-ACCUMULATE_gen6.csv",
+   "sample_file": "results/samples/EN-ACCUMULATE_gen6_50.jsonl",
+   "sample_sha256": "378ca1dff7bcbf86d90f5d7cf1778cc09084d0b5d5d4edde3bd28c72205fe3c6",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "12 of 50",
+    "english_intrusion": "n/a",
+    "repetition_loop": "2 of 50",
+    "topic_drift": "23 of 50",
+    "nonwords_mean": 1.68,
+    "nonwords_median": 1,
+    "fluency_rated": 19,
+    "fluency_mean": 3.0
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "EN-P00030",
+      "EN-P00041"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 48
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 11,
+     "reader_1_auto_0": [
+      "EN-P00005"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 38
+    }
+   },
+   "sheet": "G5_EN-ACCUMULATE_2026-10-17.html",
+   "reply_time": "2026-10-17T12:04Z",
+   "source": "results/human_read/G5_replies/EN-ACCUMULATE_Maksuda_Akter_2026-10-17T12-04Z.txt",
+   "recorded_at": "2026-10-17T12:10:39+00:00"
+  },
+  {
+   "chain": "EN-ACCUMULATE-FILTER",
+   "generation": 3,
+   "reader": "Md Tahidul Islam",
+   "csv": "EN-ACCUMULATE-FILTER_gen3.csv",
+   "sample_file": "results/samples/EN-ACCUMULATE-FILTER_gen3_50.jsonl",
+   "sample_sha256": "dea84c31888e60d01cf7adc57494b4431e43e86fe7863445d62ed092c4e7ab11",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "8 of 50",
+    "english_intrusion": "n/a",
+    "repetition_loop": "1 of 50",
+    "topic_drift": "18 of 50",
+    "nonwords_mean": 1.3,
+    "nonwords_median": 1,
+    "fluency_rated": 20,
+    "fluency_mean": 3.05
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "EN-P00048"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 49
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 7,
+     "reader_1_auto_0": [
+      "EN-P00014"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 42
+    }
+   },
+   "sheet": "G5_EN-ACCUMULATE-FILTER_2026-10-17.html",
+   "reply_time": "2026-10-17T16:04Z",
+   "source": "results/human_read/G5_replies/EN-ACCUMULATE-FILTER_Md_Tahidul_Islam_2026-10-17T16-04Z.txt",
+   "recorded_at": "2026-10-17T16:10:40+00:00"
+  },
+  {
+   "chain": "EN-ACCUMULATE-FILTER",
+   "generation": 6,
+   "reader": "Md Tahidul Islam",
+   "csv": "EN-ACCUMULATE-FILTER_gen6.csv",
+   "sample_file": "results/samples/EN-ACCUMULATE-FILTER_gen6_50.jsonl",
+   "sample_sha256": "03e2513eed08874dceb4f4aa3639a89f3251d9316b965894329cf312b96ae6cd",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "2 of 50",
+    "english_intrusion": "n/a",
+    "repetition_loop": "2 of 50",
+    "topic_drift": "14 of 50",
+    "nonwords_mean": 0.92,
+    "nonwords_median": 1,
+    "fluency_rated": 20,
+    "fluency_mean": 3.3
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "EN-P00003",
+      "EN-P00007"
+     ],
+     "reader_0_auto_1": [
+      {
+       "id": "EN-P00002",
+       "auto": {
+        "rep4": 0.218
+       }
+      }
+     ],
+     "both_0": 47
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 2,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 48
+    }
+   },
+   "sheet": "G5_EN-ACCUMULATE-FILTER_2026-10-17.html",
+   "reply_time": "2026-10-17T16:04Z",
+   "source": "results/human_read/G5_replies/EN-ACCUMULATE-FILTER_Md_Tahidul_Islam_2026-10-17T16-04Z.txt",
+   "recorded_at": "2026-10-17T16:10:40+00:00"
+  },
+  {
+   "chain": "EN-REPLACE",
+   "generation": 3,
+   "reader": "Maksuda Akter",
+   "csv": "EN-REPLACE_gen3.csv",
+   "sample_file": "results/samples/EN-REPLACE_gen3_50.jsonl",
+   "sample_sha256": "a7a3299c0404f11a5519a98e86ca3a20d9bf69fc48f4a50897cdd74e734a3f47",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "27 of 50",
+    "english_intrusion": "n/a",
+    "repetition_loop": "2 of 50",
+    "topic_drift": "38 of 50",
+    "nonwords_mean": 4.34,
+    "nonwords_median": 3,
+    "fluency_rated": 20,
+    "fluency_mean": 2.4
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "EN-P00000",
+      "EN-P00043"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 48
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 27,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 23
+    }
+   },
+   "sheet": "G5_EN-REPLACE_2026-10-17.html",
+   "reply_time": "2026-10-17T16:59Z",
+   "source": "results/human_read/G5_replies/EN-REPLACE_Maksuda_Akter_2026-10-17T16-59Z.txt",
+   "recorded_at": "2026-10-17T17:05:26+00:00"
+  },
+  {
+   "chain": "EN-REPLACE",
+   "generation": 6,
+   "reader": "Maksuda Akter",
+   "csv": "EN-REPLACE_gen6.csv",
+   "sample_file": "results/samples/EN-REPLACE_gen6_50.jsonl",
+   "sample_sha256": "6aed8f44503e7a5d8b1f99043fe2ea2c732ffa9d911e55cdac3fb222deed1099",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "26 of 50",
+    "english_intrusion": "n/a",
+    "repetition_loop": "2 of 50",
+    "topic_drift": "39 of 50",
+    "nonwords_mean": 5.18,
+    "nonwords_median": 3,
+    "fluency_rated": 20,
+    "fluency_mean": 1.95
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "EN-P00002",
+      "EN-P00041"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 48
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 24,
+     "reader_1_auto_0": [
+      "EN-P00002",
+      "EN-P00036"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 24
+    }
+   },
+   "sheet": "G5_EN-REPLACE_2026-10-17.html",
+   "reply_time": "2026-10-17T16:59Z",
+   "source": "results/human_read/G5_replies/EN-REPLACE_Maksuda_Akter_2026-10-17T16-59Z.txt",
+   "recorded_at": "2026-10-17T17:05:26+00:00"
+  },
+  {
+   "chain": "GEN0-BN",
+   "generation": 0,
+   "reader": "Md Tahidul Islam",
+   "kind": "fluency",
+   "csv": "GEN0-BN_gen0_fluency_Md_Tahidul_Islam.csv",
+   "sample_file": "results/samples/GEN0-BN_gen0_50.jsonl",
+   "sample_sha256": "a583fd3a2e8bbad4a3bc517ef8131112e726a773ff8900b3ca7b1f7d30f3be52",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.25
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_gen0_BN_2026-10-17.html",
+   "reply_time": "2026-10-17T17:14Z",
+   "source": "results/human_read/G5_replies/GEN0-BN_fluency_Md_Tahidul_Islam_2026-10-17T17-14Z.txt",
+   "recorded_at": "2026-10-17T17:17:55+00:00"
+  },
+  {
+   "chain": "GEN0-EN",
+   "generation": 0,
+   "reader": "Maksuda Akter",
+   "kind": "fluency",
+   "csv": "GEN0-EN_gen0_fluency_Maksuda_Akter.csv",
+   "sample_file": "results/samples/GEN0-EN_gen0_50.jsonl",
+   "sample_sha256": "ed77156a3b51cd60b3e029997191c5f503a6426a6a3537a77b7310600585d123",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 3.05
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_gen0_EN_2026-10-17.html",
+   "reply_time": "2026-10-17T17:25Z",
+   "source": "results/human_read/G5_replies/GEN0-EN_fluency_Maksuda_Akter_2026-10-17T17-25Z.txt",
+   "recorded_at": "2026-10-17T17:23:08+00:00"
+  },
+  {
+   "chain": "BN-ACCUMULATE-FILTER",
+   "generation": 3,
+   "reader": "Md Tahidul Islam",
+   "kind": "fluency",
+   "csv": "BN-ACCUMULATE-FILTER_gen3_fluency_Md_Tahidul_Islam.csv",
+   "sample_file": "results/samples/BN-ACCUMULATE-FILTER_gen3_50.jsonl",
+   "sample_sha256": "6ce550f62ca85c1520663050220a46be9a983e53c948d425435b92e30065fc72",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.05
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_BN-ACCUMULATE-FILTER_2026-10-17.html",
+   "reply_time": "2026-10-17T18:26Z",
+   "source": "results/human_read/G5_replies/BN-ACCUMULATE-FILTER_fluency_Md_Tahidul_Islam_2026-10-17T18-26Z.txt",
+   "recorded_at": "2026-10-17T23:03:03+00:00"
+  },
+  {
+   "chain": "BN-ACCUMULATE-FILTER",
+   "generation": 6,
+   "reader": "Md Tahidul Islam",
+   "kind": "fluency",
+   "csv": "BN-ACCUMULATE-FILTER_gen6_fluency_Md_Tahidul_Islam.csv",
+   "sample_file": "results/samples/BN-ACCUMULATE-FILTER_gen6_50.jsonl",
+   "sample_sha256": "b768e072b0ef79c4ea424d6046223651e2c833aa33d4d5487c877f9e369029bb",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.15
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_BN-ACCUMULATE-FILTER_2026-10-17.html",
+   "reply_time": "2026-10-17T18:26Z",
+   "source": "results/human_read/G5_replies/BN-ACCUMULATE-FILTER_fluency_Md_Tahidul_Islam_2026-10-17T18-26Z.txt",
+   "recorded_at": "2026-10-17T23:03:03+00:00"
+  },
+  {
+   "chain": "EN-ACCUMULATE",
+   "generation": 3,
+   "reader": "Md Tahidul Islam",
+   "kind": "fluency",
+   "csv": "EN-ACCUMULATE_gen3_fluency_Md_Tahidul_Islam.csv",
+   "sample_file": "results/samples/EN-ACCUMULATE_gen3_50.jsonl",
+   "sample_sha256": "5974a07543ace8d7bcee20c79e54dd03269a398480cc99c7fd72dfd255fd00bd",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.85
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_EN-ACCUMULATE_2026-10-17.html",
+   "reply_time": "2026-10-17T18:58Z",
+   "source": "results/human_read/G5_replies/EN-ACCUMULATE_fluency_Md_Tahidul_Islam_2026-10-17T18-58Z.txt",
+   "recorded_at": "2026-10-17T23:06:30+00:00"
+  },
+  {
+   "chain": "EN-ACCUMULATE",
+   "generation": 6,
+   "reader": "Md Tahidul Islam",
+   "kind": "fluency",
+   "csv": "EN-ACCUMULATE_gen6_fluency_Md_Tahidul_Islam.csv",
+   "sample_file": "results/samples/EN-ACCUMULATE_gen6_50.jsonl",
+   "sample_sha256": "378ca1dff7bcbf86d90f5d7cf1778cc09084d0b5d5d4edde3bd28c72205fe3c6",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.95
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_EN-ACCUMULATE_2026-10-17.html",
+   "reply_time": "2026-10-17T18:58Z",
+   "source": "results/human_read/G5_replies/EN-ACCUMULATE_fluency_Md_Tahidul_Islam_2026-10-17T18-58Z.txt",
+   "recorded_at": "2026-10-17T23:06:30+00:00"
+  },
+  {
+   "chain": "EN-REPLACE",
+   "generation": 3,
+   "reader": "Md Tahidul Islam",
+   "kind": "fluency",
+   "csv": "EN-REPLACE_gen3_fluency_Md_Tahidul_Islam.csv",
+   "sample_file": "results/samples/EN-REPLACE_gen3_50.jsonl",
+   "sample_sha256": "a7a3299c0404f11a5519a98e86ca3a20d9bf69fc48f4a50897cdd74e734a3f47",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.35
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_EN-REPLACE_2026-10-17.html",
+   "reply_time": "2026-10-17T19:38Z",
+   "source": "results/human_read/G5_replies/EN-REPLACE_fluency_Md_Tahidul_Islam_2026-10-17T19-38Z.txt",
+   "recorded_at": "2026-10-17T23:08:46+00:00"
+  },
+  {
+   "chain": "EN-REPLACE",
+   "generation": 6,
+   "reader": "Md Tahidul Islam",
+   "kind": "fluency",
+   "csv": "EN-REPLACE_gen6_fluency_Md_Tahidul_Islam.csv",
+   "sample_file": "results/samples/EN-REPLACE_gen6_50.jsonl",
+   "sample_sha256": "6aed8f44503e7a5d8b1f99043fe2ea2c732ffa9d911e55cdac3fb222deed1099",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.0
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_EN-REPLACE_2026-10-17.html",
+   "reply_time": "2026-10-17T19:38Z",
+   "source": "results/human_read/G5_replies/EN-REPLACE_fluency_Md_Tahidul_Islam_2026-10-17T19-38Z.txt",
+   "recorded_at": "2026-10-17T23:08:46+00:00"
+  },
+  {
+   "chain": "GEN0-EN",
+   "generation": 0,
+   "reader": "Md Tahidul Islam",
+   "kind": "fluency",
+   "csv": "GEN0-EN_gen0_fluency_Md_Tahidul_Islam.csv",
+   "sample_file": "results/samples/GEN0-EN_gen0_50.jsonl",
+   "sample_sha256": "ed77156a3b51cd60b3e029997191c5f503a6426a6a3537a77b7310600585d123",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 3.05
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_gen0_EN_2026-10-17.html",
+   "reply_time": "2026-10-17T23:06Z",
+   "source": "results/human_read/G5_replies/GEN0-EN_fluency_Md_Tahidul_Islam_2026-10-17T23-06Z.txt",
+   "recorded_at": "2026-10-17T23:11:18+00:00"
+  },
+  {
+   "chain": "BN-ACCUMULATE",
+   "generation": 3,
+   "reader": "Maksuda Akter",
+   "kind": "fluency",
+   "csv": "BN-ACCUMULATE_gen3_fluency_Maksuda_Akter.csv",
+   "sample_file": "results/samples/BN-ACCUMULATE_gen3_50.jsonl",
+   "sample_sha256": "79f4861294b7f13e3374df24d979edb6e9e25c83a447494d964d3ca8f9fc6596",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.3
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_BN-ACCUMULATE_2026-10-17.html",
+   "reply_time": "2026-10-17T18:32Z",
+   "source": "results/human_read/G5_replies/BN-ACCUMULATE_fluency_Maksuda_Akter_2026-10-17T18-32Z.txt",
+   "recorded_at": "2026-10-17T23:18:19+00:00"
+  },
+  {
+   "chain": "BN-ACCUMULATE",
+   "generation": 6,
+   "reader": "Maksuda Akter",
+   "kind": "fluency",
+   "csv": "BN-ACCUMULATE_gen6_fluency_Maksuda_Akter.csv",
+   "sample_file": "results/samples/BN-ACCUMULATE_gen6_50.jsonl",
+   "sample_sha256": "117f968b32e48195185506875a0104047690b8274a36f91df9c5d7a14904613b",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.45
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_BN-ACCUMULATE_2026-10-17.html",
+   "reply_time": "2026-10-17T18:32Z",
+   "source": "results/human_read/G5_replies/BN-ACCUMULATE_fluency_Maksuda_Akter_2026-10-17T18-32Z.txt",
+   "recorded_at": "2026-10-17T23:18:19+00:00"
+  },
+  {
+   "chain": "BN-REPLACE",
+   "generation": 3,
+   "reader": "Maksuda Akter",
+   "kind": "fluency",
+   "csv": "BN-REPLACE_gen3_fluency_Maksuda_Akter.csv",
+   "sample_file": "results/samples/BN-REPLACE_gen3_50.jsonl",
+   "sample_sha256": "21f76d59d537075f6b77eb4b1c02df885864c285b214cd773c552637f705e420",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.2
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_BN-REPLACE_2026-10-17.html",
+   "reply_time": "2026-10-17T19:10Z",
+   "source": "results/human_read/G5_replies/BN-REPLACE_fluency_Maksuda_Akter_2026-10-17T19-10Z.txt",
+   "recorded_at": "2026-10-17T23:22:23+00:00"
+  },
+  {
+   "chain": "BN-REPLACE",
+   "generation": 6,
+   "reader": "Maksuda Akter",
+   "kind": "fluency",
+   "csv": "BN-REPLACE_gen6_fluency_Maksuda_Akter.csv",
+   "sample_file": "results/samples/BN-REPLACE_gen6_50.jsonl",
+   "sample_sha256": "5b72c69fb468bf7b2c790455986dbdd82914d3c5c16eecfd7271917a72efc202",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 1.95
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_BN-REPLACE_2026-10-17.html",
+   "reply_time": "2026-10-17T19:10Z",
+   "source": "results/human_read/G5_replies/BN-REPLACE_fluency_Maksuda_Akter_2026-10-17T19-10Z.txt",
+   "recorded_at": "2026-10-17T23:22:23+00:00"
+  },
+  {
+   "chain": "EN-ACCUMULATE-FILTER",
+   "generation": 3,
+   "reader": "Maksuda Akter",
+   "kind": "fluency",
+   "csv": "EN-ACCUMULATE-FILTER_gen3_fluency_Maksuda_Akter.csv",
+   "sample_file": "results/samples/EN-ACCUMULATE-FILTER_gen3_50.jsonl",
+   "sample_sha256": "dea84c31888e60d01cf7adc57494b4431e43e86fe7863445d62ed092c4e7ab11",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 3.15
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_EN-ACCUMULATE-FILTER_2026-10-17.html",
+   "reply_time": "2026-10-17T21:58Z",
+   "source": "results/human_read/G5_replies/EN-ACCUMULATE-FILTER_fluency_Maksuda_Akter_2026-10-17T21-58Z.txt",
+   "recorded_at": "2026-10-17T23:24:47+00:00"
+  },
+  {
+   "chain": "EN-ACCUMULATE-FILTER",
+   "generation": 6,
+   "reader": "Maksuda Akter",
+   "kind": "fluency",
+   "csv": "EN-ACCUMULATE-FILTER_gen6_fluency_Maksuda_Akter.csv",
+   "sample_file": "results/samples/EN-ACCUMULATE-FILTER_gen6_50.jsonl",
+   "sample_sha256": "03e2513eed08874dceb4f4aa3639a89f3251d9316b965894329cf312b96ae6cd",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 3.2
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_EN-ACCUMULATE-FILTER_2026-10-17.html",
+   "reply_time": "2026-10-17T21:58Z",
+   "source": "results/human_read/G5_replies/EN-ACCUMULATE-FILTER_fluency_Maksuda_Akter_2026-10-17T21-58Z.txt",
+   "recorded_at": "2026-10-17T23:24:47+00:00"
+  },
+  {
+   "chain": "GEN0-BN",
+   "generation": 0,
+   "reader": "Maksuda Akter",
+   "kind": "fluency",
+   "csv": "GEN0-BN_gen0_fluency_Maksuda_Akter.csv",
+   "sample_file": "results/samples/GEN0-BN_gen0_50.jsonl",
+   "sample_sha256": "a583fd3a2e8bbad4a3bc517ef8131112e726a773ff8900b3ca7b1f7d30f3be52",
+   "coded": 20,
+   "n": 20,
+   "summary": {
+    "coded": 20,
+    "fluency_mean": 2.5
+   },
+   "auto_comparison": {},
+   "sheet": "G5_fluency_gen0_BN_2026-10-17.html",
+   "reply_time": "2026-10-17T22:47Z",
+   "source": "results/human_read/G5_replies/GEN0-BN_fluency_Maksuda_Akter_2026-10-17T22-47Z.txt",
+   "recorded_at": "2026-10-17T23:33:01+00:00"
+  },
+  {
+   "chain": "BN-ACCUMULATE",
+   "generation": 3,
+   "reader": "Md Tahidul Islam",
+   "kind": "rubric",
+   "csv": "BN-ACCUMULATE_gen3.csv",
+   "sample_file": "results/samples/BN-ACCUMULATE_gen3_50.jsonl",
+   "sample_sha256": "79f4861294b7f13e3374df24d979edb6e9e25c83a447494d964d3ca8f9fc6596",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "4 of 50",
+    "english_intrusion": "7 of 50",
+    "repetition_loop": "2 of 50",
+    "topic_drift": "31 of 50",
+    "nonwords_mean": 6.08,
+    "nonwords_median": 5,
+    "fluency_rated": 20,
+    "fluency_mean": 2.1
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "BN-P00010",
+      "BN-P00030"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 48
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 2,
+     "reader_1_auto_0": [
+      "BN-P00010",
+      "BN-P00040"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 46
+    },
+    "english_intrusion vs any Latin letter": {
+     "both_1": 7,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 43
+    }
+   },
+   "sheet": "G5_BN-ACCUMULATE_2026-10-17.html",
+   "reply_time": "2026-10-17T23:41Z",
+   "source": "results/human_read/G5_replies/BN-ACCUMULATE_Md_Tahidul_Islam_2026-10-17T23-41Z_corrected.txt",
+   "recorded_at": "2026-10-17T23:48:06+00:00"
+  },
+  {
+   "chain": "BN-ACCUMULATE",
+   "generation": 6,
+   "reader": "Md Tahidul Islam",
+   "kind": "rubric",
+   "csv": "BN-ACCUMULATE_gen6.csv",
+   "sample_file": "results/samples/BN-ACCUMULATE_gen6_50.jsonl",
+   "sample_sha256": "117f968b32e48195185506875a0104047690b8274a36f91df9c5d7a14904613b",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "5 of 50",
+    "english_intrusion": "12 of 50",
+    "repetition_loop": "1 of 50",
+    "topic_drift": "29 of 50",
+    "nonwords_mean": 5.6,
+    "nonwords_median": 5,
+    "fluency_rated": 20,
+    "fluency_mean": 2.25
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "BN-P00030"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 49
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 5,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 45
+    },
+    "english_intrusion vs any Latin letter": {
+     "both_1": 12,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 38
+    }
+   },
+   "sheet": "G5_BN-ACCUMULATE_2026-10-17.html",
+   "reply_time": "2026-10-17T23:41Z",
+   "source": "results/human_read/G5_replies/BN-ACCUMULATE_Md_Tahidul_Islam_2026-10-17T23-41Z_corrected.txt",
+   "recorded_at": "2026-10-17T23:48:06+00:00"
+  },
+  {
+   "chain": "BN-REPLACE",
+   "generation": 3,
+   "reader": "Md Tahidul Islam",
+   "kind": "rubric",
+   "csv": "BN-REPLACE_gen3.csv",
+   "sample_file": "results/samples/BN-REPLACE_gen3_50.jsonl",
+   "sample_sha256": "21f76d59d537075f6b77eb4b1c02df885864c285b214cd773c552637f705e420",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "8 of 50",
+    "english_intrusion": "9 of 50",
+    "repetition_loop": "1 of 50",
+    "topic_drift": "34 of 50",
+    "nonwords_mean": 14.46,
+    "nonwords_median": 14,
+    "fluency_rated": 20,
+    "fluency_mean": 1.75
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "BN-P00023"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 49
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 1,
+     "reader_1_auto_0": [
+      "BN-P00020",
+      "BN-P00021",
+      "BN-P00023",
+      "BN-P00024",
+      "BN-P00035",
+      "BN-P00043",
+      "BN-P00044"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 42
+    },
+    "english_intrusion vs any Latin letter": {
+     "both_1": 9,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 41
+    }
+   },
+   "sheet": "G5_BN-REPLACE_2026-10-17.html",
+   "reply_time": "2026-10-17T23:59Z",
+   "source": "results/human_read/G5_replies/BN-REPLACE_Md_Tahidul_Islam_2026-10-17T23-59Z_corrected.txt",
+   "recorded_at": "2026-10-18T00:06:44+00:00"
+  },
+  {
+   "chain": "BN-REPLACE",
+   "generation": 6,
+   "reader": "Md Tahidul Islam",
+   "kind": "rubric",
+   "csv": "BN-REPLACE_gen6.csv",
+   "sample_file": "results/samples/BN-REPLACE_gen6_50.jsonl",
+   "sample_sha256": "5b72c69fb468bf7b2c790455986dbdd82914d3c5c16eecfd7271917a72efc202",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "20 of 50",
+    "english_intrusion": "17 of 50",
+    "repetition_loop": "1 of 50",
+    "topic_drift": "39 of 50",
+    "nonwords_mean": 15.82,
+    "nonwords_median": 16,
+    "fluency_rated": 20,
+    "fluency_mean": 1.15
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "BN-P00046"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 49
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 9,
+     "reader_1_auto_0": [
+      "BN-P00002",
+      "BN-P00009",
+      "BN-P00018",
+      "BN-P00027",
+      "BN-P00036",
+      "BN-P00037",
+      "BN-P00040",
+      "BN-P00041",
+      "BN-P00042",
+      "BN-P00044",
+      "BN-P00046"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 30
+    },
+    "english_intrusion vs any Latin letter": {
+     "both_1": 17,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 33
+    }
+   },
+   "sheet": "G5_BN-REPLACE_2026-10-17.html",
+   "reply_time": "2026-10-17T23:59Z",
+   "source": "results/human_read/G5_replies/BN-REPLACE_Md_Tahidul_Islam_2026-10-17T23-59Z_corrected.txt",
+   "recorded_at": "2026-10-18T00:06:44+00:00"
+  },
+  {
+   "chain": "BN-ACCUMULATE-FILTER",
+   "generation": 3,
+   "reader": "Maksuda Akter",
+   "kind": "rubric",
+   "csv": "BN-ACCUMULATE-FILTER_gen3.csv",
+   "sample_file": "results/samples/BN-ACCUMULATE-FILTER_gen3_50.jsonl",
+   "sample_sha256": "6ce550f62ca85c1520663050220a46be9a983e53c948d425435b92e30065fc72",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "5 of 50",
+    "english_intrusion": "9 of 50",
+    "repetition_loop": "1 of 50",
+    "topic_drift": "24 of 50",
+    "nonwords_mean": 6.32,
+    "nonwords_median": 6,
+    "fluency_rated": 20,
+    "fluency_mean": 2.1
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "BN-P00048"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 49
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 1,
+     "reader_1_auto_0": [
+      "BN-P00009",
+      "BN-P00018",
+      "BN-P00027",
+      "BN-P00035"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 45
+    },
+    "english_intrusion vs any Latin letter": {
+     "both_1": 9,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 41
+    }
+   },
+   "sheet": "G5_BN-ACCUMULATE-FILTER_2026-10-17.html",
+   "reply_time": "2026-10-17T23:53Z",
+   "source": "results/human_read/G5_replies/BN-ACCUMULATE-FILTER_Maksuda_Akter_2026-10-17T23-53Z_corrected.txt",
+   "recorded_at": "2026-10-18T00:06:45+00:00"
+  },
+  {
+   "chain": "BN-ACCUMULATE-FILTER",
+   "generation": 6,
+   "reader": "Maksuda Akter",
+   "kind": "rubric",
+   "csv": "BN-ACCUMULATE-FILTER_gen6.csv",
+   "sample_file": "results/samples/BN-ACCUMULATE-FILTER_gen6_50.jsonl",
+   "sample_sha256": "b768e072b0ef79c4ea424d6046223651e2c833aa33d4d5487c877f9e369029bb",
+   "coded": 50,
+   "n": 50,
+   "summary": {
+    "coded": 50,
+    "script_error": "3 of 50",
+    "english_intrusion": "6 of 50",
+    "repetition_loop": "1 of 50",
+    "topic_drift": "22 of 50",
+    "nonwords_mean": 5.72,
+    "nonwords_median": 5,
+    "fluency_rated": 20,
+    "fluency_mean": 2.35
+   },
+   "auto_comparison": {
+    "repetition_loop vs own 4-gram repetition >= 0.2": {
+     "both_1": 0,
+     "reader_1_auto_0": [
+      "BN-P00010"
+     ],
+     "reader_0_auto_1": [],
+     "both_0": 49
+    },
+    "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+     "both_1": 1,
+     "reader_1_auto_0": [
+      "BN-P00018",
+      "BN-P00026"
+     ],
+     "reader_0_auto_1": [
+      {
+       "id": "BN-P00012",
+       "auto": {
+        "latin": true,
+        "foreign": true,
+        "rep4": 0.0
+       }
+      }
+     ],
+     "both_0": 46
+    },
+    "english_intrusion vs any Latin letter": {
+     "both_1": 6,
+     "reader_1_auto_0": [],
+     "reader_0_auto_1": [],
+     "both_0": 44
+    }
+   },
+   "sheet": "G5_BN-ACCUMULATE-FILTER_2026-10-17.html",
+   "reply_time": "2026-10-17T23:53Z",
+   "source": "results/human_read/G5_replies/BN-ACCUMULATE-FILTER_Maksuda_Akter_2026-10-17T23-53Z_corrected.txt",
+   "recorded_at": "2026-10-18T00:06:45+00:00"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "CG4 metric record",
+ "type": "object",
+ "required": [
+  "chain_id",
+  "generation",
+  "language",
+  "metric",
+  "value",
+  "n",
+  "checkpoint",
+  "computed_at"
+ ],
+ "properties": {
+  "chain_id": {
+   "type": "string"
+  },
+  "generation": {
+   "type": "integer"
+  },
+  "language": {
+   "enum": [
+    "EN",
+    "BN",
+    "MIX"
+   ]
+  },
+  "metric": {
+   "type": "string"
+  },
+  "value": {
+   "type": "number"
+  },
+  "ci_lo": {
+   "type": "number"
+  },
+  "ci_hi": {
+   "type": "number"
+  },
+  "n": {
+   "type": "integer"
+  },
+  "checkpoint": {
+   "type": "string"
+  },
+  "computed_at": {
+   "type": "string"
+  }
+ },
+ "additionalProperties": false
+}

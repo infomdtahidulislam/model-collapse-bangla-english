@@ -1,0 +1,31 @@
+Data, records and documents licence
+===================================
+
+Everything in this repository other than the code covered by the MIT licence
+in LICENSE (that is: the protocol documents, the probe sets, the corpus
+manifest, all metric, screening, novelty and analysis records, the redacted
+sample files, the human-read records, the signoff, request and decision logs,
+and the README files) is licensed under the Creative Commons Attribution 4.0
+International licence (CC BY 4.0):
+
+    https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 Md Tahidul Islam and Maksuda Akter.
+
+Attribution: cite the study ("Testing Model-Collapse Diagnostics in Small-Scale
+Bangla–English Self-Training",
+OSF registration DOI 10.17605/OSF.IO/SRA28) or the published paper once it
+exists.
+
+Upstream terms still govern what they cover: FineWeb-Edu (ODC-By 1.0) and
+Sangraha for corpus text (not included here), Wikidata (CC0) for the probe
+facts, the Gemma licence for model weights (not hosted here), CrowS-Pairs
+(CC BY-SA 4.0) and BanStereoSet (no explicit licence) for the bias pair sets
+(not included here; rebuilt from their sources by harness/build_probes.py).
+
+The real 12-word prefixes quoted inside the sample files (results/samples/)
+stay under their upstream terms: English Wikipedia (CC BY-SA 4.0),
+FineWeb-Edu (ODC-By 1.0), Bangla Wikipedia (CC BY-SA 4.0) and Sangraha
+(CC BY 4.0). In the released sample files, e-mail addresses and
+phone-number-formatted strings written by the models are replaced by
+[EMAIL] and [PHONE]; see results/samples_redaction/.

@@ -1,0 +1,23 @@
+G5 read, GEN0-BN fluency (optional) (G5_fluency_gen0_BN_2026-10-17.html), reader: Md Tahidul Islam, 2026-10-17T17:14Z
+## GEN0-BN_gen0_fluency | results/samples/GEN0-BN_gen0_50.jsonl sha256 a583fd3a2e8bbad4 | coded 20 of 20
+sample_id,fluency_1to5,note
+BN-P00000,2,"Some clauses are readable, but broken phrases and disconnected statements make the passage hard to follow."
+BN-P00001,2,"The sentences are partly readable, but malformed words and awkward connections often obscure the meaning."
+BN-P00002,4,"The entertainment report reads naturally overall, apart from a few odd expressions and an awkward ending."
+BN-P00003,2,"Malformed words, agreement errors and disconnected sentences make the story difficult to read."
+BN-P00004,2,The report starts clearly but becomes harder to follow as clauses break off and references become confused.
+BN-P00005,3,"Several football sentences are readable, but malformed words and unfinished clauses make the later sections awkward."
+BN-P00006,2,The biography is hard to follow because malformed words and confused clauses repeatedly interrupt the writing.
+BN-P00007,2,"Some dialogue makes sense, but malformed words, agreement errors and disconnected fragments disrupt the passage."
+BN-P00008,3,"Much of the sports report is readable, though awkward phrasing and confused references make the transitions uneven."
+BN-P00009,2,"Some sports sentences are understandable, but confused wording and incomplete constructions often obscure the meaning."
+BN-P00010,1,Malformed words and broken sentence structure make most of the passage impossible to understand.
+BN-P00011,2,Broken sentence structure and confused wording make several long clauses hard to follow.
+BN-P00012,2,"Some clauses are readable, but malformed words and tangled political language often hide the meaning."
+BN-P00013,2,"The report has understandable sentences, but malformed expressions and broken grammar repeatedly interrupt the flow."
+BN-P00014,3,"The opening and headings are clear, but the later geographic and economic descriptions become awkward and partly broken."
+BN-P00015,2,"Confused wording, malformed words and disconnected numerical claims make the passage difficult to read."
+BN-P00016,2,"A few stretches are readable, but long tangled clauses and malformed words make the history hard to follow."
+BN-P00017,2,"The sentences have recognizable structures, but invented technical terms and confused connections obscure the meaning."
+BN-P00018,3,"The passage starts clearly, but awkward phrasing and broken connections make the later descriptions less fluent."
+BN-P00019,2,Malformed terms and tangled sentences make the financial and organizational details difficult to follow.

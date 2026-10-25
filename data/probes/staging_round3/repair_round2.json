@@ -1,0 +1,5617 @@
+{
+ "rule": "REQ-012 (signoffs/REQUESTS.md), after G1 round 2",
+ "at": "2026-10-14T05:40:19+00:00",
+ "rejected_round2": {
+  "EN-P17-0056": "authors, G1 round 2: missing 'The' before 'Metropolitan line'",
+  "EN-P19-0491": "authors, G1 round 2: the gold needs 'the 2nd arrondissement of Lyon'",
+  "EN-P19-0353": "authors, G1 round 2: wrong option 1 needs 'the 2nd arrondissement of Lyon'",
+  "EN-P106-0543": "authors, G1 round 2: wrong option 'lawyer' is also true of Narendra Deva",
+  "EN-P19-0166": "authors, G1 round 2: wrong option 2 needs 'the 15th arrondissement of Paris'",
+  "EN-P17-0349": "authors, G1 round 2: Quebec Sign Language is a language, not a place",
+  "EN-P106-0327": "authors, G1 round 2: wrong option 'actor' is also true of a 'film actor'",
+  "BN-P17-0221": "authors, G1 round 2: La Route du Rock is a festival",
+  "BN-P106-0462": "authors, G1 round 2: wrong option 'postdoctoral researcher' is also true of Rodney Robert Porter",
+  "BN-P17-0048": "authors, G1 round 2: 'the geography of Canada' is a topic, not a place"
+ },
+ "changes": [
+  {
+   "language": "EN",
+   "position": 12,
+   "old_id": "EN-P17-0012",
+   "new_id": "EN-P17-0012",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "Denmark",
+     "new": "Russia",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    },
+    {
+     "option": 2,
+     "old": "Canada",
+     "new": "Ecuador",
+     "reason": "REQ-012 item 2: the option is the country of another place with the same name"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Park",
+    "the United Kingdom",
+    [
+     "Denmark",
+     "Canada",
+     "Brazil"
+    ]
+   ],
+   "new": [
+    "Park",
+    "the United Kingdom",
+    [
+     "Russia",
+     "Ecuador",
+     "Brazil"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 31,
+   "old_id": "EN-P106-0031",
+   "new_id": "EN-P106-0031",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "politician",
+     "new": "zoologist",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "David",
+    "monarch",
+    [
+     "politician",
+     "photographer",
+     "cinematographer"
+    ]
+   ],
+   "new": [
+    "David",
+    "monarch",
+    [
+     "zoologist",
+     "photographer",
+     "cinematographer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 36,
+   "old_id": "EN-P17-0036",
+   "new_id": "EN-P17-0036",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "China",
+     "new": "New Zealand",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Love",
+    "the United States",
+    [
+     "Singapore",
+     "China",
+     "the Czech Republic"
+    ]
+   ],
+   "new": [
+    "Love",
+    "the United States",
+    [
+     "Singapore",
+     "New Zealand",
+     "the Czech Republic"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 43,
+   "old_id": "EN-P106-0043",
+   "new_id": "EN-P106-0043",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "monarch",
+     "new": "association football player",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "William Hall",
+    "politician",
+    [
+     "singer",
+     "monarch",
+     "social worker"
+    ]
+   ],
+   "new": [
+    "William Hall",
+    "politician",
+    [
+     "singer",
+     "association football player",
+     "social worker"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 47,
+   "old_id": "EN-P106-0047",
+   "new_id": "EN-P106-0047",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "entrepreneur",
+     "new": "film actor",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "George W. Hill",
+    "cinematographer",
+    [
+     "prompter",
+     "university teacher",
+     "entrepreneur"
+    ]
+   ],
+   "new": [
+    "George W. Hill",
+    "cinematographer",
+    [
+     "prompter",
+     "university teacher",
+     "film actor"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 50,
+   "old_id": "EN-P106-0050",
+   "new_id": "EN-P106-0050",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "postdoctoral researcher",
+     "new": "photographer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "David H. Hall",
+    "researcher",
+    [
+     "association football player",
+     "postdoctoral researcher",
+     "monarch"
+    ]
+   ],
+   "new": [
+    "David H. Hall",
+    "researcher",
+    [
+     "association football player",
+     "photographer",
+     "monarch"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 52,
+   "old_id": "EN-P106-0052",
+   "new_id": "EN-P106-0052",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "researcher",
+     "new": "photographer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "William Wood",
+    "biologist",
+    [
+     "entrepreneur",
+     "researcher",
+     "social worker"
+    ]
+   ],
+   "new": [
+    "William Wood",
+    "biologist",
+    [
+     "entrepreneur",
+     "photographer",
+     "social worker"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 69,
+   "old_id": "EN-P106-0069",
+   "new_id": "EN-P106-0069",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "historian",
+     "new": "association football player",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "George V Thomas",
+    "researcher",
+    [
+     "historian",
+     "film actor",
+     "prompter"
+    ]
+   ],
+   "new": [
+    "George V Thomas",
+    "researcher",
+    [
+     "association football player",
+     "film actor",
+     "prompter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 93,
+   "old_id": "EN-P106-0093",
+   "new_id": "EN-P106-0093",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "postdoctoral researcher",
+     "new": "monarch",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "John C Rose",
+    "researcher",
+    [
+     "postdoctoral researcher",
+     "military personnel",
+     "entrepreneur"
+    ]
+   ],
+   "new": [
+    "John C Rose",
+    "researcher",
+    [
+     "monarch",
+     "military personnel",
+     "entrepreneur"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 106,
+   "old_id": "EN-P106-0106",
+   "new_id": "EN-P106-0106",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "postdoctoral researcher",
+     "new": "children's writer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Peter North",
+    "researcher",
+    [
+     "postdoctoral researcher",
+     "entrepreneur",
+     "abbot"
+    ]
+   ],
+   "new": [
+    "Peter North",
+    "researcher",
+    [
+     "children's writer",
+     "entrepreneur",
+     "abbot"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 112,
+   "old_id": "EN-P19-0112",
+   "new_id": "EN-P19-0112",
+   "action": "text ('the')",
+   "options_redrawn": [],
+   "article_rule": true,
+   "old": [
+    "John Young",
+    "Clay Cross",
+    [
+     "6th arrondissement of Lyon",
+     "Santa Bárbara d'Oeste",
+     "South Waziristan"
+    ]
+   ],
+   "new": [
+    "John Young",
+    "Clay Cross",
+    [
+     "the 6th arrondissement of Lyon",
+     "Santa Bárbara d'Oeste",
+     "South Waziristan"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 137,
+   "old_id": "EN-P106-0137",
+   "new_id": "EN-P106-0137",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "historian",
+     "new": "social worker",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Frank Johnson",
+    "researcher",
+    [
+     "photographer",
+     "historian",
+     "painter"
+    ]
+   ],
+   "new": [
+    "Frank Johnson",
+    "researcher",
+    [
+     "photographer",
+     "social worker",
+     "painter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 141,
+   "old_id": "EN-P106-0141",
+   "new_id": "EN-P106-0141",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "biologist",
+     "new": "children's writer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    },
+    {
+     "option": 3,
+     "old": "postdoctoral researcher",
+     "new": "cinematographer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "James V. Jones",
+    "researcher",
+    [
+     "biologist",
+     "lawyer",
+     "postdoctoral researcher"
+    ]
+   ],
+   "new": [
+    "James V. Jones",
+    "researcher",
+    [
+     "children's writer",
+     "lawyer",
+     "cinematographer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 153,
+   "old_id": "EN-P106-0153",
+   "new_id": "EN-P106-0153",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "researcher",
+     "new": "photographer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "William John Young",
+    "biochemist",
+    [
+     "monarch",
+     "physician",
+     "researcher"
+    ]
+   ],
+   "new": [
+    "William John Young",
+    "biochemist",
+    [
+     "monarch",
+     "physician",
+     "photographer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 160,
+   "old_id": "EN-P17-0160",
+   "new_id": "EN-P17-0160",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "Inca Empire",
+     "new": "Israel",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Fort St. John",
+    "Canada",
+    [
+     "the Inca Empire",
+     "Japan",
+     "Thailand"
+    ]
+   ],
+   "new": [
+    "Fort St. John",
+    "Canada",
+    [
+     "Israel",
+     "Japan",
+     "Thailand"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 169,
+   "old_id": "EN-P106-0169",
+   "new_id": "EN-P106-0169",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "postdoctoral researcher",
+     "new": "painter",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Arthur Young",
+    "economist",
+    [
+     "singer",
+     "biochemist",
+     "postdoctoral researcher"
+    ]
+   ],
+   "new": [
+    "Arthur Young",
+    "economist",
+    [
+     "singer",
+     "biochemist",
+     "painter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 191,
+   "old_id": "EN-P106-0191",
+   "new_id": "EN-P106-0191",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "monarch",
+     "new": "biochemist",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Richard C. Lee",
+    "politician",
+    [
+     "monarch",
+     "photographer",
+     "painter"
+    ]
+   ],
+   "new": [
+    "Richard C. Lee",
+    "politician",
+    [
+     "biochemist",
+     "photographer",
+     "painter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 193,
+   "old_id": "EN-P106-0193",
+   "new_id": "EN-P106-0193",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "biologist",
+     "new": "basketball player",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Richard Stone",
+    "economist",
+    [
+     "entrepreneur",
+     "biologist",
+     "journalist"
+    ]
+   ],
+   "new": [
+    "Richard Stone",
+    "economist",
+    [
+     "entrepreneur",
+     "basketball player",
+     "journalist"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 195,
+   "old_id": "EN-P106-0195",
+   "new_id": "EN-P106-0195",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "biologist",
+     "new": "engineer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "David F. Strong",
+    "entrepreneur",
+    [
+     "prompter",
+     "biologist",
+     "cinematographer"
+    ]
+   ],
+   "new": [
+    "David F. Strong",
+    "entrepreneur",
+    [
+     "prompter",
+     "engineer",
+     "cinematographer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 201,
+   "old_id": "EN-P106-0201",
+   "new_id": "EN-P106-0201",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "zoologist",
+     "new": "journalist",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Alan P Cooper",
+    "researcher",
+    [
+     "zoologist",
+     "children's writer",
+     "stripper"
+    ]
+   ],
+   "new": [
+    "Alan P Cooper",
+    "researcher",
+    [
+     "journalist",
+     "children's writer",
+     "stripper"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 207,
+   "old_id": "EN-P106-0207",
+   "new_id": "EN-P106-0207",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "zoologist",
+     "new": "prompter",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "David E Lewis",
+    "researcher",
+    [
+     "politician",
+     "actor",
+     "zoologist"
+    ]
+   ],
+   "new": [
+    "David E Lewis",
+    "researcher",
+    [
+     "politician",
+     "actor",
+     "prompter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 209,
+   "old_id": "EN-P106-0209",
+   "new_id": "EN-P106-0209",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "biochemist",
+     "new": "prompter",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Elizabeth J. Walsh",
+    "researcher",
+    [
+     "children's writer",
+     "association football player",
+     "biochemist"
+    ]
+   ],
+   "new": [
+    "Elizabeth J. Walsh",
+    "researcher",
+    [
+     "children's writer",
+     "association football player",
+     "prompter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 226,
+   "old_id": "EN-P106-0226",
+   "new_id": "EN-P106-0226",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "biologist",
+     "new": "costume designer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Emily Johnson",
+    "researcher",
+    [
+     "abbot",
+     "singer",
+     "biologist"
+    ]
+   ],
+   "new": [
+    "Emily Johnson",
+    "researcher",
+    [
+     "abbot",
+     "singer",
+     "costume designer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 234,
+   "old_id": "EN-P106-0234",
+   "new_id": "EN-P106-0234",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "biochemist",
+     "new": "prompter",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Stephen Taylor",
+    "researcher",
+    [
+     "engineer",
+     "cinematographer",
+     "biochemist"
+    ]
+   ],
+   "new": [
+    "Stephen Taylor",
+    "researcher",
+    [
+     "engineer",
+     "cinematographer",
+     "prompter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 245,
+   "old_id": "EN-P19-0245",
+   "new_id": "EN-P19-0245",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "Banff",
+     "new": "Anambra State",
+     "reason": "REQ-012 item 3: the option contains, or lies in, a true birthplace"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "William Henry Forbes",
+    "Canada",
+    [
+     "Howden",
+     "Sutrapur Thana",
+     "Banff"
+    ]
+   ],
+   "new": [
+    "William Henry Forbes",
+    "Canada",
+    [
+     "Howden",
+     "Sutrapur Thana",
+     "Anambra State"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 257,
+   "old_id": "EN-P106-0257",
+   "new_id": "EN-P106-0257",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "postdoctoral researcher",
+     "new": "film actor",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Colin Mitchell",
+    "researcher",
+    [
+     "abbot",
+     "postdoctoral researcher",
+     "cinematographer"
+    ]
+   ],
+   "new": [
+    "Colin Mitchell",
+    "researcher",
+    [
+     "abbot",
+     "film actor",
+     "cinematographer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 269,
+   "old_id": "EN-P19-0269",
+   "new_id": "EN-P19-0269",
+   "action": "text ('the')",
+   "options_redrawn": [],
+   "article_rule": true,
+   "old": [
+    "William Taylor",
+    "Alexandria",
+    [
+     "3rd arrondissement of Lyon",
+     "Mundi",
+     "Japan"
+    ]
+   ],
+   "new": [
+    "William Taylor",
+    "Alexandria",
+    [
+     "the 3rd arrondissement of Lyon",
+     "Mundi",
+     "Japan"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 270,
+   "old_id": "EN-P106-0270",
+   "new_id": "EN-P106-0270",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "biologist",
+     "new": "association football player",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Timothy R White",
+    "researcher",
+    [
+     "entrepreneur",
+     "biologist",
+     "basketball player"
+    ]
+   ],
+   "new": [
+    "Timothy R White",
+    "researcher",
+    [
+     "entrepreneur",
+     "association football player",
+     "basketball player"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 278,
+   "old_id": "EN-P106-0278",
+   "new_id": "EN-P106-0278",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "researcher",
+     "new": "singer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Alan D. Martin",
+    "university teacher",
+    [
+     "researcher",
+     "association football player",
+     "film actor"
+    ]
+   ],
+   "new": [
+    "Alan D. Martin",
+    "university teacher",
+    [
+     "singer",
+     "association football player",
+     "film actor"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 281,
+   "old_id": "EN-P106-0281",
+   "new_id": "EN-P106-0281",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "biologist",
+     "new": "writer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Taylor A Smith",
+    "researcher",
+    [
+     "monarch",
+     "biologist",
+     "prompter"
+    ]
+   ],
+   "new": [
+    "Taylor A Smith",
+    "researcher",
+    [
+     "monarch",
+     "writer",
+     "prompter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 294,
+   "old_id": "EN-P17-0294",
+   "new_id": "EN-P17-0294",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "Denmark",
+     "new": "Singapore",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Red Deer",
+    "Canada",
+    [
+     "New Zealand",
+     "India",
+     "Denmark"
+    ]
+   ],
+   "new": [
+    "Red Deer",
+    "Canada",
+    [
+     "New Zealand",
+     "India",
+     "Singapore"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 322,
+   "old_id": "EN-P19-0322",
+   "new_id": "EN-P19-0322",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "North Vancouver",
+     "new": "Kaimganj",
+     "reason": "REQ-012 item 3: the option contains, or lies in, a true birthplace"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Andrew Murphy",
+    "Canada",
+    [
+     "Anand",
+     "North Vancouver",
+     "Andharthaul"
+    ]
+   ],
+   "new": [
+    "Andrew Murphy",
+    "Canada",
+    [
+     "Anand",
+     "Kaimganj",
+     "Andharthaul"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 332,
+   "old_id": "EN-P19-0332",
+   "new_id": "EN-P19-0332",
+   "action": "text ('the')",
+   "options_redrawn": [],
+   "article_rule": true,
+   "old": [
+    "Jeff Adams",
+    "Mississauga",
+    [
+     "Hoggar Mountains",
+     "6th arrondissement of Lyon",
+     "Hamburg"
+    ]
+   ],
+   "new": [
+    "Jeff Adams",
+    "Mississauga",
+    [
+     "Hoggar Mountains",
+     "the 6th arrondissement of Lyon",
+     "Hamburg"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 341,
+   "old_id": "EN-P106-0341",
+   "new_id": "EN-P106-0341",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "film actor",
+     "new": "politician",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Arthur Hughes",
+    "painter",
+    [
+     "basketball player",
+     "journalist",
+     "film actor"
+    ]
+   ],
+   "new": [
+    "Arthur Hughes",
+    "painter",
+    [
+     "basketball player",
+     "journalist",
+     "politician"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 342,
+   "old_id": "EN-P106-0342",
+   "new_id": "EN-P106-0342",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "biochemist",
+     "new": "costume designer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Jane Anderson",
+    "researcher",
+    [
+     "biochemist",
+     "writer",
+     "singer"
+    ]
+   ],
+   "new": [
+    "Jane Anderson",
+    "researcher",
+    [
+     "costume designer",
+     "writer",
+     "singer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 347,
+   "old_id": "EN-P106-0347",
+   "new_id": "EN-P106-0347",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "postdoctoral researcher",
+     "new": "association football player",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "J. M. Robertson",
+    "economist",
+    [
+     "entrepreneur",
+     "photographer",
+     "postdoctoral researcher"
+    ]
+   ],
+   "new": [
+    "J. M. Robertson",
+    "economist",
+    [
+     "entrepreneur",
+     "photographer",
+     "association football player"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 351,
+   "old_id": "EN-P106-0351",
+   "new_id": "EN-P106-0351",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "postdoctoral researcher",
+     "new": "cellist",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "François Jacob",
+    "biochemist",
+    [
+     "postdoctoral researcher",
+     "politician",
+     "military personnel"
+    ]
+   ],
+   "new": [
+    "François Jacob",
+    "biochemist",
+    [
+     "cellist",
+     "politician",
+     "military personnel"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 355,
+   "old_id": "EN-P106-0355",
+   "new_id": "EN-P106-0355",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "zoologist",
+     "new": "journalist",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    },
+    {
+     "option": 3,
+     "old": "historian",
+     "new": "prompter",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Simon P Oliver",
+    "researcher",
+    [
+     "zoologist",
+     "singer",
+     "historian"
+    ]
+   ],
+   "new": [
+    "Simon P Oliver",
+    "researcher",
+    [
+     "journalist",
+     "singer",
+     "prompter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 357,
+   "old_id": "EN-P106-0357",
+   "new_id": "EN-P106-0357",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "writer",
+     "new": "association football player",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Tony Bennett",
+    "painter",
+    [
+     "abbot",
+     "writer",
+     "entrepreneur"
+    ]
+   ],
+   "new": [
+    "Tony Bennett",
+    "painter",
+    [
+     "abbot",
+     "association football player",
+     "entrepreneur"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 380,
+   "old_id": "EN-P106-0380",
+   "new_id": "EN-P106-0380",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "monarch",
+     "new": "writer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Richard A. Clarke",
+    "economist",
+    [
+     "monarch",
+     "prompter",
+     "painter"
+    ]
+   ],
+   "new": [
+    "Richard A. Clarke",
+    "economist",
+    [
+     "writer",
+     "prompter",
+     "painter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 382,
+   "old_id": "EN-P17-0382",
+   "new_id": "EN-P17-0382",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "Inca Empire",
+     "new": "Germany",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": true,
+   "old": [
+    "Northwest Territories",
+    "Canada",
+    [
+     "the Inca Empire",
+     "Indonesia",
+     "Turkey"
+    ]
+   ],
+   "new": [
+    "The Northwest Territories",
+    "Canada",
+    [
+     "Germany",
+     "Indonesia",
+     "Turkey"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 385,
+   "old_id": "EN-P19-0385",
+   "new_id": "EN-P19-0385",
+   "action": "text ('the')",
+   "options_redrawn": [],
+   "article_rule": true,
+   "old": [
+    "Ben Smith",
+    "New York City",
+    [
+     "3rd arrondissement of Lyon",
+     "Anand",
+     "Samrala"
+    ]
+   ],
+   "new": [
+    "Ben Smith",
+    "New York City",
+    [
+     "the 3rd arrondissement of Lyon",
+     "Anand",
+     "Samrala"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 401,
+   "old_id": "EN-P106-0401",
+   "new_id": "EN-P106-0401",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "researcher",
+     "new": "cinematographer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Robin Fleming",
+    "university teacher",
+    [
+     "entrepreneur",
+     "lawyer",
+     "researcher"
+    ]
+   ],
+   "new": [
+    "Robin Fleming",
+    "university teacher",
+    [
+     "entrepreneur",
+     "lawyer",
+     "cinematographer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 419,
+   "old_id": "EN-P106-0419",
+   "new_id": "EN-P106-0419",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "historian",
+     "new": "cinematographer",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    },
+    {
+     "option": 3,
+     "old": "postdoctoral researcher",
+     "new": "basketball player",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Nirmal Kumar Ganguly",
+    "biochemist",
+    [
+     "historian",
+     "writer",
+     "postdoctoral researcher"
+    ]
+   ],
+   "new": [
+    "Nirmal Kumar Ganguly",
+    "biochemist",
+    [
+     "cinematographer",
+     "writer",
+     "basketball player"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 434,
+   "old_id": "EN-P106-0434",
+   "new_id": "EN-P106-0434",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "postdoctoral researcher",
+     "new": "prompter",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Jenna Jameson",
+    "stripper",
+    [
+     "basketball player",
+     "painter",
+     "postdoctoral researcher"
+    ]
+   ],
+   "new": [
+    "Jenna Jameson",
+    "stripper",
+    [
+     "basketball player",
+     "painter",
+     "prompter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 446,
+   "old_id": "EN-P19-0446",
+   "new_id": "EN-P19-0446",
+   "action": "text ('the')",
+   "options_redrawn": [],
+   "article_rule": true,
+   "old": [
+    "Jane Rhodes",
+    "15th arrondissement of Paris",
+    [
+     "Kulim",
+     "Bairnsdale",
+     "Solapur district"
+    ]
+   ],
+   "new": [
+    "Jane Rhodes",
+    "the 15th arrondissement of Paris",
+    [
+     "Kulim",
+     "Bairnsdale",
+     "Solapur district"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 484,
+   "old_id": "EN-P106-0484",
+   "new_id": "EN-P106-0484",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "biochemist",
+     "new": "cinematographer",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "George Watt",
+    "physician",
+    [
+     "biochemist",
+     "entrepreneur",
+     "abbot"
+    ]
+   ],
+   "new": [
+    "George Watt",
+    "physician",
+    [
+     "cinematographer",
+     "entrepreneur",
+     "abbot"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 505,
+   "old_id": "EN-P19-0505",
+   "new_id": "EN-P19-0505",
+   "action": "text ('the')",
+   "options_redrawn": [],
+   "article_rule": true,
+   "old": [
+    "Lekh Raj Batra",
+    "the British Raj",
+    [
+     "18th arrondissement of Paris",
+     "Bilari",
+     "Massachusetts"
+    ]
+   ],
+   "new": [
+    "Lekh Raj Batra",
+    "the British Raj",
+    [
+     "the 18th arrondissement of Paris",
+     "Bilari",
+     "Massachusetts"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 506,
+   "old_id": "EN-P17-0506",
+   "new_id": "EN-P17-0506",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "Union of South Africa",
+     "new": "Botswana",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Shropshire",
+    "the United Kingdom",
+    [
+     "India",
+     "Peru",
+     "the Union of South Africa"
+    ]
+   ],
+   "new": [
+    "Shropshire",
+    "the United Kingdom",
+    [
+     "India",
+     "Peru",
+     "Botswana"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 558,
+   "old_id": "EN-P106-0558",
+   "new_id": "EN-P106-0558",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "singer",
+     "new": "historian",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Narayan Debnath",
+    "writer",
+    [
+     "singer",
+     "association football player",
+     "zoologist"
+    ]
+   ],
+   "new": [
+    "Narayan Debnath",
+    "writer",
+    [
+     "historian",
+     "association football player",
+     "zoologist"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 564,
+   "old_id": "EN-P17-0564",
+   "new_id": "EN-P17-0564",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "Canada",
+     "new": "Greece",
+     "reason": "REQ-012 item 2: the option is the country of another place with the same name"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Sandwich",
+    "the United Kingdom",
+    [
+     "Canada",
+     "Austria",
+     "Spain"
+    ]
+   ],
+   "new": [
+    "Sandwich",
+    "the United Kingdom",
+    [
+     "Greece",
+     "Austria",
+     "Spain"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 576,
+   "old_id": "EN-P106-0576",
+   "new_id": "EN-P106-0576",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "film actor",
+     "new": "abbot",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    },
+    {
+     "option": 2,
+     "old": "costume designer",
+     "new": "economist",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "Etel Adnan",
+    "painter",
+    [
+     "film actor",
+     "costume designer",
+     "association football player"
+    ]
+   ],
+   "new": [
+    "Etel Adnan",
+    "painter",
+    [
+     "abbot",
+     "economist",
+     "association football player"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 17,
+   "old_id": "EN-P17-0017",
+   "new_id": "EN-P19-0017",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Times Theatre",
+    "the United States",
+    [
+     "France",
+     "the Czech Republic",
+     "Italy"
+    ]
+   ],
+   "new": [
+    "James Hill",
+    "Bellshill",
+    [
+     "Saint Petersburg",
+     "Anakapalle",
+     "Stranraer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 20,
+   "old_id": "EN-P36-0020",
+   "new_id": "EN-P106-0020",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 3 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Republic of Texas",
+    "Houston",
+    [
+     "Gosairhat",
+     "Victoria de Durango",
+     "Cankuzo"
+    ]
+   ],
+   "new": [
+    "Andrew Charles",
+    "photographer",
+    [
+     "association football player",
+     "stripper",
+     "prompter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 21,
+   "old_id": "EN-P17-0021",
+   "new_id": "EN-P36-0021",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Peter Hill",
+    "the United Kingdom",
+    [
+     "Hungary",
+     "Bosnia and Herzegovina",
+     "Italy"
+    ]
+   ],
+   "new": [
+    "California",
+    "Sacramento",
+    [
+     "Urgench",
+     "Poltava",
+     "Nzérékoré"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 24,
+   "old_id": "EN-P17-0024",
+   "new_id": "EN-P106-0024",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "San Francisco",
+    "Ecuador",
+    [
+     "Australia",
+     "Slovenia",
+     "the United States"
+    ]
+   ],
+   "new": [
+    "Thomas Brown",
+    "physician",
+    [
+     "social worker",
+     "painter",
+     "economist"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 30,
+   "old_id": "EN-P17-0030",
+   "new_id": "EN-P106-0030",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 24 current countries, not one"
+   ],
+   "old": [
+    "Spanish",
+    "Peru",
+    [
+     "Turkey",
+     "the Almohad Caliphate",
+     "Sweden"
+    ]
+   ],
+   "new": [
+    "Richard E. Jackson",
+    "politician",
+    [
+     "cellist",
+     "prompter",
+     "basketball player"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 37,
+   "old_id": "EN-P36-0037",
+   "new_id": "EN-P19-0037",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Empire of Japan",
+    "Tokyo City",
+    [
+     "Adıyaman",
+     "Parakou",
+     "Bern"
+    ]
+   ],
+   "new": [
+    "Joe Brown",
+    "Canada",
+    [
+     "Nago",
+     "Aosta",
+     "Munich"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 54,
+   "old_id": "EN-P17-0054",
+   "new_id": "EN-P19-0054",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 2 current countries, not one"
+   ],
+   "old": [
+    "Germany–Poland border",
+    "Germany",
+    [
+     "Indonesia",
+     "New Zealand",
+     "Canada"
+    ]
+   ],
+   "new": [
+    "Rose Prince",
+    "France",
+    [
+     "Sreepur Kharandwip Union",
+     "Changzhou",
+     "Tarapur"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 56,
+   "old_id": "EN-P17-0056",
+   "new_id": "EN-P19-0056",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: missing 'The' before 'Metropolitan line'",
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Metropolitan line",
+    "the United Kingdom",
+    [
+     "Bosnia and Herzegovina",
+     "Indonesia",
+     "Australia"
+    ]
+   ],
+   "new": [
+    "William King",
+    "Stranraer",
+    [
+     "Drayton",
+     "Jabalia Refugee Camp",
+     "Kitchener"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 57,
+   "old_id": "EN-P17-0057",
+   "new_id": "EN-P19-0057",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Port of New York and New Jersey",
+    "the United States",
+    [
+     "Greece",
+     "Germany",
+     "India"
+    ]
+   ],
+   "new": [
+    "Henry Williams",
+    "Canada",
+    [
+     "Sirsa",
+     "France",
+     "Surat district"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 63,
+   "old_id": "EN-P17-0063",
+   "new_id": "EN-P19-0063",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "George A West",
+    "the United Kingdom",
+    [
+     "the Czech Republic",
+     "China",
+     "Austria"
+    ]
+   ],
+   "new": [
+    "Joseph Wood",
+    "Birmingham",
+    [
+     "Saharanpur district",
+     "Kaimganj",
+     "Jowzjan Province"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 66,
+   "old_id": "EN-P17-0066",
+   "new_id": "EN-P106-0066",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "James Bay",
+    "Canada",
+    [
+     "Russia",
+     "Brazil",
+     "Israel"
+    ]
+   ],
+   "new": [
+    "Charles I of England",
+    "monarch",
+    [
+     "abbot",
+     "biochemist",
+     "actor"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 83,
+   "old_id": "EN-P36-0083",
+   "new_id": "EN-P36-0083",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 4 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Kingdom of England",
+    "London",
+    [
+     "Mandalgovi",
+     "Jhenaidah",
+     "Cojutepeque"
+    ]
+   ],
+   "new": [
+    "Rivers State",
+    "Port Harcourt",
+    [
+     "Rumbek",
+     "Zlín",
+     "Nepalgunj"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 86,
+   "old_id": "EN-P17-0086",
+   "new_id": "EN-P19-0086",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 9 current countries, not one"
+   ],
+   "old": [
+    "Northern Europe",
+    "the United Kingdom",
+    [
+     "Argentina",
+     "Botswana",
+     "the United States"
+    ]
+   ],
+   "new": [
+    "Thomas Johnson",
+    "Thirsk",
+    [
+     "Shijiazhuang",
+     "Java",
+     "the 2nd arrondissement of Lyon"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 99,
+   "old_id": "EN-P36-0099",
+   "new_id": "EN-P106-0099",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 5 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Holy Roman Empire",
+    "Vienna",
+    [
+     "Santo Tomás",
+     "Shibchar",
+     "Burhanpur"
+    ]
+   ],
+   "new": [
+    "George V",
+    "monarch",
+    [
+     "singer",
+     "film actor",
+     "social worker"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 108,
+   "old_id": "EN-P17-0108",
+   "new_id": "EN-P19-0108",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Ray Hill",
+    "the United States",
+    [
+     "France",
+     "the Czech Republic",
+     "Israel"
+    ]
+   ],
+   "new": [
+    "Jack Smith",
+    "Bellshill",
+    [
+     "Shijiazhuang",
+     "Banff",
+     "Sardarpur"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 114,
+   "old_id": "EN-P17-0114",
+   "new_id": "EN-P106-0114",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "British Sign Language",
+    "the United Kingdom",
+    [
+     "Argentina",
+     "the Netherlands",
+     "the Czech Republic"
+    ]
+   ],
+   "new": [
+    "Henry IV of France",
+    "monarch",
+    [
+     "historian",
+     "basketball player",
+     "social worker"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 135,
+   "old_id": "EN-P36-0135",
+   "new_id": "EN-P106-0135",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Italian Social Republic",
+    "Rome",
+    [
+     "Ainaro",
+     "Shivalaya",
+     "Puyo"
+    ]
+   ],
+   "new": [
+    "Chris Rose",
+    "journalist",
+    [
+     "singer",
+     "biologist",
+     "writer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 156,
+   "old_id": "EN-P36-0156",
+   "new_id": "EN-P106-0156",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 3 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Kingdom of Israel",
+    "Shechem",
+    [
+     "Bhuj",
+     "Khunti",
+     "Colima"
+    ]
+   ],
+   "new": [
+    "Charles IV",
+    "monarch",
+    [
+     "researcher",
+     "painter",
+     "stripper"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 166,
+   "old_id": "EN-P19-0166",
+   "new_id": "EN-P106-0166",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: wrong option 2 needs 'the 15th arrondissement of Paris'"
+   ],
+   "old": [
+    "Mark Johnson",
+    "Massachusetts",
+    [
+     "Monrovia",
+     "15th arrondissement of Paris",
+     "Dohazari"
+    ]
+   ],
+   "new": [
+    "Jack Waters",
+    "film actor",
+    [
+     "magician",
+     "journalist",
+     "association football player"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 175,
+   "old_id": "EN-P36-0175",
+   "new_id": "EN-P106-0175",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 3 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Kingdom of Italy",
+    "Florence",
+    [
+     "Ujjain",
+     "Siddipet",
+     "Nablus"
+    ]
+   ],
+   "new": [
+    "Edward IV of England",
+    "monarch",
+    [
+     "children's writer",
+     "photographer",
+     "painter"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 176,
+   "old_id": "EN-P17-0176",
+   "new_id": "EN-P19-0176",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "William Hill",
+    "the United Kingdom",
+    [
+     "the Inca Empire",
+     "Canada",
+     "Bosnia and Herzegovina"
+    ]
+   ],
+   "new": [
+    "Charles Wood",
+    "New York City",
+    [
+     "Pomeroon-Supenaam",
+     "Ithaca",
+     "Burgos"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 186,
+   "old_id": "EN-P17-0186",
+   "new_id": "EN-P106-0186",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is, or lies in, a dependent territory"
+   ],
+   "old": [
+    "St. George's",
+    "the United Kingdom",
+    [
+     "Argentina",
+     "Mandatory Palestine",
+     "Germany"
+    ]
+   ],
+   "new": [
+    "David Martin",
+    "association football player",
+    [
+     "politician",
+     "historian",
+     "writer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 215,
+   "old_id": "EN-P17-0215",
+   "new_id": "EN-P106-0215",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "University of Toronto",
+    "Canada",
+    [
+     "Argentina",
+     "Mandatory Palestine",
+     "Kazakhstan"
+    ]
+   ],
+   "new": [
+    "Christopher Scott",
+    "researcher",
+    [
+     "physician",
+     "cinematographer",
+     "engineer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 276,
+   "old_id": "EN-P17-0276",
+   "new_id": "EN-P19-0276",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Adam Smith",
+    "the United Kingdom",
+    [
+     "Austria",
+     "Hungary",
+     "New Zealand"
+    ]
+   ],
+   "new": [
+    "Andrew Wilson",
+    "Hertford",
+    [
+     "Surabaya",
+     "Acapulco de Juárez",
+     "Nadia district"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 293,
+   "old_id": "EN-P17-0293",
+   "new_id": "EN-P19-0293",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 3 current countries, not one"
+   ],
+   "old": [
+    "Amazon River",
+    "Peru",
+    [
+     "Botswana",
+     "Mexico",
+     "Argentina"
+    ]
+   ],
+   "new": [
+    "Bob Davis",
+    "New York City",
+    [
+     "Bellshill",
+     "Bhiwani",
+     "Solapur district"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 323,
+   "old_id": "EN-P36-0323",
+   "new_id": "EN-P106-0323",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "Central Delhi district",
+    "Daryaganj",
+    [
+     "Raichur",
+     "Magway",
+     "Thiès"
+    ]
+   ],
+   "new": [
+    "Randy Phillips",
+    "politician",
+    [
+     "painter",
+     "historian",
+     "lawyer"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 327,
+   "old_id": "EN-P106-0327",
+   "new_id": "EN-P106-0327",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: wrong option 'actor' is also true of a 'film actor'"
+   ],
+   "old": [
+    "Yang Yang",
+    "film actor",
+    [
+     "historian",
+     "children's writer",
+     "actor"
+    ]
+   ],
+   "new": [
+    "Samuel Butler",
+    "painter",
+    [
+     "social worker",
+     "politician",
+     "stripper"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 349,
+   "old_id": "EN-P17-0349",
+   "new_id": "EN-P19-0349",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: Quebec Sign Language is a language, not a place",
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Quebec Sign Language",
+    "Canada",
+    [
+     "Argentina",
+     "Singapore",
+     "Estonia"
+    ]
+   ],
+   "new": [
+    "Kenneth Gilbert",
+    "Montreal",
+    [
+     "Nanauta",
+     "Burgos",
+     "Penrith"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 353,
+   "old_id": "EN-P19-0353",
+   "new_id": "EN-P106-0353",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: wrong option 1 needs 'the 2nd arrondissement of Lyon'"
+   ],
+   "old": [
+    "Dennis E. Taylor",
+    "Canada",
+    [
+     "2nd arrondissement of Lyon",
+     "Adilabad",
+     "Hsinchu City"
+    ]
+   ],
+   "new": [
+    "Mary Ann Baker",
+    "biologist",
+    [
+     "basketball player",
+     "economist",
+     "physician"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 359,
+   "old_id": "EN-P36-0359",
+   "new_id": "EN-P36-0359",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 5 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "German New Guinea",
+    "Rabaul",
+    [
+     "Penukonda",
+     "Namur",
+     "Afgooye"
+    ]
+   ],
+   "new": [
+    "the Kingdom of Egypt",
+    "Cairo",
+    [
+     "Dera Ismail Khan",
+     "Ciudad Benito Juárez",
+     "Gorakhpur"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 369,
+   "old_id": "EN-P17-0369",
+   "new_id": "EN-P36-0369",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 2 current countries, not one"
+   ],
+   "old": [
+    "Channel Tunnel",
+    "the United Kingdom",
+    [
+     "Malaysia",
+     "Hungary",
+     "the Almohad Caliphate"
+    ]
+   ],
+   "new": [
+    "Upper Nile",
+    "Malakal",
+    [
+     "San Miguel el Alto",
+     "Gostivar",
+     "Banswara"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 373,
+   "old_id": "EN-P17-0373",
+   "new_id": "EN-P19-0373",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 2 current countries, not one"
+   ],
+   "old": [
+    "Lake Erie",
+    "Canada",
+    [
+     "Hungary",
+     "Turkey",
+     "Bangladesh"
+    ]
+   ],
+   "new": [
+    "David Moore",
+    "Birmingham",
+    [
+     "Tangshan",
+     "Ashrafpur Kichhauchha",
+     "Magura"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 378,
+   "old_id": "EN-P17-0378",
+   "new_id": "EN-P106-0378",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Jean Gordon",
+    "the United Kingdom",
+    [
+     "Canada",
+     "The Bahamas",
+     "Israel"
+    ]
+   ],
+   "new": [
+    "Sarah Green",
+    "entrepreneur",
+    [
+     "actor",
+     "engineer",
+     "social worker"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 383,
+   "old_id": "EN-P36-0383",
+   "new_id": "EN-P36-0383",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the British Raj",
+    "New Delhi",
+    [
+     "Constantinople",
+     "Bidar",
+     "Banfora"
+    ]
+   ],
+   "new": [
+    "Bath and North East Somerset",
+    "Bath",
+    [
+     "East Jerusalem",
+     "Galle",
+     "Katiadi"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 405,
+   "old_id": "EN-P17-0405",
+   "new_id": "EN-P19-0405",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Amin railway station",
+    "India",
+    [
+     "the United States",
+     "Hungary",
+     "South Korea"
+    ]
+   ],
+   "new": [
+    "Garima Chaudhary",
+    "Meerut",
+    [
+     "Bhor",
+     "Mirzapur district",
+     "South Australia"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 421,
+   "old_id": "EN-P17-0421",
+   "new_id": "EN-P36-0421",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 2: the P17 answer is not a current sovereign state"
+   ],
+   "old": [
+    "Al Jarina mosque",
+    "Mandatory Palestine",
+    [
+     "The Bahamas",
+     "the Netherlands",
+     "the Czech Republic"
+    ]
+   ],
+   "new": [
+    "Ferdows County",
+    "Ferdows",
+    [
+     "Bago",
+     "Rajnandgaon",
+     "Sulaymaniyah"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 452,
+   "old_id": "EN-P17-0452",
+   "new_id": "EN-P36-0452",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Saga Prefectural Road Route 41",
+    "Japan",
+    [
+     "Mandatory Palestine",
+     "Australia",
+     "France"
+    ]
+   ],
+   "new": [
+    "the Seychelles",
+    "Victoria",
+    [
+     "Valsad",
+     "Gorgan",
+     "Sukma"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 460,
+   "old_id": "EN-P17-0460",
+   "new_id": "EN-P19-0460",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 2: the P17 answer is not a current sovereign state"
+   ],
+   "old": [
+    "Haifa District",
+    "Mandatory Palestine",
+    [
+     "Finland",
+     "Sweden",
+     "Russia"
+    ]
+   ],
+   "new": [
+    "James Deen",
+    "Pasadena",
+    [
+     "Smyadovo",
+     "Ephesus",
+     "Oregon City"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 469,
+   "old_id": "EN-P36-0469",
+   "new_id": "EN-P19-0469",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Kingdom of Seville",
+    "Seville",
+    [
+     "Santa Cruz",
+     "Rudraprayag",
+     "Sfântu Gheorghe"
+    ]
+   ],
+   "new": [
+    "George Sinclair",
+    "Penzance",
+    [
+     "Osaka",
+     "Bilasipara",
+     "Massachusetts"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 483,
+   "old_id": "EN-P17-0483",
+   "new_id": "EN-P19-0483",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Rambha railway station",
+    "India",
+    [
+     "Russia",
+     "Argentina",
+     "Indonesia"
+    ]
+   ],
+   "new": [
+    "Moe Yu San",
+    "Yangon",
+    [
+     "East Germany",
+     "Ica Department",
+     "Ithaca"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 491,
+   "old_id": "EN-P19-0491",
+   "new_id": "EN-P19-0491",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: the gold needs 'the 2nd arrondissement of Lyon'"
+   ],
+   "old": [
+    "Savitri Devi",
+    "2nd arrondissement of Lyon",
+    [
+     "Nitra",
+     "Rome",
+     "Sindkhed Raja"
+    ]
+   ],
+   "new": [
+    "Mullah Mohammad Hasan",
+    "Uruzgan Province",
+    [
+     "Nago",
+     "Budaun",
+     "Moonak"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 496,
+   "old_id": "EN-P17-0496",
+   "new_id": "EN-P19-0496",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Cornish",
+    "the United Kingdom",
+    [
+     "Australia",
+     "Hungary",
+     "Finland"
+    ]
+   ],
+   "new": [
+    "Kumar Deepak Das",
+    "Bijni",
+    [
+     "Aosta",
+     "Bemetara district",
+     "Usilampatti"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 504,
+   "old_id": "EN-P17-0504",
+   "new_id": "EN-P106-0504",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "River Severn",
+    "the United Kingdom",
+    [
+     "the Almohad Caliphate",
+     "the Union of South Africa",
+     "China"
+    ]
+   ],
+   "new": [
+    "Roshan Ara Begum",
+    "singer",
+    [
+     "economist",
+     "biochemist",
+     "journalist"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 523,
+   "old_id": "EN-P36-0523",
+   "new_id": "EN-P36-0523",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 5 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "the Achaemenid Empire",
+    "Ecbatana",
+    [
+     "Santa Isabel Cholula",
+     "Las Sabanas",
+     "Luoyang"
+    ]
+   ],
+   "new": [
+    "Mau district",
+    "Mau",
+    [
+     "Barnala",
+     "Drobeta-Turnu Severin",
+     "Jhunjhunu"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 543,
+   "old_id": "EN-P106-0543",
+   "new_id": "EN-P36-0543",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: wrong option 'lawyer' is also true of Narendra Deva"
+   ],
+   "old": [
+    "Narendra Deva",
+    "writer",
+    [
+     "lawyer",
+     "military personnel",
+     "abbot"
+    ]
+   ],
+   "new": [
+    "Fars Province",
+    "Shiraz",
+    [
+     "San José Estancia Grande",
+     "Arkhangelsk",
+     "Tirunelveli"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 566,
+   "old_id": "EN-P17-0566",
+   "new_id": "EN-P19-0566",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Matari railway station",
+    "India",
+    [
+     "Mandatory Palestine",
+     "the Netherlands",
+     "South Korea"
+    ]
+   ],
+   "new": [
+    "Akash Kumar",
+    "Bijnor",
+    [
+     "Motherwell",
+     "Kōchi-shi",
+     "Salempur"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 579,
+   "old_id": "EN-P17-0579",
+   "new_id": "EN-P19-0579",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "Untitled",
+    "Spain",
+    [
+     "Malaysia",
+     "Indonesia",
+     "Israel"
+    ]
+   ],
+   "new": [
+    "Anjali Patil",
+    "Nashik",
+    [
+     "Hojai",
+     "Havana",
+     "Leuven"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 583,
+   "old_id": "EN-P36-0583",
+   "new_id": "EN-P19-0583",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 3 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "Azores",
+    "Horta",
+    [
+     "Manzini",
+     "Salerno",
+     "Bhola"
+    ]
+   ],
+   "new": [
+    "Sahu Shanti Prasad Jain",
+    "Najibabad",
+    [
+     "Nadia district",
+     "Jabalia Refugee Camp",
+     "Sreepur Kharandwip Union"
+    ]
+   ]
+  },
+  {
+   "language": "EN",
+   "position": 594,
+   "old_id": "EN-P17-0594",
+   "new_id": "EN-P19-0594",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 3 current countries, not one"
+   ],
+   "old": [
+    "Aymara",
+    "Peru",
+    [
+     "Israel",
+     "the Czech Republic",
+     "Brazil"
+    ]
+   ],
+   "new": [
+    "Doly Begum",
+    "Moulvibazar District",
+    [
+     "Lohajang Upazila",
+     "Akashi",
+     "Marbella"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 1,
+   "old_id": "BN-P106-0001",
+   "new_id": "BN-P106-0001",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "শিশু সাহিত্যিক",
+     "new": "অর্থনীতিবিদ",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "হুমায়ুন",
+    "রাজশাসক",
+    [
+     "যাদুকর",
+     "চেলোবাদক",
+     "শিশু সাহিত্যিক"
+    ]
+   ],
+   "new": [
+    "হুমায়ুন",
+    "রাজশাসক",
+    [
+     "যাদুকর",
+     "চেলোবাদক",
+     "অর্থনীতিবিদ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 8,
+   "old_id": "BN-P106-0008",
+   "new_id": "BN-P106-0008",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "আলোকচিত্রশিল্পী",
+     "new": "সমাজকর্মী",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "ডেভিড ও. রাসেল",
+    "চিত্রগ্রাহক",
+    [
+     "আলোকচিত্রশিল্পী",
+     "অর্থনীতিবিদ",
+     "ফুটবলার"
+    ]
+   ],
+   "new": [
+    "ডেভিড ও. রাসেল",
+    "চিত্রগ্রাহক",
+    [
+     "সমাজকর্মী",
+     "অর্থনীতিবিদ",
+     "ফুটবলার"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 52,
+   "old_id": "BN-P17-0052",
+   "new_id": "BN-P17-0052",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "মুওয়াহহিদিন রাজবংশ",
+     "new": "যুক্তরাজ্য",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "সেন্ট জন",
+    "কানাডা",
+    [
+     "মুওয়াহহিদিন রাজবংশ",
+     "পেরু",
+     "ভারত"
+    ]
+   ],
+   "new": [
+    "সেন্ট জন",
+    "কানাডা",
+    [
+     "যুক্তরাজ্য",
+     "পেরু",
+     "ভারত"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 78,
+   "old_id": "BN-P106-0078",
+   "new_id": "BN-P106-0078",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "বিশ্ববিদ্যালয়ের শিক্ষক",
+     "new": "পোশাক নকশাকার",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "লি ই",
+    "গবেষক",
+    [
+     "বিশ্ববিদ্যালয়ের শিক্ষক",
+     "স্ট্রিপার",
+     "চেলোবাদক"
+    ]
+   ],
+   "new": [
+    "লি ই",
+    "গবেষক",
+    [
+     "পোশাক নকশাকার",
+     "স্ট্রিপার",
+     "চেলোবাদক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 88,
+   "old_id": "BN-P106-0088",
+   "new_id": "BN-P106-0088",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "প্রাণীবিদ",
+     "new": "সমাজকর্মী",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "ডেভিড বেকার",
+    "প্রাণরসায়নবিদ",
+    [
+     "বাস্কেটবল খেলোয়াড়",
+     "প্রাণীবিদ",
+     "চিত্রগ্রাহক"
+    ]
+   ],
+   "new": [
+    "ডেভিড বেকার",
+    "প্রাণরসায়নবিদ",
+    [
+     "বাস্কেটবল খেলোয়াড়",
+     "সমাজকর্মী",
+     "চিত্রগ্রাহক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 110,
+   "old_id": "BN-P106-0110",
+   "new_id": "BN-P106-0110",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "চলচ্চিত্র অভিনয়শিল্পী",
+     "new": "প্রাণরসায়নবিদ",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "পদ্মা দেবী",
+    "অভিনয়শিল্পী",
+    [
+     "গবেষক",
+     "চলচ্চিত্র অভিনয়শিল্পী",
+     "ফুটবলার"
+    ]
+   ],
+   "new": [
+    "পদ্মা দেবী",
+    "অভিনয়শিল্পী",
+    [
+     "গবেষক",
+     "প্রাণরসায়নবিদ",
+     "ফুটবলার"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 121,
+   "old_id": "BN-P17-0121",
+   "new_id": "BN-P17-0121",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "ইনকা সাম্রাজ্য",
+     "new": "কাজাখস্তান",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "ম্যানচেস্টার",
+    "যুক্তরাজ্য",
+    [
+     "ইনকা সাম্রাজ্য",
+     "ফ্রান্স",
+     "মেক্সিকো"
+    ]
+   ],
+   "new": [
+    "ম্যানচেস্টার",
+    "যুক্তরাজ্য",
+    [
+     "কাজাখস্তান",
+     "ফ্রান্স",
+     "মেক্সিকো"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 170,
+   "old_id": "BN-P17-0170",
+   "new_id": "BN-P17-0170",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "কর্তৃত্বপ্রাপ্ত শক্তির অধীন ফিলিস্তিন",
+     "new": "ডেনমার্ক",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "বৃহত্তর লন্ডন",
+    "যুক্তরাজ্য",
+    [
+     "কর্তৃত্বপ্রাপ্ত শক্তির অধীন ফিলিস্তিন",
+     "তুরস্ক",
+     "চীন"
+    ]
+   ],
+   "new": [
+    "বৃহত্তর লন্ডন",
+    "যুক্তরাজ্য",
+    [
+     "ডেনমার্ক",
+     "তুরস্ক",
+     "চীন"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 201,
+   "old_id": "BN-P106-0201",
+   "new_id": "BN-P106-0201",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "ইতিহাসবিদ",
+     "new": "চিত্রগ্রাহক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "সারাহ ই স্টুয়ার্ট",
+    "গবেষক",
+    [
+     "মোহান্ত",
+     "ইতিহাসবিদ",
+     "চলচ্চিত্র অভিনয়শিল্পী"
+    ]
+   ],
+   "new": [
+    "সারাহ ই স্টুয়ার্ট",
+    "গবেষক",
+    [
+     "মোহান্ত",
+     "চিত্রগ্রাহক",
+     "চলচ্চিত্র অভিনয়শিল্পী"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 209,
+   "old_id": "BN-P106-0209",
+   "new_id": "BN-P106-0209",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "রাজনীতিবিদ",
+     "new": "চেলোবাদক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "তৃতীয় এডওয়ার্ড",
+    "রাজশাসক",
+    [
+     "রাজনীতিবিদ",
+     "উদ্যোক্তা",
+     "প্রকৌশলী"
+    ]
+   ],
+   "new": [
+    "তৃতীয় এডওয়ার্ড",
+    "রাজশাসক",
+    [
+     "চেলোবাদক",
+     "উদ্যোক্তা",
+     "প্রকৌশলী"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 213,
+   "old_id": "BN-P106-0213",
+   "new_id": "BN-P106-0213",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "রাজনীতিবিদ",
+     "new": "চেলোবাদক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "প্রথম আবদুল্লাহ, জর্ডানের রাজা",
+    "রাজশাসক",
+    [
+     "রাজনীতিবিদ",
+     "সমাজকর্মী",
+     "পোশাক নকশাকার"
+    ]
+   ],
+   "new": [
+    "প্রথম আবদুল্লাহ, জর্ডানের রাজা",
+    "রাজশাসক",
+    [
+     "চেলোবাদক",
+     "সমাজকর্মী",
+     "পোশাক নকশাকার"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 223,
+   "old_id": "BN-P17-0223",
+   "new_id": "BN-P17-0223",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "কানাডা",
+     "new": "ব্রাজিল",
+     "reason": "REQ-012 item 2: the option is the country of another place with the same name"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "মিচেল",
+    "মার্কিন যুক্তরাষ্ট্র",
+    [
+     "কানাডা",
+     "ভারত",
+     "সুইডেন"
+    ]
+   ],
+   "new": [
+    "মিচেল",
+    "মার্কিন যুক্তরাষ্ট্র",
+    [
+     "ব্রাজিল",
+     "ভারত",
+     "সুইডেন"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 229,
+   "old_id": "BN-P106-0229",
+   "new_id": "BN-P106-0229",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "পোস্টডক্টোরাল গবেষক",
+     "new": "পোশাক নকশাকার",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "পিটার গ্রে",
+    "জীববিজ্ঞানী",
+    [
+     "প্রকৌশলী",
+     "পোস্টডক্টোরাল গবেষক",
+     "বাস্কেটবল খেলোয়াড়"
+    ]
+   ],
+   "new": [
+    "পিটার গ্রে",
+    "জীববিজ্ঞানী",
+    [
+     "প্রকৌশলী",
+     "পোশাক নকশাকার",
+     "বাস্কেটবল খেলোয়াড়"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 238,
+   "old_id": "BN-P17-0238",
+   "new_id": "BN-P17-0238",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "দক্ষিণ আফ্রিকা ইউনিয়ন",
+     "new": "বাংলাদেশ",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "ভন",
+    "কানাডা",
+    [
+     "দক্ষিণ আফ্রিকা ইউনিয়ন",
+     "চেক প্রজাতন্ত্র",
+     "দক্ষিণ কোরিয়া"
+    ]
+   ],
+   "new": [
+    "ভন",
+    "কানাডা",
+    [
+     "বাংলাদেশ",
+     "চেক প্রজাতন্ত্র",
+     "দক্ষিণ কোরিয়া"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 271,
+   "old_id": "BN-P106-0271",
+   "new_id": "BN-P106-0271",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "পোস্টডক্টোরাল গবেষক",
+     "new": "সামরিক ব্যক্তিত্ব",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "ডেভিড রবিনসন",
+    "গবেষক",
+    [
+     "প্রকৌশলী",
+     "যাদুকর",
+     "পোস্টডক্টোরাল গবেষক"
+    ]
+   ],
+   "new": [
+    "ডেভিড রবিনসন",
+    "গবেষক",
+    [
+     "প্রকৌশলী",
+     "যাদুকর",
+     "সামরিক ব্যক্তিত্ব"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 311,
+   "old_id": "BN-P106-0311",
+   "new_id": "BN-P106-0311",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "পোস্টডক্টোরাল গবেষক",
+     "new": "মোহান্ত",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "চার্লস মুর",
+    "সাংবাদিক",
+    [
+     "আইনজীবী",
+     "পোস্টডক্টোরাল গবেষক",
+     "চিত্রগ্রাহক"
+    ]
+   ],
+   "new": [
+    "চার্লস মুর",
+    "সাংবাদিক",
+    [
+     "আইনজীবী",
+     "মোহান্ত",
+     "চিত্রগ্রাহক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 317,
+   "old_id": "BN-P106-0317",
+   "new_id": "BN-P106-0317",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "যাদুকর",
+     "new": "পোস্টডক্টোরাল গবেষক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "আলেকজান্ডার অ্যান্ডারসন",
+    "চিকিৎসক",
+    [
+     "উদ্যোক্তা",
+     "যাদুকর",
+     "সাংবাদিক"
+    ]
+   ],
+   "new": [
+    "আলেকজান্ডার অ্যান্ডারসন",
+    "চিকিৎসক",
+    [
+     "উদ্যোক্তা",
+     "পোস্টডক্টোরাল গবেষক",
+     "সাংবাদিক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 331,
+   "old_id": "BN-P106-0331",
+   "new_id": "BN-P106-0331",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "পোস্টডক্টোরাল গবেষক",
+     "new": "ফুটবলার",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    },
+    {
+     "option": 2,
+     "old": "ইতিহাসবিদ",
+     "new": "সাংবাদিক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "আর্নেস্ট এম রাইট",
+    "গবেষক",
+    [
+     "পোস্টডক্টোরাল গবেষক",
+     "ইতিহাসবিদ",
+     "চিকিৎসক"
+    ]
+   ],
+   "new": [
+    "আর্নেস্ট এম রাইট",
+    "গবেষক",
+    [
+     "ফুটবলার",
+     "সাংবাদিক",
+     "চিকিৎসক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 338,
+   "old_id": "BN-P106-0338",
+   "new_id": "BN-P106-0338",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "রাজশাসক",
+     "new": "ইতিহাসবিদ",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "রে ইয়াং",
+    "রাজনীতিবিদ",
+    [
+     "চিকিৎসক",
+     "স্ট্রিপার",
+     "রাজশাসক"
+    ]
+   ],
+   "new": [
+    "রে ইয়াং",
+    "রাজনীতিবিদ",
+    [
+     "চিকিৎসক",
+     "স্ট্রিপার",
+     "ইতিহাসবিদ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 348,
+   "old_id": "BN-P106-0348",
+   "new_id": "BN-P106-0348",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "জীববিজ্ঞানী",
+     "new": "চিত্রগ্রাহক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    },
+    {
+     "option": 3,
+     "old": "বিশ্ববিদ্যালয়ের শিক্ষক",
+     "new": "শিশু সাহিত্যিক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "রিচার্ড এ ইয়াং",
+    "গবেষক",
+    [
+     "জীববিজ্ঞানী",
+     "স্মারক (মঞ্চনাটক)",
+     "বিশ্ববিদ্যালয়ের শিক্ষক"
+    ]
+   ],
+   "new": [
+    "রিচার্ড এ ইয়াং",
+    "গবেষক",
+    [
+     "চিত্রগ্রাহক",
+     "স্মারক (মঞ্চনাটক)",
+     "শিশু সাহিত্যিক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 351,
+   "old_id": "BN-P106-0351",
+   "new_id": "BN-P106-0351",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "জীববিজ্ঞানী",
+     "new": "চেলোবাদক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "এরিক আর ওয়াকার",
+    "গবেষক",
+    [
+     "আইনজীবী",
+     "জীববিজ্ঞানী",
+     "চিকিৎসক"
+    ]
+   ],
+   "new": [
+    "এরিক আর ওয়াকার",
+    "গবেষক",
+    [
+     "আইনজীবী",
+     "চেলোবাদক",
+     "চিকিৎসক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 353,
+   "old_id": "BN-P106-0353",
+   "new_id": "BN-P106-0353",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "রাজশাসক",
+     "new": "গবেষক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "রামপাল সিং",
+    "রাজনীতিবিদ",
+    [
+     "পোশাক নকশাকার",
+     "সাংবাদিক",
+     "রাজশাসক"
+    ]
+   ],
+   "new": [
+    "রামপাল সিং",
+    "রাজনীতিবিদ",
+    [
+     "পোশাক নকশাকার",
+     "সাংবাদিক",
+     "গবেষক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 368,
+   "old_id": "BN-P106-0368",
+   "new_id": "BN-P106-0368",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "অর্থনীতিবিদ",
+     "new": "সাংবাদিক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "এমিলি জনসন",
+    "গবেষক",
+    [
+     "স্মারক (মঞ্চনাটক)",
+     "অর্থনীতিবিদ",
+     "বাস্কেটবল খেলোয়াড়"
+    ]
+   ],
+   "new": [
+    "এমিলি জনসন",
+    "গবেষক",
+    [
+     "স্মারক (মঞ্চনাটক)",
+     "সাংবাদিক",
+     "বাস্কেটবল খেলোয়াড়"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 369,
+   "old_id": "BN-P106-0369",
+   "new_id": "BN-P106-0369",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "পোস্টডক্টোরাল গবেষক",
+     "new": "সাংবাদিক",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "ফ্রেডরিক এডউইন চার্চ",
+    "চিত্রকর",
+    [
+     "সমাজকর্মী",
+     "অর্থনীতিবিদ",
+     "পোস্টডক্টোরাল গবেষক"
+    ]
+   ],
+   "new": [
+    "ফ্রেডরিক এডউইন চার্চ",
+    "চিত্রকর",
+    [
+     "সমাজকর্মী",
+     "অর্থনীতিবিদ",
+     "সাংবাদিক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 386,
+   "old_id": "BN-P17-0386",
+   "new_id": "BN-P17-0386",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "যুক্তরাজ্য",
+     "new": "মালয়েশিয়া",
+     "reason": "REQ-012 item 2: the option is the country of another place with the same name"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "টরন্টো",
+    "কানাডা",
+    [
+     "যুক্তরাজ্য",
+     "ইতালি",
+     "সুইডেন"
+    ]
+   ],
+   "new": [
+    "টরন্টো",
+    "কানাডা",
+    [
+     "মালয়েশিয়া",
+     "ইতালি",
+     "সুইডেন"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 417,
+   "old_id": "BN-P106-0417",
+   "new_id": "BN-P106-0417",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "রাজশাসক",
+     "new": "পোশাক নকশাকার",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "নির্মলচন্দ্র চট্টোপাধ্যায়",
+    "লেখক",
+    [
+     "প্রাণরসায়নবিদ",
+     "রাজশাসক",
+     "চিত্রগ্রাহক"
+    ]
+   ],
+   "new": [
+    "নির্মলচন্দ্র চট্টোপাধ্যায়",
+    "লেখক",
+    [
+     "প্রাণরসায়নবিদ",
+     "পোশাক নকশাকার",
+     "চিত্রগ্রাহক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 430,
+   "old_id": "BN-P106-0430",
+   "new_id": "BN-P106-0430",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "প্রাণরসায়নবিদ",
+     "new": "চলচ্চিত্র অভিনয়শিল্পী",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "জুডিথ স্মিথ",
+    "গবেষক",
+    [
+     "সাংবাদিক",
+     "প্রকৌশলী",
+     "প্রাণরসায়নবিদ"
+    ]
+   ],
+   "new": [
+    "জুডিথ স্মিথ",
+    "গবেষক",
+    [
+     "সাংবাদিক",
+     "প্রকৌশলী",
+     "চলচ্চিত্র অভিনয়শিল্পী"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 436,
+   "old_id": "BN-P17-0436",
+   "new_id": "BN-P17-0436",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "কর্তৃত্বপ্রাপ্ত শক্তির অধীন ফিলিস্তিন",
+     "new": "মালয়েশিয়া",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "উইন্ডসর",
+    "কানাডা",
+    [
+     "মেক্সিকো",
+     "কর্তৃত্বপ্রাপ্ত শক্তির অধীন ফিলিস্তিন",
+     "ইতালি"
+    ]
+   ],
+   "new": [
+    "উইন্ডসর",
+    "কানাডা",
+    [
+     "মেক্সিকো",
+     "মালয়েশিয়া",
+     "ইতালি"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 444,
+   "old_id": "BN-P106-0444",
+   "new_id": "BN-P106-0444",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "পোস্টডক্টোরাল গবেষক",
+     "new": "পোশাক নকশাকার",
+     "reason": "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "কেনেথ ব্রাউন",
+    "বিশ্ববিদ্যালয়ের শিক্ষক",
+    [
+     "স্মারক (মঞ্চনাটক)",
+     "পোস্টডক্টোরাল গবেষক",
+     "ফুটবলার"
+    ]
+   ],
+   "new": [
+    "কেনেথ ব্রাউন",
+    "বিশ্ববিদ্যালয়ের শিক্ষক",
+    [
+     "স্মারক (মঞ্চনাটক)",
+     "পোশাক নকশাকার",
+     "ফুটবলার"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 457,
+   "old_id": "BN-P106-0457",
+   "new_id": "BN-P106-0457",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "বিশ্ববিদ্যালয়ের শিক্ষক",
+     "new": "চেলোবাদক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "ইয়ান ফ্রেজার",
+    "গবেষক",
+    [
+     "আলোকচিত্রশিল্পী",
+     "চলচ্চিত্র অভিনয়শিল্পী",
+     "বিশ্ববিদ্যালয়ের শিক্ষক"
+    ]
+   ],
+   "new": [
+    "ইয়ান ফ্রেজার",
+    "গবেষক",
+    [
+     "আলোকচিত্রশিল্পী",
+     "চলচ্চিত্র অভিনয়শিল্পী",
+     "চেলোবাদক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 478,
+   "old_id": "BN-P106-0478",
+   "new_id": "BN-P106-0478",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "অভিনয়শিল্পী",
+     "new": "গবেষক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "টোরি কেলি",
+    "সঙ্গীতশিল্পী",
+    [
+     "অভিনয়শিল্পী",
+     "চিত্রকর",
+     "স্ট্রিপার"
+    ]
+   ],
+   "new": [
+    "টোরি কেলি",
+    "সঙ্গীতশিল্পী",
+    [
+     "গবেষক",
+     "চিত্রকর",
+     "স্ট্রিপার"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 487,
+   "old_id": "BN-P17-0487",
+   "new_id": "BN-P17-0487",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "ইনকা সাম্রাজ্য",
+     "new": "বতসোয়ানা",
+     "reason": "REQ-012 item 2: the option is not a current sovereign state"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "নর্থাম্পটনশায়ার",
+    "যুক্তরাজ্য",
+    [
+     "আর্জেন্টিনা",
+     "ইনকা সাম্রাজ্য",
+     "চীন"
+    ]
+   ],
+   "new": [
+    "নর্থাম্পটনশায়ার",
+    "যুক্তরাজ্য",
+    [
+     "আর্জেন্টিনা",
+     "বতসোয়ানা",
+     "চীন"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 500,
+   "old_id": "BN-P106-0500",
+   "new_id": "BN-P106-0500",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "ইতিহাসবিদ",
+     "new": "সামরিক ব্যক্তিত্ব",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "ফিল কলিন্স",
+    "চিত্রগ্রাহক",
+    [
+     "ইতিহাসবিদ",
+     "যাদুকর",
+     "বিশ্ববিদ্যালয়ের শিক্ষক"
+    ]
+   ],
+   "new": [
+    "ফিল কলিন্স",
+    "চিত্রগ্রাহক",
+    [
+     "সামরিক ব্যক্তিত্ব",
+     "যাদুকর",
+     "বিশ্ববিদ্যালয়ের শিক্ষক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 532,
+   "old_id": "BN-P106-0532",
+   "new_id": "BN-P106-0532",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "রাজশাসক",
+     "new": "ফুটবলার",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "রিচার্ড হার্পার",
+    "রাজনীতিবিদ",
+    [
+     "বিশ্ববিদ্যালয়ের শিক্ষক",
+     "রাজশাসক",
+     "গবেষক"
+    ]
+   ],
+   "new": [
+    "রিচার্ড হার্পার",
+    "রাজনীতিবিদ",
+    [
+     "বিশ্ববিদ্যালয়ের শিক্ষক",
+     "ফুটবলার",
+     "গবেষক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 547,
+   "old_id": "BN-P106-0547",
+   "new_id": "BN-P106-0547",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "প্রাণীবিদ",
+     "new": "লেখক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    },
+    {
+     "option": 3,
+     "old": "গবেষক",
+     "new": "উদ্যোক্তা",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "হ্যারল্ড ব্রায়ান্ট",
+    "জীববিজ্ঞানী",
+    [
+     "চেলোবাদক",
+     "প্রাণীবিদ",
+     "গবেষক"
+    ]
+   ],
+   "new": [
+    "হ্যারল্ড ব্রায়ান্ট",
+    "জীববিজ্ঞানী",
+    [
+     "চেলোবাদক",
+     "লেখক",
+     "উদ্যোক্তা"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 553,
+   "old_id": "BN-P106-0553",
+   "new_id": "BN-P106-0553",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 3,
+     "old": "চলচ্চিত্র অভিনয়শিল্পী",
+     "new": "বিশ্ববিদ্যালয়ের শিক্ষক",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "রিচার্ড ফ্রিম্যান",
+    "অভিনয়শিল্পী",
+    [
+     "সামরিক ব্যক্তিত্ব",
+     "বাস্কেটবল খেলোয়াড়",
+     "চলচ্চিত্র অভিনয়শিল্পী"
+    ]
+   ],
+   "new": [
+    "রিচার্ড ফ্রিম্যান",
+    "অভিনয়শিল্পী",
+    [
+     "সামরিক ব্যক্তিত্ব",
+     "বাস্কেটবল খেলোয়াড়",
+     "বিশ্ববিদ্যালয়ের শিক্ষক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 557,
+   "old_id": "BN-P106-0557",
+   "new_id": "BN-P106-0557",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 2,
+     "old": "প্রাণীবিদ",
+     "new": "স্মারক (মঞ্চনাটক)",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "উইলিয়াম ডেভিডসন",
+    "চিকিৎসক",
+    [
+     "সঙ্গীতশিল্পী",
+     "প্রাণীবিদ",
+     "সমাজকর্মী"
+    ]
+   ],
+   "new": [
+    "উইলিয়াম ডেভিডসন",
+    "চিকিৎসক",
+    [
+     "সঙ্গীতশিল্পী",
+     "স্মারক (মঞ্চনাটক)",
+     "সমাজকর্মী"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 575,
+   "old_id": "BN-P106-0575",
+   "new_id": "BN-P106-0575",
+   "action": "options re-drawn",
+   "options_redrawn": [
+    {
+     "option": 1,
+     "old": "গবেষক",
+     "new": "ইতিহাসবিদ",
+     "reason": "REQ-012 item 4: the option is a broader or narrower occupation of a true one"
+    }
+   ],
+   "article_rule": false,
+   "old": [
+    "জন কনওয়ে",
+    "বিশ্ববিদ্যালয়ের শিক্ষক",
+    [
+     "গবেষক",
+     "লেখক",
+     "আলোকচিত্রশিল্পী"
+    ]
+   ],
+   "new": [
+    "জন কনওয়ে",
+    "বিশ্ববিদ্যালয়ের শিক্ষক",
+    [
+     "ইতিহাসবিদ",
+     "লেখক",
+     "আলোকচিত্রশিল্পী"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 2,
+   "old_id": "BN-P36-0002",
+   "new_id": "BN-P36-0002",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 7 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "চীন প্রজাতন্ত্র",
+    "বেইজিং",
+    [
+     "হিঞ্চি",
+     "সুয়েজ",
+     "নর্থঅ্যালার্টন"
+    ]
+   ],
+   "new": [
+    "মেদিনীপুর বিভাগ",
+    "মেদিনীপুর",
+    [
+     "অজয়গড়",
+     "কুশীনগর",
+     "আল ফাশির"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 40,
+   "old_id": "BN-P36-0040",
+   "new_id": "BN-P19-0040",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "পশ্চিম তীর",
+    "পূর্ব জেরুসালেম",
+    [
+     "খরগোন",
+     "আল-'ঊয়ূন",
+     "বুথিডং"
+    ]
+   ],
+   "new": [
+    "চতুর্থ মুহাম্মদ",
+    "কনস্টান্টিনোপল",
+    [
+     "কেদিরি",
+     "আমরেলি",
+     "মোন্তেভিদেও"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 47,
+   "old_id": "BN-P36-0047",
+   "new_id": "BN-P36-0047",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "ফরাসি পশ্চিম আফ্রিকা",
+    "ডাকার",
+    [
+     "ললিতপুর",
+     "কৌবে",
+     "তিন্দুফ"
+    ]
+   ],
+   "new": [
+    "পশ্চিম ত্রিপুরা জেলা",
+    "আগরতলা",
+    [
+     "স্ট্যাফোর্ড",
+     "ওঙ্গোল",
+     "রেডকার"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 48,
+   "old_id": "BN-P17-0048",
+   "new_id": "BN-P36-0048",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: 'the geography of Canada' is a topic, not a place",
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "কানাডার ভূগোল",
+    "কানাডা",
+    [
+     "ইতালি",
+     "অস্ট্রিয়া",
+     "কাজাখস্তান"
+    ]
+   ],
+   "new": [
+    "সোভিয়েত ইউনিয়ন",
+    "মস্কো",
+    [
+     "লংগতলাই",
+     "চুয়াডাঙ্গা",
+     "আল্টর্ডফ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 60,
+   "old_id": "BN-P36-0060",
+   "new_id": "BN-P19-0060",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 5 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "মুঘল সাম্রাজ্য",
+    "পুরান দিল্লি",
+    [
+     "ছাপরা",
+     "হাসকোভো",
+     "মাগদালেনা"
+    ]
+   ],
+   "new": [
+    "কার্ল পাই",
+    "বেইজিং",
+    [
+     "কার্নহাম",
+     "সেন্টজন",
+     "বিচোলিম"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 66,
+   "old_id": "BN-P36-0066",
+   "new_id": "BN-P19-0066",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "রোমান ব্রিটেন",
+    "লন্ডন",
+    [
+     "নবি সাদ",
+     "বক্সার",
+     "সুরাট"
+    ]
+   ],
+   "new": [
+    "চার্লস লর্ড",
+    "নিউ ইয়র্ক সিটি",
+    [
+     "জাম্বুসার",
+     "অঙ্কলেশ্বর",
+     "স্ট্রাউড"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 71,
+   "old_id": "BN-P36-0071",
+   "new_id": "BN-P36-0071",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "জাপান সাম্রাজ্য",
+    "টোকিও",
+    [
+     "বুথিডং",
+     "মিসোলংঘি",
+     "সাউরিমো"
+    ]
+   ],
+   "new": [
+    "ওড়িশা",
+    "ভুবনেশ্বর",
+    [
+     "ইভারনেস",
+     "নির্মল",
+     "ফরিদাবাদ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 81,
+   "old_id": "BN-P36-0081",
+   "new_id": "BN-P106-0081",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "ইতালীয় সমাজতান্ত্রিক প্রজাতন্ত্র",
+    "রোম",
+    [
+     "লস্করগাহ",
+     "উইন্ডো রক",
+     "আমবাতো"
+    ]
+   ],
+   "new": [
+    "দ্বিতীয় আশরাফ",
+    "রাজশাসক",
+    [
+     "ইতিহাসবিদ",
+     "শিশু সাহিত্যিক",
+     "সাংবাদিক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 82,
+   "old_id": "BN-P17-0082",
+   "new_id": "BN-P106-0082",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 9 current countries, not one"
+   ],
+   "old": [
+    "উত্তর ইউরোপ",
+    "যুক্তরাজ্য",
+    [
+     "কর্তৃত্বপ্রাপ্ত শক্তির অধীন ফিলিস্তিন",
+     "নিউজিল্যান্ড",
+     "রাশিয়া"
+    ]
+   ],
+   "new": [
+    "রে টমাস",
+    "রাজনীতিবিদ",
+    [
+     "স্ট্রিপার",
+     "পোশাক নকশাকার",
+     "বিশ্ববিদ্যালয়ের শিক্ষক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 89,
+   "old_id": "BN-P17-0089",
+   "new_id": "BN-P106-0089",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "আমিন রেলওয়ে স্টেশন",
+    "ভারত",
+    [
+     "মুওয়াহহিদিন রাজবংশ",
+     "তুরস্ক",
+     "ব্রাজিল"
+    ]
+   ],
+   "new": [
+    "লুইস টমাস",
+    "চিকিৎসক",
+    [
+     "আইনজীবী",
+     "প্রাণীবিদ",
+     "যাদুকর"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 90,
+   "old_id": "BN-P36-0090",
+   "new_id": "BN-P36-0090",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 3 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "দক্ষিণ আফ্রিকা ইউনিয়ন",
+    "প্রিটোরিয়া",
+    [
+     "গণ্ডেরবাল",
+     "বার্সেলোনা",
+     "ফতেহাবাদ"
+    ]
+   ],
+   "new": [
+    "কিশোরগঞ্জ জেলা",
+    "কিশোরগঞ্জ",
+    [
+     "হরিণাকুন্ড",
+     "অকোলা",
+     "হারপিন"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 97,
+   "old_id": "BN-P36-0097",
+   "new_id": "BN-P36-0097",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "জার্মান পূর্ব আফ্রিকা",
+    "দারুস সালাম",
+    [
+     "সান ফ্রান্সিস্কো দে মাকোরিস",
+     "গৌরীপুর",
+     "গজনি"
+    ]
+   ],
+   "new": [
+    "রংপুর জেলা",
+    "রংপুর",
+    [
+     "বহরমপুর",
+     "ক্রুরো",
+     "ভ্যালেদুপার"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 102,
+   "old_id": "BN-P17-0102",
+   "new_id": "BN-P106-0102",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "জর্জ এ ওয়েস্ট",
+    "যুক্তরাজ্য",
+    [
+     "ডেনমার্ক",
+     "মালয়েশিয়া",
+     "কাজাখস্তান"
+    ]
+   ],
+   "new": [
+    "লুইস লি",
+    "চেলোবাদক",
+    [
+     "বিশ্ববিদ্যালয়ের শিক্ষক",
+     "চিকিৎসক",
+     "পোস্টডক্টোরাল গবেষক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 116,
+   "old_id": "BN-P17-0116",
+   "new_id": "BN-P19-0116",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 72 current countries, not one"
+   ],
+   "old": [
+    "ইংরেজি",
+    "কানাডা",
+    [
+     "দক্ষিণ আফ্রিকা ইউনিয়ন",
+     "দক্ষিণ কোরিয়া",
+     "ইতালি"
+    ]
+   ],
+   "new": [
+    "মাইকেল হার্ট",
+    "বেলশিল",
+    [
+     "অলিভ হিল",
+     "কালিকট জেলা",
+     "সুলতান বতেরি"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 137,
+   "old_id": "BN-P17-0137",
+   "new_id": "BN-P106-0137",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 18 current countries, not one"
+   ],
+   "old": [
+    "পাঞ্জাবি",
+    "কানাডা",
+    [
+     "গ্রীস",
+     "তুরস্ক",
+     "বাহামা দ্বীপপুঞ্জ"
+    ]
+   ],
+   "new": [
+    "পল এ বেকার",
+    "গবেষক",
+    [
+     "বাস্কেটবল খেলোয়াড়",
+     "সমাজকর্মী",
+     "সামরিক ব্যক্তিত্ব"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 147,
+   "old_id": "BN-P36-0147",
+   "new_id": "BN-P19-0147",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "পর্তুগিজ সাম্রাজ্য",
+    "রিউ দি জানেইরু",
+    [
+     "ক্যানগা",
+     "বুরকঁব্রেস",
+     "মোকা"
+    ]
+   ],
+   "new": [
+    "বিল কার",
+    "কানাডা",
+    [
+     "উরুমচি",
+     "সাসওয়াদ",
+     "সেন্ট কিট্স ও নেভিস"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 197,
+   "old_id": "BN-P17-0197",
+   "new_id": "BN-P36-0197",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "মেট্রোপলিটন লাইন",
+    "যুক্তরাজ্য",
+    [
+     "স্পেন",
+     "মেক্সিকো",
+     "নেদারল্যান্ডস"
+    ]
+   ],
+   "new": [
+    "কানাডা",
+    "অটোয়া",
+    [
+     "ক্রাস্নোগোরস্ক",
+     "জোয়াই",
+     "বিতোলা"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 199,
+   "old_id": "BN-P36-0199",
+   "new_id": "BN-P106-0199",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 3 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "পর্তুগিজ ভারত",
+    "পানাজি",
+    [
+     "চিটা",
+     "আল-সুবায়দা",
+     "ইনুগু"
+    ]
+   ],
+   "new": [
+    "ডেভিড এফ মার্টিন",
+    "ইতিহাসবিদ",
+    [
+     "প্রকৌশলী",
+     "সমাজকর্মী",
+     "রাজশাসক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 219,
+   "old_id": "BN-P17-0219",
+   "new_id": "BN-P106-0219",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "ক্যাথরিন ওয়াকার",
+    "যুক্তরাজ্য",
+    [
+     "পোল্যান্ড",
+     "অস্ট্রেলিয়া",
+     "বাহামা দ্বীপপুঞ্জ"
+    ]
+   ],
+   "new": [
+    "সারাহ মরিস",
+    "চিত্রকর",
+    [
+     "অর্থনীতিবিদ",
+     "প্রাণীবিদ",
+     "স্মারক (মঞ্চনাটক)"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 221,
+   "old_id": "BN-P17-0221",
+   "new_id": "BN-P106-0221",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: La Route du Rock is a festival",
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "লা রুট ডু রক",
+    "ফ্রান্স",
+    [
+     "স্পেন",
+     "ইতালি",
+     "ইনকা সাম্রাজ্য"
+    ]
+   ],
+   "new": [
+    "ফ্রাঙ্ক জনসন",
+    "গবেষক",
+    [
+     "চিত্রগ্রাহক",
+     "যাদুকর",
+     "সাংবাদিক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 227,
+   "old_id": "BN-P17-0227",
+   "new_id": "BN-P19-0227",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "মার্গারেট লুইস",
+    "যুক্তরাজ্য",
+    [
+     "দক্ষিণ কোরিয়া",
+     "দক্ষিণ আফ্রিকা ইউনিয়ন",
+     "বতসোয়ানা"
+    ]
+   ],
+   "new": [
+    "মার্ক কুপার",
+    "কেমডেন",
+    [
+     "গিলন প্রদেশ",
+     "সিরসা",
+     "আনন্দ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 282,
+   "old_id": "BN-P17-0282",
+   "new_id": "BN-P19-0282",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 2 current countries, not one"
+   ],
+   "old": [
+    "চ্যানেল টানেল",
+    "যুক্তরাজ্য",
+    [
+     "হাঙ্গেরি",
+     "অস্ট্রিয়া",
+     "বতসোয়ানা"
+    ]
+   ],
+   "new": [
+    "ললিত যাদব",
+    "যাবৎমল",
+    [
+     "মেডওয়ে",
+     "রিও সান মার্টিনো",
+     "ত্রিস্ক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 294,
+   "old_id": "BN-P36-0294",
+   "new_id": "BN-P19-0294",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "হায়দ্রাবাদ রাজ্য",
+    "সম্ভাজিনগর",
+    [
+     "কোলার",
+     "তাইজ",
+     "হাম্বানটোটা"
+    ]
+   ],
+   "new": [
+    "নিকোলাস গ্রাহাম",
+    "কানাডা",
+    [
+     "ভয়জু",
+     "গ্রেনাডা",
+     "আলেকজান্দ্রিয়া"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 304,
+   "old_id": "BN-P17-0304",
+   "new_id": "BN-P36-0304",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "ম্যারি স্টুয়ার্ট",
+    "যুক্তরাজ্য",
+    [
+     "স্পেন",
+     "দক্ষিণ আফ্রিকা ইউনিয়ন",
+     "ব্রাজিল"
+    ]
+   ],
+   "new": [
+    "সাদ- ইস্ট",
+    "জ্যাকমেল",
+    [
+     "লিভিংস্টন",
+     "ফিলাডেলফিয়া",
+     "স্যান ডিয়েগো"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 319,
+   "old_id": "BN-P17-0319",
+   "new_id": "BN-P106-0319",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 2 current countries, not one"
+   ],
+   "old": [
+    "লিংকন সাগর",
+    "কানাডা",
+    [
+     "বতসোয়ানা",
+     "স্লোভেনিয়া",
+     "নেদারল্যান্ডস"
+    ]
+   ],
+   "new": [
+    "আর্নল্ড স্মিথ",
+    "বাস্কেটবল খেলোয়াড়",
+    [
+     "মোহান্ত",
+     "চিত্রকর",
+     "প্রাণীবিদ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 321,
+   "old_id": "BN-P17-0321",
+   "new_id": "BN-P19-0321",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "সান্তা আনা",
+    "ইকুয়েডর",
+    [
+     "অস্ট্রিয়া",
+     "দক্ষিণ আফ্রিকা ইউনিয়ন",
+     "যুক্তরাজ্য"
+    ]
+   ],
+   "new": [
+    "মার্কাস মার্টিন",
+    "লানচেন্টন",
+    [
+     "পজেন",
+     "নাশিক জেলা",
+     "প্রয়াগরাজ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 344,
+   "old_id": "BN-P17-0344",
+   "new_id": "BN-P19-0344",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "টরন্টো বিশ্ববিদ্যালয়",
+    "কানাডা",
+    [
+     "কর্তৃত্বপ্রাপ্ত শক্তির অধীন ফিলিস্তিন",
+     "ডেনমার্ক",
+     "হাঙ্গেরি"
+    ]
+   ],
+   "new": [
+    "অ্যান ই হ্যারিসন",
+    "ফ্রান্স",
+    [
+     "আহাগ্গার পর্বতশ্রেণী",
+     "জুর্মাত জেলা",
+     "জাবালিয়া শরণার্থী শিবির"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 346,
+   "old_id": "BN-P36-0346",
+   "new_id": "BN-P19-0346",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 6: the P36 subject has 5 capitals in Wikidata, not one"
+   ],
+   "old": [
+    "জার্মান নিউ গিনি",
+    "রাবাউল",
+    [
+     "মালুলস",
+     "কুয়ালালামপুর",
+     "কোমেনডাডোর, ইলিয়াস পিনা"
+    ]
+   ],
+   "new": [
+    "জর্জ উইলসন",
+    "মেরিডিয়ান",
+    [
+     "দেবগড়",
+     "এসকানাবা",
+     "বালমার"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 389,
+   "old_id": "BN-P17-0389",
+   "new_id": "BN-P106-0389",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "লেডি ক্যাথরিন ডগলাস",
+    "যুক্তরাজ্য",
+    [
+     "ইন্দোনেশিয়া",
+     "চীন",
+     "স্লোভেনিয়া"
+    ]
+   ],
+   "new": [
+    "সুভাষ শর্মা",
+    "চলচ্চিত্র অভিনয়শিল্পী",
+    [
+     "রাজনীতিবিদ",
+     "চেলোবাদক",
+     "পোস্টডক্টোরাল গবেষক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 390,
+   "old_id": "BN-P17-0390",
+   "new_id": "BN-P19-0390",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "পার্লামেন্ট হিল স্কুল",
+    "যুক্তরাজ্য",
+    [
+     "নিউজিল্যান্ড",
+     "তুরস্ক",
+     "স্লোভেনিয়া"
+    ]
+   ],
+   "new": [
+    "অরবিন্দ লাল",
+    "পুণে জেলা",
+    [
+     "টিউইন",
+     "ব্যানফ",
+     "বার্কলে"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 439,
+   "old_id": "BN-P17-0439",
+   "new_id": "BN-P106-0439",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area",
+    "REQ-012 item 1: the P17 subject has 2 current countries, not one"
+   ],
+   "old": [
+    "ইরি হ্রদ",
+    "কানাডা",
+    [
+     "স্লোভেনিয়া",
+     "চেক প্রজাতন্ত্র",
+     "ইনকা সাম্রাজ্য"
+    ]
+   ],
+   "new": [
+    "রঘুরাম রাজন",
+    "অর্থনীতিবিদ",
+    [
+     "অভিনয়শিল্পী",
+     "চিত্রগ্রাহক",
+     "রাজনীতিবিদ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 442,
+   "old_id": "BN-P17-0442",
+   "new_id": "BN-P19-0442",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "কুইবেক ইশারা ভাষা",
+    "কানাডা",
+    [
+     "মালয়েশিয়া",
+     "বাংলাদেশ",
+     "রাশিয়া"
+    ]
+   ],
+   "new": [
+    "ম্যারি বেনসন",
+    "প্রিটোরিয়া",
+    [
+     "মোস্তাগানেম",
+     "ব্রিন্ডল",
+     "ওরুজগন প্রদেশ"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 460,
+   "old_id": "BN-P17-0460",
+   "new_id": "BN-P36-0460",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "সাগা প্রশাসনিক আঞ্চলিক রাস্তা ৪৫",
+    "জাপান",
+    [
+     "মেক্সিকো",
+     "তুরস্ক",
+     "ব্রাজিল"
+    ]
+   ],
+   "new": [
+    "হাজারা বিভাগ",
+    "অ্যাব্টাবাদ",
+    [
+     "উরুগেঞ্চ",
+     "জ্ঞানপুর",
+     "ভিয়েনা"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 462,
+   "old_id": "BN-P106-0462",
+   "new_id": "BN-P19-0462",
+   "action": "replaced",
+   "reasons": [
+    "authors, G1 round 2: wrong option 'postdoctoral researcher' is also true of Rodney Robert Porter"
+   ],
+   "old": [
+    "রডনি রবার্ট পোর্টার",
+    "প্রাণরসায়নবিদ",
+    [
+     "পোস্টডক্টোরাল গবেষক",
+     "চেলোবাদক",
+     "চিত্রগ্রাহক"
+    ]
+   ],
+   "new": [
+    "অ্যান ম্যাকডোনাল্ড",
+    "লানচেন্টন",
+    [
+     "মামলুক সালতানাত",
+     "মাকিনোহারা",
+     "মোস্তাগানেম"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 527,
+   "old_id": "BN-P17-0527",
+   "new_id": "BN-P106-0527",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "গ্র্যান্ট জি হিল",
+    "মার্কিন যুক্তরাষ্ট্র",
+    [
+     "বাহামা দ্বীপপুঞ্জ",
+     "নেদারল্যান্ডস",
+     "বাংলাদেশ"
+    ]
+   ],
+   "new": [
+    "ডরোথি গ্রিন",
+    "চলচ্চিত্র অভিনয়শিল্পী",
+    [
+     "বাস্কেটবল খেলোয়াড়",
+     "চিত্রগ্রাহক",
+     "লেখক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 538,
+   "old_id": "BN-P17-0538",
+   "new_id": "BN-P106-0538",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "সাগা প্রশাসনিক আঞ্চলিক রাস্তা ৩৩",
+    "জাপান",
+    [
+     "অস্ট্রেলিয়া",
+     "অস্ট্রিয়া",
+     "মেক্সিকো"
+    ]
+   ],
+   "new": [
+    "আলফ্রেড হেইস",
+    "অর্থনীতিবিদ",
+    [
+     "চলচ্চিত্র অভিনয়শিল্পী",
+     "যাদুকর",
+     "চেলোবাদক"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 571,
+   "old_id": "BN-P17-0571",
+   "new_id": "BN-P19-0571",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "সাগা প্রশাসনিক আঞ্চলিক রাস্তা ৪০",
+    "জাপান",
+    [
+     "স্লোভেনিয়া",
+     "মালয়েশিয়া",
+     "ইন্দোনেশিয়া"
+    ]
+   ],
+   "new": [
+    "কেনেথ মার্শাল",
+    "পিটারবার্গ",
+    [
+     "দক্ষিণ অস্ট্রেলিয়া",
+     "ভিন্দ",
+     "এফেসোস"
+    ]
+   ]
+  },
+  {
+   "language": "BN",
+   "position": 581,
+   "old_id": "BN-P17-0581",
+   "new_id": "BN-P19-0581",
+   "action": "replaced",
+   "reasons": [
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area"
+   ],
+   "old": [
+    "নর্থ ডাকোটা স্টেট বিশ্ববিদ্যালয়",
+    "মার্কিন যুক্তরাষ্ট্র",
+    [
+     "কানাডা",
+     "মালয়েশিয়া",
+     "চেক প্রজাতন্ত্র"
+    ]
+   ],
+   "new": [
+    "জন হাডসন",
+    "লানচেন্টন",
+    [
+     "লিজিন কাউন্টি",
+     "ব্রাডনিন্স",
+     "বেইজিং"
+    ]
+   ]
+  }
+ ],
+ "summary": {
+  "EN": {
+   "replaced": 49,
+   "with_options_redrawn": 46,
+   "with_the_change": 7,
+   "relations_round2": {
+    "P19": 221,
+    "P106": 220,
+    "P17": 48,
+    "P36": 111
+   },
+   "relations_repaired": {
+    "P19": 241,
+    "P106": 235,
+    "P17": 17,
+    "P36": 107
+   },
+   "reasons": {
+    "REQ-012 item 4: the option is a broader or narrower occupation of a true one": 35,
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area": 29,
+    "REQ-012 item 2: the option is not a current sovereign state": 6,
+    "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under": 6,
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one": 5,
+    "REQ-012 item 6: the P36 subject has 3 capitals in Wikidata, not one": 4,
+    "REQ-012 item 1: the P17 subject has 2 current countries, not one": 3,
+    "REQ-012 item 6: the P36 subject has 5 capitals in Wikidata, not one": 3,
+    "REQ-012 item 1: the P17 subject has 3 current countries, not one": 2,
+    "REQ-012 item 2: the P17 answer is not a current sovereign state": 2,
+    "REQ-012 item 2: the option is the country of another place with the same name": 2,
+    "REQ-012 item 3: the option contains, or lies in, a true birthplace": 2,
+    "REQ-012 item 1: the P17 subject has 24 current countries, not one": 1,
+    "authors, G1 round 2: missing 'The' before 'Metropolitan line'": 1,
+    "REQ-012 item 6: the P36 subject has 4 capitals in Wikidata, not one": 1,
+    "REQ-012 item 1: the P17 subject has 9 current countries, not one": 1,
+    "authors, G1 round 2: wrong option 2 needs 'the 15th arrondissement of Paris'": 1,
+    "REQ-012 item 1: the P17 subject is, or lies in, a dependent territory": 1,
+    "authors, G1 round 2: wrong option 'actor' is also true of a 'film actor'": 1,
+    "authors, G1 round 2: Quebec Sign Language is a language, not a place": 1,
+    "authors, G1 round 2: wrong option 1 needs 'the 2nd arrondissement of Lyon'": 1,
+    "authors, G1 round 2: the gold needs 'the 2nd arrondissement of Lyon'": 1,
+    "authors, G1 round 2: wrong option 'lawyer' is also true of Narendra Deva": 1
+   }
+  },
+  "BN": {
+   "replaced": 38,
+   "with_options_redrawn": 38,
+   "with_the_change": 0,
+   "relations_round2": {
+    "P19": 192,
+    "P106": 212,
+    "P36": 154,
+    "P17": 42
+   },
+   "relations_repaired": {
+    "P19": 208,
+    "P106": 224,
+    "P36": 150,
+    "P17": 18
+   },
+   "reasons": {
+    "REQ-012 item 4: the option is a broader or narrower occupation of a true one": 27,
+    "REQ-012 item 1: the P17 subject is not a settlement or an administrative area": 24,
+    "REQ-012 item 6: the P36 subject has 2 capitals in Wikidata, not one": 8,
+    "REQ-012 item 4: the option is a kind of an occupation the subject has or falls under": 6,
+    "REQ-012 item 2: the option is not a current sovereign state": 6,
+    "REQ-012 item 1: the P17 subject has 2 current countries, not one": 3,
+    "REQ-012 item 6: the P36 subject has 5 capitals in Wikidata, not one": 2,
+    "REQ-012 item 6: the P36 subject has 3 capitals in Wikidata, not one": 2,
+    "REQ-012 item 2: the option is the country of another place with the same name": 2,
+    "REQ-012 item 6: the P36 subject has 7 capitals in Wikidata, not one": 1,
+    "authors, G1 round 2: 'the geography of Canada' is a topic, not a place": 1,
+    "REQ-012 item 1: the P17 subject has 9 current countries, not one": 1,
+    "REQ-012 item 1: the P17 subject has 72 current countries, not one": 1,
+    "REQ-012 item 1: the P17 subject has 18 current countries, not one": 1,
+    "authors, G1 round 2: La Route du Rock is a festival": 1,
+    "authors, G1 round 2: wrong option 'postdoctoral researcher' is also true of Rodney Robert Porter": 1
+   }
+  }
+ }
+}

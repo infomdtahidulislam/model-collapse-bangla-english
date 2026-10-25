@@ -1,0 +1,141 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "CG4 step record",
+ "type": "object",
+ "required": [
+  "chain_id",
+  "generation",
+  "language",
+  "regime",
+  "session_id",
+  "training_set",
+  "train",
+  "checkpoint_sha256",
+  "created_at"
+ ],
+ "properties": {
+  "chain_id": {
+   "type": "string"
+  },
+  "generation": {
+   "type": "integer",
+   "minimum": -1
+  },
+  "language": {
+   "enum": [
+    "EN",
+    "BN",
+    "MIX"
+   ]
+  },
+  "regime": {
+   "enum": [
+    "BASE",
+    "GEN0",
+    "REPLACE",
+    "ACCUMULATE",
+    "ACCUMULATE-FILTER",
+    "ACCUMULATE-SUBSAMPLE",
+    "REAL-REPEAT"
+   ]
+  },
+  "session_id": {
+   "type": "string"
+  },
+  "training_set": {
+   "type": "object",
+   "required": [
+    "real_docs",
+    "synthetic_docs",
+    "components"
+   ],
+   "properties": {
+    "real_docs": {
+     "type": "integer"
+    },
+    "synthetic_docs": {
+     "type": "integer"
+    },
+    "components": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "tokens": {
+     "type": [
+      "integer",
+      "null"
+     ]
+    },
+    "target_tokens": {
+     "type": "integer"
+    },
+    "real_target_tokens": {
+     "type": "integer"
+    },
+    "synthetic_target_tokens": {
+     "type": "integer"
+    },
+    "masked_prefix_tokens": {
+     "type": "integer"
+    }
+   }
+  },
+  "generate": {
+   "type": [
+    "object",
+    "null"
+   ]
+  },
+  "filter": {
+   "type": [
+    "object",
+    "null"
+   ]
+  },
+  "train": {
+   "type": "object"
+  },
+  "checkpoint_sha256": {
+   "type": "string"
+  },
+  "previous_checkpoint": {
+   "type": "string"
+  },
+  "base_model": {
+   "type": "object"
+  },
+  "created_at": {
+   "type": "string"
+  },
+  "sample": {
+   "type": [
+    "object",
+    "null"
+   ]
+  },
+  "seed": {
+   "type": "integer"
+  },
+  "seed_offset": {
+   "type": "integer"
+  },
+  "gen0_id": {
+   "type": "string"
+  },
+  "budget_tokens": {
+   "type": "integer"
+  },
+  "variant": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "sampling": {
+   "type": "object"
+  }
+ },
+ "additionalProperties": true
+}

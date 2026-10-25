@@ -1,0 +1,7 @@
+G1 spot-check round 2: authors' reply, pasted in chat on 2026-10-14 (after the agent's message of 04:35Z; pasted 05:04:35Z per the session log). Verbatim:
+
+G1 spot-check round 2: reject EN-P17-0056 - Missing “The” before “Metropolitan line” in the gold sentence.; reject EN-P19-0491 - Gold needs “the 2nd arrondissement of Lyon”.; reject EN-P19-0353 - Wrong option 1 needs “the 2nd arrondissement of Lyon”.; reject EN-P106-0543 - Wrong option 1 (“lawyer”) is also true of Narendra Deva.; reject EN-P19-0166 - Wrong option 2 needs “the 15th arrondissement of Paris”.; reject EN-P17-0349 - Quebec Sign Language is a language, not a physical place that is “located” in a country.; reject EN-P106-0327 - Wrong option 3 (“actor”) is also true whenever the gold “film actor” is true.; reject BN-P17-0221 - La Route du Rock is a festival; events were meant to be excluded from round-2 P17.; reject BN-P106-0462 - Wrong option 1 (“postdoctoral researcher”) is also true of Rodney Robert Porter.; reject BN-P17-0048 - “The geography of Canada” is a topic, not a place that can be located in Canada.. All other rows ok.
+
+Agent count (all 10 ids are rows of data/probes/spotcheck_{EN,BN}.csv, round 2):
+EN 7 of 60 rejected: P19 3 of 26, P106 2 of 22, P17 2 of 6, P36 0 of 6.
+BN 3 of 60 rejected: P17 2 of 7, P106 1 of 20, P19 0 of 21, P36 0 of 12.

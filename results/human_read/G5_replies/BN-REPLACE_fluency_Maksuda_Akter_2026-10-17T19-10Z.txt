@@ -1,0 +1,45 @@
+G5 read, BN-REPLACE fluency (optional) (G5_fluency_BN-REPLACE_2026-10-17.html), reader: Maksuda Akter, 2026-10-17T19:10Z
+## BN-REPLACE_gen3_fluency | results/samples/BN-REPLACE_gen3_50.jsonl sha256 21f76d59d537075f | coded 20 of 20
+sample_id,fluency_1to5,note
+BN-P00000,2,Making sense of the match account requires constant guessing around distorted words and unfinished constructions.
+BN-P00001,2,Dense clauses and muddled references make the passage laborious to read from the start.
+BN-P00002,2,"After the simple cartoon announcement, most phrases no longer combine into understandable statements."
+BN-P00003,2,"The filming headings are clear, while the descriptions beneath them are largely tangled."
+BN-P00004,3,"The report's basic sentence structure survives, despite repetition and awkward wording in the quotation."
+BN-P00005,3,"Simple career statements are readable, though changes in verb person and odd expressions weaken the flow."
+BN-P00006,2,Biographical details are buried under damaged wording and clauses with unclear grammatical links.
+BN-P00007,2,"Archaic phrasing alone is manageable, but the many distorted words leave this passage hard to decipher."
+BN-P00008,3,"Parts of the personal account are understandable, with strained clauses making the rest harder to follow."
+BN-P00009,2,Repeated odd expressions and broken clause links obscure both the sporting and film descriptions.
+BN-P00010,2,"Much of the dialogue is difficult to decode, despite occasional recognisable sentences."
+BN-P00011,3,Straightforward biographical lines alternate with clumsy or damaged descriptions that need extra effort.
+BN-P00012,2,The place descriptions rely on distorted terms and fragments that resist a clear reading.
+BN-P00013,2,Numbers crowd the report without clear sentence links explaining what they refer to.
+BN-P00014,2,Descriptions of boundaries and settlements become difficult to interpret through broken phrasing.
+BN-P00015,2,Recognisable news phrases are surrounded by damaged wording that makes most of the passage unreadable without guessing.
+BN-P00016,2,Lengthy descriptions of the memorial lose their grammatical shape and leave several sentences difficult to interpret.
+BN-P00017,2,Distorted vocabulary and incomplete grammatical links obscure nearly every explanation in the passage.
+BN-P00018,2,Garbled dialogue and fragments interrupt what little readable biographical prose remains.
+BN-P00019,2,Even the shorter statements contain awkward word combinations that leave their meaning uncertain.
+## BN-REPLACE_gen6_fluency | results/samples/BN-REPLACE_gen6_50.jsonl sha256 5b72c69fb468bf7b | coded 20 of 20
+sample_id,fluency_1to5,note
+BN-P00000,2,"A few match statements are legible, followed by repetition and a garbled mixed-script ending."
+BN-P00001,2,Meaning remains elusive across the historical sections because so many expressions are malformed.
+BN-P00002,2,"Crowded punctuation, unclear pronouns and damaged wording make this account especially tiring to read."
+BN-P00003,2,"Short readable fragments keep breaking off into garbled narration, with no stable flow."
+BN-P00004,2,Heavy word corruption and poorly connected clauses obscure the events being described.
+BN-P00005,2,Repetition and tangled pronouns make the long sentences difficult to hold together.
+BN-P00006,2,Frequent misused verbs and stray fragments undermine the otherwise recognisable biography format.
+BN-P00007,2,Garbled inserts and unstable sentence structure repeatedly break the reading flow.
+BN-P00008,2,"A few headings are intelligible, but most entries read as disconnected or malformed fragments."
+BN-P00009,2,Scores and team names remain visible among phrases that rarely form a clear statement.
+BN-P00010,1,Nearly all of this exchange is too garbled to read as connected language.
+BN-P00011,2,It is hard to identify clear actions or participants in these poorly assembled sentences.
+BN-P00012,2,Unusual word combinations and repeated place names leave most of the account unclear.
+BN-P00013,2,"The Ramadan remarks contain readable phrases, but malformed wording repeatedly prevents a complete thought."
+BN-P00014,2,"A particularly long middle sentence loses its structure, and several surrounding lines are also muddled."
+BN-P00015,2,"The video announcement reads clearly, after which the actions and descriptions become increasingly tangled."
+BN-P00016,2,Repetition and badly joined clauses make the account of government formation hard to follow.
+BN-P00017,2,"Several lists of terms never develop into clear sentences, and the later narration is similarly strained."
+BN-P00018,2,Long strings of loosely connected words make the discussion increasingly difficult to read.
+BN-P00019,2,"The opening is overloaded, and damaged expressions continue to obstruct the later media section."

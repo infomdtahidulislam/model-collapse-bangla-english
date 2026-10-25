@@ -1,0 +1,334 @@
+[
+ {
+  "x": "http://www.wikidata.org/entity/Q79980",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q80989",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q16410"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81398",
+  "v": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q28513"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q28"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q142"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q795803",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q795814",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796485",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796501",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796505",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796650",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796664",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796669",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796739",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796742",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796749",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796809",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q796819",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q797126",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q797132",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q797437",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q797462",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q797472",
+  "v": "http://www.wikidata.org/entity/Q837"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q798382",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q797782",
+  "v": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q798839",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q798906",
+  "v": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q803960",
+  "v": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q849524",
+  "v": "http://www.wikidata.org/entity/Q262"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q849441",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q849584",
+  "v": "http://www.wikidata.org/entity/Q155"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q849596",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q849619",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q849835",
+  "v": "http://www.wikidata.org/entity/Q77"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q850527",
+  "v": "http://www.wikidata.org/entity/Q17"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q850640",
+  "v": "http://www.wikidata.org/entity/Q17"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q855044",
+  "v": "http://www.wikidata.org/entity/Q33296"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q927794",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q926988",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q928162",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q927213",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q928349",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q928828",
+  "v": "http://www.wikidata.org/entity/Q794"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q928836",
+  "v": "http://www.wikidata.org/entity/Q902"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q928959",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q927935",
+  "v": "http://www.wikidata.org/entity/Q155"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q928614",
+  "v": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q968713",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q984035",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q983747",
+  "v": "http://www.wikidata.org/entity/Q155"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q983801",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q983840",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q983859",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q984128",
+  "v": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q984264",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q7709440",
+  "v": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q958",
+  "v": "http://www.wikidata.org/entity/Q958"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q963",
+  "v": "http://www.wikidata.org/entity/Q963"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q965",
+  "v": "http://www.wikidata.org/entity/Q965"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q771",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q959",
+  "v": "http://www.wikidata.org/entity/Q159"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q956",
+  "v": "http://www.wikidata.org/entity/Q148"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q8678",
+  "v": "http://www.wikidata.org/entity/Q155"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q9676",
+  "v": "http://www.wikidata.org/entity/Q9676"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q9580",
+  "v": "http://www.wikidata.org/entity/Q29"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q9679",
+  "v": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q9681",
+  "v": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q9733",
+  "v": "http://www.wikidata.org/entity/Q142"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q9777",
+  "v": "http://www.wikidata.org/entity/Q55"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q79",
+  "v": "http://www.wikidata.org/entity/Q79"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q87",
+  "v": "http://www.wikidata.org/entity/Q79"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q88",
+  "v": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q90",
+  "v": "http://www.wikidata.org/entity/Q142"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q253094"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q600018"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q940741"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q1470101"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q81581",
+  "v": "http://www.wikidata.org/entity/Q16056854"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q817165",
+  "v": "http://www.wikidata.org/entity/Q129286"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q855044",
+  "v": "http://www.wikidata.org/entity/Q83618"
+ },
+ {
+  "x": "http://www.wikidata.org/entity/Q855044",
+  "v": "http://www.wikidata.org/entity/Q129286"
+ }
+]

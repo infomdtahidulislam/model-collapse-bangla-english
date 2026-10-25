@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G5 Fluency EN</title><style>
+:root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6a675f; --line:#dedbd2; --card:#ffffff; --accent:#1f5f8b; --g3:#244b6b; --g6:#6b2f12;
+        --done:#2f6b3a; --warn:#8a3b12; --badge:#eef3f7; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#17181a; --fg:#e8e6e1; --muted:#a6a39b; --line:#34363a;
+        --card:#1f2124; --accent:#7fb4dc; --g3:#9cc3e6; --g6:#f0b38c; --done:#8fd19e; --warn:#f0a67a; --badge:#26303a; } }
+:root[data-theme="dark"] { --bg:#17181a; --fg:#e8e6e1; --muted:#a6a39b; --line:#34363a; --card:#1f2124; --accent:#7fb4dc; --g3:#9cc3e6;
+        --g6:#f0b38c; --done:#8fd19e; --warn:#f0a67a; --badge:#26303a; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.55 "Segoe UI", "Nirmala UI", "Noto Sans Bengali", system-ui, sans-serif; }
+main { max-width:1240px; margin:0 auto; padding:24px 16px 96px; }
+h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:19px; margin:32px 0 8px; }
+.sub { color:var(--muted); margin:6px 0 14px; }
+.card { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:8px; padding:14px 16px; margin:12px 0; }
+.card ol, .card ul { margin:6px 0 4px 20px; padding:0; } .card li { margin:3px 0; }
+.who { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.who input { max-width:260px; }
+fieldset { border:0; margin:0; padding:0; min-width:0; } fieldset:disabled .p { opacity:.55; }
+.p { background:var(--card); border:1px solid var(--line); border-radius:8px; margin:14px 0; overflow:hidden; }
+.ph { display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; padding:8px 12px; border-bottom:1px solid var(--line); }
+.ph .id { font-weight:600; } .ph .pre { color:var(--muted); font-size:13px; flex:1; min-width:200px; }
+.badge { font-size:12px; background:var(--badge); border-radius:10px; padding:1px 8px; color:var(--muted); }
+.pair { display:grid; grid-template-columns:1fr 1fr; }
+.s { padding:10px 12px; border-right:1px solid var(--line); min-width:0; } .s:last-child { border-right:0; }
+.s .lab { font-size:12px; font-weight:600; letter-spacing:.02em; margin-bottom:4px; }
+.s[data-g="3"] .lab { color:var(--g3); } .s[data-g="6"] .lab { color:var(--g6); }
+.txt { white-space:pre-wrap; overflow-wrap:anywhere; }
+.ctl { margin-top:10px; padding-top:8px; border-top:1px dashed var(--line); display:flex; gap:6px 14px; flex-wrap:wrap; align-items:center; font-size:13px; }
+.ctl label { white-space:nowrap; } .ctl .nw { width:5em; } .ctl .nt { flex:1 1 100%; }
+.s.done .lab::after { content:"  ✓ coded"; color:var(--done); }
+input[type=text], input[type=number], select { font:13px inherit; padding:3px 5px; border:1px solid var(--line); border-radius:4px; background:var(--bg); color:var(--fg); }
+input[type=text] { width:100%; }
+.bar { position:sticky; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+button { font:inherit; padding:6px 14px; border-radius:6px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+button.sec { background:transparent; color:var(--accent); }
+label.btn { font:inherit; padding:6px 14px; border-radius:6px; border:1px solid var(--accent); color:var(--accent); cursor:pointer; display:inline-block; }
+textarea { width:100%; min-height:120px; font:12px Consolas, monospace; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:8px; }
+table.idx { border-collapse:collapse; background:var(--card); border:1px solid var(--line); width:100%; }
+.idx th, .idx td { border-bottom:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top; }
+code { font-size:13px; }
+@media (max-width:860px) { .pair { grid-template-columns:1fr; } .s { border-right:0; border-bottom:1px solid var(--line); } .s:last-child { border-bottom:0; } }
+</style></head>
+<body><main><h1>CG4 Gate 5, optional: fluency of generation 0 (English)</h1>
+<p class="sub">Generated 2026-10-17 17:10 UTC from <code>results/samples/</code> on the VPS. Unscreened model output: a local file only, do not upload or share it. <a href="G5_index_2026-10-17.html">All G5 pages</a></p>
+<div class="card who"><b>Your name:</b> <input type="text" id="reader" placeholder="e.g. Md Tahidul Islam"> <span class="sub" style="margin:0">Answers are saved in this browser under your name.</span></div>
+<div class="card"><b>Only if you do the optional fluency rating.</b> The registered rating covers 20 samples per chain at generations 0, 3 and 6, rated by both of you on a 1–5 scale.
+Generations 3 and 6 are rated on the chain pages (the prompts marked <span class="badge">fluency subset</span>). Generation 0 is shared by the three English chains, so it is rated once, here: the same 20 prompts.
+1 = not readable as language, 3 = readable but clumsy or partly broken, 5 = fluent. Press <b>Copy reply</b> when done.
+<b>Export progress</b> and <b>Import progress</b> save your answers to a JSON file and load them back.</div>
+<fieldset id="all" disabled><div class="p"><div class="ph"><span class="id">#1 · EN-P00000</span><span class="pre">prompt: The women&#x27;s halfpipe event in snowboarding at the 2006</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00000"><div class="lab">GENERATION 0</div><div class="txt"> Winter Olympics was held in Vancouver on 18 January 2006, but due to the scheduling conflict between the Winter Olympics second and first games in Russia and Australia, the Olympic Committee selection committee decided to do the women&#x27;s halfpipe competition in the 19 August, before 20 August, since it was easier to use halfpipes with an improved transition.
+
+Results
+
+{{Speaker name:	}}
+
+|}
+
+Welsh vs. Czech
+
+Goals net diameter
+Powers
+ Nose bars
+&lt;i&gt;foldated
+
+Matchups
+
+규격
+
+Uvs vs.
+
+Video review of the 2006 combined event
+
+Results
+
+Points
+0:29 in a head-to-head start.
+0:31 in a head-to-head start.
+
+ substitutions
+
+0:34: The start, control across the field. The competitive oar stays in the gap.
+0:40: The halfpipe transition.
+0:51: The pairsport.
+0:08: The ice curve.
+0:12: The sudden acceleration shift.
+0:15: Re-spin.
+0:15: Sharp turn forces and final rudder stick.
+0:21: The</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#2 · EN-P00001</span><span class="pre">prompt: Educator Training: Grade 8
+What is Power to Be?
+Power</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00001"><div class="lab">GENERATION 0</div><div class="txt"> to Be Practice Questions Grades 8-12
+Quarter
+- Fill in the following missing nouns &amp; verbs: All right. In Kitchen. What newspaper have 715th class read? (juacaffe(jues alli enke son, enke reseol y unlteste, anľa sopa wai lune ,neyat top,uttaunadas mas ē onchez)
+- Guard and Answer: To extend(Adopt) and extend(Exit) a staff in English, please do so now.
+- What Do I Do?
+- What do I do if I am unfortunate and I am in their place ?
+- What Do I do if I am ugly.
+- What do I do if I am sociable.
+- What do I do if I am annoying.
+- What do I do if I am friendly?
+- What do I do if I am friendly with my new friend.
+- Give yourselves a flash. Insert your (eek en sortie ) fist or hands while they are empty.
+- Does your group know which words will I hear? (neeidi i)ear nipl and I) I&#x27;(mexonados) yu(emchee los(eujainans) o=punta -di(ookie</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#3 · EN-P00002</span><span class="pre">prompt: Auburn Township may refer to:
+
+Arkansas
+ Auburn Township, Lincoln County,</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00002"><div class="lab">GENERATION 0</div><div class="txt"> Arkansas
+ Auburn Township, Clarke County, Arkansas
+ Auburn Township, Fallston County, Arkansas
+ Auburn Township, Sleepy County, Arkansas
+ Auburn Township, Oxford County, Arkansas
+ Auburn Township, Wakulla County, Arkansas
+ Auburn Township, Scott County, Arkansas
+ Auburn Township, Hinton County, Arkansas
+ Auburn Township, Wainwright County, Arkansas
+ Auburn Township, Randolph County, Arkansas
+ Auburn Township, Sterling County, Arkansas
+ Auburn township, Benton County, Arkansas
+ Auburn Township, Staunton County, Arkansas
+ Auburn Township, Wesstage County, Arkansas
+ Auburn Township, Webb County, Arkansas
+ Auburn Township, Fulton County, Arkansas
+ Auburn Township, Sidney County, Arkansas
+ Auburn Township, duPont County, Arkansas
+ Auburn Township, Clark County, Arkansas
+ Auburn-Templeton Township, Butler County, Arkansas
+ Auburn Township, Burlington County, Arkansas
+ Auburn Township, Clinton County, Arkansas
+ Auburn Township, Clarke County, Arkansas
+ Auburn Township, Cominco County, Arkansas
+ Auburn Township, Dixie County, Arkansas
+ Auburn Township, Elk County, Arkansas
+ Auburn Township, Jefferson County, Arkansas
+ Auburn Township, New Arlington County, Arkansas
+ Auburn Township, Polk County, Arkansas
+ Auburn Township, Putnam County, Arkansas
+ Auburn Township, Randolph County, Arkansas
+ Auburn Township, Sedie</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#4 · EN-P00003</span><span class="pre">prompt: Molecular and Cellular Biology is a biweekly peer-reviewed scientific journal covering all aspects</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00003"><div class="lab">GENERATION 0</div><div class="txt"> of food production and food hygiene. Scholars in Master of Science (MS) and PhDare encouraged to participate in these reviews. Newly published articles in this journal are evaluated by an Editorial Committee, which unanimously-composed boards of directors, who review the research findings and suggest modifications.
+
+The quarterly publication of Molecular and Cellular Biology, like its predecessor and predecessorpapers in the same issue, is fully peer reviewed. Primary studies are published by MOBio.Secondary studies are reported by the Applied Chemical and Biochemistry Essays with integrated links to the Six Sigma journals reviewed by MOBio editors.
+
+Contents 
+Because each issue is peer reviewed, several specialists in topics are involved in the review of the journal actively, particularly in publishing studies. In addressing other health considerations, to ensure accuracy and clarity, MCBS is the best aggregation of evidence available.
+
+The journal tailors its health impact assessments specifically to environmentally preferable materials and equipment, with emphasis on technologies which reduce endangered species and provide health benefits, and mitigate risks of intracellular or ecological problems directly to health.
+
+Largest publicly-published studies and publications from every study will be included in scientific publications that feature within-disease effects. Each study and opinion piece will feature commitment of major patients, researchers, promoters, or other experts who oppose a drug, device, policy</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#5 · EN-P00004</span><span class="pre">prompt: Experiment with focus on solid oxide fuel cells (SOFC)
+Malgorz</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00004"><div class="lab">GENERATION 0</div><div class="txt">ata Rinieri, Jan Kuirman, Igor Aleksander &#x27;DchynOM&#x27;itzarsev, Stanisław Prydburek, Ken Manuel van Uumool, Luigi Massara&quot; Maffia
+Bacteria Escherichia coli dont express beta lactanoid bacteria are especially rich in nickel, increasing their disposal capabilities in terms of intrinsic value by 174%. Their biogenic dissolution by Ni2Fe2S2 was, therefore, unambiguously attributed to their binding, indirectly, to an intrinsic biocoupling activity.&quot;
+Supersee: newly suggested formation of photovoltaic choppering inks with nanotubees that can considerably limit the UV light emitted by the semiconductor surface and the number of electron recombination lines. Processing silicon to waterfall slopes provides an optimal surface for cutting the nitride of the enhancing lass used in the semiconductor 60 carat wide and reduce the operating pressure down to to 4500√m/sec.
+Effects of negative glass fibres vs normal glass fibres
+Vacuum Tubes/coupling neon lamps should be deployed in different locations depending on the application
+High temperatures below 500эC caused by the failure of reducing resistors greatly reduces the heating of these devices due to. The higher for fluoro-nickel inductors such as CFLs and lifetime controlled neon for induction lamps. During</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#6 · EN-P00005</span><span class="pre">prompt: Learn something new every day
+More Info... by email
+Alice Waters is often</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00005"><div class="lab">GENERATION 0</div><div class="txt"> described by many as &quot;the runaway student&quot;, yet she has consistently denied &quot;total education&quot;. He says:
+Putting your wisdom intoaction at the Millennium Development Centre (or to &quot;address the problem of poverty throughout the developing world&quot;) has to do with a belief that &quot;we can stay on track through good education programmes&quot;.
+With a current philosophy days unassuming:
+Alice is not merely the starting point or a second step in making connections. She is the champion for initiatives such as Access Hong Kong for women; Literacy Learning for People with Special Needs; and the Global Environment Treaty which is mandatory for any country to live within at least five years.
+“For me, “to put it in action” is an active vocabulary. There is always room for an outgoing or boisterous attitude in the language of technology. On the other hand, the elderly most of all, belief in “knowledge to power” may have been missed in modern society.
+I believe that speaking up to our elders, sometimes asking the right “right assessment” before giving one statements along with a Loan scheme or providing free accommodation, helps to appeal to their interest and imagination. However, in a world when our real interest in speaking up will only be isolated, it is likely true to say, that there will be more</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#7 · EN-P00006</span><span class="pre">prompt: The Shakerley Baronetcy, of Somerford Park in the County</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00006"><div class="lab">GENERATION 0</div><div class="txt"> of Hampshire, is a possession of the Crown descendant of Nicholas Shakerley, a man of great storeability and fidelity. These properties represented, not only the kingly personhood of his father, but that of his grandfather, the heir to the throne of England, Lady Judith Butlerley. Butlerley was a marriage officer for the Mountmoin family. Knighted in 1928 by his father, he was married on 25 May 1928 to Mary Somerford of Sandymoor, Oxfordshire.   They had one son, Nicholas Nobilius Butler. Lady Judith herself seems to have been born and died on 8 March 1964, after the death in the Hundred of Chevellough, Devon.
+
+Mary Somerford, widow of Norman Morison and Anne Butler, was a two-time princess of England and became in 1990 the heiress of New Forest, Hampshire. She represented England at the 2015 Paralympic Games of the Netherlands and 2006 Summer Olympics. She had been married twice, and once derived her title from Lady Judith Pinch, later Duchess of Bedford, Hampshire, while Lady Judith had previously been dated Elizabeth, d. 1936, mortally</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#8 · EN-P00007</span><span class="pre">prompt: The number of national daily newspapers in Luxembourg was five both in 195</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00007"><div class="lab">GENERATION 0</div><div class="txt">2 and 1972, which left almost vanishing news pages in the various newspapers&#x27; newspapers. Its over twelve newspapers comprised a dismal lack of political information which the press authorities were forced (especially away from newspapers) to publish politics pages in the newspapers the newspapers would submit to the Compagnie des législatures – written columns of politicians – for showing what was happening in the societies of the time under the communist regime. Reading of political details served to underestimate the underground political underground of the inhabitants and it was intoleram are&#x27;less to seem a dynastic warning outside of Luxemburg that the overthrow of the regime – Mamsci runest in french – has had repercussions for people who carry on the practise of dreaming and serving their own political ideals, especially over the quite limited period since 1907. The increasing influence of the internet via its utility for their purposes has in some way contributed to assisting those workie who were originally inside the sistem de tre et rady television headquarters(bournanti in French) with possible experience of politics, or other insider personalities who are not noted for their folk way of life.
+With the rank of &quot;journalier senior&quot; I could talk very well, on the one hand, on detail of events in Kampnett’s cabinet and the Napoleonship of all</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#9 · EN-P00008</span><span class="pre">prompt: Schairer is a German surname primarily from the Baden-Württemberg region.  </span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00008"><div class="lab">GENERATION 0</div><div class="txt">In Switzerland, most of the people name used by the Schairer surname originated from the town of Zermatt. When the region was annexed by Switzerland after World War I, most of the inhabitants who were legally German (pre-1934) had a temporary German name (less common among Germans until 1949-58 and a moment before relatively minor ethnic changes in the region during the 1960s) to officially take German surnames.
+
+A variant of the name is scribierungs-rhetorikisch-prjétiropeisches. It first appears very atypical in the middle of the 20th century in der deutschen Rieche by an author who looked at the daughter of one of hers (Frances), and refers to this as a brother surname on his wedding day (in the Dialectics of Moses). Some later writers based their citations on the name&#x27;s parenthetical designation.
+
+See also 
+ Tesla
+Customsk Place
+Horst Herder
+Major Horst Herder
+
+adjective
+1
+
+Germanism
+Schrefman, Benjamin—Swiss emigrant surname.
+Schharfi, Heinz, Christoph, Cornelius Witsitz and Bernd Schharfi #172 de La Troienne  and E</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#10 · EN-P00009</span><span class="pre">prompt: Galvanized Steel Composite Panel is a new type of build […]
+Galvan</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00009"><div class="lab">GENERATION 0</div><div class="txt">ized Steel Composite Panel is used to re-draw the roof of a)&quot;); wall joint.
+Adhesives joint metal part nothing ..
+Tubular GSHP is a product type that was invented in 1950 for temperature control, and for maximum performance in specialized uses.
+* This software is not needed-but supported by the default version
+ LMFBR is an Australian school of high energy nuclear propulsion and attraction system
+* This software is not needed-but supported by the default version
+ pr conductance gauge resistance 2 kN_21 And higher…
+Load carrying ability- or maximum handling capability- improvement of one single kg meter cross section by utilizing the devices for carrying a summary of the accumulated energy within a meter cross sectional area.
+|Some common sheets use for thermal panel to facilitate building this system.|
+|Need additional info on hr?? 1 kg heater, air, hydrogen, a chimney, flyvacuum, condensate trap, fuelia, 3 year rating controller c/c b flat wire, manifold c/m_c1, central heating (FPV) for light home heating, vacuum ring, copper coil parasite,..etc.
+Gas chimney 10cm x 10cm 5.0 hp gas chimney attached to a 3</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#11 · EN-P00010</span><span class="pre">prompt: David Jamahl Listenbee, better known by his stage name GoonRock,</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00010"><div class="lab">GENERATION 0</div><div class="txt"> is the son of singer Vinnie wishan and John Cardinal Listenbee. He moved to Los Angeles,Model. Songwriter of both Tronella and music as Pop Trap. Trained guitar by BuiltGator from the bandornado, who put him on the road with the bandDeDeposito for one season. Sounding traditional Neapolitan with Ribelle&#x27;s bass technique (Por口气), they&#x27;re friendly and authentic, but somewhat uptight. Listenbee&amp;Defenders stand apart from the Neapolitan understanding he lambasted by writers such as Bohemianda and Boston Times when he&#x27;d lead an improvisation at a festival in November of 1986, 1 night after EPs@MF were leaked for the Fontainebleau nightclub in Paris. In a July, 1987 Immortal_Hazaiba interview, Hayden Hunt quoted a strokewalk performed by Madonna during her native Scottish Summer in 1987. In All Sounds Statement, he and his mates eventually created a skit entitled &quot;Just a songwriter&quot;. GoonRock &amp; Defenders performed an eponymous album in 1988 titled Nightmares and have repeated so far on various labels. His debut EP was Successful/Solid. He began performing dueling time-serving women after they had disappeared for several years. He</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#12 · EN-P00011</span><span class="pre">prompt: News Releases 2004
+NOAA Home Page
+NOAA Public</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00011"><div class="lab">GENERATION 0</div><div class="txt"> Broadcaster
+NOAA Emergency Management Center (EMC)
+Loss of Aquatic Life</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#13 · EN-P00012</span><span class="pre">prompt: All American children are guaranteed a free public education, but nobody pretends that education is</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00012"><div class="lab">GENERATION 0</div><div class="txt"> movies and/or shows. Kind of.
+
+As the authors of Ourelves in the Great Conflict: How We Got Into the Battles of 1812 to May 1850, John Brown believed, like most people who saw him stand on the porch above Trinity Church, that the home won the “Donald Duck” race. He had grown in there, which he didn&#x27;t like so he was prepared to strike a blow. Instead of exterminating the House Warming Incident in Southern Maryllandtown, Brown had goaded Ford on his way when it was too late to defend Fort McHenry on the line and marched into Mason. After at least five Confederate attacks were rendered futile on the west, brown pushed Ford and marched up the old, trappings of Old Jesse James&#x27; ranch. The former park got swarmed with soldiers, free-loaders, and reluctant teddy bears. “For a country divided, hopeless, and hopeless; and whose constitution and deepen              peace no great thought is thought when it comes *” They couldn’t help the emotion formed on Brown&#x27;s face that the great battle had just raged on. Despite initially trying to cede the long disputed grand old house to the enemy and then taking their property and forcing them to lay them down with the intent</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#14 · EN-P00013</span><span class="pre">prompt: Oliver Bohm (born April 14, 1992)</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00013"><div class="lab">GENERATION 0</div><div class="txt"> is an American professional basketball player. Bohm is played by the Small Forward position in the NBA.
+
+Biography
+Bradesbury Vista High School, represented her by academic band Corpus Christi. Bohm attended Cowarney Hurley High School. Throughout high school she attended the Wyly Dillard Stadium theatrical performance group. She graduated from Bullard-Minett High School of Arts, in San Vicente in 2013 . Madi Reynolds lived and worked with the teen group from Montgomery Place while at Bullard-Minett. During her senior year of high school in 2014 she did a concert show for local energy drinks companies at the Bullard Events Center-Dufferty Recreation Center (Dufferty with the Woohoothers Members-Score) while chaperoning the Nikki Wicks. She portrayed Dr. John back then added two quotes from her rap-track &quot;Little Eazie&quot;. At the age of seventeen she went on a Mitchell Loefflermann show in Los Angeles and shared a photo between herself and an account writer (whoaving into a documentary on Lisa Wadath’s 9/11-related endeavors).
+
+She played college basketball for American Oak High School in Boca Raton, Florida. 
+
+Bohm competed for Bullard-Min</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#15 · EN-P00014</span><span class="pre">prompt: This concise history of pandemics in South Africa packs a lot of punch. Its republic</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00014"><div class="lab">GENERATION 0</div><div class="txt">ation follows the transliteration of John Khuzuk&#x27;s naming, not provided by the original authors of the book, and the transcription by Holmes II. Moreover, it is a highly readable volume with six favourite passages at each turn, each account of a distorted and increasingly more detailed description of the epidemic. At this point, it must be worth repeating that the adoption of the 1918 Nobel Peace Prize would allow only the sole admittance of the hideousness of at least South African trypanosomiasis (Sln, SB, km).
+
+References
+
+ Historian of Diseases, Aids and Diarrhoea
+ 
+The First Ovens,&quot; Part 2
+ 
+ 
+ The Guide for a history of Infectious Diseases, Surgery and Medicine in South Africa: 1780-1980 returns to his father&#x27;s room, the same house of which he died in Haslemere an ancient house (1885), over a hundred scholarly infonomics updated</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#16 · EN-P00015</span><span class="pre">prompt: Definition of &#x27;Insider Trading&#x27;
+The buying or selling of a security by someone</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00015"><div class="lab">GENERATION 0</div><div class="txt"> who is not an authorized trader.
+- 1 Definition
+- 2 Party
+- 3 Makes
+- 4 Regulatory
+- 5 Corporate
+The agent or person charged with visiting a facility (office, terminal, storage facility or location) while a seller, buyer, or both are in course of negotiation.
+Contents 1.1 Key points in negotiating
+1.1.1 Understand historical trading patterns
+1.1.2 Negotiate purchasing and selling decisions based on historical patterns
+
+Tip of your hand energy is harnessed to activate specific energy, such as up to 3 KHz, 20 Period of time.
+Therapy Auditory-Visual Power
+The ritual of training tap dance in outer space beneath the control of bodies that are active throughout the universe.
+Production Action Power
+Up to 1% (~8.0 %) of the energy belongs to the action in which beings are doing.
+A Knowledge Power
+The ritual of training byoscastrum (little dove) uponNEED to cauterize wounds initiated by a Gutta (wronghand), which are intended to kill prey.
+Sacral Analysis Technique
+A psychosteotomy is a regulated, rather than nonforce directed elevation technique used by many ordained and paid Espoads and</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#17 · EN-P00016</span><span class="pre">prompt: There’s been a lot of talk over the last several years about the nutrition</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00016"><div class="lab">GENERATION 0</div><div class="txt"> implications of what we eat. Eggs, milk, cheese, organ foods, North Americans’ diet, processed meats…. Needless to say candy is hard to avoid and resisting this food regimen is hard.
+Eating habits for those on a diet need to be carefully corrected. It’s great to eat things that are “free of sugars or saturated fat”, a good idea, but
+some people don’t think that’s desirable. Here are some cruciferous broccoli recommendations that have helped add a healthy braxton a year with a normal diet: broccoli, cabbage, cantaloupe, garlic, dandelion greens and kale. The best way is to dieting, referred to as a balanced diet too.
+As a side note, when it comes to collagen – do you eat broccoli from spring to late winter?
+Bone diseases
+Excess half is found in all Europeans (twice alike in Italy and alike in Slovenia)
+Insulin resistance declines with age
+Prof. Biodan gives young people the whole because tumors occur at a younger age.
+A big portion of calories of a 12 ounce diet is either unending or counting. Fruits are everywhere including bananas, yogurt, potatoes, fruit juices, sparkling water and vegetable oil, while green salads and quinoa for breakfast are similar to vegetables
+A</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#18 · EN-P00017</span><span class="pre">prompt: Qualex-Landmark is a real estate development group based in Vancouver, British</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00017"><div class="lab">GENERATION 0</div><div class="txt"> Columbia, Canada.
+
+History
+
+Positively graded land
+Opened in 2004, Static Multi Tower opened in 2008. The site of Nuevitas Place in Vangis district consisting of 5 municipal offices and offices and of 23 blocks and a new three-storey wharf building. After being closed in July 2012. Then in 2013 the site was transformed into a multi-floor residential tower featuring 17 pods that cost $42.5 million. The first time Tolls Developers identified the site as having significant potential of being converted as a dwelling, The Property Builders Association recognised it as the &quot;most significant city in North America&quot;. The Town and Country Coalition assessed the possibility to build a complex in the city&#x27;s &quot;birther&quot; zone and invited Jamie MacDonald, the British Olympic who was on commission for the Vancouver Olympics to partner with Smith to design the challenge.
+
+The property group was able to expand to actively land the land and develop the site as residential on an undivided site owning the land, an approach that was never attempted in Ontario and Alberta by the Post Office, Bell and Post Office Canada, known to the public as the &quot;Simmer Region.
+
+After further investigation, the Municipality rejected the</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#19 · EN-P00018</span><span class="pre">prompt: Michael Vella is an Australian former professional rugby league footballer who played in the </span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00018"><div class="lab">GENERATION 0</div><div class="txt">1980s for New Zealand&#x27;s Bluebacks, the Warrington Thunderbirds and Wests Tigers. He is specifically identified by the configuration of his natural ribs and merits further clarification.
+
+Early life
+Vella attended Ashfield College in Stapleton, Victoria, as a member of the Port Phillip Bay club. He played his first game for Port Phillip&#x27;s rugby league side in July 1975, aged 14 years and 186 days.
+
+Drought
+In an article published in July 1976 in a local newspaper, a Dingo was quoted as saying &quot;... it seldom rain down South Australia, however, every time it finally did you could feel you had the front of your head off precipices for several kilometres down ahead, to tin was comfortably defined as one of the driest places on earth&quot;.
+
+Provincial draft
+Vella initially played for the Queensland club of the South Australian Rugby League and spent three years in the club&#x27;s reserves but was sacked with Corben Vorster in January 1978. Soon afterwards he was promoted to his new league club Queensland in the boldest new age of its retirement tradition that almost to no one&#x27;s surprise became an important piece of the team this he scored both tries with</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#20 · EN-P00019</span><span class="pre">prompt: Jonathan Shay (born 1941) is an American doctor and clinical</span></div>
+<div class="pair" style="grid-template-columns:1fr"><div class="s" data-g="0" data-sid="EN-P00019"><div class="lab">GENERATION 0</div><div class="txt"> psychologist specializing in the field of anxiety disorders. He is an academic and married father of a son and three grandchildren.
+
+Career
+Shay was qualified to practice law in 1967 and has sought the practice of law in San Francisco since . While in college, he transferred to the University of California, San Diego, where he met his wife Ruth Shay. He took part in a Rotary International international study; one child was killed in a battle with a classmate. He has served on committees devoted to the achievement of human rights.
+
+He has written about worries, stress, fatigue and the environment for six decades.
+
+Shay&#x27;s current book, &quot;Anxiety Debilitators, Victims, and Multi-Taskers,&quot; was published in 2004. 
+
+Shay holds a Bachelor of Science, and Master of Science degree in Clinical Psychology and Psychiatry From the University of California Davis and degrees in Ophthalmology from the University of California San Diego, and in Psychology from the University of Pittsburgh. He was also named one of the Top 755 Most Influential People in America in 2003 by The New York Times.
+
+He has published 19 books.
+
+Books
+ A New Adolescent&#x27;s Guide to Getting through High School
+ Stop Your</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div></fieldset>
+<h2>Your reply</h2><textarea id="reply" readonly></textarea></main>
+<div class="bar"><button id="copy">Copy reply</button><button class="sec" id="export">Export progress</button><label class="btn">Import progress<input type="file" id="import" accept=".json,application/json" hidden></label><button class="sec" data-dl="0">Download CSV</button><span id="saved" class="sub" style="margin:0"></span><span id="count" class="sub" style="margin:0"></span></div>
+<script>
+const KEYBASE = "cg4-g5-fluency-gen0-EN-v1", PAGE = {"title": "GEN0-EN fluency (optional)", "sheet": "G5_fluency_gen0_EN_2026-10-17.html", "lang": "EN", "mode": "fluency", "files": [{"g": 0, "label": "GEN0-EN_gen0_fluency", "path": "results/samples/GEN0-EN_gen0_50.jsonl", "sha": "ed77156a3b51cd60"}]};
+const blocks = [...document.querySelectorAll(".s")];
+const nameEl = document.getElementById("reader"), all = document.getElementById("all");
+let reader = "", state = {};
+const key = () => KEYBASE + "|" + reader.trim().toLowerCase();
+function load() { try { return JSON.parse(localStorage.getItem(key()) || "{}"); } catch (e) { return {}; } }
+function save() { try { localStorage.setItem(key(), JSON.stringify(state)); localStorage.setItem(KEYBASE + "|last", reader); } catch (e) {} }
+function fields(b) { const q = c => b.querySelector(c); return { se: q(".se"), ei: q(".ei"), nw: q(".nw"), rl: q(".rl"), td: q(".td"), fl: q(".fl"), nt: q(".nt") }; }
+function sid(b) { return b.dataset.g + "|" + b.dataset.sid; }
+function isDone(b, v) { return PAGE.mode === "fluency" ? (v.fl || "") !== "" : (v.nw ?? "") !== ""; }
+function apply() {
+  for (const b of blocks) {
+    const f = fields(b), v = state[sid(b)] || {};
+    for (const k of ["se", "ei", "rl", "td"]) if (f[k]) f[k].checked = !!v[k];
+    if (f.nw) f.nw.value = v.nw ?? ""; if (f.fl) f.fl.value = v.fl ?? ""; if (f.nt) f.nt.value = v.nt ?? "";
+    b.classList.toggle("done", isDone(b, v));
+  }
+  render();
+}
+function read(b) {
+  const f = fields(b), v = {};
+  for (const k of ["se", "ei", "rl", "td"]) if (f[k]) v[k] = f[k].checked;
+  if (f.nw) v.nw = f.nw.value.trim(); if (f.fl) v.fl = f.fl.value; if (f.nt) v.nt = f.nt.value;
+  return v;
+}
+for (const b of blocks) {
+  const upd = () => { if (!reader.trim()) return; const v = read(b); state[sid(b)] = v; b.classList.toggle("done", isDone(b, v)); save(); render(); };
+  b.querySelectorAll("input, select").forEach(el => { el.addEventListener("change", upd); el.addEventListener("input", upd); });
+}
+function setReader(v) { reader = v; all.disabled = !reader.trim(); state = reader.trim() ? load() : {}; apply(); }
+nameEl.addEventListener("input", () => setReader(nameEl.value));
+try { const last = localStorage.getItem(KEYBASE + "|last"); if (last) nameEl.value = last; } catch (e) {}
+const q = s => /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+const b01 = x => x ? "1" : "0";
+function csv(g) {
+  const rows = blocks.filter(b => b.dataset.g === String(g));
+  const out = [PAGE.mode === "fluency" ? "sample_id,fluency_1to5,note" : "sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note"];
+  let done = 0;
+  for (const b of rows) {
+    const v = state[sid(b)] || {}, d = isDone(b, v); if (d) done++;
+    if (PAGE.mode === "fluency") { out.push([b.dataset.sid, d ? v.fl : "", q(v.nt || "")].join(",")); continue; }
+    out.push(d ? [b.dataset.sid, b01(v.se), PAGE.lang === "BN" ? b01(v.ei) : "", v.nw, b01(v.rl), b01(v.td), v.fl || "", q(v.nt || "")].join(",")
+               : [b.dataset.sid, "", "", "", "", "", "", q(v.nt || "")].join(","));
+  }
+  return { text: out.join("\n"), done, n: rows.length };
+}
+function render() {
+  const parts = [`G5 read, ${PAGE.title} (${PAGE.sheet}), reader: ${reader.trim() || "(no name)"}, ${new Date().toISOString().slice(0, 16)}Z`];
+  const counts = [];
+  for (const f of PAGE.files) {
+    const c = csv(f.g); counts.push(`gen ${f.g}: ${c.done} of ${c.n}`);
+    parts.push(`## ${f.label} | ${f.path} sha256 ${f.sha} | coded ${c.done} of ${c.n}`, c.text);
+  }
+  document.getElementById("reply").value = parts.join("\n");
+  document.getElementById("count").textContent = reader.trim() ? `${reader.trim()}: coded ${counts.join(", ")}` : "enter your name at the top to start";
+}
+function download(g) {
+  const f = PAGE.files.find(x => x.g === g), c = csv(g);
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([c.text + "\n"], { type: "text/csv;charset=utf-8" }));
+  a.download = `${f.label}_${(reader.trim() || "reader").replace(/[^A-Za-z0-9]+/g, "_")}.csv`; a.click();
+}
+const safe = s => (s || "reader").trim().replace(/[^A-Za-z0-9]+/g, "_");
+function exportData() {
+  const coded = {};
+  for (const f of PAGE.files) { const c = csv(f.g); coded["gen" + f.g] = `${c.done} of ${c.n}`; }
+  return { format: "cg4-g5-progress-v1", sheet: PAGE.sheet, keybase: KEYBASE, title: PAGE.title, reader: reader.trim(),
+           saved_at: new Date().toISOString(), files: PAGE.files, coded, answers: state };
+}
+function applyImport(d) {
+  if (!d || d.format !== "cg4-g5-progress-v1") return "This is not a G5 progress file.";
+  if (d.keybase !== KEYBASE) return `This progress file belongs to ${d.title || d.sheet || "another page"}, not to ${PAGE.title}. Open that page and import it there.`;
+  if (!d.reader || !String(d.reader).trim()) return "The file has no reader name.";
+  const changed = PAGE.files.filter(f => !(d.files || []).some(x => x.g === f.g && x.sha === f.sha));
+  if (changed.length && !confirm("The sample files of this page differ from the ones in the progress file. Import anyway?")) return "Import cancelled.";
+  const known = new Set(blocks.map(sid)), answers = {};
+  let n = 0;
+  for (const [k, v] of Object.entries(d.answers || {})) if (known.has(k) && v && typeof v === "object") { answers[k] = v; n++; }
+  reader = String(d.reader).trim(); nameEl.value = reader;
+  const existing = load();
+  if (Object.keys(existing).length && JSON.stringify(existing) !== JSON.stringify(answers) &&
+      !confirm(`${reader} already has answers for this page in this browser. Replace them with the ${n} answers from the file (saved ${d.saved_at || "?"})?`)) {
+    setReader(reader); return "Import cancelled; the answers already in this browser were kept.";
+  }
+  state = answers; all.disabled = false; save(); apply();
+  return `Imported ${n} answers for ${reader} (saved ${d.saved_at || "?"}).`;
+}
+document.getElementById("copy").addEventListener("click", async () => {
+  const t = document.getElementById("reply"); t.select();
+  try { await navigator.clipboard.writeText(t.value); } catch (e) { document.execCommand("copy"); }
+});
+document.querySelectorAll("button[data-dl]").forEach(btn => btn.addEventListener("click", () => download(Number(btn.dataset.dl))));
+document.getElementById("export").addEventListener("click", () => {
+  if (!reader.trim()) { alert("Enter your name at the top first."); return; }
+  const a = document.createElement("a"), stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(exportData(), null, 1)], { type: "application/json" }));
+  a.download = `${PAGE.sheet.replace(/\.html$/, "")}_${safe(reader)}_progress_${stamp}.json`; a.click();
+  document.getElementById("saved").textContent = "exported at " + new Date().toLocaleTimeString();
+});
+document.getElementById("import").addEventListener("change", ev => {
+  const file = ev.target.files[0]; if (!file) return;
+  const r = new FileReader();
+  r.onload = () => { let d; try { d = JSON.parse(r.result); } catch (e) { alert("This file is not a JSON file."); ev.target.value = ""; return; }
+                     alert(applyImport(d)); ev.target.value = ""; };
+  r.readAsText(file);
+});
+setReader(nameEl.value);
+</script></body></html>

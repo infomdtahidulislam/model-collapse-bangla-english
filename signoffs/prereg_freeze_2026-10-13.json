@@ -1,0 +1,40 @@
+{
+  "package": "CG4_model_collapse_lowresource_experiment",
+  "title": "Model Collapse in Bangla and English: A Pre-Registered Study of Iterative Self-Training with Gemma-3-270m",
+  "frozen_at": "2026-10-13T14:38:50+00:00",
+  "frozen_by": "experiment agent, after REQ-001 (DECISION, authors: ok) and REQ-002 (BUDGET, authors: option B) were resolved, the authors fixed the ethics statement (department notice waived) and chose the final title; see signoffs/REQUESTS.md and signoffs/G0_preregistration.md",
+  "history": [
+    {"frozen_at": "2026-10-13T13:33:14+00:00", "sha256_01_PREREGISTRATION": "7ee580a47e5be9d9924696a791514abb8897766bb9c7d51d21e5990565f02a5c", "superseded_because": "before Gate 0 passed, the authors replaced the human-subjects line with their ethics statement (no ethics committee at the institution; no departmental notice); no other file changed"},
+    {"frozen_at": "2026-10-13T13:49:29+00:00", "sha256_01_PREREGISTRATION": "51abdd20e9d2624f968cf0d995d6035c90db2e679725134e38062b2bf491d754", "superseded_because": "before Gate 0 passed and before public registration, the authors replaced the question-form title with the descriptive title above (title line only); no other file changed"}
+  ],
+  "authors": [
+    {"name": "Md Tahidul Islam", "orcid": "0009-0004-6798-892X", "role": "first and corresponding author"},
+    {"name": "Maksuda Akter", "orcid": "0009-0004-5808-518X", "role": "second author"}
+  ],
+  "affiliation": "Department of Computer Science and Engineering, CCN University of Science & Technology, Cumilla, Bangladesh",
+  "how_to_verify": "from the package folder run: sha256sum 01_PREREGISTRATION.md configs/chains.yaml configs/corpora.yaml schemas/document.schema.json schemas/metric.schema.json schemas/step.schema.json  (PowerShell: Get-FileHash -Algorithm SHA256 <file>) and compare with the values below; any later change to these files requires a line in results/deviations.md",
+  "sha256": {
+    "01_PREREGISTRATION.md": "2379c64f65236c7c79a4a5e240b9f890f98a2f16b5cbcc92911abc78fb085967",
+    "configs/chains.yaml": "c911895ecc1f6b0079b1bd919eff6f6f2b69e229a9939a5382131cb9db9c1084",
+    "configs/corpora.yaml": "e537242d88abf254b6c95063edcf6126d00012e57c75188186841cafe1fef2ad",
+    "schemas/document.schema.json": "bc37552ed44c71952ebb14442b89caca70c63b8396727414d9d356f28bc84541",
+    "schemas/metric.schema.json": "322a979c283bed07915ee435a9d6dceb7c31f388308d07f6015aea9ad2970b6d",
+    "schemas/step.schema.json": "0acfc8f85f6bd82392adff90111cfe17dd27512b625481b6bce485ba1fe7c10f"
+  },
+  "public_registration": {
+    "osf_url": "https://osf.io/sra28/",
+    "osf_registration_id": "sra28",
+    "date_registered": "2026-10-13T15:35:08Z",
+    "registration_type": "OSF Open-Ended Registration",
+    "visibility": "public immediately (chosen at submission); approved and public since 2026-10-13 (OSF API ~15:50Z: public=true, reviews_state=accepted, not embargoed)",
+    "osf_doi": "10.17605/OSF.IO/SRA28",
+    "osf_doi_url": "https://doi.org/10.17605/OSF.IO/SRA28",
+    "archived_file_sha256": {
+      "01_PREREGISTRATION.md": "2379c64f65236c7c79a4a5e240b9f890f98a2f16b5cbcc92911abc78fb085967",
+      "chains.yaml": "c911895ecc1f6b0079b1bd919eff6f6f2b69e229a9939a5382131cb9db9c1084",
+      "corpora.yaml": "e537242d88abf254b6c95063edcf6126d00012e57c75188186841cafe1fef2ad",
+      "prereg_freeze_2026-10-13.json": "f17d9b5e06f902de130fb57818e7909db147435bd048e058a87d8f22db948f72"
+    },
+    "note": "the archived copy of this file on OSF is the version before this public_registration block was filled (hash f17d9b5e…); the six sha256 values above it are unchanged. Record the DOI here and in signoffs/G0_preregistration.md once OSF mints it"
+  }
+}

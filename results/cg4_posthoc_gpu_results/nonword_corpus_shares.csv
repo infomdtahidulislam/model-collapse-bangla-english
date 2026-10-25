@@ -1,0 +1,13 @@
+chain,gen,source,n_tokens,token_oov_share,type_oov_share,oov_types,novel_bigram_type_share,novel_bigram_token_share,n_docs
+EN-REPLACE,1,training corpus (gen_1/synthetic.jsonl),7368662,0.03503,0.71447,223617,0.0932,0.0874,44544
+EN-REPLACE,2,training corpus (gen_2/synthetic.jsonl),7410471,0.04047,0.76796,259785,0.1163,0.1103,44544
+EN-REPLACE,3,training corpus (gen_3/synthetic.jsonl),7385957,0.04617,0.80727,297934,0.1265,0.121,44032
+EN-REPLACE,4,training corpus (gen_4/synthetic.jsonl),7401020,0.04934,0.82973,320597,0.1326,0.1279,44544
+EN-REPLACE,5,training corpus (gen_5/synthetic.jsonl),7382247,0.05342,0.84855,346239,0.1452,0.1413,44544
+EN-REPLACE,6,training corpus (gen_6/synthetic.jsonl),7534849,0.05434,0.85954,359257,0.1508,0.1465,45056
+BN-REPLACE,1,training corpus (gen_1/synthetic.jsonl),5809081,0.08809,0.81292,441828,0.0116,0.0107,36864
+BN-REPLACE,2,training corpus (gen_2/synthetic.jsonl),5858763,0.09817,0.83837,497550,0.0165,0.0149,37888
+BN-REPLACE,3,training corpus (gen_3/synthetic.jsonl),5842645,0.10566,0.85374,531893,0.0199,0.0179,38400
+BN-REPLACE,4,training corpus (gen_4/synthetic.jsonl),5809031,0.11225,0.8643,557974,0.0228,0.021,38912
+BN-REPLACE,5,training corpus (gen_5/synthetic.jsonl),5800365,0.11748,0.87215,579084,0.0276,0.0245,38400
+BN-REPLACE,6,training corpus (gen_6/synthetic.jsonl),5809903,0.12366,0.88069,606881,0.029,0.0264,38400

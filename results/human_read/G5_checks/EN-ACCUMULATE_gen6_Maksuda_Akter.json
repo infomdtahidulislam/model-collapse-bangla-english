@@ -1,0 +1,35 @@
+{
+ "label": "EN-ACCUMULATE_gen6",
+ "reader": "Maksuda Akter",
+ "summary": {
+  "coded": 50,
+  "script_error": "12 of 50",
+  "english_intrusion": "n/a",
+  "repetition_loop": "2 of 50",
+  "topic_drift": "23 of 50",
+  "nonwords_mean": 1.68,
+  "nonwords_median": 1,
+  "fluency_rated": 19,
+  "fluency_mean": 3.0
+ },
+ "auto_comparison": {
+  "repetition_loop vs own 4-gram repetition >= 0.2": {
+   "both_1": 0,
+   "reader_1_auto_0": [
+    "EN-P00030",
+    "EN-P00041"
+   ],
+   "reader_0_auto_1": [],
+   "both_0": 48
+  },
+  "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+   "both_1": 11,
+   "reader_1_auto_0": [
+    "EN-P00005"
+   ],
+   "reader_0_auto_1": [],
+   "both_0": 38
+  }
+ },
+ "recorded_at": "2026-10-17T12:10:39+00:00"
+}

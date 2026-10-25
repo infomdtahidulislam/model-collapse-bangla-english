@@ -1,0 +1,43 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "CG4 document record (seed, held-out or synthetic)",
+ "type": "object",
+ "required": [
+  "doc_id",
+  "text"
+ ],
+ "properties": {
+  "doc_id": {
+   "type": "string"
+  },
+  "language": {
+   "type": "string"
+  },
+  "source": {
+   "type": "string"
+  },
+  "created": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "text": {
+   "type": "string",
+   "minLength": 1
+  },
+  "n_tokens": {
+   "type": "integer"
+  },
+  "fresh": {
+   "type": "boolean"
+  },
+  "prefix_id": {
+   "type": "string"
+  },
+  "hit_cap": {
+   "type": "boolean"
+  }
+ },
+ "additionalProperties": true
+}

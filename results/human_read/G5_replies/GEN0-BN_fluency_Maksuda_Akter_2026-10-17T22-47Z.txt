@@ -1,0 +1,23 @@
+G5 read, GEN0-BN fluency (optional) (G5_fluency_gen0_BN_2026-10-17.html), reader: Maksuda Akter, 2026-10-17T22:47Z
+## GEN0-BN_gen0_fluency | results/samples/GEN0-BN_gen0_50.jsonl sha256 a583fd3a2e8bbad4 | coded 20 of 20
+sample_id,fluency_1to5,note
+BN-P00000,2,"Several middle sentences are broken, though the beginning and final lines remain readable."
+BN-P00001,2,The longer explanations take considerable guessing because their words and clauses fit together poorly.
+BN-P00002,4,"This announcement reads quite easily, with a loose fragment and an incomplete ending."
+BN-P00003,2,Much of the cast description leaves it unclear who performed each action.
+BN-P00004,3,Short reporting sentences remain understandable despite broken statements between them.
+BN-P00005,3,"The career outline can be followed in places, although several middle sentences fall apart."
+BN-P00006,3,"Most of the biography can be read, although the closing paragraph is heavily muddled."
+BN-P00007,2,"The dialogue keeps breaking into distorted phrases, and the verb forms do not consistently match the speaker."
+BN-P00008,3,"The match results are partly clear, with awkward connections in the longer sentences."
+BN-P00009,2,Too many incomplete clauses interrupt the match account for it to read comfortably.
+BN-P00010,2,"Recognisable Bangla phrases survive, even though most sentences are severely damaged."
+BN-P00011,2,The long appointment descriptions are difficult to untangle because subjects and clauses keep getting mixed together.
+BN-P00012,2,Repeated county references sit within badly joined sentences that rarely make the actions clear.
+BN-P00013,2,"The museum report has scattered readable lines, with damaged wording obscuring much of the rest."
+BN-P00014,3,"Population figures are easy to read, but the river descriptions become awkward and confusing."
+BN-P00015,3,"The remarks are partly readable, although the funding figures lack clear connections to the surrounding text."
+BN-P00016,2,Long historical descriptions lose their grammatical connections well before the sentences end.
+BN-P00017,2,Distorted technical wording makes the explanation hard to read despite some intact sentence patterns.
+BN-P00018,3,"Several book descriptions read clearly, followed by awkward expressions and loose fragments."
+BN-P00019,3,"The organisations' activities remain partly readable through the wordy sentences, despite several awkward constructions."

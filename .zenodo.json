@@ -1,0 +1,32 @@
+{
+  "title": "Testing Model-Collapse Diagnostics in Small-Scale Bangla–English Self-Training (release package)",
+  "upload_type": "software",
+  "description": "Release package for the pre-registered study: experiment harness, configuration files, pre-registration and gate/decision records, per-generation metric records and per-item score records, analysis outputs including dated post-hoc analyses (the post-hoc seed replicates and the three-seed cross-decoder evaluation of 24 October 2026 included), and 50-document sample files (model-written contact details redacted) for an iterative self-training experiment with Gemma-3-270m in Bangla and English with pre-registered controls. Code is released under MIT; data, records and documents under CC BY 4.0 (see LICENSE and LICENSE-DATA). Restricted files can be requested under ACCESS.md. Pre-registration: OSF, DOI 10.17605/OSF.IO/SRA28. BanStereoSet items are not redistributed; CrowS-Pairs is CC BY-SA 4.0.",
+  "creators": [
+    {
+      "name": "Islam, Md Tahidul",
+      "affiliation": "CCN University of Science & Technology"
+    },
+    {
+      "name": "Akter, Maksuda",
+      "affiliation": "CCN University of Science & Technology"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "model collapse",
+    "synthetic data",
+    "iterative self-training",
+    "Bangla",
+    "low-resource languages",
+    "pre-registered study"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "references",
+      "identifier": "10.17605/OSF.IO/SRA28"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-10-25"
+}

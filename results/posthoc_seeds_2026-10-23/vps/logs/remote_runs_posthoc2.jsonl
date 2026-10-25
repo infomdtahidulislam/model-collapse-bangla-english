@@ -1,0 +1,5 @@
+{"instance_id": 57450903, "name": "posthoc2_setup", "cmd": "bash posthoc_gpu_pack2_2026-10-23/host/host_run2.sh setup", "started_at": "2026-10-24T02:02:23+00:00", "pid": "549"}
+{"instance_id": 57450903, "name": "posthoc2_setup", "cmd": "bash posthoc_gpu_pack2_2026-10-23/host/host_run2.sh setup", "started_at": "2026-10-24T02:03:06+00:00", "pid": "611"}
+{"instance_id": 57450903, "name": "posthoc2_chains", "cmd": "bash posthoc_gpu_pack2_2026-10-23/host/host_run2.sh chains 18.5", "started_at": "2026-10-24T02:19:49+00:00", "pid": "7720"}
+{"instance_id": 57450903, "name": "posthoc2_xdec", "cmd": "bash posthoc_gpu_pack2_2026-10-23/host/host_run2.sh xdec", "started_at": "2026-10-24T14:28:09+00:00", "pid": "36920"}
+{"instance_id": 57450903, "name": "posthoc2_pack", "cmd": "bash posthoc_gpu_pack2_2026-10-23/host/host_run2.sh pack", "started_at": "2026-10-24T15:43:49+00:00", "pid": "38569"}

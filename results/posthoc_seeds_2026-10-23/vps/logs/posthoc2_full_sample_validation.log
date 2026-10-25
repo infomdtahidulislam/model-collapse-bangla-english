@@ -1,0 +1,18 @@
+﻿EN-REPLACE               log_ratio_slope_0_6  +0.00381 [+0.00200, +0.00557] words/step 3282
+EN-REPLACE-s2            log_ratio_slope_0_6  +0.00523 [+0.00367, +0.00665] words/step 3378
+EN-REPLACE-s3            log_ratio_slope_0_6  +0.00132 [+0.00007, +0.00314] words/step 3402
+EN-ACCUMULATE            log_ratio_slope_0_6  -0.00163 [-0.00324, -0.00022] words/step 3216
+EN-ACCUMULATE-FILTER     log_ratio_slope_0_6  +0.00020 [-0.00126, +0.00168] words/step 3331
+EN-ACCUMULATE-SUBSAMPLE  log_ratio_slope_0_6  +0.00256 [+0.00083, +0.00424] words/step 3326
+EN-REAL-REPEAT           log_ratio_slope_0_6  +0.00109 [-0.00056, +0.00256] words/step 3512
+EN-REPLACE-WM            log_ratio_slope_0_6  +0.00388 [+0.00207, +0.00582] words/step 2899
+EN-REPLACE-topp95        raw_slope_1_6        -0.02720 [-0.02974, -0.02322] words/step 3197
+BN-REPLACE               log_ratio_slope_0_6  -0.00021 [-0.00122, +0.00130] words/step 3201
+BN-REPLACE-s2            log_ratio_slope_0_6  -0.00141 [-0.00328, +0.00047] words/step 2487
+BN-REPLACE-s3            log_ratio_slope_0_6  -0.00060 [-0.00123, +0.00040] words/step 2414
+BN-ACCUMULATE            log_ratio_slope_0_6  -0.00069 [-0.00158, +0.00052] words/step 3030
+BN-ACCUMULATE-FILTER     log_ratio_slope_0_6  -0.00111 [-0.00185, -0.00015] words/step 3497
+BN-ACCUMULATE-SUBSAMPLE  log_ratio_slope_0_6  +0.00147 [+0.00072, +0.00186] words/step 2624
+BN-REAL-REPEAT           log_ratio_slope_0_6  -0.00004 [-0.00081, +0.00059] words/step 3099
+BN-REPLACE-topp95        raw_slope_1_6        -0.03507 [-0.03913, -0.02875] words/step 3003
+wrote 17 chains to results\posthoc_seeds_2026-10-23\full_sample_check_validation

@@ -1,0 +1,807 @@
+--- _original_from_pc/02_cross_decoder.py
++++ 02_cross_decoder.py
+@@ -12,111 +12,108 @@
+ changes no registered number. Fresh fixed seeds per cell; comparisons are valid
+ within this diagnostic only.
+ 
+-Run after 01_fetch.sh:  python3 02_cross_decoder.py
++Run after 01_fetch.sh (or the VPS route's staged upload):  python3 02_cross_decoder.py
++
++VPS-route fixes, 2026-10-20 (posthoc_gpu_pack/PATCH_NOTES.md):
++ - The decoders are the registered ones: top-k off, temperature 1.0, top_p 1.0 or 0.95, passed as generate() keyword
++   arguments. The checkpoints' generation_config.json holds Gemma's defaults (top_k 64, top_p 0.95), which generate()
++   would otherwise apply. A start-up decoder check confirms this from the processed scores.
++ - max_new_tokens is the registered cap of the step's own sample (sample_meta.json: EN 260, BN 338), not max(n_tokens) + 8.
++ - Seeds come from zlib.crc32; Python's hash() of a string changes with every process, so the old seeds were not fixed.
++ - Files are read at the archive's own paths (results/chains/<chain>[/gen_<g>]/...), not found by regex search.
++ - A sampled <pad> token stays in the continuation, as in the registered vLLM sampling; only the first <eos> ends it.
++ - Scorer check: the registered statistic of sample_scores.jsonl is recomputed for the first 50 archived documents of every
++   step, to show that the host reproduces the registered gen-0 scorer.
+ """
+-import json, os, re, sys, gzip, csv, math, gc
++import argparse, csv, gc, gzip, io, json, math, os, sys, time, zlib
+ 
+-ROOT = "extracted"
+-OUT = "out"
++ap = argparse.ArgumentParser()
++ap.add_argument("--root", default="extracted", help="folder holding the archive's results/ and data/ paths")
++ap.add_argument("--out", default="out")
++ap.add_argument("--steps", default="", help="tests only: comma list of chain:gen (default: all 26 steps)")
++ap.add_argument("--n", type=int, default=50, help="prefixes per cell (50 = the human-read set)")
++ap.add_argument("--max-new", type=int, default=0, help="tests only: override the registered max_new_tokens")
++ap.add_argument("--batch", type=int, default=25)
++ap.add_argument("--device", default="")
++a = ap.parse_args()
++ROOT, OUT = a.root, a.out
+ os.makedirs(OUT, exist_ok=True)
+ 
+ import torch
++import transformers
+ from transformers import AutoModelForCausalLM, AutoTokenizer
+ import regex as uregex
+ 
+-WORD_RE = uregex.compile(r"[\p{L}\p{M}‌‍]+|\p{N}+")  # registered split (harness/common.py)
+-DEV = "cuda" if torch.cuda.is_available() else "cpu"
++WORD_RE = uregex.compile(r"[\p{L}\p{M}‌‍]+|\p{N}+")  # registered split (harness/common.py words())
++DEV = a.device or ("cuda" if torch.cuda.is_available() else "cpu")
++DTYPE = torch.bfloat16                      # the registered sampling and scoring dtype (configs: training.dtype)
+ CHAINS = ["EN-REPLACE", "EN-REPLACE-topp95", "BN-REPLACE", "BN-REPLACE-topp95"]
+-EXCLUDE = ("-s2", "-s3", "-WM")  # seed/word-matched variants are out of scope here
++DECODERS = (1.0, 0.95)
++SAMPLING = dict(do_sample=True, temperature=1.0, top_k=0)   # top_k=0: no top-k, as vLLM's SamplingParams in the run
++
++
++def log(msg):
++    print(f"{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())} {msg}", flush=True)
++
+ 
+ def fail(msg):
+     sys.exit(f"ERROR: {msg}")
+ 
+-# ---------- discovery ----------
+-def find_checkpoints():
+-    """Map (chain, gen) -> checkpoint dir; gen 0 under its GEN0-<L> model."""
+-    found = {}
+-    for dirpath, dirnames, filenames in os.walk(ROOT):
+-        if "config.json" not in filenames:
+-            continue
+-        p = dirpath.replace("\\", "/")
+-        if any(x in p for x in EXCLUDE):
+-            continue
+-        m0 = re.search(r"GEN0-(EN|BN)(?![-\w])", p)
+-        mg = re.search(r"gen[_-]?([0-9]+)", p, re.I)
+-        chain = next((c for c in sorted(CHAINS, key=len, reverse=True) if c in p), None)
+-        if chain and mg:
+-            key = (chain, int(mg.group(1)))
+-        elif m0:
+-            key = (f"GEN0-{m0.group(1)}", 0)
+-        else:
+-            continue
+-        prev = found.get(key)
+-        if prev is None or len(p) < len(prev):   # prefer the shortest (top-most) dir
+-            found[key] = p
+-    return found
+-
+-def find_samples():
+-    """Map (chain-or-GEN0 name, gen) -> sample jsonl path (for the frozen prefixes)."""
+-    out = {}
+-    for dirpath, _, filenames in os.walk(ROOT):
+-        for fn in filenames:
+-            if not fn.endswith(".jsonl") or "sample" not in fn.lower() and not fn.endswith("_50.jsonl"):
+-                continue
+-            p = os.path.join(dirpath, fn).replace("\\", "/")
+-            if any(x in p for x in EXCLUDE):
+-                continue
+-            m0 = re.search(r"GEN0-(EN|BN)(?![-\w])", p)
+-            mg = re.search(r"gen[_-]?([0-9]+)", p, re.I)
+-            chain = next((c for c in sorted(CHAINS, key=len, reverse=True) if c in p), None)
+-            if chain and mg:
+-                out.setdefault((chain, int(mg.group(1))), p)
+-            elif m0:
+-                out.setdefault((f"GEN0-{m0.group(1)}", 0), p)
+-    return out
+ 
+-def load_rows(path, n=50):
++def lang_of(name):
++    return name.split("-")[1] if name.startswith("GEN0-") else name[:2]
++
++
++def step_dir(name, gen):
++    base = os.path.join(ROOT, "results", "chains", name)
++    return base if gen == 0 else os.path.join(base, f"gen_{gen}")
++
++
++# ---------- inputs ----------
++def load_rows(path, n):
+     rows = []
+     with open(path, encoding="utf-8") as f:
+         for line in f:
+             d = json.loads(line)
+-            if "prefix_ids" in d:
+-                rows.append(d)
++            if not (isinstance(d.get("prefix_ids"), list) and d["prefix_ids"]):
++                fail(f"row without prefix_ids in {path}: {d.get('doc_id')}")
++            rows.append(d)
+             if len(rows) >= n:
+                 break
+     if len(rows) < n:
+-        print(f"  note: only {len(rows)} rows with prefix_ids in {path}")
++        fail(f"only {len(rows)} rows in {path}")
+     return rows
+ 
++
+ def build_vocab(lang):
+-    cands = []
+-    for dirpath, _, filenames in os.walk(ROOT):
+-        for fn in filenames:
+-            if fn == f"{lang}_seed.jsonl" or (lang in fn and "seed" in fn and fn.endswith(".jsonl")):
+-                cands.append(os.path.join(dirpath, fn))
+-    if not cands:
+-        fail(f"no {lang} seed corpus found under {ROOT} (needed for the OOV share)")
+-    path = sorted(cands, key=len)[0]
+-    print(f"  seed vocab from {path}")
++    path = os.path.join(ROOT, "data", "corpora", f"{lang}_seed.jsonl")
+     vocab = set()
+     with open(path, encoding="utf-8") as f:
+         for line in f:
+             for w in WORD_RE.findall(json.loads(line)["text"]):
+                 vocab.add(w.lower())
++    log(f"seed vocabulary {lang}: {len(vocab)} types ({path})")
+     return vocab
+ 
++
+ # ---------- model helpers ----------
+ def load_model(path):
+     tok = AutoTokenizer.from_pretrained(path)
+-    model = AutoModelForCausalLM.from_pretrained(path, torch_dtype=torch.bfloat16).to(DEV).eval()
++    model = AutoModelForCausalLM.from_pretrained(path, dtype=DTYPE).to(DEV).eval()
+     return tok, model
+ 
+-def generate_batch(model, tok, prefix_ids_list, top_p, max_new, seed):
+-    torch.manual_seed(seed)
++
++def special(tok):
+     bos = tok.bos_token_id
+     if bos is None:
+         fail("tokenizer has no BOS id; gemma-3 requires BOS (03_MODELS_AND_TRAINING.md)")
+     pad = tok.pad_token_id if tok.pad_token_id is not None else bos
++    return bos, pad, tok.eos_token_id
++
++
++def generate_batch(model, tok, prefix_ids_list, top_p, max_new, seed):
++    torch.manual_seed(seed)
++    bos, pad, eos = special(tok)
+     seqs = [[bos] + list(p) for p in prefix_ids_list]
+     width = max(len(s) for s in seqs)
+     input_ids = torch.full((len(seqs), width), pad, dtype=torch.long)
+@@ -126,24 +123,20 @@
+         attn[i, width - len(s):] = 1
+     input_ids, attn = input_ids.to(DEV), attn.to(DEV)
+     with torch.no_grad():
+-        out = model.generate(input_ids=input_ids, attention_mask=attn, do_sample=True,
+-                             temperature=1.0, top_p=top_p, max_new_tokens=max_new,
+-                             pad_token_id=pad)
++        out = model.generate(input_ids=input_ids, attention_mask=attn, top_p=top_p, max_new_tokens=max_new,
++                             pad_token_id=pad, eos_token_id=eos, bos_token_id=bos, **SAMPLING)
+     conts = []
+-    eos = tok.eos_token_id
+     for i in range(len(seqs)):
+         c = out[i, width:].tolist()
+         if eos is not None and eos in c:
+-            c = c[:c.index(eos)]                      # continuation tokens only, EOS excluded
+-        while c and c[-1] == pad:
+-            c.pop()
++            c = c[:c.index(eos)]                      # continuation tokens only, EOS excluded; padding only follows EOS
+         conts.append(c)
+     return conts
+ 
++
+ def score_batch(scorer, tok, prefix_ids_list, cont_list):
+     """Mean per-token NLL (nats) of each continuation under the scorer, prefix as context."""
+-    bos = tok.bos_token_id
+-    pad = tok.pad_token_id if tok.pad_token_id is not None else bos
++    bos, _, _ = special(tok)
+     nlls = []
+     for prefix_ids, cont in zip(prefix_ids_list, cont_list):
+         if not cont:
+@@ -154,41 +147,139 @@
+         targets = ids[0, 1:]
+         start = len(prefix_ids)                       # first continuation position in targets
+         lp = torch.log_softmax(logits[start:], dim=-1)
+-        tok_nll = -lp[torch.arange(len(cont)), targets[start:]]
++        tok_nll = -lp[torch.arange(len(cont), device=DEV), targets[start:]]
+         nlls.append(tok_nll.mean().item())
+     return nlls
+ 
++
++def decoder_check(model, tok, prefix_ids, steps=24):
++    """One short generation per decoder with the processed scores returned. top_p 1.0 must leave every vocabulary entry
++    finite (no top-k and no top-p truncation); top_p 0.95 must keep exactly the top-p set of the raw logits under the HF
++    rule (ascending sort, cumulative probability <= 1 - top_p removed), and nothing caps it at 64 (top-k off)."""
++    bos, pad, eos = special(tok)
++    ids = torch.tensor([[bos] + list(prefix_ids)], device=DEV)
++    res = {}
++    for top_p in DECODERS:
++        torch.manual_seed(12345)
++        with torch.no_grad():
++            o = model.generate(input_ids=ids, attention_mask=torch.ones_like(ids), top_p=top_p, max_new_tokens=steps,
++                               pad_token_id=pad, eos_token_id=eos, bos_token_id=bos, output_scores=True, output_logits=True,
++                               return_dict_in_generate=True, **SAMPLING)
++        V = int(o.scores[0].shape[-1])
++        kept = [int(torch.isfinite(s[0]).sum()) for s in o.scores]
++        expect = []
++        for lg in o.logits:
++            if top_p >= 1.0:
++                expect.append(V); continue
++            srt = torch.sort(lg[0].float(), descending=False)[0]
++            cum = srt.softmax(dim=-1).cumsum(dim=-1)
++            expect.append(V - int((cum <= (1 - top_p)).sum()))
++        res[str(top_p)] = dict(steps=len(kept), vocab=V, kept_min=min(kept), kept_max=max(kept),
++                               steps_matching_rule=sum(abs(k - e) <= 1 for k, e in zip(kept, expect)), kept=kept, expected=expect)
++    ok = (res["1.0"]["kept_min"] == res["1.0"]["vocab"]
++          and res["0.95"]["steps_matching_rule"] == res["0.95"]["steps"] and res["0.95"]["steps"] > 0)
++    return ok, res
++
++
++def scorer_check(key, stok, smodel):
++    """The registered statistic of sample_scores.jsonl (harness metrics.sample_under_reference): prefix + continuation text,
++    tokenised with <bos>, NLL summed over every token after <bos> under the language's gen-0 model, truncated at the
++    registered max_len (longest prefix_ids + n_tokens of the step's 2,000 documents + 8, at most 1024). Recomputed for the
++    first n archived documents, one at a time, and compared per document."""
++    sd = step_dir(*key)
++    docs, max_len = [], 0
++    with open(os.path.join(sd, "sample.jsonl"), encoding="utf-8") as f:
++        for i, line in enumerate(f):
++            d = json.loads(line)
++            max_len = max(max_len, len(d.get("prefix_ids") or []) + int(d.get("n_tokens") or 0))
++            if i < a.n:
++                docs.append(d)
++    max_len = min(1024, max_len + 8)
++    reg = {}
++    with open(os.path.join(sd, "sample_scores.jsonl"), encoding="utf-8") as f:
++        for line in f:
++            r = json.loads(line)
++            reg[r["doc_id"]] = r
++    diffs, n_mis = [], 0
++    for d in docs:
++        enc = stok((d.get("prefix") or "") + d["text"], return_tensors="pt", truncation=True, max_length=max_len).to(DEV)
++        with torch.no_grad():
++            logits = smodel(**enc).logits[0, :-1].float()
++        labels = enc["input_ids"][0, 1:]
++        nll = float(-torch.log_softmax(logits, dim=-1).gather(-1, labels.unsqueeze(-1)).sum())
++        n = int(labels.shape[0])
++        r = reg[d["doc_id"]]
++        n_mis += int(n != int(r["n_tokens"]))
++        diffs.append(abs(nll / max(1, n) - float(r["nll_total_ref"]) / max(1, int(r["n_tokens"]))))
++    return dict(chain=key[0], gen=key[1], n_docs=len(docs), max_len=max_len, n_token_count_mismatch=n_mis,
++                mean_abs_diff_nll_per_token=round(sum(diffs) / len(diffs), 6), max_abs_diff_nll_per_token=round(max(diffs), 6))
++
++
+ # ---------- main ----------
+-ckpts = find_checkpoints()
+-samples = find_samples()
+-print(f"checkpoints found: {len(ckpts)}; sample files found: {len(samples)}")
++t_start = time.time()
+ need = [(f"GEN0-{L}", 0) for L in ("EN", "BN")] + [(c, g) for c in CHAINS for g in range(1, 7)]
+-missing = [k for k in need if k not in ckpts]
+-if missing:
+-    fail(f"missing checkpoints for {missing}; check toc.txt / extraction patterns")
+-missing_s = [k for k in need if k not in samples]
+-if missing_s:
+-    fail(f"missing sample files (for prefixes) for {missing_s}")
++if a.steps:
++    sel = set(a.steps.split(","))
++    need = [k for k in need if f"{k[0]}:{k[1]}" in sel]
++    if not need:
++        fail(f"--steps matched nothing: {a.steps}")
++langs = sorted({lang_of(k[0]) for k in need})
++for key in [(f"GEN0-{L}", 0) for L in langs] + need:
++    sd = step_dir(*key)
++    for f in ("checkpoint/config.json", "checkpoint/model.safetensors", "sample.jsonl", "sample_meta.json", "sample_scores.jsonl"):
++        if not os.path.exists(os.path.join(sd, f)):
++            fail(f"missing {os.path.join(sd, f)}; check the extraction / upload")
++gpu = torch.cuda.get_device_name(0) if DEV.startswith("cuda") else "none"
++log(f"{len(need)} steps x {len(DECODERS)} decoders, {a.n} prefixes each; device {DEV} ({gpu}); torch {torch.__version__}, "
++    f"transformers {transformers.__version__}")
+ 
+-vocab = {L: build_vocab(L) for L in ("EN", "BN")}
++vocab = {L: build_vocab(L) for L in langs}
+ scorers = {}
+-for L in ("EN", "BN"):
+-    print(f"loading generation-0 scorer for {L}")
+-    scorers[L] = load_model(ckpts[(f"GEN0-{L}", 0)])
++for L in langs:
++    log(f"loading generation-0 scorer for {L}")
++    scorers[L] = load_model(os.path.join(step_dir(f"GEN0-{L}", 0), "checkpoint"))
++
++L0 = langs[0]
++first_prefix = load_rows(os.path.join(step_dir(f"GEN0-{L0}", 0), "sample.jsonl"), 1)[0]["prefix_ids"]
++dec_ok, dec_res = decoder_check(scorers[L0][1], scorers[L0][0], first_prefix)
++log(f"decoder check ({L0} gen-0 model): top_p 1.0 keeps {dec_res['1.0']['kept_min']}..{dec_res['1.0']['kept_max']} of "
++    f"{dec_res['1.0']['vocab']}; top_p 0.95 keeps {dec_res['0.95']['kept_min']}..{dec_res['0.95']['kept_max']}, "
++    f"{dec_res['0.95']['steps_matching_rule']}/{dec_res['0.95']['steps']} steps match the top-p rule -> {'OK' if dec_ok else 'FAILED'}")
++checks = dict(started_at=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime(t_start)), device=DEV, gpu=gpu, torch=torch.__version__,
++              transformers=transformers.__version__, dtype=str(DTYPE), sampling=dict(SAMPLING), decoders=list(DECODERS),
++              n_prefixes=a.n, decoder_check_ok=dec_ok, decoder_check=dec_res)
++if not dec_ok:
++    with open(f"{OUT}/cross_decoder_checks.json", "w", encoding="utf-8") as f:
++        json.dump(checks, f, indent=1)
++    fail("decoder check failed: generate() does not sample with the registered decoders (see cross_decoder_checks.json)")
+ 
+-summary, sink = [], gzip.open(f"{OUT}/cross_decoder_samples.jsonl.gz", "wt", encoding="utf-8")
++sc_rows = []
++for key in need:
++    sc_rows.append(scorer_check(key, *scorers[lang_of(key[0])]))
++    log(f"scorer check {key[0]} gen {key[1]}: mean |diff| {sc_rows[-1]['mean_abs_diff_nll_per_token']}, "
++        f"max {sc_rows[-1]['max_abs_diff_nll_per_token']} nats/token, token-count mismatches {sc_rows[-1]['n_token_count_mismatch']}")
++with open(f"{OUT}/cross_decoder_scorer_check.csv", "w", newline="", encoding="utf-8") as f:
++    w = csv.DictWriter(f, fieldnames=list(sc_rows[0].keys())); w.writeheader(); w.writerows(sc_rows)
++
++summary = []
++raw = open(f"{OUT}/cross_decoder_samples.jsonl.gz", "wb")
++sink = io.TextIOWrapper(gzip.GzipFile(fileobj=raw, mode="wb", mtime=0), encoding="utf-8")
+ for key in need:
+     name, gen = key
+-    L = "EN" if "EN" in name.split("-") else "BN"
+-    rows = load_rows(samples[key])
++    L = lang_of(name)
++    sd = step_dir(name, gen)
++    rows = load_rows(os.path.join(sd, "sample.jsonl"), a.n)
++    with open(os.path.join(sd, "sample_meta.json"), encoding="utf-8") as f:
++        meta = json.load(f)
++    max_new = a.max_new or int(meta["max_new_tokens"])
+     prefix_ids_list = [r["prefix_ids"] for r in rows]
+-    max_new = min(384, max(int(r.get("n_tokens", 0)) for r in rows) + 8) or 384
+-    tok, model = (scorers[L] if key == (f"GEN0-{L}", 0) else load_model(ckpts[key]))
+-    for top_p in (1.0, 0.95):
+-        seed = abs(hash((name, gen, top_p))) % (2**31)
++    tok, model = (scorers[L] if gen == 0 else load_model(os.path.join(sd, "checkpoint")))
++    for top_p in DECODERS:
++        seed = zlib.crc32(f"{name}|{gen}|{top_p}".encode()) & 0x7FFFFFFF
++        t0 = time.time()
+         conts = []
+-        for b in range(0, len(prefix_ids_list), 25):
+-            conts += generate_batch(model, tok, prefix_ids_list[b:b+25], top_p, max_new, seed + b)
++        for b in range(0, len(prefix_ids_list), a.batch):
++            conts += generate_batch(model, tok, prefix_ids_list[b:b + a.batch], top_p, max_new, seed + b)
+         stok, smodel = scorers[L]
+         nlls = score_batch(smodel, stok, prefix_ids_list, conts)
+         texts = [tok.decode(c, skip_special_tokens=True) for c in conts]
+@@ -196,21 +287,35 @@
+         ntok = sum(len(w) for w in words)
+         oov = sum(1 for ws in words for w in ws if w not in vocab[L])
+         ok = [x for x in nlls if not math.isnan(x)]
++        if len(ok) < 2:
++            fail(f"{name} gen {gen} top_p {top_p}: only {len(ok)} non-empty continuations")
+         mean = sum(ok) / len(ok)
+-        sd = (sum((x - mean) ** 2 for x in ok) / (len(ok) - 1)) ** 0.5
++        sd_nll = (sum((x - mean) ** 2 for x in ok) / (len(ok) - 1)) ** 0.5
+         summary.append(dict(chain=name, gen=gen, decoder_top_p=top_p, n=len(ok),
+-                            mean_nll_nats=round(mean, 4), sd_nll=round(sd, 4),
++                            mean_nll_nats=round(mean, 4), sd_nll=round(sd_nll, 4),
+                             mean_len_tokens=round(sum(len(c) for c in conts) / len(conts), 1),
+-                            token_oov_share=round(oov / ntok, 5) if ntok else ""))
+-        print(summary[-1])
++                            token_oov_share=round(oov / ntok, 5) if ntok else "",
++                            n_empty=len(conts) - len(ok), cap_hit_share=round(sum(1 for c in conts if len(c) >= max_new) / len(conts), 3),
++                            max_new_tokens=max_new, seed=seed))
++        log(f"{json.dumps(summary[-1])} ({time.time() - t0:.0f} s)")
+         for r, c, t, x in zip(rows, conts, texts, nlls):
+             sink.write(json.dumps(dict(chain=name, gen=gen, decoder_top_p=top_p,
+                                        prefix_id=r.get("prefix_id"), nll=x,
+-                                       n_tokens=len(c), text=t), ensure_ascii=False) + "\n")
+-    if key != (f"GEN0-{L}", 0):
+-        del model; gc.collect(); torch.cuda.empty_cache()
++                                       n_tokens=len(c), finish="length" if len(c) >= max_new else "stop", text=t),
++                                  ensure_ascii=False) + "\n")
++    if gen != 0:
++        del model; gc.collect()
++        if DEV.startswith("cuda"):
++            torch.cuda.empty_cache()
+ 
+-sink.close()
++sink.close(); raw.close()
+ with open(f"{OUT}/cross_decoder_summary.csv", "w", newline="", encoding="utf-8") as f:
+     w = csv.DictWriter(f, fieldnames=list(summary[0].keys())); w.writeheader(); w.writerows(summary)
+-print(f"\nwrote {OUT}/cross_decoder_summary.csv ({len(summary)} cells) and cross_decoder_samples.jsonl.gz")
++checks.update(finished_at=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), seconds=round(time.time() - t_start),
++              cells=len(summary), steps=[f"{k[0]}:{k[1]}" for k in need],
++              scorer_check_max_abs_diff=max(r["max_abs_diff_nll_per_token"] for r in sc_rows),
++              scorer_check_token_count_mismatches=sum(r["n_token_count_mismatch"] for r in sc_rows))
++with open(f"{OUT}/cross_decoder_checks.json", "w", encoding="utf-8") as f:
++    json.dump(checks, f, indent=1)
++log(f"wrote {OUT}/cross_decoder_summary.csv ({len(summary)} cells), cross_decoder_samples.jsonl.gz, "
++    f"cross_decoder_scorer_check.csv and cross_decoder_checks.json")
+--- _original_from_pc/03_labse_sensitivity.py
++++ 03_labse_sensitivity.py
+@@ -9,89 +9,94 @@
+ (c) Fluent-only subsets: if pc_files/human_read/ is present, dispersion of the
+     human-read files restricted to samples with mean fluency >= 4, next to all 50.
+ 
+-Dispersion uses the harness implementation when it can be imported from the
+-extracted archive; otherwise the fallback is the mean pairwise cosine distance
+-of L2-normalised LaBSE embeddings, and the choice is logged.
++Dispersion is the registered robustness (ix) statistic (harness/tools/semantic_dispersion.py, REQ-026): 1 - mean pairwise
++cosine similarity over pairs of different documents, from unit-normalised LaBSE embeddings, in float64, with LaBSE at the
++revision (ix) used.
+ 
+ Post-hoc diagnostic (2026-10-20). Not pre-registered; changes no registered number.
+ Run after 01_fetch.sh:  python3 03_labse_sensitivity.py
++On the VPS:             python 03_labse_sensitivity.py --root ../results/g6_extract
++
++VPS-route fixes, 2026-10-20 (PATCH_NOTES.md):
++ - Each step's set is the first 50 documents of its sample.jsonl, which is exactly results/samples/<step>_50.jsonl, the
++   human-read file. Files are read at the archive's own paths. The old regex search took whichever of the two files the
++   directory walk met first.
++ - LaBSE is pinned to (ix)'s revision and uses (ix)'s formula. The archive holds no harness to import, so the old code always
++   took its fallback, which is the same quantity computed in float32.
++ - New --root, --out and --device options. The human-read folder is found next to this script.
+ """
+-import csv, json, os, random, re, sys, itertools, statistics
++import argparse, csv, json, os, random, re, sys, statistics
+ 
+-ROOT, OUT = "extracted", "out"
++ap = argparse.ArgumentParser()
++ap.add_argument("--root", default="extracted", help="folder holding the archive's results/ paths")
++ap.add_argument("--out", default="out")
++ap.add_argument("--device", default="")
++a = ap.parse_args()
++ROOT, OUT = a.root, a.out
+ os.makedirs(OUT, exist_ok=True)
++HERE = os.path.dirname(os.path.abspath(__file__))
+ import regex as uregex
+ WORD_RE = uregex.compile(r"[\p{L}\p{M}‌‍]+|\p{N}+")
+ 
+-# ---------- find sample files ----------
+-def sample_files():
+-    out = {}
+-    for dirpath, _, filenames in os.walk(ROOT):
+-        for fn in filenames:
+-            if not fn.endswith(".jsonl") or ("sample" not in fn.lower() and not fn.endswith("_50.jsonl")):
+-                continue
+-            p = os.path.join(dirpath, fn).replace("\\", "/")
+-            m0 = re.search(r"GEN0-(EN|BN)(?![-\w])", p)
+-            mc = re.search(r"(EN|BN)-([A-Z-]+?)(?:[_/-]gen[_-]?([0-9]+))", p)
+-            if m0 and not any(x in p for x in ("-s2", "-s3", "-WM")):
+-                out.setdefault(("GEN0", m0.group(1), 0), p)
+-            elif mc:
+-                out.setdefault((f"{mc.group(1)}-{mc.group(2)}".rstrip("-"), mc.group(1), int(mc.group(3))), p)
+-    return out
++
++# ---------- sample files ----------
++def sample_path(chain, gen):
++    base = os.path.join(ROOT, "results", "chains", chain)
++    return os.path.join(base, "sample.jsonl") if gen == 0 else os.path.join(base, f"gen_{gen}", "sample.jsonl")
++
++
++N_EMPTY = {}
++
+ 
+ def texts_of(path, n=50):
++    """The first n documents of a step's sample (the human-read set); empty continuations are counted, not skipped."""
+     rows = []
+     with open(path, encoding="utf-8") as f:
+         for line in f:
+-            d = json.loads(line)
+-            if d.get("text"):
+-                rows.append(d)
++            rows.append(json.loads(line))
+             if len(rows) >= n:
+                 break
++    if len(rows) < n:
++        sys.exit(f"ERROR: only {len(rows)} documents in {path}")
++    N_EMPTY[path] = sum(1 for r in rows if not r.get("text"))
+     return rows
+ 
+-FILES = sample_files()
+-need = [("GEN0", "EN", 0), ("GEN0", "BN", 0)]
+-for k in need:
+-    if k not in FILES:
+-        sys.exit(f"ERROR: no generation-0 sample file found for {k}; check extraction")
++
++for L in ("EN", "BN"):
++    if not os.path.exists(sample_path(f"GEN0-{L}", 0)):
++        sys.exit(f"ERROR: no generation-0 sample file for {L} ({sample_path(f'GEN0-{L}', 0)}); check extraction")
+ 
+ # ---------- embedding + dispersion ----------
+-from sentence_transformers import SentenceTransformer
+ import numpy as np
+-model = SentenceTransformer("sentence-transformers/LaBSE")
++import torch
++import sentence_transformers
++from huggingface_hub import snapshot_download
++from sentence_transformers import SentenceTransformer
++
++MODEL, REVISION = "sentence-transformers/LaBSE", "836121a0533e5664b21c7aacc5d22951f2b8b25b"   # as robustness (ix)
++DEVICE = a.device or ("cuda" if torch.cuda.is_available() else "cpu")
++if DEVICE.startswith("cuda"):
++    torch.backends.cuda.matmul.allow_tf32 = False      # plain fp32, as (ix)
++    torch.backends.cudnn.allow_tf32 = False
++    torch.set_float32_matmul_precision("highest")
++model = SentenceTransformer(snapshot_download(MODEL, revision=REVISION), device=DEVICE)
++disp_src = f"(ix) formula of harness/tools/semantic_dispersion.py; {MODEL}@{REVISION}, max_seq_length {model.max_seq_length}, device {DEVICE}"
++print(f"dispersion implementation: {disp_src}; torch {torch.__version__}, sentence-transformers {sentence_transformers.__version__}", flush=True)
+ 
+-disp_fn, disp_src = None, "fallback: mean pairwise cosine distance"
+-for dirpath, dirnames, filenames in os.walk(ROOT):
+-    if "metrics.py" in filenames and "harness" in dirpath:
+-        sys.path.insert(0, dirpath)
+-        try:
+-            import metrics as harness_metrics  # type: ignore
+-            for cand in ("embedding_dispersion", "labse_dispersion", "semantic_dispersion", "dispersion"):
+-                if hasattr(harness_metrics, cand):
+-                    disp_fn, disp_src = getattr(harness_metrics, cand), f"harness metrics.{cand}"
+-                    break
+-        except Exception as e:
+-            print(f"note: harness import failed ({e}); using fallback dispersion")
+-        break
+-print(f"dispersion implementation: {disp_src}")
+ 
+ def dispersion(texts):
+-    emb = model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
+-    if disp_fn is not None:
+-        try:
+-            return float(disp_fn(emb))
+-        except Exception:
+-            pass
+-    sims = emb @ emb.T
+-    n = len(texts)
+-    iu = np.triu_indices(n, k=1)
+-    return float((1.0 - sims[iu]).mean())
++    E = model.encode(texts, batch_size=32, normalize_embeddings=True, convert_to_numpy=True,
++                     show_progress_bar=False).astype(np.float64)
++    n = len(E)
++    s = E.sum(0)
++    return float(1.0 - (s @ s - n) / (n * (n - 1)))
++
+ 
+ # ---------- corruptions ----------
+ rng = random.Random(20261020)
+ LATIN = "abcdefghijklmnopqrstuvwxyz"
+ 
++
+ def shuffle_word(w):
+     for _ in range(10):
+         chars = list(w)
+@@ -101,6 +106,7 @@
+             return s
+     return w + rng.choice(LATIN)
+ 
++
+ def corrupt_nonwords(text, rate):
+     spans = list(WORD_RE.finditer(text))
+     k = round(len(spans) * rate)
+@@ -115,6 +121,7 @@
+     out.append(text[last:])
+     return "".join(out)
+ 
++
+ def corrupt_repetition(text):
+     words = WORD_RE.findall(text)
+     if len(words) < 8:
+@@ -123,6 +130,7 @@
+     extra = " ".join([loop] * max(1, len(words) // 12))
+     return text + " " + extra
+ 
++
+ def corrupt_scriptmix(text, rate=0.10):
+     spans = list(WORD_RE.finditer(text))
+     k = round(len(spans) * rate)
+@@ -137,33 +145,34 @@
+     out.append(text[last:])
+     return "".join(out)
+ 
++
+ rows = []
+ for L in ("EN", "BN"):
+-    base = [r["text"] for r in texts_of(FILES[("GEN0", L, 0)])]
++    base = [r["text"] for r in texts_of(sample_path(f"GEN0-{L}", 0))]
+     for rate in (0.0, 0.05, 0.10, 0.20, 0.40):
+         rows.append(dict(language=L, corruption="nonword_substitution", rate=rate, n=len(base),
+                          dispersion=round(dispersion([corrupt_nonwords(t, rate) for t in base]), 5)))
+-        print(rows[-1])
++        print(rows[-1], flush=True)
+     rows.append(dict(language=L, corruption="repetition_loop", rate="", n=len(base),
+                      dispersion=round(dispersion([corrupt_repetition(t) for t in base]), 5)))
+-    print(rows[-1])
++    print(rows[-1], flush=True)
+     if L == "BN":
+         rows.append(dict(language=L, corruption="latin_script_mix", rate=0.10, n=len(base),
+                          dispersion=round(dispersion([corrupt_scriptmix(t) for t in base]), 5)))
+-        print(rows[-1])
+-    k6 = (f"{L}-REPLACE", L, 6)
+-    if k6 in FILES:
+-        g6 = [r["text"] for r in texts_of(FILES[k6])]
++        print(rows[-1], flush=True)
++    p6 = sample_path(f"{L}-REPLACE", 6)
++    if os.path.exists(p6):
++        g6 = [r["text"] for r in texts_of(p6)]
+         rows.append(dict(language=L, corruption="reference_REPLACE_gen6", rate="", n=len(g6),
+                          dispersion=round(dispersion(g6), 5)))
+-        print(rows[-1])
++        print(rows[-1], flush=True)
+ 
+ with open(f"{OUT}/labse_corruption.csv", "w", newline="", encoding="utf-8") as f:
+     w = csv.DictWriter(f, fieldnames=["language", "corruption", "rate", "n", "dispersion"])
+     w.writeheader(); w.writerows(rows)
+ 
+ # ---------- fluent-only subsets (optional) ----------
+-HR = "pc_files/human_read"
++HR = os.path.join(HERE, "pc_files", "human_read")
+ frows = []
+ if os.path.isdir(HR):
+     for fn in sorted(os.listdir(HR)):
+@@ -171,9 +180,9 @@
+         if not m:
+             continue
+         chain, L, g = m.group(1), m.group(2), int(m.group(3))
+-        key = (chain, L, g)
+-        if key not in FILES:
+-            print(f"note: no sample file for {key}, skipping fluent subset")
++        path = sample_path(chain, g)
++        if not os.path.exists(path):
++            print(f"note: no sample file for {chain} gen {g}, skipping fluent subset")
+             continue
+         flu = {}
+         for d in csv.DictReader(open(os.path.join(HR, fn), encoding="utf-8-sig")):
+@@ -188,17 +197,20 @@
+                         flu.setdefault(d["sample_id"], []).append(float(d["fluency_1to5"]))
+                     except (KeyError, ValueError):
+                         pass
+-        samples = texts_of(FILES[key])
++        samples = texts_of(path)
+         allt = [r["text"] for r in samples]
+         fl = [r["text"] for r in samples
+               if flu.get(r.get("prefix_id")) and statistics.mean(flu[r["prefix_id"]]) >= 4]
+         row = dict(file=f"{chain}_gen{g}", n_all=len(allt), dispersion_all=round(dispersion(allt), 5),
+                    n_fluent=len(fl), dispersion_fluent=round(dispersion(fl), 5) if len(fl) >= 8 else "")
+-        frows.append(row); print(row)
++        frows.append(row); print(row, flush=True)
+     with open(f"{OUT}/labse_fluent_subset.csv", "w", newline="", encoding="utf-8") as f:
+         w = csv.DictWriter(f, fieldnames=["file", "n_all", "dispersion_all", "n_fluent", "dispersion_fluent"])
+         w.writeheader(); w.writerows(frows)
+ else:
+     print("note: pc_files/human_read not present; fluent-only subset skipped (optional)")
+ 
+-print(f"\nwrote {OUT}/labse_corruption.csv" + (" and labse_fluent_subset.csv" if frows else ""))
++with open(f"{OUT}/labse_info.json", "w", encoding="utf-8") as f:
++    json.dump(dict(dispersion=disp_src, torch=torch.__version__, sentence_transformers=sentence_transformers.__version__,
++                   empty_texts_in_sets={os.path.relpath(k, ROOT).replace(os.sep, "/"): v for k, v in N_EMPTY.items()}), f, indent=1)
++print(f"\nwrote {OUT}/labse_corruption.csv" + (" and labse_fluent_subset.csv" if frows else "") + " and labse_info.json")
+--- _original_from_pc/04_nonword_bigram.py
++++ 04_nonword_bigram.py
+@@ -11,84 +11,73 @@
+     (plausible real-but-unseen words),
+   - the 40 most frequent OOV types per corpus, flagged, for manual inspection.
+ 
+-Falls back to the archived 50-sample evaluation files (with a loud note) if no
+-training corpora are found in the extraction.
++The training corpus of generation g is results/chains/<chain>/gen_<g>/synthetic.jsonl. harness/run_chain.py step()
++writes it: generation g-1's model generates it, and generation g is trained on it. These are the corpora that robustness
++(viii) measured.
+ 
+ Post-hoc diagnostic (2026-10-20). Not pre-registered; changes no registered number.
+ Run after 01_fetch.sh:  python3 04_nonword_bigram.py
++On the VPS:             python 04_nonword_bigram.py --root ../results/g6_extract
++
++VPS-route fixes, 2026-10-20 (PATCH_NOTES.md):
++ - The corpus is gen_<g>/synthetic.jsonl. The old search accepted only file names containing "corpus" or "train", so it
++   never found a corpus. It then fell back to whichever of sample.jsonl or sample_scores.jsonl the directory walk met
++   first, and labelled that a "50-sample file". There is no fallback now: a missing corpus is an error.
++ - Files are read at the archive's own paths. New --root and --out options.
+ """
+-import csv, json, os, re, sys
++import argparse, csv, json, os, sys
+ from collections import Counter
+ 
+-ROOT, OUT = "extracted", "out"
++ap = argparse.ArgumentParser()
++ap.add_argument("--root", default="extracted", help="folder holding the archive's results/ and data/ paths")
++ap.add_argument("--out", default="out")
++a = ap.parse_args()
++ROOT, OUT = a.root, a.out
+ os.makedirs(OUT, exist_ok=True)
+ import regex as uregex
+ WORD_RE = uregex.compile(r"[\p{L}\p{M}‌‍]+|\p{N}+")
+ CHAINS = ("EN-REPLACE", "BN-REPLACE")
+ 
+-def find_seed(lang):
+-    cands = []
+-    for dirpath, _, filenames in os.walk(ROOT):
+-        for fn in filenames:
+-            if fn == f"{lang}_seed.jsonl" or (lang in fn and "seed" in fn and fn.endswith(".jsonl")):
+-                cands.append(os.path.join(dirpath, fn))
+-    if not cands:
+-        sys.exit(f"ERROR: no {lang} seed corpus in extraction")
+-    return sorted(cands, key=len)[0]
+-
+-def find_corpora():
+-    """(chain, gen) -> corpus jsonl path; prefers files with 'corpus' in the name."""
+-    out = {}
+-    for dirpath, _, filenames in os.walk(ROOT):
+-        for fn in filenames:
+-            if not fn.endswith(".jsonl"):
+-                continue
+-            p = os.path.join(dirpath, fn).replace("\\", "/")
+-            if any(x in p for x in ("-s2", "-s3", "-WM", "topp95")):
+-                continue
+-            chain = next((c for c in CHAINS if c in p), None)
+-            mg = re.search(r"gen[_-]?([0-9]+)", p, re.I)
+-            if not (chain and mg):
+-                continue
+-            key = (chain, int(mg.group(1)))
+-            iscorp = "corpus" in fn.lower() or "train" in fn.lower()
+-            if iscorp:
+-                out[key] = p
+-            elif key not in out and ("sample" in fn.lower() or fn.endswith("_50.jsonl")):
+-                out.setdefault(("FALLBACK",) + key, p)
+-    return out
++
++def seed_path(lang):
++    p = os.path.join(ROOT, "data", "corpora", f"{lang}_seed.jsonl")
++    if not os.path.exists(p):
++        sys.exit(f"ERROR: no {lang} seed corpus at {p}")
++    return p
++
++
++def corpus_path(chain, g):
++    p = os.path.join(ROOT, "results", "chains", chain, f"gen_{g}", "synthetic.jsonl")
++    if not os.path.exists(p):
++        sys.exit(f"ERROR: no training corpus at {p}; check the extraction")
++    return p
++
+ 
+ def bigrams(word):
+     w = f"^{word}$"
+     return {w[i:i+2] for i in range(len(w) - 1)}
+ 
++
+ rows, toprows = [], []
+-corp = find_corpora()
+ for lang in ("EN", "BN"):
+     vocab, seed_bi = set(), set()
+-    print(f"building {lang} seed vocabulary and bigram inventory")
+-    with open(find_seed(lang), encoding="utf-8") as f:
++    print(f"building {lang} seed vocabulary and bigram inventory", flush=True)
++    with open(seed_path(lang), encoding="utf-8") as f:
+         for line in f:
+             for w in WORD_RE.findall(json.loads(line)["text"]):
+                 vocab.add(w.lower())
+     for w in vocab:
+         seed_bi |= bigrams(w)
+-    print(f"  {len(vocab)} types, {len(seed_bi)} character bigrams")
++    print(f"  {len(vocab)} types, {len(seed_bi)} character bigrams", flush=True)
+     chain = f"{lang}-REPLACE"
+     for g in range(1, 7):
+-        path, src = corp.get((chain, g)), "training corpus"
+-        if path is None:
+-            path, src = corp.get(("FALLBACK", chain, g)), "50-sample file (FALLBACK: corpus not in extraction)"
+-        if path is None:
+-            print(f"note: nothing found for {chain} gen{g}, skipped"); continue
+-        ntok = noov = 0
++        path, src = corpus_path(chain, g), f"training corpus (gen_{g}/synthetic.jsonl)"
++        ndocs = ntok = noov = 0
+         types, oov_counts = set(), Counter()
+         with open(path, encoding="utf-8") as f:
+             for line in f:
+-                try:
+-                    text = json.loads(line).get("text") or ""
+-                except json.JSONDecodeError:
+-                    continue
++                text = json.loads(line).get("text") or ""
++                ndocs += 1
+                 for w in WORD_RE.findall(text):
+                     w = w.lower(); ntok += 1; types.add(w)
+                     if w not in vocab:
+@@ -100,8 +89,9 @@
+                    type_oov_share=round(len(oov_counts) / len(types), 5) if types else "",
+                    oov_types=len(oov_counts),
+                    novel_bigram_type_share=round(len(novel_types) / len(oov_counts), 4) if oov_counts else "",
+-                   novel_bigram_token_share=round(novel_tok / noov, 4) if noov else "")
+-        rows.append(row); print(row)
++                   novel_bigram_token_share=round(novel_tok / noov, 4) if noov else "",
++                   n_docs=ndocs)
++        rows.append(row); print(row, flush=True)
+         for w, c in oov_counts.most_common(40):
+             toprows.append(dict(chain=chain, gen=g, type=w, count=c,
+                                 novel_bigram="yes" if w in novel_types else "no"))

@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G5 Fluency EN-ACCUMULATE-FILTER</title><style>
+:root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6a675f; --line:#dedbd2; --card:#ffffff; --accent:#1f5f8b; --g3:#244b6b; --g6:#6b2f12;
+        --done:#2f6b3a; --warn:#8a3b12; --badge:#eef3f7; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#17181a; --fg:#e8e6e1; --muted:#a6a39b; --line:#34363a;
+        --card:#1f2124; --accent:#7fb4dc; --g3:#9cc3e6; --g6:#f0b38c; --done:#8fd19e; --warn:#f0a67a; --badge:#26303a; } }
+:root[data-theme="dark"] { --bg:#17181a; --fg:#e8e6e1; --muted:#a6a39b; --line:#34363a; --card:#1f2124; --accent:#7fb4dc; --g3:#9cc3e6;
+        --g6:#f0b38c; --done:#8fd19e; --warn:#f0a67a; --badge:#26303a; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.55 "Segoe UI", "Nirmala UI", "Noto Sans Bengali", system-ui, sans-serif; }
+main { max-width:1240px; margin:0 auto; padding:24px 16px 96px; }
+h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:19px; margin:32px 0 8px; }
+.sub { color:var(--muted); margin:6px 0 14px; }
+.card { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:8px; padding:14px 16px; margin:12px 0; }
+.card ol, .card ul { margin:6px 0 4px 20px; padding:0; } .card li { margin:3px 0; }
+.who { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.who input { max-width:260px; }
+fieldset { border:0; margin:0; padding:0; min-width:0; } fieldset:disabled .p { opacity:.55; }
+.p { background:var(--card); border:1px solid var(--line); border-radius:8px; margin:14px 0; overflow:hidden; }
+.ph { display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; padding:8px 12px; border-bottom:1px solid var(--line); }
+.ph .id { font-weight:600; } .ph .pre { color:var(--muted); font-size:13px; flex:1; min-width:200px; }
+.badge { font-size:12px; background:var(--badge); border-radius:10px; padding:1px 8px; color:var(--muted); }
+.pair { display:grid; grid-template-columns:1fr 1fr; }
+.s { padding:10px 12px; border-right:1px solid var(--line); min-width:0; } .s:last-child { border-right:0; }
+.s .lab { font-size:12px; font-weight:600; letter-spacing:.02em; margin-bottom:4px; }
+.s[data-g="3"] .lab { color:var(--g3); } .s[data-g="6"] .lab { color:var(--g6); }
+.txt { white-space:pre-wrap; overflow-wrap:anywhere; }
+.ctl { margin-top:10px; padding-top:8px; border-top:1px dashed var(--line); display:flex; gap:6px 14px; flex-wrap:wrap; align-items:center; font-size:13px; }
+.ctl label { white-space:nowrap; } .ctl .nw { width:5em; } .ctl .nt { flex:1 1 100%; }
+.s.done .lab::after { content:"  ✓ coded"; color:var(--done); }
+input[type=text], input[type=number], select { font:13px inherit; padding:3px 5px; border:1px solid var(--line); border-radius:4px; background:var(--bg); color:var(--fg); }
+input[type=text] { width:100%; }
+.bar { position:sticky; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+button { font:inherit; padding:6px 14px; border-radius:6px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+button.sec { background:transparent; color:var(--accent); }
+label.btn { font:inherit; padding:6px 14px; border-radius:6px; border:1px solid var(--accent); color:var(--accent); cursor:pointer; display:inline-block; }
+textarea { width:100%; min-height:120px; font:12px Consolas, monospace; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:8px; }
+table.idx { border-collapse:collapse; background:var(--card); border:1px solid var(--line); width:100%; }
+.idx th, .idx td { border-bottom:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top; }
+code { font-size:13px; }
+@media (max-width:860px) { .pair { grid-template-columns:1fr; } .s { border-right:0; border-bottom:1px solid var(--line); } .s:last-child { border-bottom:0; } }
+</style></head>
+<body><main><h1>CG4 Gate 5, optional: fluency of EN-ACCUMULATE-FILTER (second rater)</h1>
+<p class="sub">Generated 2026-10-17 17:10 UTC from <code>results/samples/</code> on the VPS. Unscreened model output: a local file only, do not upload or share it. <a href="G5_index_2026-10-17.html">All G5 pages</a></p>
+<div class="card who"><b>Your name:</b> <input type="text" id="reader" placeholder="Maksuda Akter"> <span class="sub" style="margin:0">Answers are saved in this browser under your name.</span></div>
+<div class="card"><b>For: Maksuda Akter.</b> These are the 20 prompts marked <span class="badge">fluency subset</span> on the EN-ACCUMULATE-FILTER page, generation 3 next to generation 6. The other author rated them while coding that page; you rate them here without seeing those ratings, so that agreement between you can be reported (<code>06_HUMAN_TASKS.md</code>).
+Rate only <b>fluency</b>: 1 = not readable as language, 3 = readable but clumsy or partly broken, 5 = fluent. The note is optional. About 15–20 minutes. Press <b>Copy reply</b> (or <b>Export progress</b>) when done.</div>
+<fieldset id="all" disabled><div class="p"><div class="ph"><span class="id">#1 · EN-P00000</span><span class="pre">prompt: The women&#x27;s halfpipe event in snowboarding at the 2006</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00000"><div class="lab">GENERATION 3</div><div class="txt"> Winter Olympics had been postponed to Friday due to bad weather.
+
+Pan American Games
+Snowboarding at the Pan American Games 2017
+The Women&#x27;s Halfpipe World Cup (WFFC) quarter-finals
+
+Asian Games
+
+Antiochia League Championship
+
+2019 All-Russian Games
+Nizhhorozhny Red Square, Ukraine, women 80.61 x 10.87 m
+
+Women&#x27;s A-League Championship
+
+2019 International Games
+Nizhhorozhny Red Square, Ukraine, men&#x27;s 80.64 x 10.11 m
+
+Russian Championship
+
+Nizhhorozhny Red Square, Ukraine, women 80.48 x 10.94 m
+
+Russian Championships
+
+Nizhhorozhny Red square, Ukraine, women 85.03 x 11.01 m
+
+Women’s Removal of Losses
+
+ ailment of Nadal Eugene Emery, American football specialist
+
+Magael dama Gjøvik, Norwegian women 80.54 x 10.95 m
+
+Local buses to Horticultural Park (anno)</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00000"><div class="lab">GENERATION 6</div><div class="txt"> Summer Olympics in snowboard combined with the latest world record of 1584 points.
+
+Medallists
+
+See also
+2006 Winter Olympics
+Sonata style</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#2 · EN-P00001</span><span class="pre">prompt: Educator Training: Grade 8
+What is Power to Be?
+Power</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00001"><div class="lab">GENERATION 3</div><div class="txt"> to Be is a registered victualling organization that controls and monitors a healthcare-associated facility in the United States.
+What is the power to be program?
+The Office of Uniform Services (OUS) is an agency within the Federal Communications Commission (FCC). The OUS proposes guidelines and standards to suggest the communication technologies that citizens should use to send text messages.
+What risks citizens should avoid?
+When talking about self-identifying people, the United States fears an elaborate collection of people and public-Highly-Important Information (HIL), the goal of keeping individuals safe.
+What does it mean to be super- knowledgeable?
+The competence by which an individual is able to communicate a sufficient level of knowledge pertaining to certain communication technologies (e.g. podcast).
+What are the counseling/psychiatric actions of angry families?
+We expect that parents understand that the abusive parent does not share child-parent affection. Have a parent meeting with angry parents become a boilerplate.
+So…What does it mean to be super- knowledgeable?
+The competence to communicate a sufficient level of knowledge pertaining to a variety of issues in a stable and trusting manner. Cognitive Behavioral Therapy (CBT) is an approach to help people deal with additional stages and delays concluded by Milton Herzberg in</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00001"><div class="lab">GENERATION 6</div><div class="txt"> to Be is not as easily identified as power to be. It is an opportunity for unique individuals, groups, or organizations to deliver goods and services in ways that challenge the average consumer or individual. Although this power may render us vulnerable to financial, however much future, and psychological susceptibility, it is not a prevention, but merely a means of moving forward.
+Power to Be is not an opportunity to immediately take control over a product by creating an immediate statement, recording, or a series of abstract statements through a phone call, text message, email, or other board game.</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#3 · EN-P00002</span><span class="pre">prompt: Auburn Township may refer to:
+
+Arkansas
+ Auburn Township, Lincoln County,</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00002"><div class="lab">GENERATION 3</div><div class="txt"> Arkansas, Southern U.S. state
+ Auburn Township, Arlington County, Texas
+
+Florida
+ Auburn County, Florida
+ Casey A. (born 1991), American professional roller hockey player
+ Kihara A. (born 1983), Japanese judoka
+
+Iowa
+ Auburn Township, Hubbard County, Iowa
+ Yammeh Aharco/Haleah A. Township, La Salle County, Iowa
+ Deptford A. (1913–1929), American politician, member of Hamilton County, Kansas
+ Dan bench A. (disambiguation)
+ Ashley A. (2006–2014), Scottish footballer
+ Amy B. (born 1983), American singer-songwriter
+
+Kansas
+ Auburn Township, Ashburn County, Kansas, Boone Power Roams and CFL players
+ Cass Bellachan (1922–2003), Irish politician
+ Clarence B. (1924–2020), American botanist
+ Chelton/Turnabay Forkthird (baseball)
+ Rufus (disambiguation)
+ Douglas Blensen (born 1962), British politician
+ Dr. Thomas E. Garde (born 1947), American physician
+ Dick G. Morrison</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00002"><div class="lab">GENERATION 6</div><div class="txt"> Arkansas, known as AL 195, Lincoln County
+
+Illinois
+ Auburn Township, Ward County, Illinois, known as Oz township, Love County, Illinois
+
+Kansas
+ Auburn Township, Delavan County, Kansas, known as Oton Township, Esko County
+
+Michigan
+ a village within Auburn Township, Michigan; a hamlet within Lake Taylor
+ a village within Auburn Township, Susquehanna County, Pennsylvania, referred to by the township name “string”.
+
+Pennsylvania
+ a village within Auburn Township, Somerset County, Pennsylvania; refer to the hamlet of Auburn Township, Somerset County, Pennsylvania
+ a village within Auburn Township, Centre County, Pennsylvania, known as Alain Township, Centre County, Pennsylvania
+ be Auburn Township, Chester County, Pennsylvania
+ the town Auburn Township, Delavan County, Pennsylvania; refer to the hamlet of Auburn Township, Delavan County, Pennsylvania
+ Auburn Township, Callan Township, Carroll County, Pennsylvania; refer to the hamlet Auburn Township, Carroll County, Pennsylvania
+ Auburn Township, Passaic County, New Jersey
+ Auburn Township, Somerset County, Indiana; refer to the hamlet of Auburn Township, Somerset County, Indiana
+
+Missouri
+ Auburn Township, Shelby County, Missouri; refer to the hamlet Auburn Township, Shelby County, Missouri
+
+Nebraska 
+ Auburn Township, Gage County</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#4 · EN-P00003</span><span class="pre">prompt: Molecular and Cellular Biology is a biweekly peer-reviewed scientific journal covering all aspects</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00003"><div class="lab">GENERATION 3</div><div class="txt"> of molecular and cellular biology published in the journals in all social media on a lecturers recurring basis in 2015, 2016 and 2017.</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00003"><div class="lab">GENERATION 6</div><div class="txt"> of molecular and cellular biology published in the journal’s 26 edition. It is edited by Dr. Huazzone. The journal’s editors are Optimization and Optimization (Professor Busiverting) and Optimization in Molecular Medicine from the Department of Molecular and Cellular Biology, UH Corporation. The journal’s editor-in-chief is Professor Wike Russell. Science Publishing has published in the journal since its publication.  University Hospital (the Division of Molecular and Cellular Biology in UH Medical Center, the Division of Molecular and Cellular Biology in Defense of the Environment in the Defense of Tomorrow Center). This is an extension of the absence of articles from the Healthy and Dysfunctional Menace (HWM) research center. A large increase in researchers enrolling in these programs is due to the absence of funded research grants in the headquarters of the Diskler School of Public Health. The Frontier Research Center for Molecular Systems and BioStructures (FRCSC) produces the Biocompare, a new bioimagingfeatured series of perspectives for Today’s Cover Families. Each week brings a series of four to six news items, covering news about diseases, dysfunction, and concerns. Technology covers the latest excites, exciting technological breakthroughs, and innovative blockchain energy projects. sciencemag.com/changinghealthandwell #CNC #New</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#5 · EN-P00004</span><span class="pre">prompt: Experiment with focus on solid oxide fuel cells (SOFC)
+Malgorz</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00004"><div class="lab">GENERATION 3</div><div class="txt">ata Hanerson, Assistant Professor of Electrical and Computer Engineering, University of Stanford, USA
+September 6, 2008
+Explore new ideas in electronics design using experimentation.
+- Experiment on the merit of electrical signals at core resonance and own amplification.
+- Show, experiment and analyze fixed computational resources in a structured way.
+- Use hardware and software to enter electrical design explorations.
+(Modulation) is the design of conventional, integrated, solid-oxide-fuel cells (SOFC) and the associated circuit and hardware components for power distribution at the microscopic scale.
+A Freiburg i. M. (FIM). Just such experiments pioneer are performed as design demonstration projects for electrothermal device systems.
+Phonics experiments and examples are conducted, aimed at improving student performance in any science.
+Introduction to electronics.
+ _: Module:ofsuration
+medskiping: Device Roof Commercial Roof
+term1.5: Electric Strings (Cos Mordeeze Ensemnh)
+ dragons:animal , predator, Griffin
+1.5: Golden Bird
+2.5: Mordeeze, Griffin, Amelia Earhart
+2.5: Rebellion / Confederacy ofClosing Menu
+2.5 Footplate
+2.5: Over-Sun, Defeased
+2.</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00004"><div class="lab">GENERATION 6</div><div class="txt">ata Lenmeyer, (17 January 1912 – 25 June 1977) was a Czech artist specialising in oil painting. She worked as a journalist for the public radio Czechavo. Her work often targets into nature. The most famous works are German SteinGhostwagen and Empress.
+
+References
+
+External links
+ 
+
+Dusch motorizedienne
+
+1912 births
+1977 deaths
+Photographers from Prague
+Czech women artists
+Czech non-fiction writers</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#6 · EN-P00005</span><span class="pre">prompt: Learn something new every day
+More Info... by email
+Alice Waters is often</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00005"><div class="lab">GENERATION 3</div><div class="txt"> called the &quot;Lady of the Dawn&quot; for her poetic books and exploration of time in art. The astronomer and writer for The New Yorker notes that most of the works inspired by the artist&#x27;s observations were created in less than 15 years, although Waters&#x27; latest book, Black Magic: The Secret Life of American Women, was published in 2008. The revolution in American art that has taken place since Waters&#x27; book was begun, Women of the Dawn series, rose through seven years of international collaboration. In keeping track of that progress, I recently came across a decades-old myth about the struggle of a woman to steal a painting and show it at the Galer candle in New York City.
+John Seung of Sohonewszyna claims that paintings like &quot;Fabyrinth&quot; and &quot;Skyscraper&quot;. or &quot;The Flight of Moses&quot; are some of the strongest works by Russian artists during the independent Renaissance or Baroque era. The Priegiani January 10, 1613: Journey to Constantinople, 3rd-5th reformers and radical icon of Petersburg, was extraordinary and sent around the world as a symbol of one time. The monumental work, entitled At the Gate of Constantinople. Or, &quot;Irish-American: The Hidden Talance of Oscar Wilde</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00005"><div class="lab">GENERATION 6</div><div class="txt"> known for her explorations in music and performance, often commenting on Picasso or PBS&#x27;s The Art of War. She is a playwright and performance artist. As such, more than 50 years after her arrest on general duty in 2008, she has taken years un scorned looking for inspiration.</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#7 · EN-P00006</span><span class="pre">prompt: The Shakerley Baronetcy, of Somerford Park in the County</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00006"><div class="lab">GENERATION 3</div><div class="txt"> of Lincolnshire, was founded in 1260/61 by Donridge of Mahey approve of plans to elevate the rank of Lord of Somerford Park to the rank of legislator and to add a separate guardhouse to the Westminster Hall. This house was built in 1841.
+
+The Baronets of Calington, of Lloydsey and of Chillingall-in the latter part of it gave to Guido Hamilton of Chillingall a right ofafin.:
+Barbara Selmore baronets , High Sheriff of Newton
+Isabel Sherwood baronets , High Sheriff of North Lincolnshire
+Matthew Cook baronets , High Sheriff of Lincolnshire
+Sir Charles King knight 1629 -1632
+
+Sir John Alderson Knight , Prioress of Crystal Palace of London, member in the Board of Comptroller and HM Secretary, and appointed commander to intervene on 67.5/69. aeruginosa Hospital in Newton Abbot.
+
+Lord Laker and several Rolls
+
+Lawrenceowl Bay
+
+Whaltharp Bay
+
+Pubic Bay (Pembrokeshire)
+
+References
+
+Reords of Wales
+Notes
+
+Wales
+Military history of Wales
+Military history of Pavia
+20th-century beginnings of the Great Britain</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00006"><div class="lab">GENERATION 6</div><div class="txt"> of Aston, in Staffordshire, the owner of the Shakerley villa, is one of the younger proprietors. His personal name may be rendered in letters or in form of an address by means of a littledar.)
+
+Sir John Shaker told the Baronet how he wished to be called &#x27;heretic&#x27;. He wished to go only with Queen Victoria, Catherine Helen and her courts.
+
+‘The spur from the side is in hopes of saving him alone,&#x27; he says. &#x27;At first, he evaporated into the furnace; but afterwards, as soon as he had breakfast in the naiveness of his mind, he cleared his body and the proceedings of the court. She was moistened to the whole world&#x27;s knees; but she kept pressing, Civilization was saved.&#x27;
+
+References
+
+1830 births
+1924 deaths
+Knights of the British Empire
+British Army generals</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#8 · EN-P00007</span><span class="pre">prompt: The number of national daily newspapers in Luxembourg was five both in 195</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00007"><div class="lab">GENERATION 3</div><div class="txt">0 and 1960, in addition to a total of sixteen new supplements (from solid editions of the five first newspapers) found in February 1960. The service continued to carry two twenty-four issue newspapers, which were the first of these two these were. The newspaper and service were all part ofólefton.[ CITATION]
+
+The delivery days were also the same, each on Saturday morning at 4 a.m. In 1970, there were five other newspapers, one of which was the Volksblad, the Ille-Joufficie (I-J Ou evocir outfit, only later part of the land handed over to the press) and the Rauquis et Liberté (the latter being taken over by the Das Selfsame Setting/).
+
+Block listings were also published by both Nordsection (the supporter magazine for Balsôme, for example), who published them only then and again on the main pagesurname.tokatv (Listed: pauper, prominent, official, and personal) The Correspondent of Cantoda.
+The Nordsection branch of Nordsection verticalised altogether as the tip of the commissioned life that von Osterberg had before the revolution. (See References), to use phone numbers similar to the one that</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00007"><div class="lab">GENERATION 6</div><div class="txt">7 and 1974, Sundays and Thursday’s edition above in next calendar year anyway. The top ten most read titular newspapers at all times are Luxembourg Times, Échi-Editorál Weekend, Supernum à minute, Record without a headline, MYST, and Time for Shift. Always followed by the most viewed and highest readers (and most read) among various publications.
+1959: Luncheon, Weekly – Wednesday, Monthly – Tuesday before certain titles per file for a week or more
+1968: Weekly, Monthly, Weekly, Monthly, Monthly – Monday, Tuesday before certain titles per file for a week or so
+1972 1. The News orbiting Luxembourg Times, 12 h consecutive days of 12 days per week, and 21205/21 hours of consecutive days per week composed of Sundays, Fridays, Mondays, and Saturdays.
+1982: Weekly, Weekly,Weekly – Wednesday, April 6, 11-14, 80% below the final top ten, 85% drastic top ten after Sept. 31.
+1987: Weekly, Monday, Sunday, Friday, Sunday – Wednesday, Friday, Monday, Thursday</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#9 · EN-P00008</span><span class="pre">prompt: Schairer is a German surname primarily from the Baden-Württemberg region.  </span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00008"><div class="lab">GENERATION 3</div><div class="txt">The adjoining communities of Altefermøen, Abdler, Belforten andcata patties, are well known in Baden-Württemberg. The family population of Altesmühle farms, in Württemberg, may also refer to some of the communities in living people: the densely populated &quot;Weste&quot; items in the Map of the Fed of Mirrors, and elsewhere.  One of the inhabitants, Carla Magnes,  is also a well-known surname in Italy.
+
+In German genealogy, Schairer&#x27;s surname is shown in three German ethnic groups. Together these languages mean that the Schairers are mostly German speakers in south-west Germany, with prominent Jewish and Christian users of German ethnic affiliation. The scattered affırenae (divisions) A03, A08, A12 and others, spelling almost as Schairer, indicate local German isolates in eastern and central Germany, and can be accredited to a number of different genes.
+
+Schairer may also refer to:
+
+aryl_musician (disambiguation)
+Adam Schairer, (1829–1914), English composer
+Alex Schairer, (1883–1936), American photographer
+Arne Schairer, (1</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00008"><div class="lab">GENERATION 6</div><div class="txt">The typical German for shadow piercing in a Schmikh must be a chin or a legs expression. In other languages there are separate forms of piercing. Notable people with the surname include:
+
+Orna
+Georg Schairer (1874–1969), German-German sculptor, sculptor and tug footballer,
+Hercit Schairer (born 1984), Czech-German footballer and pro hockey player
+René Schairer (1908–1997), German-German aviator whouerte in the Thule (Norwegian Arctic wilderness) flight.
+ prioritizing and manfully arrogant German politicians.</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#10 · EN-P00009</span><span class="pre">prompt: Galvanized Steel Composite Panel is a new type of build […]
+Galvan</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00009"><div class="lab">GENERATION 3</div><div class="txt">ized Steel Composite Panel (GSPC) was developed, designed, developed, manufactured and marketed by coloration companies […]Companies with the expertise to manufacture, deploy, measure, analyze, and deploy pigment systems, carefully manage and minimize the cost of high-performance pigment materials, precision, and maintain available resource to deliver specialty estate and laboratory pigments, designer pigments, and fine pigment processes that are cost-effective and exhibit up to 31% error minimize and machine error. The use of an interdependent strategy for superior heat resistance with fast shrinkage of tan to achieve that level provides longevity and productivity. The extensive dispersity surface treatment is an astounding obstacle for many self-contained systems, according to hydrogen and hydrogen-based facilities.
+To write this article using the terms known to man, all articles must be copied from a company’s web site. Also, you must purchase an additional piece of artwork to use in a 2012 video game that would be not acceptable on games in the U.S.
+ Supplies and Materials
+Grateful acquisitions made from sources listed above are available for an additional
+Details ofProducts sold and produced through Artists onCourse.com</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00009"><div class="lab">GENERATION 6</div><div class="txt">ized Steel Composite Panel is a new building material, with the use of a coating of zinc or […]
+Home » Design Solutions » Tile Glass
+A ceramic tile’s frame provides structural support and protects it from damage caused by heavy […]
+tile glass is a type of high-performance building material used to build commercial, industrial, and […]
+water resistant walls. Some of these natural factory-made windows need to be sealed. The salts […]
+ Tucson Unified School District uses Vitrok’s Slozen Salt Khomesane, the first building in the United States, developed. […]</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#11 · EN-P00010</span><span class="pre">prompt: David Jamahl Listenbee, better known by his stage name GoonRock,</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00010"><div class="lab">GENERATION 3</div><div class="txt"> was the guitarist for the band Guitar Geek Club. Signals to Guitar Geek Club about how much Rock played in the band eventually disappeared once money for recording was discovered and required going back. Guitar Geek Club eventually parted ways with bassist David Heymann.
+
+Rock continued to uncover who was and invited others on tour. Major Divisions, this was Joel Rossi and bass player Jamal Bellini in the 2005 festivals of which Rock was significantly vocal. In Las Vegas, 2005 Jaovic &amp; Rock spent several days on several of GA Rockefeller’s 8 Nights International + The Australans playing at the Mountain Resort Casino and Arena, together they sold copies of their singles in Las Vegas fully equipped in Rock&#x27;s My Universe CD / DVD store.
+
+Today Rock plays free guitar and has spoken publicly on the guitar and is now the founding member of the new band Rock Just Out Loud.
+
+Discography
+
+References
+
+External links 
+
+ 
+
+1977 births
+Living people
+Rock Jars</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00010"><div class="lab">GENERATION 6</div><div class="txt"> is an American musician, songwriter and producer. He is the lead singer of the band Horrible MA.
+
+Biography
+Drovers released their debut single &quot; hairyHeadOnly2InK&quot; on June 4, 2007, and went on to have early success with their A&amp;R.
+
+Early years
+
+GoonRock attended grade school. Back then he played guitar, keyboard, drums and organ. Soon after his grades, it was noticed by the large crowds that had been assembled at the local stage to perform for Tom Walker, a local conveyor belt music producer, who worked in the record recording business in Tacoma, Washington.  He was a sellout rock band vocalist bringing people together to listen to music. The attraction was so huge the music was sold out with record sales going well over $200,000 before the 2010 suicides of Bryan Thomas Bon Doctrine and Carmen Hydro. GoonRock enjoyed the experience, but later became frustrated by reviews the band was releasing in the band&#x27;s favor.
+
+“Two Vitamin Shots”
+
+The band went on to stay signed to the Seattle Soundear and released GoonRock&#x27;s second No. 1 album, I salute George, in 2010. It featured Skiath</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#12 · EN-P00011</span><span class="pre">prompt: News Releases 2004
+NOAA Home Page
+NOAA Public</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00011"><div class="lab">GENERATION 3</div><div class="txt"> Health Research
+Publication Date 
+August, 2004
+Please note: If you titrate, some physicians have suggested that you titrate using a pen-and-rubs method, but this may not be possible when taking 2100 mg/day of long-term study data. Do be sure to inform your doctor of any other medications you are taking with regards long-term study data.
+Established in 1973, The Office of Research on Biomedical and Human Purpose is one of the foremost academic microbiology definitions of a research clustering. Congress funds research projects donated from the Service Employees Union, Community Resources, volunteer organizations, and community residents to scientists and concerned citizens.
+Four sets of entities under the federal act &quot;infectious disease&quot; (AD) have made available access to evidence-based information on infectious disease, including illnesses such as AIDS, trachoma, Lyme disease, cholera, and ragweed, as well as those that cause digestive tracts or may interfere with the communication
+This fun library of licensed films, series, and textbooks of all types... is rich in technology, in the 1920s: Shockinger, Iron Man, the Tall Black Death, Green Theme, Ship of Fools, Hacking (Hacker),</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00011"><div class="lab">GENERATION 6</div><div class="txt"> Office
+TPU Outstanding Academic Performance Award
+This is a press release from The Air Force Office of Scientific Research and Engineering. Readers who examine materials obtained from the National Archives and Records Administration, such as this publication, will begin to see favorable trends for civilian performance.
+During the past decade, a number of factors have combined to show the industrial battalion what Haynesville Air Force College achieved as a whole again. That is compared to the computer inability of an earlier battalion that had slept for years. That country did not treat aviation laws as there were a number of of previous contracts. That is the trend for the last decade. Navy officers and sailors created more runways and reworked squadrons for more success, tried to make space activity seem like normal, tried pulling the wing up to protect spectators, and tried raising a two-story wing roof so the ships could watch them aircraft move away. The increase in belly fire accounted for it all. Even though a battalion that days was in poor shape, each machine was about the size of the next.
+The majority of helicopter maintenance professionals at Haynesville affirmed that a person with a license and liability insurance business is armed to defend the U.S. military. They gave no mention to the anti-aircraft armament and heavy machines like the Fw090 and</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#13 · EN-P00012</span><span class="pre">prompt: All American children are guaranteed a free public education, but nobody pretends that education is</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00012"><div class="lab">GENERATION 3</div><div class="txt"> just for kids. Critics, including ex-Secular policy experts, have come up with some incredibly wise ideas about education.
+The Free Schools Challenge Organization acknowledged that such programs can help students striving for their higher education dreams, but they don’t claim that freedom is the only kind of education children want, with the right education being better so they better out of social environments and helping to generate stories about people within.
+The problem is not with free education, or being able to do what is more right for students. It is with the holistic view, in the perspective that each child is and needs to whatever education systems and deeply innate bodies they live. The good teachers, the good kids platforms, parents and individuals know that “It’s what it is. No choice but to take it. One which becomes subsidiary to education when one does it.” Systems like AIST (All American Institute for the Study of Social Skills) and CCCS (Common Consumer Skills) strive to guide children and support their higher education dreams at the most fundamental principles.
+The problem is with the methodology, with school and community systems, which aren’t practical in urban areas, suburbs, the outskirts of communities and even on the outskirts of town dwellers. The best urban schools and communities in Punjab and most north</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00012"><div class="lab">GENERATION 6</div><div class="txt"> sufficiently important for them. There were hopes for American children that theirs would be some of the them, but no earning it was profitable. Today we get half an education with deficits and dirt. Today we hear children do not know they belong to their own communities, and today they represent their families’ wants by not contributing to their community’s already out-dated plans.
+The ending of our dream is a good one. As the Great Society statesman St. Paul said, “There is nothing remarkable about what we keep out of our communities.” We may take all the country down with dinosaur proportions, but surely there has to be another. Human beings and other beings, including kids, will start staying forefront such as their children do, wherein all possible change will be received. It is also important to recognize a world in which capitalism can exist, but it is not in the extent or quality of its operation. What the world should be remembered as, however, is the world of commerce; commerce itself, it is clear, is not the world where there is no need for each subsequent trade.</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#14 · EN-P00013</span><span class="pre">prompt: Oliver Bohm (born April 14, 1992)</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00013"><div class="lab">GENERATION 3</div><div class="txt"> is an American cricketer, in the Indian cricket league. Playing in the class of All-Ireland for the Ireland women&#x27;s team, he only made it to the U-21 level. Bohm is part of the four-way partnership for both Anna Paulina and Terry Niemeck.
+
+Honours and managers
+Gold Coast Magpies: 2004, 2008, 2015 (pre-U21 level) Commonwealth Games knockout
+Coors FC: 2004 (LFA) - Player of the Year
+Bradfield FC: 2005 (LFA) - Player of the Year (listed)
+Managerials in the Halifax Perielder&#x27;s Youth
+ casa depez, Lisbon, Portugal - April 2005
+Continentes in Liguria, Chile - March 2006
+Class 1 Villafranca, Spain - April 2007
+
+International cricket
+Ireland
+U-21 World Cup winner (NCAA) - Spring 2011
+
+External links
+Ría División España player profile
+
+1992 births
+Living people
+Sportspeople from Claremorrá
+Irish expatriate sportspeople in England
+Irish expatriate sports</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00013"><div class="lab">GENERATION 6</div><div class="txt"> is a German football manager.
+
+Career
+
+BeU
+Oliver Bohm made his professional debut on 1 September 2013 with BeU. He has played for the club in the Süper Lig.
+
+FC Heerenveen
+On 23 September 2014, FC Heerenveen released a roster with two players from BGB. Bohm has been in the team for a month. Boey’s shot scoring proved his desire for the full job. He would eventually score 3 goals during the game against Nijmegen. It boosted his goal, Boey scored in a 3–0 win while supporting Boey. In the 3rd minute against Spotifyar, Boey also took part as FC Heerenveen players. He set up himself goalkeeper Eduardo Berrap points victory.
+
+FC Groningen
+On 15 August 2015, he signed a three-year contract with FC Groningen and made his chance on the Groningen left wing. Both Bohm and Boey rode together during the Groningen 1st League season to reach promotion back into the top team. Europe goals even included Bohm giving a speculative penalty. After a second centuries win against Sadly Joensrud, Boey scored again in the game against Innsbruck. Holding</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#15 · EN-P00014</span><span class="pre">prompt: This concise history of pandemics in South Africa packs a lot of punch. Its republic</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00014"><div class="lab">GENERATION 3</div><div class="txt">ation brings the grand scheme of one closer to family.
+&#x27;The original causes are well established, including floods, diseases, starvation, and diseases of poverty&#x27;
+&#x27;The main problems are eliminated, and vice versa&#x27;
+&#x27;There follows a healthy balance of disease prevention and quality of life&#x27;
+--Pishops Archbishop Louis XVI of Rhodes, Lesotho and Glysa fought apartheid for decades. This latest document is remarkable for both its technicalness and its vision of better world-wide action. It advocates the complex and global functions of widows and by-products to create an all-too-human ally with the united people. It prescriptions a celebration of social, unique nature, and rigorous social reform leading to the development of South Africa as never before.
+The short but convincing 38-page History of Pandemics in South Africa was probably written for a holiday or two Valley of Hy^derpas
+The Documents A-Z</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00014"><div class="lab">GENERATION 6</div><div class="txt">ation brings the story forward by identifying who was most responsible for the spread of the 2016 COVID-19 pandemic.
+To add further to the story, missionaries from many different places on Earth will contributed their experiences and insights. It will also discuss personal stories closely related to this pandemic. These personal stories will forward the darkness of Covid-19 to the light of the pandemic, thereby sports accessible navigation through different regions, viewing local public service, visiting schools, things that have yet to surfaces and other means.
+COVID-19 would have been treated differently from the other illnesses found in the last century. Tavo L. Williams, the southernmost point on Earth, would begin the outbreak of the pandemic through Tarpangko in Dumuzile District, which bears his name having been born in Manitoba.
+The outbreak of the 2016 COVID-19 had an unusual scope for health personnel; however, health managers aren’t accustomed to ethical questions related to how they assist their staff. The COVID-19 pandemic is one that brought many lives into the air. It is touching the world, destroying communities, resulting in death and sickness and results in animalisation. It affected countries like South Africa, where empathy was placed on fauna people, whose skin</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#16 · EN-P00015</span><span class="pre">prompt: Definition of &#x27;Insider Trading&#x27;
+The buying or selling of a security by someone</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00015"><div class="lab">GENERATION 3</div><div class="txt"> who is not authorised by that party.
+The investor is informed that her funds and assets will not trade in gold until she withdraws all her cash. (prohibits investor from making withdrawal unless they are told about it by the lender)
+When an investor makes all her cash that is expected to earn gold, she buys some gold and loses nothing, thereby becoming anInsider. (prohibiting investor to make withdrawal unless they are told about it by the lender).
+How do JCP Securities measure &#x27;Insider Trading Potential&#x27;
+The maximum trading potential, based on all financial options available to investors.
+The JCP Securities number is 000000, equivalent to &#x27;Insider Value&#x27; ( summation of current axe and change value).
+does not include the risk of losses in derivatives, short selling and the reverse trade on the spot, futures, options, short positions on &#x27;long&#x27; positions, forwards and catalytic swap transactions, trading abroad, constrained options, compliant derivative forwards, SPIF’s AS, MC,zf MT futures contracts, and Foreign exchange forwards.
+How do Cash Adders rate the calculation of &#x27;Insider Trading Potential&#x27;?
+The cash adders algorithm combined with the standard precautions investment calculation relies on the fundamental financial theory of diversification. ( asymmetric design)</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00015"><div class="lab">GENERATION 6</div><div class="txt"> intending to reap real estate rents or to gain capital.
+An speculative investor in the stock market, often with risks and potential losses; this category accounts for commodity investing.
+The principle of integration, which requires simpler computation; this means processing data, algorithms, or data to eliminate irrelevant information.
+It refers to all of the transactions and transactions made between two parties through the sale of shares or shares.
+The Level One Credit Beacon is a two-story residential tower.  The building consists of Infrared Radiation Management (IRilver) technology solutions for the building&#x27;s aerial and LED monitoring systems.  The equipment incorporates the CBS System, the first national integrated digital communications system when it was initially recommended in the early 1980s.
+A communications system established by some companies to communicate with the network of the internet in a desired area of an area.
+The technology is designed to supply digital signal networks for even the most complicated applications, such as broadcasting by audio devices or public Wi-Fi networks.
+It&#x27;s a Stevens Building. Also known as Enterprise Suite, which means the building was built without occupancy for the company. To name just a few startups up West Side Market Street.
+Terms &amp; Definitions
+Lane departure vehicles protect drivers from the unexpected.
+Mid portfolio ratio</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#17 · EN-P00016</span><span class="pre">prompt: There’s been a lot of talk over the last several years about the nutrition</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00016"><div class="lab">GENERATION 3</div><div class="txt"> quality of American students. A recent pilot study conducted by the Ohio State University showed that well-rounded students are four times as likely to have an unhealthy diet as non- OW. Furthermore, the figures demonstrate that participating in true Summer Schools (SS) programs improves readers’ nutrition and increases their will-power and creativity. Attending tournaments works wonders on students’ muscles response and is continuous throughout the year. One of the reasons for this is the maturity that can occur when practicing a skill within that you’ve learned to do over the years. If you’ve ever hunted a deer or scientist, you know that it’s like having a powder keg of survival. Our first Speak freely (Public Awareness and Leadership) next year will focus largely on these ways of life, but these days, I hope you will all hear the stories of the diverse forces that shape the way we make physical decisions by using all kinds of moral judgment.
+About Going Publicly, Who’s Who &amp; Other Aspects
+0-200 interest responses take their toll. I fall somewhere in between. As the small demographic of those who typically take part in public speaking shows a declining interest in their Master’s degree, and their current focus is on careers in research fields such as automotive and engineering. While some</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00016"><div class="lab">GENERATION 6</div><div class="txt"> crisis that’s sweeping the entire nation now.
+The Rural Opportunities Project and Partnership Program recently from 2017 into 2019 brought together 34 community food service providers and training and certification professionals to develop new food partnerships to help feed Chicago Southwest and southeast Chicago.
+Chicago Southwest Alliance is one of the program’s core innovations, introduced in 2017 and invested in 2019 to support community food service providers through the program’s grassroots marketing campaign.
+Grassroots marketing is a nationwide nationwide marketing technique that benefits community-owned food services.Targeted marketing results include special enrollment, pre-packaged refrigerated grocery shipments that match the food’s nutritional label, and same day brings in packages representing the individual.
+The pop culture around promotion of Chicago Southwest Initiative is about investment, innovation in collaboration with hard data and people-to-people.
+Grassroots initiative emphasizes the lesson that data is the best approach to success. Chicago Southwest Initiative fakes that conventional resources, such as consultants, logistics, and other tools, has produced the most money. They were happy to point out how much of the initiative’s model has improved throughout communities.
+Chicago Southwest has continued this work at different strategic levels. Circle for Children’s Safety</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#18 · EN-P00017</span><span class="pre">prompt: Qualex-Landmark is a real estate development group based in Vancouver, British</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00017"><div class="lab">GENERATION 3</div><div class="txt"> Columbia.  As a real estate developer, the group has completed approximately 100,000 units worth over 5M – including a half-block designation on Front Street of Xian, developing the Brooklyn Kowloon peninsula in nearby Wellesley Hills.
+
+History
+In November 1989, Canada News reported that a group of investors wanting to see enough sea bottom and bring in a studio next to the Lilywood public library shared plans to buy land on Front Street (which once had been listed on the National Register of Historic Places) for graduate school, a ballpark, station building, basketball court and even an underground parking garage. The plan was meant as a &quot;show business&quot; plan, and back in 1991 a group of London tradespeople, including Ken Flacke, started the first private pitch for real estate with the hopes of exchanging quarterly rent payments. All of these plans never materialised into anything concrete. It was long thought that the initial funding would come from lords of the city.
+
+A Campbell Street Office building was viewed as being a prime suspect, as a none-of-energy building. A anonymous group of people behind the building were attempting to sell residential property at the doomed Brighthouse College. Eventually, Dale Chatham bought the building and built a</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00017"><div class="lab">GENERATION 6</div><div class="txt"> Columbia. They are currently one of the most prominent residential investors in the region and have developed several extravagant multi-story residential and commercial towers, some of them dubbed &quot;seaview towers.&quot; The company was formed by Trekking Board founder, Tim Ellis, marketing director Sarah Lamock and Mary Hornig, who are currently a team of developer, architect, property developer, and architect.
+
+The company will start construction next year, with the Canada Excellence Research Chair Award for Public/Private Research being nominated in 2021 and wide spread applications ranging from 10-20 years to multiple building projects. 
+
+It is a Vancouver based project company through Triangle Street Partners.  The property permitting for product acquisition was granted by the Community Development Commission.
+
+Founded in 1966 by Ken Nelson and Jackie Lancaster, the company moved from 5045اعت connotations (also known as Renaud&#x27;s Torals) which is the only block type bearing Industrial sign, located at the waterfront near the company&#x27;s current site located at 613 Calgary street.
+
+Since its establishment in 1966, the company has achieved substantial residential growth and is nearing completion for the first tower. The headquarters of Trekking Board today lie on the Sedgwick River</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#19 · EN-P00018</span><span class="pre">prompt: Michael Vella is an Australian former professional rugby league footballer who played in the </span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00018"><div class="lab">GENERATION 3</div><div class="txt">1996 NRL season and the 2006 NRL season.
+
+Club career
+Vella&#x27;s first team career was with Hawkes Bay when they Wilderness Eagles and the Melbourne Storm premiership matchday sides. During his tenure at Sheffield Sepura, he won the Super League summit over the shuffle all-star roles at Bazett Biosynthesis, New Zealand in next season&#x27;s 2010 NRL season. He would play for the NRL side from 2010 to 2014 and from 2015 to 2016, playing for the WesternTribo Blues of the NRL in 2021. He would also play promotional cricket for the Australia Labor Party in Australia.
+
+In the 2023 NRL season, Vella was playing heading the way in the first round, and became the 100th Subway Anyone USA Citizen since the debut match of his club &#x27;Alexты&#x27; from 8 October 2023 and 434th Australian citizen since joining the club on the final day of the 2023 season.
+
+He served as referee for various matches in the 2023 NRL season and was chair for practice and formal Grand A matches from 1</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00018"><div class="lab">GENERATION 6</div><div class="txt">1990s, 2000s, 30s and 40s. National Rugby League, a game which featured players of most Australian sports teams, bought back the rights for Vella in up until 2001 and permits him to play in only Australian rugby league clubs, to date most basketball leagues.
+
+Vella is best known for his association with Bob Barbie. Barbie took over the Otago Wildcats as part of the Magpie roaries between the years 1992 and 1999, formerly the team playing in the Shield for Otago. Barbie&#x27;s release coincided with the change of name from Range Rovers to Magpie which was not seen as a relegation battle (not even North Otago). The Magpie was his main club although not the only one. He received an executive post at Otago to continue the auction process for his syndicate when his contract expired in Ocmaidana. When Vella received his syndicate he turned the    skipper race up amongst his syndicate. He impacted Vella&#x27;s final statement of intention to invest in Cup XIII. The Huddersfield Giants picked up his remaining syndicate after the Zim finished signprom, and the NZ funds closed with Vella announcing his sale to New Zealand Cricket for NZ money</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div><div class="p"><div class="ph"><span class="id">#20 · EN-P00019</span><span class="pre">prompt: Jonathan Shay (born 1941) is an American doctor and clinical</span></div>
+<div class="pair"><div class="s" data-g="3" data-sid="EN-P00019"><div class="lab">GENERATION 3</div><div class="txt"> psychologist known for his discovery of the neurobiology and etiology of Parkinson’s disease and the role of aging inAlzheimer’s disease. Other criticisms include his work being controversial in politics, particularly the struggle of James longhorn for the first chairman of the Senate Veterans’ Group, which was fried by Martin Luther King for pro-Israel marches.
+ pathogenesis of Parkinson’s disease.讧icolosulmonary diseases, Parkinson’s
+Paraprophropathy. View of the conventional, elite chronic
+type of Parkinson’s disease in which a gray matter
+chanencephalic brain lesion is projected to attach itself to the lymph-forming
+organism is incorporated into a weak and disorganized
+vessel of aging postoperaneous in the brain.
+Top ten causes of Parkinson’s disease in Western countries.
+Vocal and Non-verbal Diagnosis. View the contrast viewed
+by people who know what an accident can look like.
+Treatment Chemical Description. The procedure for
+Treatment Chemical Description of Parkinson’s Disease.
+clay, barium to aid in
+
+forward planning.
+Magnetic resonance imaging. Performing an MRI
+is easier and more comfortable and is used by many elderly patients. On Monday
+the initial scan is placed on the seat of the patient at his pocket, on the area
+</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div>
+<div class="s" data-g="6" data-sid="EN-P00019"><div class="lab">GENERATION 6</div><div class="txt"> associate professor of pediatrics at Vermont General Hospital in Burlington. He is a member of the American Academy of Health Sciences. Veterans compensation agency Veterans Net will soon replace the National Amheim Child Protection War Memorial as the new site for pricing alcohol.
+
+Education
+Salt Lake City Academy
+Harvard University
+Yale University and Johns Hopkins Hospital
+
+Career
+After receiving his doctorate in public health in 1970 from Harvard University School of Medicine in Massachusetts, Shay held the position of associate professor of pediatrics at Vermont General Hospital from 1979 until 1981.
+
+In January 2024, Shay was elected administrator by the Association of Pediatric Surgeons (APPS) to become the first woman to hold this post, following Charles Panick. He was also co-president of the International Pediatric Society.
+
+Other appointments 
+
+Bonn (Mar) Hospital Center for the Arts. Health Sciences were assistant to Elenia Morse and Fitz farther.
+
+Japan  
+In 1992 he was assigned to the task as Jumei Uesugi (the fourth Plenary Meeting on Jewish Psychology). That same year he was offered a trial run with physicians at Natchi Hospital Princeoku,  the firstGP treating adolescents in Japan and was named by Tokyo Health</div><div class="ctl"><label>fluency <select class="fl"><option value="">–</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></label><input type="text" class="nt" placeholder="note (optional)"></div></div></div></div></fieldset>
+<h2>Your reply</h2><textarea id="reply" readonly></textarea></main>
+<div class="bar"><button id="copy">Copy reply</button><button class="sec" id="export">Export progress</button><label class="btn">Import progress<input type="file" id="import" accept=".json,application/json" hidden></label><button class="sec" data-dl="3">Download CSV gen 3</button><button class="sec" data-dl="6">Download CSV gen 6</button><span id="saved" class="sub" style="margin:0"></span><span id="count" class="sub" style="margin:0"></span></div>
+<script>
+const KEYBASE = "cg4-g5-fluency-EN-ACCUMULATE-FILTER-v1", PAGE = {"title": "EN-ACCUMULATE-FILTER fluency (optional)", "sheet": "G5_fluency_EN-ACCUMULATE-FILTER_2026-10-17.html", "lang": "EN", "mode": "fluency", "files": [{"g": 3, "label": "EN-ACCUMULATE-FILTER_gen3_fluency", "path": "results/samples/EN-ACCUMULATE-FILTER_gen3_50.jsonl", "sha": "dea84c31888e60d0"}, {"g": 6, "label": "EN-ACCUMULATE-FILTER_gen6_fluency", "path": "results/samples/EN-ACCUMULATE-FILTER_gen6_50.jsonl", "sha": "03e2513eed08874d"}]};
+const blocks = [...document.querySelectorAll(".s")];
+const nameEl = document.getElementById("reader"), all = document.getElementById("all");
+let reader = "", state = {};
+const key = () => KEYBASE + "|" + reader.trim().toLowerCase();
+function load() { try { return JSON.parse(localStorage.getItem(key()) || "{}"); } catch (e) { return {}; } }
+function save() { try { localStorage.setItem(key(), JSON.stringify(state)); localStorage.setItem(KEYBASE + "|last", reader); } catch (e) {} }
+function fields(b) { const q = c => b.querySelector(c); return { se: q(".se"), ei: q(".ei"), nw: q(".nw"), rl: q(".rl"), td: q(".td"), fl: q(".fl"), nt: q(".nt") }; }
+function sid(b) { return b.dataset.g + "|" + b.dataset.sid; }
+function isDone(b, v) { return PAGE.mode === "fluency" ? (v.fl || "") !== "" : (v.nw ?? "") !== ""; }
+function apply() {
+  for (const b of blocks) {
+    const f = fields(b), v = state[sid(b)] || {};
+    for (const k of ["se", "ei", "rl", "td"]) if (f[k]) f[k].checked = !!v[k];
+    if (f.nw) f.nw.value = v.nw ?? ""; if (f.fl) f.fl.value = v.fl ?? ""; if (f.nt) f.nt.value = v.nt ?? "";
+    b.classList.toggle("done", isDone(b, v));
+  }
+  render();
+}
+function read(b) {
+  const f = fields(b), v = {};
+  for (const k of ["se", "ei", "rl", "td"]) if (f[k]) v[k] = f[k].checked;
+  if (f.nw) v.nw = f.nw.value.trim(); if (f.fl) v.fl = f.fl.value; if (f.nt) v.nt = f.nt.value;
+  return v;
+}
+for (const b of blocks) {
+  const upd = () => { if (!reader.trim()) return; const v = read(b); state[sid(b)] = v; b.classList.toggle("done", isDone(b, v)); save(); render(); };
+  b.querySelectorAll("input, select").forEach(el => { el.addEventListener("change", upd); el.addEventListener("input", upd); });
+}
+function setReader(v) { reader = v; all.disabled = !reader.trim(); state = reader.trim() ? load() : {}; apply(); }
+nameEl.addEventListener("input", () => setReader(nameEl.value));
+try { const last = localStorage.getItem(KEYBASE + "|last"); if (last) nameEl.value = last; } catch (e) {}
+const q = s => /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+const b01 = x => x ? "1" : "0";
+function csv(g) {
+  const rows = blocks.filter(b => b.dataset.g === String(g));
+  const out = [PAGE.mode === "fluency" ? "sample_id,fluency_1to5,note" : "sample_id,script_error,english_intrusion,nonwords,repetition_loop,topic_drift,fluency_1to5,note"];
+  let done = 0;
+  for (const b of rows) {
+    const v = state[sid(b)] || {}, d = isDone(b, v); if (d) done++;
+    if (PAGE.mode === "fluency") { out.push([b.dataset.sid, d ? v.fl : "", q(v.nt || "")].join(",")); continue; }
+    out.push(d ? [b.dataset.sid, b01(v.se), PAGE.lang === "BN" ? b01(v.ei) : "", v.nw, b01(v.rl), b01(v.td), v.fl || "", q(v.nt || "")].join(",")
+               : [b.dataset.sid, "", "", "", "", "", "", q(v.nt || "")].join(","));
+  }
+  return { text: out.join("\n"), done, n: rows.length };
+}
+function render() {
+  const parts = [`G5 read, ${PAGE.title} (${PAGE.sheet}), reader: ${reader.trim() || "(no name)"}, ${new Date().toISOString().slice(0, 16)}Z`];
+  const counts = [];
+  for (const f of PAGE.files) {
+    const c = csv(f.g); counts.push(`gen ${f.g}: ${c.done} of ${c.n}`);
+    parts.push(`## ${f.label} | ${f.path} sha256 ${f.sha} | coded ${c.done} of ${c.n}`, c.text);
+  }
+  document.getElementById("reply").value = parts.join("\n");
+  document.getElementById("count").textContent = reader.trim() ? `${reader.trim()}: coded ${counts.join(", ")}` : "enter your name at the top to start";
+}
+function download(g) {
+  const f = PAGE.files.find(x => x.g === g), c = csv(g);
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([c.text + "\n"], { type: "text/csv;charset=utf-8" }));
+  a.download = `${f.label}_${(reader.trim() || "reader").replace(/[^A-Za-z0-9]+/g, "_")}.csv`; a.click();
+}
+const safe = s => (s || "reader").trim().replace(/[^A-Za-z0-9]+/g, "_");
+function exportData() {
+  const coded = {};
+  for (const f of PAGE.files) { const c = csv(f.g); coded["gen" + f.g] = `${c.done} of ${c.n}`; }
+  return { format: "cg4-g5-progress-v1", sheet: PAGE.sheet, keybase: KEYBASE, title: PAGE.title, reader: reader.trim(),
+           saved_at: new Date().toISOString(), files: PAGE.files, coded, answers: state };
+}
+function applyImport(d) {
+  if (!d || d.format !== "cg4-g5-progress-v1") return "This is not a G5 progress file.";
+  if (d.keybase !== KEYBASE) return `This progress file belongs to ${d.title || d.sheet || "another page"}, not to ${PAGE.title}. Open that page and import it there.`;
+  if (!d.reader || !String(d.reader).trim()) return "The file has no reader name.";
+  const changed = PAGE.files.filter(f => !(d.files || []).some(x => x.g === f.g && x.sha === f.sha));
+  if (changed.length && !confirm("The sample files of this page differ from the ones in the progress file. Import anyway?")) return "Import cancelled.";
+  const known = new Set(blocks.map(sid)), answers = {};
+  let n = 0;
+  for (const [k, v] of Object.entries(d.answers || {})) if (known.has(k) && v && typeof v === "object") { answers[k] = v; n++; }
+  reader = String(d.reader).trim(); nameEl.value = reader;
+  const existing = load();
+  if (Object.keys(existing).length && JSON.stringify(existing) !== JSON.stringify(answers) &&
+      !confirm(`${reader} already has answers for this page in this browser. Replace them with the ${n} answers from the file (saved ${d.saved_at || "?"})?`)) {
+    setReader(reader); return "Import cancelled; the answers already in this browser were kept.";
+  }
+  state = answers; all.disabled = false; save(); apply();
+  return `Imported ${n} answers for ${reader} (saved ${d.saved_at || "?"}).`;
+}
+document.getElementById("copy").addEventListener("click", async () => {
+  const t = document.getElementById("reply"); t.select();
+  try { await navigator.clipboard.writeText(t.value); } catch (e) { document.execCommand("copy"); }
+});
+document.querySelectorAll("button[data-dl]").forEach(btn => btn.addEventListener("click", () => download(Number(btn.dataset.dl))));
+document.getElementById("export").addEventListener("click", () => {
+  if (!reader.trim()) { alert("Enter your name at the top first."); return; }
+  const a = document.createElement("a"), stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(exportData(), null, 1)], { type: "application/json" }));
+  a.download = `${PAGE.sheet.replace(/\.html$/, "")}_${safe(reader)}_progress_${stamp}.json`; a.click();
+  document.getElementById("saved").textContent = "exported at " + new Date().toLocaleTimeString();
+});
+document.getElementById("import").addEventListener("change", ev => {
+  const file = ev.target.files[0]; if (!file) return;
+  const r = new FileReader();
+  r.onload = () => { let d; try { d = JSON.parse(r.result); } catch (e) { alert("This file is not a JSON file."); ev.target.value = ""; return; }
+                     alert(applyImport(d)); ev.target.value = ""; };
+  r.readAsText(file);
+});
+setReader(nameEl.value);
+</script></body></html>

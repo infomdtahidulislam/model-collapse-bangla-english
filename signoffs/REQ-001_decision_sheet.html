@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CG4 Gate 0 decision sheet</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1b1b1b; --muted:#5a5a5a; --line:#d9d9d9; --accent:#1f5f8b; --soft:#f3f6f9; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141618; --fg:#e8e8e8; --muted:#a8a8a8; --line:#333; --accent:#7fb3d9; --soft:#1e2226; } }
+  :root[data-theme="dark"] { --bg:#141618; --fg:#e8e8e8; --muted:#a8a8a8; --line:#333; --accent:#7fb3d9; --soft:#1e2226; }
+  body { background:var(--bg); color:var(--fg); font:15px/1.5 system-ui, "Segoe UI", "Noto Sans Bengali", "Nirmala UI", sans-serif; margin:0; padding:24px 16px; }
+  main { max-width: 980px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; } h2 { font-size: 1.15rem; margin: 28px 0 8px; color: var(--accent); }
+  p.sub { color: var(--muted); margin: 0 0 16px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; } th, td { border: 1px solid var(--line); padding: 6px 8px; vertical-align: top; text-align: left; }
+  th { background: var(--soft); } td.k { white-space: nowrap; width: 12%; } code { background: var(--soft); padding: 1px 4px; border-radius: 3px; font-size: 0.92em; }
+  .bn { font-size: 1.1em; } .note { color: var(--muted); font-size: 0.93em; }
+  .gpu { color: #b3261e; font-weight: 600; } .cpu { color: #2e7d32; font-weight: 600; } .pc { color: var(--muted); font-weight: 600; }
+  @media (max-width: 640px) { table, thead, tbody, tr, th, td { display: block; } th { display: none; } td { border: none; border-bottom: 1px solid var(--line); } td.k { width: auto; font-weight: 600; } tr { margin-bottom: 10px; border: 1px solid var(--line); } }
+</style>
+</head>
+<body>
+<main>
+<h1>CG4 Gate 0 decision sheet</h1>
+<p class="sub">Everything the two authors must decide before anything is rented. Source files are named per row; the agent fills in your answers in <code>signoffs/REQUESTS.md</code>. Prepared 2026-10-12 after the six-seat design review (<code>logs/design_review_2026-10-12/editorial_decision.md</code>).</p>
+
+<h2>REQ-001: nine design decisions (reply ok / change per item)</h2>
+<table>
+<thead><tr><th>#</th><th>Decision</th><th>Where it lives</th><th>Default if you say ok</th></tr></thead>
+<tbody>
+<tr><td class="k">1</td><td><strong>Claim scope and title.</strong> Proposed title: <em>Does iterative self-training degrade a small multilingual language model faster in Bangla than in English? A pre-registered model-collapse study with Gemma-3-270m.</em> "Low-resource" is defined operationally (lower pretraining share, higher tokenizer fertility, smaller curated web presence) and the claim is about this model–tokenizer–corpus–language tuple, not Bangla as such.</td><td><code>01_PREREGISTRATION.md</code>, "Scope of the claim"</td><td>single-language-pair, single-model claim</td></tr>
+<tr><td class="k">2</td><td><strong>Prefix handling.</strong> Each synthetic document starts with a real 12-word prefix. Default: the prefix is fed as context but excluded from the training loss (<code>masked</code>). Alternative the panel also accepts: <code>dropped</code> (train on the generated continuation alone).</td><td><code>configs/chains.yaml</code> → <code>training.prefix_mode</code>; <code>03_MODELS_AND_TRAINING.md</code> §2</td><td>masked</td></tr>
+<tr><td class="k">3</td><td><strong>Document lengths matched in words</strong> (12-word prefix, up to 190 generated words), converted to per-language token counts at Gate 1, instead of 16 / 256 tokens for both languages (Bangla gets more tokens for the same text).</td><td><code>configs/chains.yaml</code> → <code>length_unit, prefix_words, max_new_words</code>; <code>02_DATA_SOURCES.md</code> §5</td><td>words</td></tr>
+<tr><td class="k">4</td><td><strong>Robustness chains and their fixed order</strong>, run after the six confirmatory chains until the cap is reached: (1) second-seed REPLACE pair, (2) English REPLACE at the Bangla word-matched budget, (3) no-synthetic REAL-REPEAT control pair, (4) REPLACE pair continued to generation 10, (5) third-seed pair, (6) compute-matched ACCUMULATE-SUBSAMPLE pair, (7) top-p 0.95 REPLACE pair. Whatever the cap does not reach is reported as "not run".</td><td><code>configs/chains.yaml</code> → <code>robustness_chains</code>; <code>01_PREREGISTRATION.md</code>, "Design"; <code>04_RUN_PLAN.md</code> §3</td><td>order 1–7 as listed</td></tr>
+<tr><td class="k">5</td><td><strong>Scoped out</strong> (no result will be claimed): byte-level tokenizer condition (old H3), code-mixed chain, other languages or resource tiers, larger models, re-initialising from the base model each generation, temperatures other than 1.</td><td><code>01_PREREGISTRATION.md</code>, "Scoped out"</td><td>scoped out</td></tr>
+<tr><td class="k">6</td><td><strong>H2 as a ratio and the decision rule.</strong> H2 compares the <em>relative</em> benefit of accumulation per language, so it is not implied by H1. Results are "supported", "not supported" or "inconclusive"; "supported" needs the predicted sign on all three primary metrics and the same sign across seeds where replicates exist.</td><td><code>01_PREREGISTRATION.md</code>, "Hypotheses" and "Analysis plan and inference"; <code>07_ANALYSIS_PLAN.md</code></td><td>ratio + three-way rule</td></tr>
+<tr><td class="k">7</td><td><strong>Bangla cloze templates</strong> rewritten so the object slot is bare (no case suffix). Please read them as native speakers and correct anything unnatural:<br>
+<span class="bn">P36 capital: {S}-এর রাজধানী হল {O}।</span><br>
+<span class="bn">P17 country: {S} {O} দেশে অবস্থিত।</span><br>
+<span class="bn">P19 birthplace: {S}-এর জন্মস্থান {O}।</span><br>
+<span class="bn">P106 occupation: {S}-এর পেশা {O}।</span><br>
+English: "The capital of {S} is {O}.", "{S} is located in the country of {O}.", "The birthplace of {S} is {O}.", "The occupation of {S} is {O}."</td><td><code>configs/corpora.yaml</code> → <code>probes.relations</code>; <code>02_DATA_SOURCES.md</code> §3</td><td>templates as shown</td></tr>
+<tr><td class="k">8</td><td><strong>Publication venue.</strong> A writing matter, not a study decision; not recorded here.</td><td></td><td></td></tr>
+<tr><td class="k">9</td><td><strong>BanStereoSet licence</strong> is unstated in its repository (Bangla bias probe). Options: use it as research data, e-mail its authors, or swap to another public Bangla bias set.</td><td><code>configs/corpora.yaml</code> → <code>BN.bias_pairs</code>; <code>02_DATA_SOURCES.md</code> §4</td><td>none: you must choose</td></tr>
+</tbody>
+</table>
+<p class="note">Also pending: REQ-002 (cap option A US$25/55 h, B US$30/70 h recommended, C US$34/84 h, and loading the Vast.ai balance) and REQ-003 (the Gate 0 sign-off itself: pre-registration tag, department notice, authorship). The full reviewer reports are in <code>logs/design_review_2026-10-12/</code>.</p>
+
+<h2>Which steps need the rented GPU</h2>
+<p>The instance bills by the hour from creation to deletion (about US$0.40/h), whether the GPU is busy or idle. Steps marked <span class="gpu">GPU</span> are the compute; <span class="cpu">host, CPU</span> steps run on the rented machine but use little GPU; <span class="pc">PC</span> steps cost nothing. Exact commands: <code>12_VASTAI_RUNBOOK.md</code>.</p>
+<table>
+<thead><tr><th>Order</th><th>Step</th><th>Runs where</th><th>Time / cost (pre-pilot estimates)</th><th>Gate</th></tr></thead>
+<tbody>
+<tr><td class="k">1</td><td>Preflight, sanity tests, budget ladder, run plan, gap re-check, Gate 0 requests</td><td class="pc">PC</td><td>done; no cost</td><td>G0 (you)</td></tr>
+<tr><td class="k">2</td><td>Rent the RTX 4090 host (200 GB disk), push code and <code>.env</code>, bootstrap (installs vLLM, transformers, logs in to Hugging Face)</td><td class="cpu">host, CPU</td><td>≈ 10 min</td><td>after G0</td></tr>
+<tr><td class="k">3</td><td>Fetch sources, build the two seed corpora, held-out sets, prefixes, probe sets and spot-check CSVs</td><td class="cpu">host, CPU</td><td>≈ 1–1.5 h ≈ US$0.50</td><td>G1 evidence (you spot-check 60+60 probes)</td></tr>
+<tr><td class="k">4</td><td>Base-model metrics for both languages (generation −1)</td><td class="gpu">GPU</td><td>≈ 5 min per language</td><td>G2 evidence</td></tr>
+<tr><td class="k">5</td><td>Generation-0 training on the real seed corpus, both languages, plus their samples and metrics</td><td class="gpu">GPU</td><td>≈ 15–25 min per language</td><td>G2 (you judge the validation)</td></tr>
+<tr><td class="k">6</td><td>Pilot: one REPLACE step per language; measured step times replace the estimates</td><td class="gpu">GPU</td><td>≈ 30–40 min per language</td><td>G3 (you read 50 samples each, approve the phases the cap allows)</td></tr>
+<tr><td class="k">7</td><td>Six confirmatory chains to generation 6 (36 steps)</td><td class="gpu">GPU</td><td>≈ 35 GPU-h cumulative ≈ US$14</td><td>G4 evidence</td></tr>
+<tr><td class="k">8</td><td>Robustness phases in the pre-registered order, until the cap</td><td class="gpu">GPU</td><td>41 → 43 → 46 → 49 → 55 → 61 → 66 GPU-h cumulative</td><td>G4 evidence</td></tr>
+<tr><td class="k">9</td><td>Pack the archive (all checkpoints, corpora, samples, score files), pull it to the PC, verify hashes, re-run the analysis from the download, file the teardown request</td><td class="cpu">host, CPU + network</td><td>≈ 1–2 h (45–70 GB download)</td><td>G4b (you delete the instance)</td></tr>
+<tr><td class="k">10</td><td>Human read of samples, analysis, robustness tables, manuscript</td><td class="pc">PC</td><td>no cost</td><td>G5–G7</td></tr>
+</tbody>
+</table>
+<p class="note">While the instance exists and a gate is waiting for you (G1, G2, G3), idle time still bills. Answer those within a day or tell the agent to stop the instance; the agent also stops it on its own if the expected wait exceeds 24 h.</p>
+</main>
+</body>
+</html>

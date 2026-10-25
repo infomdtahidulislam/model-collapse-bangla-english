@@ -1,0 +1,131 @@
+{
+ "created_at": "2026-10-13T17:44:26+00:00",
+ "tokenizer": "hf:google/gemma-3-270m",
+ "budget_tokens": 10000000,
+ "languages": {
+  "EN": {
+   "seed_docs": 17509,
+   "seed_tokens": 10000387,
+   "seed_bytes": 44689271,
+   "seed_words": 7314331,
+   "seed_chars": 44505956,
+   "words_per_token": 0.7314,
+   "bytes_per_token": 4.4688,
+   "chars_per_token": 4.4504,
+   "prefix_tokens": 16,
+   "max_new_tokens": 260,
+   "length_unit": "words",
+   "doc_length_percentiles": {
+    "tokens": {
+     "5": 95.0,
+     "25": 257.0,
+     "50": 518.0,
+     "75": 999.0,
+     "95": 1024.0
+    },
+    "words": {
+     "5": 57.0,
+     "25": 175.0,
+     "50": 372.0,
+     "75": 683.0,
+     "95": 832.0
+    },
+    "bytes": {
+     "5": 370.0,
+     "25": 1092.0,
+     "50": 2283.0,
+     "75": 4115.0,
+     "95": 5078.0
+    }
+   },
+   "near_dup_removed": {
+    "encyclopaedic": 317,
+    "web": 1
+   },
+   "heldout_docs": 2500,
+   "heldout_regular_docs": 2000,
+   "fresh_docs": 500,
+   "fresh_dropped_as_near_dup": 0,
+   "prefixes": 10000,
+   "sources": [
+    {
+     "name": "enwiki",
+     "licence": "CC BY-SA 4.0",
+     "domain": "encyclopaedic"
+    },
+    {
+     "name": "en_web",
+     "licence": "ODC-By 1.0",
+     "domain": "web"
+    }
+   ],
+   "sha256": {
+    "seed": "ca73a1b32f2194de88c90cb98a547fd37f152c9e8146c9d93a696afe1ef071bc",
+    "heldout": "78ce31f01ca65f4ff44b3ef71c79a556c3ac072629f54011b034cbdb35c0fd18",
+    "prefixes": "c1bb8bde6c3e0cf616343e293d1976fd6ba26ad54bc5367ee3705548ce3249ab"
+   }
+  },
+  "BN": {
+   "seed_docs": 20913,
+   "seed_tokens": 10001024,
+   "seed_bytes": 99809119,
+   "seed_words": 5625959,
+   "seed_chars": 37498590,
+   "words_per_token": 0.5625,
+   "bytes_per_token": 9.9799,
+   "chars_per_token": 3.7495,
+   "prefix_tokens": 21,
+   "max_new_tokens": 338,
+   "length_unit": "words",
+   "doc_length_percentiles": {
+    "tokens": {
+     "5": 110.0,
+     "25": 215.0,
+     "50": 378.0,
+     "75": 706.0,
+     "95": 1024.0
+    },
+    "words": {
+     "5": 58.0,
+     "25": 120.0,
+     "50": 217.0,
+     "75": 394.0,
+     "95": 606.0
+    },
+    "bytes": {
+     "5": 1069.0,
+     "25": 2180.0,
+     "50": 3859.0,
+     "75": 7046.0,
+     "95": 10612.0
+    }
+   },
+   "near_dup_removed": {
+    "encyclopaedic": 1714,
+    "web": 5
+   },
+   "heldout_docs": 2499,
+   "heldout_regular_docs": 2000,
+   "fresh_docs": 499,
+   "fresh_dropped_as_near_dup": 0,
+   "prefixes": 10000,
+   "sources": [
+    {
+     "name": "bnwiki",
+     "licence": "CC BY-SA 4.0",
+     "domain": "encyclopaedic"
+    },
+    {
+     "name": "bn_web",
+     "licence": "CC BY 4.0",
+     "domain": "web"
+    }
+   ],
+   "sha256": {
+    "seed": "f686c5c34943fe3a65085d879682d1d538270bafff7de0bd07260b1ee106e3d9",
+    "heldout": "ec86d2078aec15b9c221f210385d6402719e600e8cedf7afd3d546d8f6e5196e",
+    "prefixes": "dbf1f3bf5c69cfc579380aad9f577581071d0d807f70b598b45a34f838d8fcb6"
+   }
+  }
+ }
+}

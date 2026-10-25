@@ -1,0 +1,426 @@
+[
+ {
+  "l": "Ontario",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Ottawa",
+  "c": "http://www.wikidata.org/entity/Q258"
+ },
+ {
+  "l": "Oakthorpe",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Piedra Ancha",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Ormož",
+  "c": "http://www.wikidata.org/entity/Q215"
+ },
+ {
+  "l": "Orrell",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q889"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q1036"
+ },
+ {
+  "l": "Newmarket",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Newmarket",
+  "c": "http://www.wikidata.org/entity/Q27"
+ },
+ {
+  "l": "Newmarket",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Oxfordshire",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Norfolk",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q1044"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Orestias",
+  "c": "http://www.wikidata.org/entity/Q43"
+ },
+ {
+  "l": "Orestias",
+  "c": "http://www.wikidata.org/entity/Q41"
+ },
+ {
+  "l": "Orestias",
+  "c": "http://www.wikidata.org/entity/Q41741"
+ },
+ {
+  "l": "Offa",
+  "c": "http://www.wikidata.org/entity/Q1036"
+ },
+ {
+  "l": "Peru",
+  "c": "http://www.wikidata.org/entity/Q794"
+ },
+ {
+  "l": "Peru",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Niagara Falls",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Oshawa",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Norfolk",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q664"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Offa",
+  "c": "http://www.wikidata.org/entity/Q1033"
+ },
+ {
+  "l": "Peru",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Ottawa",
+  "c": "http://www.wikidata.org/entity/Q1008"
+ },
+ {
+  "l": "Old City of Jerusalem",
+  "c": "http://www.wikidata.org/entity/Q801"
+ },
+ {
+  "l": "Old City of Jerusalem",
+  "c": "http://www.wikidata.org/entity/Q810"
+ },
+ {
+  "l": "Old City of Jerusalem",
+  "c": "http://www.wikidata.org/entity/Q12560"
+ },
+ {
+  "l": "Old City of Jerusalem",
+  "c": "http://www.wikidata.org/entity/Q55502"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q43"
+ },
+ {
+  "l": "Norfolk",
+  "c": "http://www.wikidata.org/entity/Q664"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q414"
+ },
+ {
+  "l": "Old City of Jerusalem",
+  "c": "http://www.wikidata.org/entity/Q180114"
+ },
+ {
+  "l": "Old City of Jerusalem",
+  "c": "http://www.wikidata.org/entity/Q193714"
+ },
+ {
+  "l": "Old City of Jerusalem",
+  "c": "http://www.wikidata.org/entity/Q219060"
+ },
+ {
+  "l": "Peru",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Ontario",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Ottawa",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Newmarket",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Norfolk",
+  "c": "http://www.wikidata.org/entity/Q55"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Nova Scotia",
+  "c": "http://www.wikidata.org/entity/Q8680"
+ },
+ {
+  "l": "Ottawa",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Newfoundland and Labrador",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Northumberland",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Northwest Territories",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Nova Scotia",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Nunavut",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Niagara Falls",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Oshawa",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Northern Ireland",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Ogmore Valley",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q27"
+ },
+ {
+  "l": "North Yorkshire",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Pasco Department",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q334"
+ },
+ {
+  "l": "Offa",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Panteg",
+  "c": "http://www.wikidata.org/entity/Q25"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q25"
+ },
+ {
+  "l": "Northumberland",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Pant",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Oakthorpe",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Oxfordshire",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Norfolk",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Ockbrook",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Offerton Park",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q174193"
+ },
+ {
+  "l": "Newton",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Northumberland",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Olveston",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Northamptonshire",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Nuthall",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Panteg",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Nottinghamshire",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q794"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Outwoods",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Newmarket",
+  "c": "http://www.wikidata.org/entity/Q664"
+ },
+ {
+  "l": "Newmarket",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Oxfordshire",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Norfolk",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Nutfield",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Nutfield",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Northumberland",
+  "c": "http://www.wikidata.org/entity/Q161885"
+ },
+ {
+  "l": "Northumberland",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Northamptonshire",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Nottinghamshire",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Northumberland",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Nutfield",
+  "c": "http://www.wikidata.org/entity/Q27"
+ },
+ {
+  "l": "Offa",
+  "c": "http://www.wikidata.org/entity/Q1008"
+ },
+ {
+  "l": "Nova Scotia",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Peru",
+  "c": "http://www.wikidata.org/entity/Q27"
+ },
+ {
+  "l": "Oswestry Rural",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Odd Rode",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Ormesby St Margaret with Scratby",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Park",
+  "c": "http://www.wikidata.org/entity/Q55"
+ },
+ {
+  "l": "Niwari district",
+  "c": "http://www.wikidata.org/entity/Q668"
+ }
+]

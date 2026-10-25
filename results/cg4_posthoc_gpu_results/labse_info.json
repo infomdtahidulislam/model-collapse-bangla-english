@@ -1,0 +1,21 @@
+{
+ "dispersion": "(ix) formula of harness/tools/semantic_dispersion.py; sentence-transformers/LaBSE@836121a0533e5664b21c7aacc5d22951f2b8b25b, max_seq_length 256, device cpu",
+ "torch": "2.14.1+cpu",
+ "sentence_transformers": "6.1.0",
+ "empty_texts_in_sets": {
+  "results/chains/GEN0-EN/sample.jsonl": 0,
+  "results/chains/EN-REPLACE/gen_6/sample.jsonl": 0,
+  "results/chains/GEN0-BN/sample.jsonl": 0,
+  "results/chains/BN-REPLACE/gen_6/sample.jsonl": 0,
+  "results/chains/BN-ACCUMULATE-FILTER/gen_3/sample.jsonl": 0,
+  "results/chains/BN-ACCUMULATE-FILTER/gen_6/sample.jsonl": 0,
+  "results/chains/BN-ACCUMULATE/gen_3/sample.jsonl": 0,
+  "results/chains/BN-ACCUMULATE/gen_6/sample.jsonl": 0,
+  "results/chains/BN-REPLACE/gen_3/sample.jsonl": 0,
+  "results/chains/EN-ACCUMULATE-FILTER/gen_3/sample.jsonl": 0,
+  "results/chains/EN-ACCUMULATE-FILTER/gen_6/sample.jsonl": 0,
+  "results/chains/EN-ACCUMULATE/gen_3/sample.jsonl": 0,
+  "results/chains/EN-ACCUMULATE/gen_6/sample.jsonl": 0,
+  "results/chains/EN-REPLACE/gen_3/sample.jsonl": 0
+ }
+}

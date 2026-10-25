@@ -1,0 +1,13 @@
+language,seed,quantity,n_prefixes,point,ci_lo,ci_hi
+EN,0,"slope EN-REPLACE, eval top-p 1.0",50,0.2518819816,0.1893786463,0.3112137402
+EN,0,"slope EN-REPLACE, eval top-p 0.95",50,0.2239024483,0.1773757307,0.2707080990
+EN,0,"slope EN-REPLACE-topp95, eval top-p 1.0",50,-0.2306680763,-0.2774402313,-0.1862656605
+EN,0,"slope EN-REPLACE-topp95, eval top-p 0.95",50,-0.1611459794,-0.1883698182,-0.1352463479
+EN,0,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",50,0.4825500580,0.4136807950,0.5474743620
+EN,0,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",50,0.3850484277,0.3321811187,0.4369197484
+BN,0,"slope BN-REPLACE, eval top-p 1.0",50,0.1547667664,0.1169230744,0.1973441592
+BN,0,"slope BN-REPLACE, eval top-p 0.95",50,0.1775844325,0.1437489856,0.2132060397
+BN,0,"slope BN-REPLACE-topp95, eval top-p 1.0",50,-0.2755320507,-0.3302927260,-0.2212719726
+BN,0,"slope BN-REPLACE-topp95, eval top-p 0.95",50,-0.2557839348,-0.3063105542,-0.2058549573
+BN,0,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",50,0.4302988170,0.3647962359,0.4962605319
+BN,0,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",50,0.4333683673,0.3763175086,0.4908629008

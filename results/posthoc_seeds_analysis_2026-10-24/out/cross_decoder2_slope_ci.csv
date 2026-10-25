@@ -1,0 +1,41 @@
+language,seed,quantity,n_prefixes,point,ci_lo,ci_hi
+EN,0,"slope EN-REPLACE, eval top-p 1.0",200,0.3089824099,0.2802419931,0.3379616286
+EN,0,"slope EN-REPLACE, eval top-p 0.95",200,0.2585914716,0.2368148534,0.2797717536
+EN,0,"slope EN-REPLACE-topp95, eval top-p 1.0",200,-0.2352282506,-0.2550374466,-0.2158213623
+EN,0,"slope EN-REPLACE-topp95, eval top-p 0.95",200,-0.1739094919,-0.1937985256,-0.1534948272
+EN,2,"slope EN-REPLACE-s2, eval top-p 1.0",200,0.2465879952,0.2172266757,0.2758365080
+EN,2,"slope EN-REPLACE-s2, eval top-p 0.95",200,0.2164192500,0.1930700010,0.2394619965
+EN,2,"slope EN-REPLACE-topp95-s2, eval top-p 1.0",200,-0.2415604723,-0.2610706976,-0.2230358739
+EN,2,"slope EN-REPLACE-topp95-s2, eval top-p 0.95",200,-0.1844256958,-0.2026277761,-0.1666607924
+EN,3,"slope EN-REPLACE-s3, eval top-p 1.0",200,0.2768669496,0.2491717112,0.3052443908
+EN,3,"slope EN-REPLACE-s3, eval top-p 0.95",200,0.2307714457,0.2118966085,0.2498444536
+EN,3,"slope EN-REPLACE-topp95-s3, eval top-p 1.0",200,-0.2222287596,-0.2431233888,-0.2017606438
+EN,3,"slope EN-REPLACE-topp95-s3, eval top-p 0.95",200,-0.1713308285,-0.1945291167,-0.1453295427
+EN,0,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",200,0.5442106606,0.5104271917,0.5777087368
+EN,2,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",200,0.4881484676,0.4546660496,0.5222943630
+EN,3,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",200,0.4990957093,0.4689091575,0.5292379000
+EN,"mean of 0,2,3","training-decoder contrast, mean over seeds, eval top-p 1.0",200,0.5104849458,0.4919298481,0.5289250502
+EN,0,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",200,0.4325009636,0.4032629101,0.4612810717
+EN,2,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",200,0.4008449458,0.3718261014,0.4310002297
+EN,3,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",200,0.4021022742,0.3703487326,0.4324608756
+EN,"mean of 0,2,3","training-decoder contrast, mean over seeds, eval top-p 0.95",200,0.4118160612,0.3922768492,0.4311272922
+BN,0,"slope BN-REPLACE, eval top-p 1.0",200,0.1761493024,0.1538947322,0.1985421043
+BN,0,"slope BN-REPLACE, eval top-p 0.95",200,0.1817389396,0.1569578652,0.2059354199
+BN,0,"slope BN-REPLACE-topp95, eval top-p 1.0",200,-0.2418031635,-0.2680781438,-0.2134914880
+BN,0,"slope BN-REPLACE-topp95, eval top-p 0.95",200,-0.2365645630,-0.2603198553,-0.2127975422
+BN,2,"slope BN-REPLACE-s2, eval top-p 1.0",200,0.1319157109,0.1086847880,0.1549509966
+BN,2,"slope BN-REPLACE-s2, eval top-p 0.95",200,0.1502433819,0.1278929733,0.1721498021
+BN,2,"slope BN-REPLACE-topp95-s2, eval top-p 1.0",200,-0.2477954531,-0.2743257587,-0.2205949781
+BN,2,"slope BN-REPLACE-topp95-s2, eval top-p 0.95",200,-0.2257332453,-0.2487068866,-0.2035067609
+BN,3,"slope BN-REPLACE-s3, eval top-p 1.0",200,0.1813738171,0.1558228740,0.2072092204
+BN,3,"slope BN-REPLACE-s3, eval top-p 0.95",200,0.1612837549,0.1413663115,0.1818251907
+BN,3,"slope BN-REPLACE-topp95-s3, eval top-p 1.0",200,-0.2635818740,-0.2854533024,-0.2417154769
+BN,3,"slope BN-REPLACE-topp95-s3, eval top-p 0.95",200,-0.2268569638,-0.2503551301,-0.2033758907
+BN,0,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",200,0.4179524658,0.3830448794,0.4502535993
+BN,2,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",200,0.3797111640,0.3408013230,0.4182453235
+BN,3,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 1.0",200,0.4449556911,0.4123617205,0.4777481373
+BN,"mean of 0,2,3","training-decoder contrast, mean over seeds, eval top-p 1.0",200,0.4142064403,0.3930429198,0.4353962890
+BN,0,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",200,0.4183035025,0.3863704738,0.4496632995
+BN,2,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",200,0.3759766271,0.3454301301,0.4068559632
+BN,3,"training-decoder contrast (top-p 1.0 minus 0.95 trained), eval top-p 0.95",200,0.3881407187,0.3569687660,0.4199060669
+BN,"mean of 0,2,3","training-decoder contrast, mean over seeds, eval top-p 0.95",200,0.3941402828,0.3741844098,0.4146996400

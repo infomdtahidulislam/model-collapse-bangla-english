@@ -1,0 +1,21 @@
+start 2026-10-20T05:50:10Z
+building EN seed vocabulary and bigram inventory
+  181984 types, 7583 character bigrams
+{'chain': 'EN-REPLACE', 'gen': 1, 'source': 'training corpus (gen_1/synthetic.jsonl)', 'n_tokens': 7368662, 'token_oov_share': 0.03503, 'type_oov_share': 0.71447, 'oov_types': 223617, 'novel_bigram_type_share': 0.0932, 'novel_bigram_token_share': 0.0874, 'n_docs': 44544}
+{'chain': 'EN-REPLACE', 'gen': 2, 'source': 'training corpus (gen_2/synthetic.jsonl)', 'n_tokens': 7410471, 'token_oov_share': 0.04047, 'type_oov_share': 0.76796, 'oov_types': 259785, 'novel_bigram_type_share': 0.1163, 'novel_bigram_token_share': 0.1103, 'n_docs': 44544}
+{'chain': 'EN-REPLACE', 'gen': 3, 'source': 'training corpus (gen_3/synthetic.jsonl)', 'n_tokens': 7385957, 'token_oov_share': 0.04617, 'type_oov_share': 0.80727, 'oov_types': 297934, 'novel_bigram_type_share': 0.1265, 'novel_bigram_token_share': 0.121, 'n_docs': 44032}
+{'chain': 'EN-REPLACE', 'gen': 4, 'source': 'training corpus (gen_4/synthetic.jsonl)', 'n_tokens': 7401020, 'token_oov_share': 0.04934, 'type_oov_share': 0.82973, 'oov_types': 320597, 'novel_bigram_type_share': 0.1326, 'novel_bigram_token_share': 0.1279, 'n_docs': 44544}
+{'chain': 'EN-REPLACE', 'gen': 5, 'source': 'training corpus (gen_5/synthetic.jsonl)', 'n_tokens': 7382247, 'token_oov_share': 0.05342, 'type_oov_share': 0.84855, 'oov_types': 346239, 'novel_bigram_type_share': 0.1452, 'novel_bigram_token_share': 0.1413, 'n_docs': 44544}
+{'chain': 'EN-REPLACE', 'gen': 6, 'source': 'training corpus (gen_6/synthetic.jsonl)', 'n_tokens': 7534849, 'token_oov_share': 0.05434, 'type_oov_share': 0.85954, 'oov_types': 359257, 'novel_bigram_type_share': 0.1508, 'novel_bigram_token_share': 0.1465, 'n_docs': 45056}
+building BN seed vocabulary and bigram inventory
+  314784 types, 8142 character bigrams
+{'chain': 'BN-REPLACE', 'gen': 1, 'source': 'training corpus (gen_1/synthetic.jsonl)', 'n_tokens': 5809081, 'token_oov_share': 0.08809, 'type_oov_share': 0.81292, 'oov_types': 441828, 'novel_bigram_type_share': 0.0116, 'novel_bigram_token_share': 0.0107, 'n_docs': 36864}
+{'chain': 'BN-REPLACE', 'gen': 2, 'source': 'training corpus (gen_2/synthetic.jsonl)', 'n_tokens': 5858763, 'token_oov_share': 0.09817, 'type_oov_share': 0.83837, 'oov_types': 497550, 'novel_bigram_type_share': 0.0165, 'novel_bigram_token_share': 0.0149, 'n_docs': 37888}
+{'chain': 'BN-REPLACE', 'gen': 3, 'source': 'training corpus (gen_3/synthetic.jsonl)', 'n_tokens': 5842645, 'token_oov_share': 0.10566, 'type_oov_share': 0.85374, 'oov_types': 531893, 'novel_bigram_type_share': 0.0199, 'novel_bigram_token_share': 0.0179, 'n_docs': 38400}
+{'chain': 'BN-REPLACE', 'gen': 4, 'source': 'training corpus (gen_4/synthetic.jsonl)', 'n_tokens': 5809031, 'token_oov_share': 0.11225, 'type_oov_share': 0.8643, 'oov_types': 557974, 'novel_bigram_type_share': 0.0228, 'novel_bigram_token_share': 0.021, 'n_docs': 38912}
+{'chain': 'BN-REPLACE', 'gen': 5, 'source': 'training corpus (gen_5/synthetic.jsonl)', 'n_tokens': 5800365, 'token_oov_share': 0.11748, 'type_oov_share': 0.87215, 'oov_types': 579084, 'novel_bigram_type_share': 0.0276, 'novel_bigram_token_share': 0.0245, 'n_docs': 38400}
+{'chain': 'BN-REPLACE', 'gen': 6, 'source': 'training corpus (gen_6/synthetic.jsonl)', 'n_tokens': 5809903, 'token_oov_share': 0.12366, 'type_oov_share': 0.88069, 'oov_types': 606881, 'novel_bigram_type_share': 0.029, 'novel_bigram_token_share': 0.0264, 'n_docs': 38400}
+
+wrote ../results/cg4_posthoc_gpu_results/nonword_corpus_shares.csv and nonword_top_types.csv
+exit 0
+end 2026-10-20T05:56:15Z

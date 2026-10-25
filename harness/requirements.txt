@@ -1,0 +1,21 @@
+# Core (no GPU needed; control machine and host)
+pyyaml>=6.0
+jsonschema>=4.21
+pandas>=2.2
+numpy>=1.26
+scipy>=1.12
+matplotlib>=3.8
+regex>=2024.4
+requests>=2.32          # fetch_sources.py (MediaWiki API, CSV downloads)
+datasets>=3.0           # fetch_sources.py (Hugging Face streaming); lazy-imported, --dry-run works without it
+huggingface_hub>=0.30
+vastai>=0.2             # Vast.ai CLI used by harness/vast/vast_ops.py (control machine)
+kaggle>=1.6             # Kaggle fallback automation (optional)
+
+# GPU stack (installed on the host by harness/vast/bootstrap.sh; pin versions in logs/decisions.md after the pilot)
+# torch (CUDA build; vllm pins it)
+# vllm                    # fast synthetic generation (optional; HF generate fallback), wheels for CUDA 12.8/12.9
+# transformers>=4.56      # google/gemma-3-270m support
+# accelerate
+# hf_transfer, sentencepiece, protobuf
+# fasttext (optional language-id check; lid.176.bin must be downloaded separately)

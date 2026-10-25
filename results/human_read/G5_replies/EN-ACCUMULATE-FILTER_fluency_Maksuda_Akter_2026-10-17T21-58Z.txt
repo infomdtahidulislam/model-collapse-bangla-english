@@ -1,0 +1,45 @@
+G5 read, EN-ACCUMULATE-FILTER fluency (optional) (G5_fluency_EN-ACCUMULATE-FILTER_2026-10-17.html), reader: Maksuda Akter, 2026-10-17T21:58Z
+## EN-ACCUMULATE-FILTER_gen3_fluency | results/samples/EN-ACCUMULATE-FILTER_gen3_50.jsonl sha256 dea84c31888e60d0 | coded 20 of 20
+sample_id,fluency_1to5,note
+EN-P00000,4,"Readable headings and compact entries carry the list, although a few labels sound unnatural."
+EN-P00001,3,Questions such as “What risks citizens should avoid” and the parent-meeting advice need grammatical repair.
+EN-P00002,4,"The list is mostly easy to scan, with an awkwardly crowded entry under Kansas."
+EN-P00003,3,The single sentence becomes clumsy around the repeated publication wording and “a lecturers recurring basis”.
+EN-P00004,3,The instructional prose is partly readable before the ending breaks into garbled labels and numbered fragments.
+EN-P00005,3,Readable art commentary gives way to awkwardly joined titles and an unfinished final description.
+EN-P00006,3,"Several historical statements have broken grammar, although the names and shorter entries are easy to read."
+EN-P00007,3,Repetition such as “the first of these two these were” and tangled later clauses repeatedly interrupt the report.
+EN-P00008,3,"The surname discussion uses recognisable sentences, but several word combinations make the intended meaning unclear."
+EN-P00009,3,The long marketing sentence is overloaded with repeated verbs and poorly joined technical phrases.
+EN-P00010,3,Phrases such as “continued to uncover who was” leave gaps in an otherwise recognisable career narrative.
+EN-P00011,3,"Formal wording masks several muddled constructions, including “2100 mg/day of long-term study data”."
+EN-P00012,3,The argument becomes hard to track where long clauses lose their grammatical connections.
+EN-P00013,4,"The brief biography and honours list need little effort, apart from a handful of awkward labels."
+EN-P00014,3,"The review has readable sentences, with slips such as “It prescriptions” and an unfinished closing description."
+EN-P00015,3,"The questions are understandable, while awkward parenthetical instructions and a dense list slow the reading."
+EN-P00016,3,"Much of the prose can be followed, although phrases such as “practicing a skill within” leave unclear connections."
+EN-P00017,4,"The property narrative mostly reads smoothly, with a few unnatural phrases and a small article error."
+EN-P00018,3,"The career outline is recognisable, but missing verbs and tangled match descriptions repeatedly disrupt it."
+EN-P00019,2,"After a readable start, the medical wording breaks into damaged terms and poorly connected fragments."
+## EN-ACCUMULATE-FILTER_gen6_fluency | results/samples/EN-ACCUMULATE-FILTER_gen6_50.jsonl sha256 03e2513eed08874d | coded 20 of 20
+sample_id,fluency_1to5,note
+EN-P00000,3,"The event and record are linked awkwardly, while the remaining headings are straightforward."
+EN-P00001,3,"Reading slows around “financial, however much future” and the confusing list at the end."
+EN-P00002,4,Repeated township descriptions remain understandable despite occasional slips such as “be Auburn Township”.
+EN-P00003,3,Straightforward journal details are mixed with unfinished constructions and awkward phrases such as “the latest excites”.
+EN-P00004,4,The short biography reads comfortably apart from “targets into nature” and a stray garbled entry.
+EN-P00005,3,"The last sentence is difficult to phrase naturally, especially “taken years un scorned”."
+EN-P00006,3,"The dialogue has recognisable sentences, with strained imagery and unclear references making parts of it cumbersome."
+EN-P00007,3,"The publication schedule is legible, though crowded fragments and repetitive labels make it cumbersome."
+EN-P00008,3,Awkward wording about “a chin or a legs expression” and a damaged verb interrupt otherwise readable list entries.
+EN-P00009,4,"Most catalogue snippets read naturally, with a poorly joined sentence about the school district near the end."
+EN-P00010,3,"The biography is readable in stretches, with clumsy phrasing around his grades, audiences and record sales."
+EN-P00011,3,"Basic press-release sentences remain readable, though repeated words and phrases such as “them aircraft” disrupt the later account."
+EN-P00012,3,Broken phrases such as “some of the them” sit among sentences that are otherwise readable.
+EN-P00013,3,"The career sections are readable in places, though phrases such as “He set up himself goalkeeper” need repair."
+EN-P00014,3,"Verb errors and strained expressions interrupt the review, particularly “will contributed” and “thereby sports accessible navigation”."
+EN-P00015,3,Repeated wording such as “transactions and transactions” and several sentence fragments make the explanation clumsy.
+EN-P00016,3,"The project description remains partly readable despite duplicated words, awkward agreement and strained marketing language."
+EN-P00017,3,Crowded role descriptions and a garbled address interrupt the otherwise readable company profile.
+EN-P00018,3,"Several complete sentences are easy to read, while unclear references and strained syndicate wording make the later account cumbersome."
+EN-P00019,4,"Most of the biography reads clearly, with awkward constructions concentrated in the final appointments sections."

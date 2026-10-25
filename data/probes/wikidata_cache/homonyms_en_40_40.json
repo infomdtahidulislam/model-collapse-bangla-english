@@ -1,0 +1,382 @@
+[
+ {
+  "l": "Birmingham",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Bristol",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Bristol",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Canterbury",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Calgary",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Cerro de Pasco",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Burlington",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Burlington",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Cajamarca",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Chachapoyas",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Belleville",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Belleville",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Belleville",
+  "c": "http://www.wikidata.org/entity/Q142"
+ },
+ {
+  "l": "Chatham-Kent",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Bhola",
+  "c": "http://www.wikidata.org/entity/Q902"
+ },
+ {
+  "l": "Brampton",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Brampton",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Callao",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Brantford",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Belfast",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Cardiff",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Cardiff",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Canada",
+  "c": "http://www.wikidata.org/entity/Q212"
+ },
+ {
+  "l": "Charlottetown",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Brockville",
+  "c": "http://www.wikidata.org/entity/Q664"
+ },
+ {
+  "l": "Brockville",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Bath",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Bermuda",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Bristol",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Canterbury",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Calgary",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "British Columbia",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Cheshire",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Callao",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Belfast",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Cardiff",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Bath",
+  "c": "http://www.wikidata.org/entity/Q763"
+ },
+ {
+  "l": "Bath",
+  "c": "http://www.wikidata.org/entity/Q766"
+ },
+ {
+  "l": "Bath",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Bath",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Birmingham",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Campo Dolores",
+  "c": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "l": "Canterbury",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Burnaby",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Cardiff",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Cheshire",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Belleville",
+  "c": "http://www.wikidata.org/entity/Q1008"
+ },
+ {
+  "l": "Belfast",
+  "c": "http://www.wikidata.org/entity/Q664"
+ },
+ {
+  "l": "Belfast",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Cardiff",
+  "c": "http://www.wikidata.org/entity/Q664"
+ },
+ {
+  "l": "Canterbury",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Brookview",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Brampton",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Canada",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Canada",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Chapais",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Brockville",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Bermuda",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Cedar Key",
+  "c": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "l": "Callao",
+  "c": "http://www.wikidata.org/entity/Q899706"
+ },
+ {
+  "l": "Belleville",
+  "c": "http://www.wikidata.org/entity/Q27"
+ },
+ {
+  "l": "Cajamarca Department",
+  "c": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "l": "Bedfordshire",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Bath",
+  "c": "http://www.wikidata.org/entity/Q55"
+ },
+ {
+  "l": "Cambridgeshire",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Birmingham",
+  "c": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "l": "Calgary",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Charles Hill",
+  "c": "http://www.wikidata.org/entity/Q963"
+ },
+ {
+  "l": "Burnaby",
+  "c": "http://www.wikidata.org/entity/Q763"
+ },
+ {
+  "l": "Bishop's Stortford",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Bovingdon",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Canada",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Broxbourne",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "British Virgin Islands",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Cajamarca",
+  "c": "http://www.wikidata.org/entity/Q739"
+ },
+ {
+  "l": "Buckinghamshire",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Cardiff",
+  "c": "http://www.wikidata.org/entity/Q174193"
+ },
+ {
+  "l": "Cardiff",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Bedfordshire",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Bath",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Cambridgeshire",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Bristol",
+  "c": "http://www.wikidata.org/entity/Q174193"
+ },
+ {
+  "l": "Bristol",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Canterbury",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Cheshire",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Buckinghamshire",
+  "c": "http://www.wikidata.org/entity/Q179876"
+ },
+ {
+  "l": "Bhola",
+  "c": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "l": "Belfast",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "Bath",
+  "c": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "l": "Belfast",
+  "c": "http://www.wikidata.org/entity/Q56850459"
+ },
+ {
+  "l": "Berkhamsted",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Canada",
+  "c": "http://www.wikidata.org/entity/Q55"
+ },
+ {
+  "l": "Castle Sween",
+  "c": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "l": "Burnaby",
+  "c": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "l": "CN Tower",
+  "c": "http://www.wikidata.org/entity/Q16"
+ }
+]

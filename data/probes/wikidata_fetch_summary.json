@@ -1,0 +1,44 @@
+{
+ "fetched_at": "2026-10-13T18:41:39+00:00",
+ "endpoint": "https://query.wikidata.org/sparql",
+ "cap_per_relation": 3000,
+ "method": "evenly spaced bd:slice windows, round-robin up to the cap",
+ "relations": {
+  "P36": {
+   "statements": 132812,
+   "window_size": 664,
+   "windows": 150,
+   "matches": 3699,
+   "kept": 3000,
+   "distinct_subjects": 2792,
+   "distinct_objects": 2395
+  },
+  "P17": {
+   "statements": 20683030,
+   "window_size": 2000,
+   "windows": 200,
+   "matches": 3333,
+   "kept": 3000,
+   "distinct_subjects": 2988,
+   "distinct_objects": 46
+  },
+  "P19": {
+   "statements": 4389254,
+   "window_size": 2000,
+   "windows": 100,
+   "matches": 3368,
+   "kept": 3000,
+   "distinct_subjects": 2999,
+   "distinct_objects": 439
+  },
+  "P106": {
+   "statements": 14662217,
+   "window_size": 2000,
+   "windows": 50,
+   "matches": 3227,
+   "kept": 3000,
+   "distinct_subjects": 2998,
+   "distinct_objects": 33
+  }
+ }
+}

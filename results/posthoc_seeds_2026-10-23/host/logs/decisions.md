@@ -1,0 +1,1 @@
+- 2026-10-24T02:19:49+00:00 — rented run rented-1792808389: 1 GPU(s), phases ['P8 robustness priority 8', 'P9 robustness priority 9', 'P10 robustness priority 10', 'P11 robustness priority 11'], max_hours 18.5

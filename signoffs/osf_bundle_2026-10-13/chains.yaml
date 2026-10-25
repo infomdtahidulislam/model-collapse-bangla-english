@@ -1,0 +1,99 @@
+# CG4 chain configuration. Edit only before Gate 0; afterwards changes require results/deviations.md.
+# Revised 2026-10-12 after the six-seat design review (logs/design_review_2026-10-12/): bf16, prefix masking, per-request
+# generation seeds, quantity-matched FILTER, sample from the trained model, pre-registered robustness chains in priority order.
+study_id: CG4-collapse-lowresource
+prereg_tag: prereg-v1
+seed: 20261010
+
+base_model:
+  id: gemma-3-270m
+  hf: google/gemma-3-270m          # verified 2026-10-12: exists, base/pretrained checkpoint (not -it), 0.27B params (170M embeddings,
+                                   # 262k vocabulary), Gemma licence (gated; accepted on the HF_TOKEN account 2026-10-12), needs transformers >= 4.56
+  params_m: 270
+  tokenizer_condition: SUBWORD
+
+languages: [EN, BN]
+regimes: [REPLACE, ACCUMULATE, ACCUMULATE-FILTER]   # confirmatory: 2 x 3 chains, seed offset 0
+generations: 6                     # confirmatory generations after generation 0 (H0/H1/H2 slopes use 0..6)
+replace_extension_generations: 10  # the two confirmatory REPLACE chains continue to 10 (exploratory plateau series)
+replace_extension_priority: 4      # ... at this position of the robustness order
+tokens_per_generation: 10000000    # GENERATED tokens per generation (prefix tokens excluded) and seed corpus size, in base-model tokens
+seq_len: 1024
+length_unit: words                 # prefix and continuation lengths are matched in WORDS across languages (design review 2026-10-12):
+prefix_words: 12                   #   prepare_corpora.py converts them to per-language token counts with the measured words-per-token
+max_new_words: 190                 #   of each seed corpus (EN: about 16 / 256 tokens; BN: more tokens for the same text) -> manifest.json
+max_new_tokens: 256                # used only when length_unit is 'tokens' (Kaggle fallback / legacy)
+prefix_tokens: 16
+n_prefixes: 10000
+sampling: { temperature: 1.0, top_p: 1.0 }   # pure ancestral sampling
+
+training:
+  lr: 2.0e-4
+  warmup_ratio: 0.03
+  min_lr_ratio: 0.1                # cosine_with_min_lr (implemented; was documented but not applied before 2026-10-12)
+  weight_decay: 0.1
+  betas: [0.9, 0.95]
+  effective_batch_seqs: 64
+  micro_batch_seqs: 8              # OOM fallback: 4 (effective batch unchanged, no deviation)
+  grad_clip: 1.0
+  epochs: 1
+  dtype: bfloat16                  # gemma-3 is bf16-trained; float16 overflows (HF model card, vLLM refuses gemma3 in fp16). RTX 4090 supports bf16.
+                                   # Kaggle T4 fallback only: float16 with a deviations.md line.
+  save_dtype: bfloat16             # checkpoints saved in bf16 (0.54 GB each); the next generation loads them as fp32 master weights
+  gradient_checkpointing: true
+  prefix_mode: masked              # masked: the real prefix is context only (label -100), REPLACE trains on generated tokens only;
+                                   # dropped: train on the continuation alone; trained: prefix tokens in the loss (not pre-registered)
+  init: previous_checkpoint        # warm-start chaining: generation g starts from the g-1 checkpoint (stated design; 03 §2)
+
+filter:                            # ACCUMULATE-FILTER rule (fixed)
+  min_script_ratio: 0.95
+  max_repeat_4gram: 0.20
+  ppl_percentile_band: [5, 95]     # of the gen-0 model's per-token NLL on regular held-out docs truncated to prefix+max_new tokens
+  near_dup_jaccard: 0.80           # MinHash (64 perms, 8 bands) against the seed corpus and every previously kept synthetic document
+  minhash_perms: 64
+  top_up: true                     # generate more until kept tokens >= budget (quantity-matched with ACCUMULATE), at most ...
+  max_generation_multiple: 2.0     # ... 2x the budget of generated tokens; a shortfall is recorded in filter.json
+
+metrics:
+  n_sample_docs: 2000              # fixed sample prefixes (first 2,000 of prefixes_<lang>.jsonl), one continuation each, from the TRAINED checkpoint
+  sample_seed_offset: 7
+  ttr_window_tokens: 50000
+  tail_rare_fraction: 0.10
+  heldout_docs: 2000               # regular held-out docs; the fresh slice is scored separately in full
+  probes_per_language: 600
+  bootstrap_resamples: 300         # document bootstrap for the window metrics (distinct-n, ttr, mtld, entropy, tail mass)
+
+# Pre-registered robustness chains: run AFTER the six confirmatory chains, in priority order, until the measured post-pilot
+# projection (plan_budget.py --measured) reaches the approved cap; whatever is not reached is reported as not run.
+# ids with -s2/-s3: re-seeded (seed_offset) generation + training AND a re-seeded gen-0 (gen0 field) -> run-to-run variance.
+robustness_chains:
+  - { id: EN-REPLACE-s2, language: EN, regime: REPLACE, seed_offset: 1000, gen0: GEN0-EN-s2, priority: 1, enabled: true, variant: seed2,
+      purpose: "run-to-run variance of the REPLACE pair (re-seeded gen-0, generation and training)" }
+  - { id: BN-REPLACE-s2, language: BN, regime: REPLACE, seed_offset: 1000, gen0: GEN0-BN-s2, priority: 1, enabled: true, variant: seed2,
+      purpose: "run-to-run variance of the REPLACE pair" }
+  - { id: EN-REAL-REPEAT, language: EN, regime: REAL-REPEAT, priority: 3, enabled: true, variant: control,
+      purpose: "no-synthetic control: the identical recipe re-trained on the real seed every generation separates continual fine-tuning drift from collapse" }
+  - { id: BN-REAL-REPEAT, language: BN, regime: REAL-REPEAT, priority: 3, enabled: true, variant: control,
+      purpose: "no-synthetic control" }
+  - { id: EN-REPLACE-WM, language: EN, regime: REPLACE, tokens: match_words_of_BN, gen0: GEN0-EN-WM, priority: 2, enabled: true, variant: word_matched,
+      purpose: "English REPLACE chain at the token budget that carries the same number of WORDS as the Bangla seed: is faster Bangla decay just less text?" }
+  - { id: EN-ACCUMULATE-SUBSAMPLE, language: EN, regime: ACCUMULATE-SUBSAMPLE, priority: 6, enabled: true, variant: compute_matched,
+      purpose: "accumulate, then subsample the union to the per-generation budget (constant dataset size; Gerstgrasser control)" }
+  - { id: BN-ACCUMULATE-SUBSAMPLE, language: BN, regime: ACCUMULATE-SUBSAMPLE, priority: 6, enabled: true, variant: compute_matched,
+      purpose: "compute-matched accumulation" }
+  - { id: EN-REPLACE-topp95, language: EN, regime: REPLACE, sampling: { temperature: 1.0, top_p: 0.95 }, priority: 7, enabled: true, variant: decoding,
+      purpose: "decoding sensitivity: truncated sampling" }
+  - { id: BN-REPLACE-topp95, language: BN, regime: REPLACE, sampling: { temperature: 1.0, top_p: 0.95 }, priority: 7, enabled: true, variant: decoding,
+      purpose: "decoding sensitivity" }
+  - { id: EN-REPLACE-s3, language: EN, regime: REPLACE, seed_offset: 2000, gen0: GEN0-EN-s3, priority: 5, enabled: true, variant: seed3,
+      purpose: "third seed of the REPLACE pair" }
+  - { id: BN-REPLACE-s3, language: BN, regime: REPLACE, seed_offset: 2000, gen0: GEN0-BN-s3, priority: 5, enabled: true, variant: seed3,
+      purpose: "third seed of the REPLACE pair" }
+
+exploratory_chains: []             # BYTE (H3) and code-mixed chains removed from the design on 2026-10-12 (scoped out; see 01 and deviations)
+
+scale_rules:                       # apply in order with a deviations.md entry
+  - "drop robustness chains from the lowest priority upward (pre-registered order; no deviation needed, reported as not run)"
+  - "tokens_per_generation 10M -> 5M"
+  - "generations 6 -> 5"
+  - "never drop a language or a confirmatory regime without author sign-off"

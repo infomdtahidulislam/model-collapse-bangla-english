@@ -1,0 +1,21 @@
+sample_id,fluency_1to5,note
+EN-P00000,3,"The opening is badly worded, while the later sports sentences are easier to read."
+EN-P00001,3,"The lesson introduction makes sense, but the ending becomes a jumble of labels and fragments."
+EN-P00002,5,"The entries are easy to scan and follow a clear, consistent list structure."
+EN-P00003,3,"The opening is clear, but later technical statements become wordy and grammatically incomplete."
+EN-P00004,2,Broken technical phrases make much of the passage hard to understand despite some clear lines.
+EN-P00005,2,Unfinished thoughts and made-up expressions leave much of the passage difficult to follow.
+EN-P00006,2,Fused words and broken clause structure repeatedly interrupt the account.
+EN-P00007,3,"Most sentences are readable, but awkward expressions and repeated wording weaken the flow."
+EN-P00008,2,The introductory paragraphs are clearer than the tangled names and broken entries that follow.
+EN-P00009,2,Invented terms and broken product descriptions keep interrupting the reading.
+EN-P00010,3,Repeated words and unfinished credits make an otherwise understandable music profile feel clumsy.
+EN-P00011,3,"The list format is clear, but several technical labels are awkwardly assembled."
+EN-P00012,3,"The program descriptions are understandable, though the longer sentences become cluttered and awkward."
+EN-P00013,3,"The career story mostly makes sense, with several awkward expressions and a messy ending."
+EN-P00014,2,"The explanation quickly becomes tangled, with clauses that no longer fit together grammatically."
+EN-P00015,5,The sentence completes the prompt smoothly and is easy to understand.
+EN-P00016,3,"Many sentences read normally, but odd expressions and loosely connected ideas make the passage uneven."
+EN-P00017,3,"The company history reads better than the final paragraph, which has broken wording and clauses."
+EN-P00018,4,"The short entry reads clearly, apart from a couple of oddly phrased category labels."
+EN-P00019,3,"Several paragraphs read comfortably, while fragments and an awkward quotation disrupt the rest."

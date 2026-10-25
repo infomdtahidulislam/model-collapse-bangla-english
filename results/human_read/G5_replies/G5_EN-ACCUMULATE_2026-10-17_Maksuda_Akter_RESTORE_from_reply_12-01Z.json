@@ -1,0 +1,926 @@
+{
+ "format": "cg4-g5-progress-v1",
+ "sheet": "G5_EN-ACCUMULATE_2026-10-17.html",
+ "keybase": "cg4-g5-EN-ACCUMULATE-v1",
+ "title": "EN-ACCUMULATE",
+ "reader": "Maksuda Akter",
+ "saved_at": "2026-10-17T12:01Z",
+ "files": [
+  {
+   "g": 3,
+   "label": "EN-ACCUMULATE_gen3",
+   "path": "results/samples/EN-ACCUMULATE_gen3_50.jsonl",
+   "sha": "5974a07543ace8d7"
+  },
+  {
+   "g": 6,
+   "label": "EN-ACCUMULATE_gen6",
+   "path": "results/samples/EN-ACCUMULATE_gen6_50.jsonl",
+   "sha": "378ca1dff7bcbf86"
+  }
+ ],
+ "coded": {},
+ "answers": {
+  "3|EN-P00000": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "",
+   "fl": "",
+   "nt": "Bullet items repeat as the event description drifts into unrelated biographical categories."
+  },
+  "3|EN-P00001": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "7",
+   "fl": "2",
+   "nt": "Roughly 7 nonwords, mixed scripts and fused words accompany the shift from education to industrial products and unrelated fragments."
+  },
+  "3|EN-P00002": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "5",
+   "nt": "The place name list is readable, and its changing entries do not form a repetition loop."
+  },
+  "3|EN-P00003": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "4",
+   "nt": "A fused word containing another script seems to be the only nonword in otherwise readable journal prose."
+  },
+  "3|EN-P00004": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "11",
+   "fl": "1",
+   "nt": "The experiment gives way to disconnected fragments, mixed scripts and fused words, with the nonword estimate near 11."
+  },
+  "3|EN-P00005": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "3",
+   "nt": "The named person disappears into website promotion and rock music, with 1 possible nonword in the continuation."
+  },
+  "3|EN-P00006": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "3",
+   "nt": "The increasingly confused local history moves away from the baronetcy and contains what seems to be 1 nonword."
+  },
+  "3|EN-P00007": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "3",
+   "nt": "The clauses are readable but connect awkwardly, while the text stays broadly about newspapers and related institutions."
+  },
+  "3|EN-P00008": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "3",
+   "nt": "Cyrillic and Arabic letters appear among roughly 2 nonwords as the text switches surnames and ends in unrelated audio-export material."
+  },
+  "3|EN-P00009": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "3",
+   "nt": "A fused word appears to be the only nonword as the panel description jumps into unrelated promotional snippets."
+  },
+  "3|EN-P00010": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "4",
+   "fl": "3",
+   "nt": "The music biography stays recognizable, but made-up role names and fused words contribute roughly 4 nonwords."
+  },
+  "3|EN-P00011": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "4",
+   "fl": "2",
+   "nt": "Marine news ends in unrelated vacation material after several script changes and about 4 apparent nonwords."
+  },
+  "3|EN-P00012": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "3",
+   "nt": "The education discussion is readable, although its grammar and logical connections are strained."
+  },
+  "3|EN-P00013": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "3",
+   "nt": "The sports story is clumsy and changes its subject from Bohm to Bellamy."
+  },
+  "3|EN-P00014": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "5",
+   "nt": "The short continuation completes the prompt's split word naturally and reads fluently."
+  },
+  "3|EN-P00015": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "3",
+   "nt": "The financial prose is readable but grammatically tangled, while factual accuracy is outside this rubric."
+  },
+  "3|EN-P00016": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "3",
+   "nt": "One word seems malformed in agricultural prose that is awkward but broadly related to food systems."
+  },
+  "3|EN-P00017": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "4",
+   "nt": "The prose is mostly readable, but the company description turns into a place and transport account."
+  },
+  "3|EN-P00018": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "3",
+   "nt": "The biography changes which player it describes, with broken grammar and a word join that looks malformed."
+  },
+  "3|EN-P00019": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "2",
+   "nt": "Roughly 2 nonwords interrupt broken academic prose that shifts into unrelated research and birds."
+  },
+  "3|EN-P00020": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "2",
+   "fl": "",
+   "nt": "The short schedule and contact details contain Cyrillic and Arabic fragments, with about 2 apparent nonwords."
+  },
+  "3|EN-P00021": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "",
+   "nt": "The text leaves filmmaking behind and turns to general product profits and pork production."
+  },
+  "3|EN-P00022": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The invented plot is awkwardly written, but unusual character names alone are not nonwords."
+  },
+  "3|EN-P00023": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The geographical continuation is readable, with no clear rubric issue."
+  },
+  "3|EN-P00024": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "",
+   "nt": "Korean letters appear in a name among about 2 nonwords as the health discussion turns to a haunted building and fictional characters."
+  },
+  "3|EN-P00025": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "13",
+   "fl": "",
+   "nt": "An estimated 13 nonwords and mixed Cyrillic and CJK letters accompany the shift from team goals to broken animal and taxonomy descriptions."
+  },
+  "3|EN-P00026": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The text stays on children's education and welfare, and awkward claims alone are not nonwords."
+  },
+  "3|EN-P00027": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "",
+   "nt": "The geographical description veers into unrelated British and American political claims, with roughly 2 nonwords."
+  },
+  "3|EN-P00028": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "Thai letters appear in a member's name, while the rest still follows a band profile."
+  },
+  "3|EN-P00029": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "",
+   "nt": "One category term looks malformed in an otherwise recognizable film entry."
+  },
+  "3|EN-P00030": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The hockey biography is clumsy but recognizable, with no clear rubric issue."
+  },
+  "3|EN-P00031": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "5",
+   "fl": "",
+   "nt": "The taxonomy description is interrupted by Korean letters and around 5 malformed or fused words."
+  },
+  "3|EN-P00032": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The bibliography is fragmentary, but no definite nonword or unrelated subject stands out."
+  },
+  "3|EN-P00033": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "",
+   "nt": "Greek letters in a PDF marker account for a possible nonword as the cardiac trial discussion moves to game theory and general methods."
+  },
+  "3|EN-P00034": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "4",
+   "fl": "",
+   "nt": "About 4 drug names or technical terms seem malformed, although the passage remains broadly biomedical."
+  },
+  "3|EN-P00035": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The geographical entry is readable, with no clear rubric issue."
+  },
+  "3|EN-P00036": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "",
+   "nt": "The birth-rate discussion turns into a disconnected personal story with 2 apparent fused or made-up words."
+  },
+  "3|EN-P00037": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The local history is clumsy and implausible, but factual errors alone are outside this rubric."
+  },
+  "3|EN-P00038": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "",
+   "nt": "A word join seems malformed, but the repeated topic terms do not form a loop."
+  },
+  "3|EN-P00039": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The album discussion is awkward but stays on music, with plausible names and titles excluded from the count."
+  },
+  "3|EN-P00040": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "3",
+   "fl": "",
+   "nt": "A broken heading and fused words give a rough count of 3 nonwords as the poetry discussion shifts into climate and taxation."
+  },
+  "3|EN-P00041": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "6",
+   "fl": "",
+   "nt": "Unrelated fragments about work, computing and conflict contain an estimated 6 nonwords."
+  },
+  "3|EN-P00042": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The short taxonomy passage is readable, and plausible taxon names are not counted as nonwords."
+  },
+  "3|EN-P00043": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "6",
+   "fl": "",
+   "nt": "Thai, CJK and Cyrillic letters appear among roughly 6 malformed instructional terms."
+  },
+  "3|EN-P00044": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "2",
+   "fl": "",
+   "nt": "The publication history remains recognizable, though a couple of words look malformed or fused."
+  },
+  "3|EN-P00045": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "4",
+   "fl": "",
+   "nt": "Arabic and Cyrillic letters and an estimated 4 nonwords appear before the climate study ends in unrelated mortality material."
+  },
+  "3|EN-P00046": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The sports biography is recognizable, and factual mismatches alone are outside this rubric."
+  },
+  "3|EN-P00047": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "3",
+   "fl": "",
+   "nt": "CJK and Korean letters appear alongside roughly 3 nonwords as the explanation shifts to pollination, online notes and unrelated fragments."
+  },
+  "3|EN-P00048": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "",
+   "nt": "The government history changes into unrelated wildlife and tourism material, with 1 possible nonword."
+  },
+  "3|EN-P00049": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "",
+   "nt": "The protected-area description drifts into railways, dams and structures, while recurring place names alone are not a loop."
+  },
+  "6|EN-P00000": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "2",
+   "nt": "One adjective looks malformed, and the poorly connected sports descriptions make the passage awkward."
+  },
+  "6|EN-P00001": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "",
+   "nt": "A Cyrillic fragment and what looks like 1 malformed ending interrupt otherwise partly readable educational material."
+  },
+  "6|EN-P00002": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "5",
+   "nt": "The list reads smoothly, and its repeated structure is normal for distinct place names."
+  },
+  "6|EN-P00003": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "2",
+   "fl": "3",
+   "nt": "About 2 technical terms look malformed, and broken sentence connections make the passage hard to follow."
+  },
+  "6|EN-P00004": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "2",
+   "nt": "A couple of apparent nonwords and a Cyrillic fragment interrupt the shift from engineering to football and history."
+  },
+  "6|EN-P00005": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "8",
+   "fl": "2",
+   "nt": "Around 8 nonwords include made-up terms, broken joins and an unused token as unrelated science and names replace the topic."
+  },
+  "6|EN-P00006": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "3",
+   "fl": "2",
+   "nt": "About 3 fused or malformed words and broken grammar accompany the shift into spells and loosely connected biography."
+  },
+  "6|EN-P00007": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "3",
+   "nt": "The newspaper and government discussion stays broadly relevant, despite clumsy phrasing and a possible nonword."
+  },
+  "6|EN-P00008": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "5",
+   "fl": "2",
+   "nt": "The switch to another surname brings a Cyrillic fragment, fused names and broken list entries, giving an estimated 5 nonwords."
+  },
+  "6|EN-P00009": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "8",
+   "fl": "2",
+   "nt": "Around 8 malformed compounds and Tamil letters appear as steel products give way to dental and medical material."
+  },
+  "6|EN-P00010": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "4",
+   "nt": "The music biography is mostly readable, with awkward phrasing and an unfinished awards list."
+  },
+  "6|EN-P00011": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "3",
+   "nt": "The environmental list is clumsy, but its repeated headings introduce different items rather than a loop."
+  },
+  "6|EN-P00012": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "3",
+   "nt": "The education topic remains clear, though an apparent word join and awkward program descriptions reduce readability."
+  },
+  "6|EN-P00013": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "4",
+   "nt": "The sporting biography is generally readable despite awkward headings and sentence construction."
+  },
+  "6|EN-P00014": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "2",
+   "nt": "Broken grammar accompanies a shift from a book review to treatment services."
+  },
+  "6|EN-P00015": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "5",
+   "nt": "The single-sentence continuation reads fluently, with no clear language issue."
+  },
+  "6|EN-P00016": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "3",
+   "nt": "Religion and cars replace the nutrition discussion, alongside a couple of possible nonwords."
+  },
+  "6|EN-P00017": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "3",
+   "nt": "Arabic letters appear inside a fused word, contributing to an estimate of 2 nonwords as property development becomes television biography."
+  },
+  "6|EN-P00018": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "4",
+   "nt": "The short continuation and category list are readable despite some awkward category wording."
+  },
+  "6|EN-P00019": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "3",
+   "nt": "A mixed word with Arabic letters looks malformed as the clinical biography changes to UFOs, religion and spacecraft."
+  },
+  "6|EN-P00020": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The schedule wording is awkward, but the brief duplication is not a sustained loop."
+  },
+  "6|EN-P00021": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "6",
+   "fl": "",
+   "nt": "Around 6 malformed words interrupt disconnected passages about exports, marketing and games."
+  },
+  "6|EN-P00022": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "4",
+   "fl": "",
+   "nt": "The literary discussion remains recognizable despite perhaps 4 nonwords."
+  },
+  "6|EN-P00023": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "",
+   "nt": "A Cyrillic fragment and an unused token contribute to a rough count of 2 as the text drifts into disconnected biography."
+  },
+  "6|EN-P00024": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The health discussion is awkward and strained, but no clear nonword or unrelated topic stands out."
+  },
+  "6|EN-P00025": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "",
+   "nt": "A couple of words appear fused as team goals give way to unrelated travel and survey history."
+  },
+  "6|EN-P00026": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "",
+   "nt": "The community development discussion breaks into unrelated international names and fragmentary lists."
+  },
+  "6|EN-P00027": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "",
+   "nt": "About 2 compounds seem malformed as the text switches towns and adds a disconnected personal history."
+  },
+  "6|EN-P00028": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The band profile is clumsy, but plausible names and titles have been excluded from the nonword count."
+  },
+  "6|EN-P00029": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "",
+   "nt": "The film entry drifts into Eurovision and a football biography, with Japanese letters in a name that may count as 1 nonword."
+  },
+  "6|EN-P00030": {
+   "se": true,
+   "ei": false,
+   "rl": true,
+   "td": true,
+   "nw": "3",
+   "fl": "",
+   "nt": "Cyrillic and Korean letters and an unused token contribute roughly 3 nonwords as repeated country labels replace the biography."
+  },
+  "6|EN-P00031": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "3",
+   "fl": "",
+   "nt": "The fish description becomes a personal travel story containing perhaps 3 nonwords."
+  },
+  "6|EN-P00032": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "",
+   "nt": "A couple of apparent nonwords appear as the definition turns into housing, transport and utility duties."
+  },
+  "6|EN-P00033": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The trial description is short and awkward, while scientific accuracy is outside this language rating."
+  },
+  "6|EN-P00034": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "3",
+   "fl": "",
+   "nt": "Roughly 3 nonwords, broken technical phrasing and fused reference fragments make the passage difficult to follow."
+  },
+  "6|EN-P00035": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The short geographical entry is readable, and plausible place names are not treated as nonwords."
+  },
+  "6|EN-P00036": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "",
+   "nt": "The baby-health discussion drifts into a general account of society and welfare."
+  },
+  "6|EN-P00037": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "",
+   "nt": "One scientific term looks malformed within the invented local history."
+  },
+  "6|EN-P00038": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The academic prose is readable, and recurring topic terms do not form a repetition loop."
+  },
+  "6|EN-P00039": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "2",
+   "fl": "",
+   "nt": "The album entry is recognizable despite about 2 words that appear malformed."
+  },
+  "6|EN-P00040": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "4",
+   "fl": "",
+   "nt": "Around 4 malformed compounds appear as the poetry reflection becomes disconnected theatre promotion."
+  },
+  "6|EN-P00041": {
+   "se": false,
+   "ei": false,
+   "rl": true,
+   "td": true,
+   "nw": "4",
+   "fl": "",
+   "nt": "Repeated Persian qualifiers and about 4 apparent nonwords interrupt a quotation that shifts into history and usage-code fragments."
+  },
+  "6|EN-P00042": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The taxonomy and reference structure is recognizable, and unfamiliar names alone are not nonwords."
+  },
+  "6|EN-P00043": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The online-learning discussion is readable, with no clear rubric issue."
+  },
+  "6|EN-P00044": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "3",
+   "fl": "",
+   "nt": "A web-address-like string includes Cyrillic letters among around 3 nonwords as the magazine profile drifts into space and funding fragments."
+  },
+  "6|EN-P00045": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "3",
+   "fl": "",
+   "nt": "The passage still resembles research news, although about 3 words appear malformed or joined together."
+  },
+  "6|EN-P00046": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The sports biography is clumsy but recognizable, with no clear rubric issue."
+  },
+  "6|EN-P00047": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "2",
+   "fl": "",
+   "nt": "Perhaps 2 malformed or fused words make the mechanical explanation hard to follow."
+  },
+  "6|EN-P00048": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "",
+   "nt": "The government discussion turns into an extended account of Newtonian physics."
+  },
+  "6|EN-P00049": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "Cyrillic letters appear inside a park name in an otherwise recognizable protected-area entry."
+  }
+ },
+ "restored_from": "a reply saved by the agent"
+}

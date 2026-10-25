@@ -1,0 +1,50 @@
+{
+ "label": "BN-REPLACE_gen6",
+ "reader": "Md Tahidul Islam",
+ "summary": {
+  "coded": 50,
+  "script_error": "20 of 50",
+  "english_intrusion": "17 of 50",
+  "repetition_loop": "1 of 50",
+  "topic_drift": "39 of 50",
+  "nonwords_mean": 15.82,
+  "nonwords_median": 16,
+  "fluency_rated": 20,
+  "fluency_mean": 1.15
+ },
+ "auto_comparison": {
+  "repetition_loop vs own 4-gram repetition >= 0.2": {
+   "both_1": 0,
+   "reader_1_auto_0": [
+    "BN-P00046"
+   ],
+   "reader_0_auto_1": [],
+   "both_0": 49
+  },
+  "script_error vs other-script letter, private-use, mojibake or 10+ identical characters": {
+   "both_1": 9,
+   "reader_1_auto_0": [
+    "BN-P00002",
+    "BN-P00009",
+    "BN-P00018",
+    "BN-P00027",
+    "BN-P00036",
+    "BN-P00037",
+    "BN-P00040",
+    "BN-P00041",
+    "BN-P00042",
+    "BN-P00044",
+    "BN-P00046"
+   ],
+   "reader_0_auto_1": [],
+   "both_0": 30
+  },
+  "english_intrusion vs any Latin letter": {
+   "both_1": 17,
+   "reader_1_auto_0": [],
+   "reader_0_auto_1": [],
+   "both_0": 33
+  }
+ },
+ "recorded_at": "2026-10-18T00:06:44+00:00"
+}

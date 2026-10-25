@@ -1,0 +1,121 @@
+== [1/5] unpack the small inputs 2026-10-20T06:11:37Z ==
+== [2/5] check every input against the pack manifest 2026-10-20T06:11:39Z ==
+all 210 input files match the pack manifest
+== [3/5] libraries: the run's transformers stack, the image's torch 2026-10-20T06:12:30Z ==
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+torch 2.8.0+cu129 | cuda 12.9 | gpu NVIDIA GeForce RTX 4090 | transformers 5.17.0
+NVIDIA GeForce RTX 4090, 24564 MiB, 595.71.05
+== [4/5] 02_cross_decoder.py 2026-10-20T06:12:44Z ==
+2026-10-20T06:12:47Z 26 steps x 2 decoders, 50 prefixes each; device cuda (NVIDIA GeForce RTX 4090); torch 2.8.0+cu129, transformers 5.17.0
+2026-10-20T06:12:50Z seed vocabulary BN: 314784 types (extracted/data/corpora/BN_seed.jsonl)
+2026-10-20T06:12:54Z seed vocabulary EN: 181984 types (extracted/data/corpora/EN_seed.jsonl)
+2026-10-20T06:12:54Z loading generation-0 scorer for BN
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 6839.47it/s]
+2026-10-20T06:12:57Z loading generation-0 scorer for EN
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9040.19it/s]
+2026-10-20T06:13:01Z decoder check (BN gen-0 model): top_p 1.0 keeps 262144..262144 of 262144; top_p 0.95 keeps 1..2450, 24/24 steps match the top-p rule -> OK
+2026-10-20T06:13:02Z scorer check GEN0-EN gen 0: mean |diff| 0.002513, max 0.013623 nats/token, token-count mismatches 0
+2026-10-20T06:13:03Z scorer check GEN0-BN gen 0: mean |diff| 0.010347, max 0.0392 nats/token, token-count mismatches 0
+2026-10-20T06:13:04Z scorer check EN-REPLACE gen 1: mean |diff| 0.002345, max 0.006266 nats/token, token-count mismatches 0
+2026-10-20T06:13:05Z scorer check EN-REPLACE gen 2: mean |diff| 0.002745, max 0.010685 nats/token, token-count mismatches 0
+2026-10-20T06:13:07Z scorer check EN-REPLACE gen 3: mean |diff| 0.002691, max 0.014755 nats/token, token-count mismatches 0
+2026-10-20T06:13:08Z scorer check EN-REPLACE gen 4: mean |diff| 0.002545, max 0.014992 nats/token, token-count mismatches 0
+2026-10-20T06:13:09Z scorer check EN-REPLACE gen 5: mean |diff| 0.002712, max 0.009474 nats/token, token-count mismatches 0
+2026-10-20T06:13:10Z scorer check EN-REPLACE gen 6: mean |diff| 0.003292, max 0.014607 nats/token, token-count mismatches 0
+2026-10-20T06:13:11Z scorer check EN-REPLACE-topp95 gen 1: mean |diff| 0.002543, max 0.016539 nats/token, token-count mismatches 0
+2026-10-20T06:13:13Z scorer check EN-REPLACE-topp95 gen 2: mean |diff| 0.00239, max 0.011964 nats/token, token-count mismatches 0
+2026-10-20T06:13:14Z scorer check EN-REPLACE-topp95 gen 3: mean |diff| 0.002678, max 0.014755 nats/token, token-count mismatches 0
+2026-10-20T06:13:15Z scorer check EN-REPLACE-topp95 gen 4: mean |diff| 0.002589, max 0.014334 nats/token, token-count mismatches 0
+2026-10-20T06:13:16Z scorer check EN-REPLACE-topp95 gen 5: mean |diff| 0.002216, max 0.007783 nats/token, token-count mismatches 0
+2026-10-20T06:13:17Z scorer check EN-REPLACE-topp95 gen 6: mean |diff| 0.002055, max 0.009501 nats/token, token-count mismatches 0
+2026-10-20T06:13:18Z scorer check BN-REPLACE gen 1: mean |diff| 0.014029, max 0.039856 nats/token, token-count mismatches 0
+2026-10-20T06:13:20Z scorer check BN-REPLACE gen 2: mean |diff| 0.015344, max 0.091351 nats/token, token-count mismatches 0
+2026-10-20T06:13:21Z scorer check BN-REPLACE gen 3: mean |diff| 0.011599, max 0.042577 nats/token, token-count mismatches 0
+2026-10-20T06:13:22Z scorer check BN-REPLACE gen 4: mean |diff| 0.016073, max 0.057268 nats/token, token-count mismatches 0
+2026-10-20T06:13:23Z scorer check BN-REPLACE gen 5: mean |diff| 0.014132, max 0.067553 nats/token, token-count mismatches 0
+2026-10-20T06:13:25Z scorer check BN-REPLACE gen 6: mean |diff| 0.012643, max 0.054193 nats/token, token-count mismatches 0
+2026-10-20T06:13:26Z scorer check BN-REPLACE-topp95 gen 1: mean |diff| 0.010696, max 0.035991 nats/token, token-count mismatches 0
+2026-10-20T06:13:27Z scorer check BN-REPLACE-topp95 gen 2: mean |diff| 0.013323, max 0.036407 nats/token, token-count mismatches 0
+2026-10-20T06:13:28Z scorer check BN-REPLACE-topp95 gen 3: mean |diff| 0.012626, max 0.055245 nats/token, token-count mismatches 0
+2026-10-20T06:13:29Z scorer check BN-REPLACE-topp95 gen 4: mean |diff| 0.011115, max 0.031799 nats/token, token-count mismatches 0
+2026-10-20T06:13:31Z scorer check BN-REPLACE-topp95 gen 5: mean |diff| 0.013755, max 0.067926 nats/token, token-count mismatches 0
+2026-10-20T06:13:32Z scorer check BN-REPLACE-topp95 gen 6: mean |diff| 0.012026, max 0.057568 nats/token, token-count mismatches 0
+2026-10-20T06:13:44Z {"chain": "GEN0-EN", "gen": 0, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 3.4292, "sd_nll": 0.7453, "mean_len_tokens": 231.1, "token_oov_share": 0.03936, "n_empty": 0, "cap_hit_share": 0.74, "max_new_tokens": 260, "seed": 2033179174} (13 s)
+2026-10-20T06:13:58Z {"chain": "GEN0-EN", "gen": 0, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 2.6149, "sd_nll": 0.6756, "mean_len_tokens": 228.1, "token_oov_share": 0.01801, "n_empty": 0, "cap_hit_share": 0.76, "max_new_tokens": 260, "seed": 1069243813} (14 s)
+2026-10-20T06:14:14Z {"chain": "GEN0-BN", "gen": 0, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 3.8414, "sd_nll": 1.1069, "mean_len_tokens": 251.3, "token_oov_share": 0.08678, "n_empty": 0, "cap_hit_share": 0.54, "max_new_tokens": 338, "seed": 1944769343} (16 s)
+2026-10-20T06:14:31Z {"chain": "GEN0-BN", "gen": 0, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 3.2797, "sd_nll": 1.0334, "mean_len_tokens": 280.6, "token_oov_share": 0.07855, "n_empty": 0, "cap_hit_share": 0.62, "max_new_tokens": 338, "seed": 1541025900} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9678.09it/s]
+2026-10-20T06:14:46Z {"chain": "EN-REPLACE", "gen": 1, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 3.9239, "sd_nll": 1.1711, "mean_len_tokens": 216.4, "token_oov_share": 0.04904, "n_empty": 0, "cap_hit_share": 0.64, "max_new_tokens": 260, "seed": 1767051001} (13 s)
+2026-10-20T06:15:00Z {"chain": "EN-REPLACE", "gen": 1, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 2.994, "sd_nll": 0.7468, "mean_len_tokens": 223.9, "token_oov_share": 0.01831, "n_empty": 0, "cap_hit_share": 0.72, "max_new_tokens": 260, "seed": 700968500} (14 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9813.28it/s]
+2026-10-20T06:15:15Z {"chain": "EN-REPLACE", "gen": 2, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.1017, "sd_nll": 0.9329, "mean_len_tokens": 230.8, "token_oov_share": 0.04453, "n_empty": 0, "cap_hit_share": 0.78, "max_new_tokens": 260, "seed": 787706921} (13 s)
+2026-10-20T06:15:30Z {"chain": "EN-REPLACE", "gen": 2, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 3.2472, "sd_nll": 0.781, "mean_len_tokens": 219.9, "token_oov_share": 0.02616, "n_empty": 0, "cap_hit_share": 0.7, "max_new_tokens": 260, "seed": 794008730} (15 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8749.26it/s]
+2026-10-20T06:15:48Z {"chain": "EN-REPLACE", "gen": 3, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.3395, "sd_nll": 1.2143, "mean_len_tokens": 228.8, "token_oov_share": 0.04198, "n_empty": 0, "cap_hit_share": 0.76, "max_new_tokens": 260, "seed": 328424857} (14 s)
+2026-10-20T06:16:02Z {"chain": "EN-REPLACE", "gen": 3, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 3.5072, "sd_nll": 0.8023, "mean_len_tokens": 227.1, "token_oov_share": 0.02501, "n_empty": 0, "cap_hit_share": 0.78, "max_new_tokens": 260, "seed": 1678724927} (14 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9974.46it/s]
+2026-10-20T06:16:17Z {"chain": "EN-REPLACE", "gen": 4, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.7461, "sd_nll": 1.1765, "mean_len_tokens": 220.5, "token_oov_share": 0.05956, "n_empty": 0, "cap_hit_share": 0.7, "max_new_tokens": 260, "seed": 565412233} (12 s)
+2026-10-20T06:16:30Z {"chain": "EN-REPLACE", "gen": 4, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 3.6706, "sd_nll": 0.9916, "mean_len_tokens": 220.0, "token_oov_share": 0.02484, "n_empty": 0, "cap_hit_share": 0.7, "max_new_tokens": 260, "seed": 2030731143} (13 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 10457.95it/s]
+2026-10-20T06:16:46Z {"chain": "EN-REPLACE", "gen": 5, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.7026, "sd_nll": 1.2897, "mean_len_tokens": 205.4, "token_oov_share": 0.04372, "n_empty": 0, "cap_hit_share": 0.68, "max_new_tokens": 260, "seed": 483633209} (12 s)
+2026-10-20T06:16:59Z {"chain": "EN-REPLACE", "gen": 5, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 4.0094, "sd_nll": 0.8293, "mean_len_tokens": 220.9, "token_oov_share": 0.02348, "n_empty": 0, "cap_hit_share": 0.72, "max_new_tokens": 260, "seed": 844540962} (13 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9170.43it/s]
+2026-10-20T06:17:14Z {"chain": "EN-REPLACE", "gen": 6, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 5.2451, "sd_nll": 0.9696, "mean_len_tokens": 216.6, "token_oov_share": 0.05084, "n_empty": 0, "cap_hit_share": 0.7, "max_new_tokens": 260, "seed": 1534317289} (12 s)
+2026-10-20T06:17:28Z {"chain": "EN-REPLACE", "gen": 6, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 4.0714, "sd_nll": 1.2157, "mean_len_tokens": 197.5, "token_oov_share": 0.02908, "n_empty": 0, "cap_hit_share": 0.6, "max_new_tokens": 260, "seed": 885186188} (13 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 10035.44it/s]
+2026-10-20T06:17:43Z {"chain": "EN-REPLACE-topp95", "gen": 1, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 3.1215, "sd_nll": 0.8704, "mean_len_tokens": 232.2, "token_oov_share": 0.03038, "n_empty": 0, "cap_hit_share": 0.78, "max_new_tokens": 260, "seed": 1125569123} (12 s)
+2026-10-20T06:17:57Z {"chain": "EN-REPLACE-topp95", "gen": 1, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 2.4723, "sd_nll": 0.6786, "mean_len_tokens": 225.2, "token_oov_share": 0.01458, "n_empty": 0, "cap_hit_share": 0.82, "max_new_tokens": 260, "seed": 968348082} (13 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9436.09it/s]
+2026-10-20T06:18:12Z {"chain": "EN-REPLACE-topp95", "gen": 2, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 2.8774, "sd_nll": 0.6742, "mean_len_tokens": 230.4, "token_oov_share": 0.02307, "n_empty": 0, "cap_hit_share": 0.74, "max_new_tokens": 260, "seed": 79079603} (12 s)
+2026-10-20T06:18:25Z {"chain": "EN-REPLACE-topp95", "gen": 2, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 2.3024, "sd_nll": 0.5714, "mean_len_tokens": 217.9, "token_oov_share": 0.01763, "n_empty": 0, "cap_hit_share": 0.7, "max_new_tokens": 260, "seed": 1059300124} (13 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8722.35it/s]
+2026-10-20T06:18:41Z {"chain": "EN-REPLACE-topp95", "gen": 3, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 2.4859, "sd_nll": 0.9076, "mean_len_tokens": 214.3, "token_oov_share": 0.01341, "n_empty": 0, "cap_hit_share": 0.72, "max_new_tokens": 260, "seed": 970359043} (12 s)
+2026-10-20T06:18:54Z {"chain": "EN-REPLACE-topp95", "gen": 3, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 2.2221, "sd_nll": 0.5779, "mean_len_tokens": 212.1, "token_oov_share": 0.01377, "n_empty": 0, "cap_hit_share": 0.7, "max_new_tokens": 260, "seed": 1954508985} (13 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8622.36it/s]
+2026-10-20T06:19:10Z {"chain": "EN-REPLACE-topp95", "gen": 4, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 2.6118, "sd_nll": 0.7747, "mean_len_tokens": 225.4, "token_oov_share": 0.02097, "n_empty": 0, "cap_hit_share": 0.76, "max_new_tokens": 260, "seed": 200695059} (13 s)
+2026-10-20T06:19:23Z {"chain": "EN-REPLACE-topp95", "gen": 4, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 1.9917, "sd_nll": 0.6362, "mean_len_tokens": 229.3, "token_oov_share": 0.01494, "n_empty": 0, "cap_hit_share": 0.78, "max_new_tokens": 260, "seed": 1769619457} (14 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8338.93it/s]
+2026-10-20T06:19:39Z {"chain": "EN-REPLACE-topp95", "gen": 5, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 2.1079, "sd_nll": 0.6364, "mean_len_tokens": 236.2, "token_oov_share": 0.01373, "n_empty": 0, "cap_hit_share": 0.86, "max_new_tokens": 260, "seed": 915829923} (13 s)
+2026-10-20T06:19:53Z {"chain": "EN-REPLACE-topp95", "gen": 5, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 1.8463, "sd_nll": 0.5778, "mean_len_tokens": 233.5, "token_oov_share": 0.01668, "n_empty": 0, "cap_hit_share": 0.82, "max_new_tokens": 260, "seed": 572953508} (13 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9652.61it/s]
+2026-10-20T06:20:08Z {"chain": "EN-REPLACE-topp95", "gen": 6, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 1.9434, "sd_nll": 0.6514, "mean_len_tokens": 237.1, "token_oov_share": 0.00999, "n_empty": 0, "cap_hit_share": 0.86, "max_new_tokens": 260, "seed": 1899368051} (12 s)
+2026-10-20T06:20:21Z {"chain": "EN-REPLACE-topp95", "gen": 6, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 1.6641, "sd_nll": 0.6695, "mean_len_tokens": 237.0, "token_oov_share": 0.01353, "n_empty": 0, "cap_hit_share": 0.86, "max_new_tokens": 260, "seed": 615702794} (13 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 7893.15it/s]
+2026-10-20T06:20:40Z {"chain": "BN-REPLACE", "gen": 1, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.4331, "sd_nll": 1.0142, "mean_len_tokens": 278.2, "token_oov_share": 0.10462, "n_empty": 0, "cap_hit_share": 0.64, "max_new_tokens": 338, "seed": 346748556} (16 s)
+2026-10-20T06:20:57Z {"chain": "BN-REPLACE", "gen": 1, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 3.687, "sd_nll": 1.0025, "mean_len_tokens": 301.1, "token_oov_share": 0.0888, "n_empty": 0, "cap_hit_share": 0.72, "max_new_tokens": 338, "seed": 156603007} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 7949.75it/s]
+2026-10-20T06:21:16Z {"chain": "BN-REPLACE", "gen": 2, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.5262, "sd_nll": 1.2261, "mean_len_tokens": 237.0, "token_oov_share": 0.0996, "n_empty": 0, "cap_hit_share": 0.52, "max_new_tokens": 338, "seed": 1393200220} (16 s)
+2026-10-20T06:21:33Z {"chain": "BN-REPLACE", "gen": 2, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 3.8964, "sd_nll": 1.108, "mean_len_tokens": 247.1, "token_oov_share": 0.08062, "n_empty": 0, "cap_hit_share": 0.54, "max_new_tokens": 338, "seed": 264364241} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 7457.38it/s]
+2026-10-20T06:21:51Z {"chain": "BN-REPLACE", "gen": 3, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.7808, "sd_nll": 1.0251, "mean_len_tokens": 249.7, "token_oov_share": 0.12668, "n_empty": 0, "cap_hit_share": 0.54, "max_new_tokens": 338, "seed": 1852483052} (16 s)
+2026-10-20T06:22:08Z {"chain": "BN-REPLACE", "gen": 3, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 4.1587, "sd_nll": 1.1598, "mean_len_tokens": 246.4, "token_oov_share": 0.09025, "n_empty": 0, "cap_hit_share": 0.52, "max_new_tokens": 338, "seed": 1151153012} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8073.60it/s]
+2026-10-20T06:22:27Z {"chain": "BN-REPLACE", "gen": 4, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.8033, "sd_nll": 1.1092, "mean_len_tokens": 284.1, "token_oov_share": 0.11512, "n_empty": 0, "cap_hit_share": 0.64, "max_new_tokens": 338, "seed": 1548384764} (16 s)
+2026-10-20T06:22:44Z {"chain": "BN-REPLACE", "gen": 4, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 4.191, "sd_nll": 1.1009, "mean_len_tokens": 280.6, "token_oov_share": 0.09276, "n_empty": 0, "cap_hit_share": 0.7, "max_new_tokens": 338, "seed": 1503134668} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8767.93it/s]
+2026-10-20T06:23:03Z {"chain": "BN-REPLACE", "gen": 5, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 4.9438, "sd_nll": 1.1166, "mean_len_tokens": 228.3, "token_oov_share": 0.12045, "n_empty": 0, "cap_hit_share": 0.42, "max_new_tokens": 338, "seed": 1630163020} (16 s)
+2026-10-20T06:23:19Z {"chain": "BN-REPLACE", "gen": 5, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 4.3399, "sd_nll": 1.1209, "mean_len_tokens": 262.2, "token_oov_share": 0.10075, "n_empty": 0, "cap_hit_share": 0.48, "max_new_tokens": 338, "seed": 314888297} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9426.93it/s]
+2026-10-20T06:23:38Z {"chain": "BN-REPLACE", "gen": 6, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 5.2614, "sd_nll": 0.8986, "mean_len_tokens": 275.9, "token_oov_share": 0.12712, "n_empty": 0, "cap_hit_share": 0.68, "max_new_tokens": 338, "seed": 646589084} (16 s)
+2026-10-20T06:23:55Z {"chain": "BN-REPLACE", "gen": 6, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 4.6576, "sd_nll": 0.8921, "mean_len_tokens": 295.8, "token_oov_share": 0.09955, "n_empty": 0, "cap_hit_share": 0.74, "max_new_tokens": 338, "seed": 340828871} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8727.35it/s]
+2026-10-20T06:24:14Z {"chain": "BN-REPLACE-topp95", "gen": 1, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 3.7662, "sd_nll": 1.044, "mean_len_tokens": 270.0, "token_oov_share": 0.08998, "n_empty": 0, "cap_hit_share": 0.6, "max_new_tokens": 338, "seed": 900680397} (16 s)
+2026-10-20T06:24:31Z {"chain": "BN-REPLACE-topp95", "gen": 1, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 3.1871, "sd_nll": 0.9114, "mean_len_tokens": 274.9, "token_oov_share": 0.06802, "n_empty": 0, "cap_hit_share": 0.66, "max_new_tokens": 338, "seed": 145745605} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8036.50it/s]
+2026-10-20T06:24:50Z {"chain": "BN-REPLACE-topp95", "gen": 2, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 3.5837, "sd_nll": 1.0113, "mean_len_tokens": 289.4, "token_oov_share": 0.06473, "n_empty": 0, "cap_hit_share": 0.66, "max_new_tokens": 338, "seed": 1913597981} (16 s)
+2026-10-20T06:25:07Z {"chain": "BN-REPLACE-topp95", "gen": 2, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 3.1301, "sd_nll": 0.838, "mean_len_tokens": 289.0, "token_oov_share": 0.05417, "n_empty": 0, "cap_hit_share": 0.66, "max_new_tokens": 338, "seed": 238785643} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9669.58it/s]
+2026-10-20T06:25:26Z {"chain": "BN-REPLACE-topp95", "gen": 3, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 3.3524, "sd_nll": 0.8803, "mean_len_tokens": 226.1, "token_oov_share": 0.05565, "n_empty": 0, "cap_hit_share": 0.46, "max_new_tokens": 338, "seed": 1332681133} (16 s)
+2026-10-20T06:25:43Z {"chain": "BN-REPLACE-topp95", "gen": 3, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 2.6194, "sd_nll": 1.0437, "mean_len_tokens": 262.2, "token_oov_share": 0.05568, "n_empty": 0, "cap_hit_share": 0.48, "max_new_tokens": 338, "seed": 1164396494} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 8068.60it/s]
+2026-10-20T06:26:01Z {"chain": "BN-REPLACE-topp95", "gen": 4, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 2.8547, "sd_nll": 1.0328, "mean_len_tokens": 265.8, "token_oov_share": 0.04787, "n_empty": 0, "cap_hit_share": 0.6, "max_new_tokens": 338, "seed": 2102379965} (16 s)
+2026-10-20T06:26:19Z {"chain": "BN-REPLACE-topp95", "gen": 4, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 2.7177, "sd_nll": 0.8924, "mean_len_tokens": 266.7, "token_oov_share": 0.04545, "n_empty": 0, "cap_hit_share": 0.62, "max_new_tokens": 338, "seed": 1482848118} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 9009.09it/s]
+2026-10-20T06:26:37Z {"chain": "BN-REPLACE-topp95", "gen": 5, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 2.9815, "sd_nll": 1.4989, "mean_len_tokens": 237.4, "token_oov_share": 0.03959, "n_empty": 0, "cap_hit_share": 0.44, "max_new_tokens": 338, "seed": 1076882445} (16 s)
+2026-10-20T06:26:54Z {"chain": "BN-REPLACE-topp95", "gen": 5, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 2.2029, "sd_nll": 0.9411, "mean_len_tokens": 278.1, "token_oov_share": 0.02784, "n_empty": 0, "cap_hit_share": 0.64, "max_new_tokens": 338, "seed": 322872531} (17 s)
+Loading weights:   0%|          | 0/236 [00:00<?, ?it/s]Loading weights: 100%|██████████| 236/236 [00:00<00:00, 7819.38it/s]
+2026-10-20T06:27:13Z {"chain": "BN-REPLACE-topp95", "gen": 6, "decoder_top_p": 1.0, "n": 50, "mean_nll_nats": 2.2983, "sd_nll": 0.961, "mean_len_tokens": 260.2, "token_oov_share": 0.02494, "n_empty": 0, "cap_hit_share": 0.58, "max_new_tokens": 338, "seed": 126850781} (16 s)
+2026-10-20T06:27:30Z {"chain": "BN-REPLACE-topp95", "gen": 6, "decoder_top_p": 0.95, "n": 50, "mean_nll_nats": 1.9332, "sd_nll": 0.8708, "mean_len_tokens": 285.4, "token_oov_share": 0.03405, "n_empty": 0, "cap_hit_share": 0.72, "max_new_tokens": 338, "seed": 363517565} (17 s)
+2026-10-20T06:27:30Z wrote out/cross_decoder_summary.csv (52 cells), cross_decoder_samples.jsonl.gz, cross_decoder_scorer_check.csv and cross_decoder_checks.json
+== [5/5] pack 2026-10-20T06:27:31Z ==
+== ALL DONE 2026-10-20T06:27:32Z ==

@@ -1,0 +1,926 @@
+{
+ "format": "cg4-g5-progress-v1",
+ "sheet": "G5_BN-REPLACE_2026-10-17.html",
+ "keybase": "cg4-g5-BN-REPLACE-v1",
+ "title": "BN-REPLACE",
+ "reader": "Md Tahidul Islam",
+ "saved_at": "2026-10-17T11:39Z",
+ "files": [
+  {
+   "g": 3,
+   "label": "BN-REPLACE_gen3",
+   "path": "results/samples/BN-REPLACE_gen3_50.jsonl",
+   "sha": "21f76d59d537075f"
+  },
+  {
+   "g": 6,
+   "label": "BN-REPLACE_gen6",
+   "path": "results/samples/BN-REPLACE_gen6_50.jsonl",
+   "sha": "5b72c69fb468bf7b"
+  }
+ ],
+ "coded": {},
+ "answers": {
+  "3|BN-P00000": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "12",
+   "fl": "1",
+   "nt": "The Argentina and Poland report drifts from football into cricket, with roughly 12 badly formed words."
+  },
+  "3|BN-P00001": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "7",
+   "fl": "2",
+   "nt": "Around 7 malformed words appear as the station description wanders into lunar travel, Bangladesh and the garment industry."
+  },
+  "3|BN-P00002": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "6",
+   "fl": "2",
+   "nt": "About 6 words look malformed in a cartoon announcement that turns into unrelated agriculture and travel fragments."
+  },
+  "3|BN-P00003": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": false,
+   "nw": "12",
+   "fl": "2",
+   "nt": "Latin phrases and roughly 12 nonwords disrupt a passage that stays broadly about television production."
+  },
+  "3|BN-P00004": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "1",
+   "fl": "3",
+   "nt": "One possible nonword appears as the report on returning workers changes into an election campaign statement."
+  },
+  "3|BN-P00005": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "3",
+   "nt": "One spelling looks malformed in the sporting biography, while incorrect identity claims fall outside this rating."
+  },
+  "3|BN-P00006": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "10",
+   "fl": "2",
+   "nt": "Social, political and personal matters replace the sporting biography, which contains around 10 malformed words."
+  },
+  "3|BN-P00007": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "20",
+   "fl": "1",
+   "nt": "Around 20 words seem malformed rather than simply old-fashioned, making the narrative hard to read."
+  },
+  "3|BN-P00008": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "10",
+   "fl": "2",
+   "nt": "About 10 words appear malformed in a dated entry that breaks into schools, family disputes and court proceedings."
+  },
+  "3|BN-P00009": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "15",
+   "fl": "1",
+   "nt": "Roughly 15 nonwords disrupt the football report as cricket and filmmaking take over."
+  },
+  "3|BN-P00010": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "35",
+   "fl": "1",
+   "nt": "The old-fashioned dialogue breaks into disconnected clauses and perhaps 35 nonwords, leaving little readable text."
+  },
+  "3|BN-P00011": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "9",
+   "fl": "2",
+   "nt": "The biographical structure survives, but confused clauses and about 9 apparent nonwords make the account difficult to follow."
+  },
+  "3|BN-P00012": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "21",
+   "fl": "2",
+   "nt": "The Manhattan passage changes to Jamia and other places, with broken grammar and around 21 nonwords."
+  },
+  "3|BN-P00013": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "7",
+   "fl": "2",
+   "nt": "The Ramadan statement becomes disconnected development, travel and financial claims, with about 7 malformed words."
+  },
+  "3|BN-P00014": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": false,
+   "nw": "13",
+   "fl": "2",
+   "nt": "The local description stays recognizable as a topic, but a Latin word and roughly 13 nonwords disrupt its confused wording."
+  },
+  "3|BN-P00015": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "22",
+   "fl": "1",
+   "nt": "Festivals and films replace the hockey announcement, with an estimated 22 nonwords in the broken wording."
+  },
+  "3|BN-P00016": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "12",
+   "fl": "2",
+   "nt": "The memorial and locality remain central, though confused grammar and roughly 12 nonwords make the account hard to read."
+  },
+  "3|BN-P00017": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "15",
+   "fl": "1",
+   "nt": "The diabetes description turns into agriculture, history and a disconnected story, with a nonword estimate of 15."
+  },
+  "3|BN-P00018": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "30",
+   "fl": "1",
+   "nt": "Latin letters appear inside a word as Egyptian literature becomes a confused Bangla biography with roughly 30 nonwords."
+  },
+  "3|BN-P00019": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "14",
+   "fl": "2",
+   "nt": "Approximately 14 nonwords appear in a pharmaceutical report that moves into short stories, politics and filmmaking."
+  },
+  "3|BN-P00020": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "14",
+   "fl": "",
+   "nt": "A digit appears inside a number word in the artist's biography, which has about 14 apparent nonwords and many broken phrases."
+  },
+  "3|BN-P00021": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "18",
+   "fl": "",
+   "nt": "Repeated diacritics interrupt the riverbank report as it shifts into political and religious incidents, alongside roughly 18 nonwords."
+  },
+  "3|BN-P00022": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "13",
+   "fl": "",
+   "nt": "Religious, military and travel accounts replace the national professor honor, and perhaps 13 words are malformed."
+  },
+  "3|BN-P00023": {
+   "se": true,
+   "ei": false,
+   "rl": true,
+   "td": true,
+   "nw": "14",
+   "fl": "",
+   "nt": "Meitner's biography drifts into politics and history before a long closing-bracket loop, with the nonword count estimated at 14."
+  },
+  "3|BN-P00024": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "18",
+   "fl": "",
+   "nt": "Corrupt digits appear inside a word as the biography wanders through cooking, cricket and history, with around 18 nonwords."
+  },
+  "3|BN-P00025": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "11",
+   "fl": "",
+   "nt": "The fisheries event becomes disconnected first-person political commentary containing about 11 malformed words."
+  },
+  "3|BN-P00026": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "25",
+   "fl": "",
+   "nt": "A Latin string interrupts the shift from segmentation to historical and personal stories, where around 25 words seem malformed."
+  },
+  "3|BN-P00027": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "11",
+   "fl": "",
+   "nt": "About 11 words appear malformed as Sylheti folklore gives way to military, business and administrative commentary."
+  },
+  "3|BN-P00028": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "18",
+   "fl": "",
+   "nt": "Latin text appears as the airline bag story becomes a confused online banking account containing roughly 18 nonwords."
+  },
+  "3|BN-P00029": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "13",
+   "fl": "",
+   "nt": "The Kaptai Dam passage has roughly 13 nonwords and shifts into unrelated geography, economics and politics."
+  },
+  "3|BN-P00030": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "23",
+   "fl": "",
+   "nt": "Latin, Japanese and replacement characters appear as Druk Desi gives way to confused literary and religious history, with roughly 23 nonwords."
+  },
+  "3|BN-P00031": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The city description is mostly readable, and missing coordinates or inconsistent details alone do not establish degeneration."
+  },
+  "3|BN-P00032": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "12",
+   "fl": "",
+   "nt": "About 12 apparent nonwords interrupt a river description that becomes committees, schools and disconnected first-person statements."
+  },
+  "3|BN-P00033": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "23",
+   "fl": "",
+   "nt": "The city geography and history structure survives despite an estimated 23 nonwords and badly broken clauses."
+  },
+  "3|BN-P00034": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "22",
+   "fl": "",
+   "nt": "The biography keeps its structure, but roughly 22 nonwords and disconnected clauses make it very difficult to read."
+  },
+  "3|BN-P00035": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "19",
+   "fl": "",
+   "nt": "A digit appears inside a word as the diplomatic report turns to violence, media and films, alongside about 19 nonwords."
+  },
+  "3|BN-P00036": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "0",
+   "fl": "",
+   "nt": "The advice about starting early turns into an unrelated, incomplete remark about India, Bengal and Chennai."
+  },
+  "3|BN-P00037": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "18",
+   "fl": "",
+   "nt": "Latin web addresses and an estimated 18 nonwords interrupt dialogue that turns into disconnected political and historical narration."
+  },
+  "3|BN-P00038": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The union description is concise and readable, with an inconsistent locality name in the final category."
+  },
+  "3|BN-P00039": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "16",
+   "fl": "",
+   "nt": "Latin words appear as the disqualification request becomes unrelated violence and pandemic reporting, with about 16 malformed words."
+  },
+  "3|BN-P00040": {
+   "se": false,
+   "ei": false,
+   "rl": true,
+   "td": true,
+   "nw": "18",
+   "fl": "",
+   "nt": "The literary passage becomes political reporting and repeats one word three times, with an estimated 18 nonwords overall."
+  },
+  "3|BN-P00041": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "10",
+   "fl": "",
+   "nt": "About 10 words look malformed as the morality discussion changes to disconnected sport, illness and politics."
+  },
+  "3|BN-P00042": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "10",
+   "fl": "",
+   "nt": "Death, history and legal matters replace the teacher recruitment notice, with a rough total of 10 nonwords."
+  },
+  "3|BN-P00043": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "23",
+   "fl": "",
+   "nt": "The religious argument is incoherent, with a stray consonant sign after punctuation and approximately 23 nonwords."
+  },
+  "3|BN-P00044": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "35",
+   "fl": "",
+   "nt": "Broken symbols and a stray vowel sign interrupt Aghor's reflection as it turns to celebrity, violence and politics, with about 35 nonwords."
+  },
+  "3|BN-P00045": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "9",
+   "fl": "",
+   "nt": "Militant violence remains the broad subject, but broken grammar and meaning accompany around 9 apparent nonwords."
+  },
+  "3|BN-P00046": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "18",
+   "fl": "",
+   "nt": "The freedom fighter's biography retains its sections, though broken grammar and roughly 18 nonwords disrupt the entire account."
+  },
+  "3|BN-P00047": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "13",
+   "fl": "",
+   "nt": "Around 13 words appear malformed as political party reporting replaces the film-related opening."
+  },
+  "3|BN-P00048": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "11",
+   "fl": "",
+   "nt": "An unrelated family, political and business biography replaces the tennis and maternity-leave report, with an estimated 11 nonwords."
+  },
+  "3|BN-P00049": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "16",
+   "fl": "",
+   "nt": "Writers, military events and nineteenth-century history replace Rowley's biography, and about 16 words look malformed."
+  },
+  "6|BN-P00000": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": false,
+   "nw": "2",
+   "fl": "2",
+   "nt": "Latin, Cyrillic and CJK text disrupt the match account, alongside 2 possible nonwords and weak sentence connections."
+  },
+  "6|BN-P00001": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "12",
+   "fl": "1",
+   "nt": "CJK text appears as the station account breaks into institutional and political history, containing around 12 nonwords."
+  },
+  "6|BN-P00002": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "11",
+   "fl": "1",
+   "nt": "Latin text and stray marks interrupt the shift from the cartoon announcement to markets and family matters, with perhaps 11 nonwords."
+  },
+  "6|BN-P00003": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "14",
+   "fl": "1",
+   "nt": "A Latin word appears as the series description turns to agriculture, police and local allegations, alongside about 14 nonwords."
+  },
+  "6|BN-P00004": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "11",
+   "fl": "1",
+   "nt": "Latin, Cyrillic and CJK text mix with an estimated 11 nonwords as the topic changes to fires, courts and health."
+  },
+  "6|BN-P00005": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "12",
+   "fl": "1",
+   "nt": "The biography has about 12 nonwords and turns into disconnected first-person commentary on politics and literature."
+  },
+  "6|BN-P00006": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "5",
+   "fl": "2",
+   "nt": "The writer's biography remains recognizable despite a Devanagari word, weak connections and about 5 apparent nonwords."
+  },
+  "6|BN-P00007": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": false,
+   "nw": "21",
+   "fl": "1",
+   "nt": "Latin, Japanese, Telugu and CJK text appear in a badly broken literary narrative with roughly 21 nonwords."
+  },
+  "6|BN-P00008": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "10",
+   "fl": "1",
+   "nt": "Latin text interrupts disconnected personal and religious statements, where the estimated nonword count is 10."
+  },
+  "6|BN-P00009": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "9",
+   "fl": "1",
+   "nt": "The report switches from football to cricket scores, with a stray vowel mark and around 9 malformed words."
+  },
+  "6|BN-P00010": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": false,
+   "nw": "21",
+   "fl": "1",
+   "nt": "Korean and Latin characters appear inside broken words, with an estimated 21 nonwords making most of the dialogue unreadable."
+  },
+  "6|BN-P00011": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "17",
+   "fl": "1",
+   "nt": "Latin text and roughly 17 nonwords interrupt the saint's biography as it becomes a confused travel and local-incident story."
+  },
+  "6|BN-P00012": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "24",
+   "fl": "1",
+   "nt": "Pakistan, Syria and Saudi Arabia replace the original topic, while largely unintelligible clauses contain an estimated 24 nonwords."
+  },
+  "6|BN-P00013": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "19",
+   "fl": "1",
+   "nt": "An estimated 19 nonwords and CJK characters interrupt unrelated poetic and political fragments that are hard to understand."
+  },
+  "6|BN-P00014": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "16",
+   "fl": "1",
+   "nt": "The union description contains around 16 apparent nonwords and drifts into family, social and political commentary."
+  },
+  "6|BN-P00015": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "20",
+   "fl": "1",
+   "nt": "The opening makes sense before hospitals, politics and injuries take over, alongside about 20 malformed words."
+  },
+  "6|BN-P00016": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "13",
+   "fl": "2",
+   "nt": "Around 13 words appear malformed as the memorial account becomes disconnected political events, ports and schools."
+  },
+  "6|BN-P00017": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "20",
+   "fl": "1",
+   "nt": "Education, politics and war take over the diabetes passage, and about 20 nonwords contribute to its unintelligible clauses."
+  },
+  "6|BN-P00018": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "26",
+   "fl": "1",
+   "nt": "The literature topic disappears into disconnected lists and comments, with a stray consonant sign and around 26 nonwords."
+  },
+  "6|BN-P00019": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "23",
+   "fl": "1",
+   "nt": "Latin letters intrude inside words as the financial report becomes media and family commentary, with an estimated 23 nonwords."
+  },
+  "6|BN-P00020": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "2",
+   "fl": "",
+   "nt": "The opening is completed before film categories replace the dancer's biography, with a couple of possible nonwords."
+  },
+  "6|BN-P00021": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "10",
+   "fl": "",
+   "nt": "An English conjunction joins a Bangla word among around 10 nonwords as the report shifts to schools and administrative complaints."
+  },
+  "6|BN-P00022": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "12",
+   "fl": "",
+   "nt": "The honor description falls into disconnected projects, politics and news fragments, with about 12 apparent nonwords."
+  },
+  "6|BN-P00023": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "12",
+   "fl": "",
+   "nt": "Roughly 12 malformed words appear as Meitner is replaced by other people, settlement stories and unrelated categories."
+  },
+  "6|BN-P00024": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "19",
+   "fl": "",
+   "nt": "Latin text and a replacement character appear amid unrelated education, cricket and politics, giving an estimated 19 nonwords."
+  },
+  "6|BN-P00025": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "15",
+   "fl": "",
+   "nt": "The fisheries event has become a confused coronavirus and administrative report containing perhaps 15 nonwords."
+  },
+  "6|BN-P00026": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "24",
+   "fl": "",
+   "nt": "The technical definition breaks into unrelated political and first-person statements, with a rough nonword total of 24."
+  },
+  "6|BN-P00027": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "35",
+   "fl": "",
+   "nt": "Stray vowel signs and broken symbols appear as unreadable fragments turn to farming and personal events, with an estimated 35 nonwords."
+  },
+  "6|BN-P00028": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "8",
+   "fl": "",
+   "nt": "The story drifts into disconnected shops, media and films, and around 8 words look malformed."
+  },
+  "6|BN-P00029": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "28",
+   "fl": "",
+   "nt": "Latin phrases appear as the dam account moves to railways and an incoherent literary story, alongside an estimated 28 nonwords."
+  },
+  "6|BN-P00030": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "18",
+   "fl": "",
+   "nt": "Around 18 nonwords and mixed scripts appear among school, religious and European categories that replace the topic."
+  },
+  "6|BN-P00031": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The city description is mostly readable despite inconsistent details and a wrong percentage unit, without a clear loop or unrelated story."
+  },
+  "6|BN-P00032": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "16",
+   "fl": "",
+   "nt": "The river's surrounding region remains the broad topic, but broken descriptions and sentence connections contain perhaps 16 nonwords."
+  },
+  "6|BN-P00033": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "1",
+   "fl": "",
+   "nt": "The city description is mostly readable, with 1 possible nonword in a possessive ending and some incomplete or inconsistent details."
+  },
+  "6|BN-P00034": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "16",
+   "fl": "",
+   "nt": "The biography's roughly 16 nonwords accompany a shift into unrelated business, hostage and political stories."
+  },
+  "6|BN-P00035": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "0",
+   "fl": "",
+   "nt": "The short continuation about the Turkish meeting has confused grammar but no clear issue under the listed flags."
+  },
+  "6|BN-P00036": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "35",
+   "fl": "",
+   "nt": "Broken symbols and literal Latin escape characters appear as advice becomes literary and religious fragments, with an estimated 35 nonwords."
+  },
+  "6|BN-P00037": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "19",
+   "fl": "",
+   "nt": "A stray vowel sign follows punctuation as the text turns to unrelated student and university events, with around 19 nonwords."
+  },
+  "6|BN-P00038": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "15",
+   "fl": "",
+   "nt": "The local description ends in incoherent political and religious fragments, where the nonword estimate is 15."
+  },
+  "6|BN-P00039": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "4",
+   "fl": "",
+   "nt": "Roughly 4 nonwords appear as university, newspaper and administrative fragments replace the disqualification request."
+  },
+  "6|BN-P00040": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": false,
+   "nw": "31",
+   "fl": "",
+   "nt": "A percent sign breaks into a word in a largely unintelligible literary continuation, where the nonword count is around 31."
+  },
+  "6|BN-P00041": {
+   "se": true,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "20",
+   "fl": "",
+   "nt": "Broken punctuation interrupts a vowel sequence as the passage becomes an unrelated personal story containing roughly 20 nonwords."
+  },
+  "6|BN-P00042": {
+   "se": true,
+   "ei": false,
+   "rl": true,
+   "td": true,
+   "nw": "19",
+   "fl": "",
+   "nt": "A repeated diacritic interrupts one word among roughly 19 nonwords as unrelated political events take over the passage."
+  },
+  "6|BN-P00043": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "29",
+   "fl": "",
+   "nt": "An English word appears as the passage breaks into administrative, geographic and personal statements, with around 29 malformed words."
+  },
+  "6|BN-P00044": {
+   "se": true,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "28",
+   "fl": "",
+   "nt": "Roughly 28 nonwords, Latin strings and a stray vowel sign disrupt a passage that drifts into personal and political statements."
+  },
+  "6|BN-P00045": {
+   "se": false,
+   "ei": true,
+   "rl": false,
+   "td": true,
+   "nw": "13",
+   "fl": "",
+   "nt": "An English phrase appears as the Meghalaya report moves into unrelated international conflict and incidents, with an estimated 13 nonwords."
+  },
+  "6|BN-P00046": {
+   "se": true,
+   "ei": false,
+   "rl": true,
+   "td": false,
+   "nw": "21",
+   "fl": "",
+   "nt": "The biography repeats a word three times and includes a corrupt word-number fragment, with about 21 apparent nonwords."
+  },
+  "6|BN-P00047": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "15",
+   "fl": "",
+   "nt": "The film account drifts into disconnected factory, family and administrative events, alongside perhaps 15 nonwords."
+  },
+  "6|BN-P00048": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "9",
+   "fl": "",
+   "nt": "About 9 apparent nonwords appear in the Serena Williams report as it turns into a confused local incident and hospital account."
+  },
+  "6|BN-P00049": {
+   "se": false,
+   "ei": false,
+   "rl": false,
+   "td": true,
+   "nw": "11",
+   "fl": "",
+   "nt": "The biography turns into unrelated Bangladeshi political and military stories, with a nonword total of around 11."
+  }
+ },
+ "restored_from": "a reply saved by the agent"
+}

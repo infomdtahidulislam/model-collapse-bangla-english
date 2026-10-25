@@ -1,0 +1,19 @@
+# pip constraints: the library versions generation 0 was trained, sampled and scored with
+# (instance 55779705, 2026-10-13; logs/host_55779705/environment.json pip freeze, results/chains/manifest.json).
+# bootstrap.sh installs with `-c` this file, so a replacement host runs the later generations on the same stack, then
+# fails loudly if an installed version differs. numpy (2.3.2) comes from the image's conda and is not pinned here.
+# torchaudio ends as 2.11.0+cu130 through bootstrap's CUDA-match reinstall. If a pinned version cannot be installed, log
+# it in logs/decisions.md and note the changed stack in results/deviations.md before any chain step runs.
+vllm==0.31.0
+torch==2.13.0
+torchvision==0.28.0
+torchaudio==2.11.0
+triton==3.7.1
+flashinfer-python==0.7.0.post1
+transformers==5.17.0
+tokenizers==0.23.3
+accelerate==1.15.0
+datasets==5.1.0
+huggingface_hub==1.33.0
+safetensors==0.8.0
+sentencepiece==0.2.2

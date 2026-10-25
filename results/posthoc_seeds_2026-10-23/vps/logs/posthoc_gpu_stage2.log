@@ -1,0 +1,9 @@
+2026-10-24T01:37:22Z batch A: 36 archive files (2.30 GB) for 4 steps -> C:\Users\Administrator\Desktop\Terminal gaps\CG4_model_collapse_lowresource_experiment\results\posthoc_gpu_stage2_2026-10-23
+2026-10-24T01:37:22Z local copies: 0 of 36 staged; 36 to extract from the archive
+2026-10-24T01:48:43Z archive pass done in 681 s
+2026-10-24T01:48:45Z package files staged: 74 (key files match the run's SHA-256)
+2026-10-24T01:48:45Z batch A done: 110 files listed in inputs_A.sha256
+2026-10-24T01:49:07Z batch B: 450 archive files (28.71 GB) for 50 steps -> C:\Users\Administrator\Desktop\Terminal gaps\CG4_model_collapse_lowresource_experiment\results\posthoc_gpu_stage2_2026-10-23
+2026-10-24T01:49:07Z local copies: 0 of 450 staged; 450 to extract from the archive
+2026-10-24T02:02:22Z archive pass done in 795 s
+2026-10-24T02:02:22Z batch B done: 450 files listed in inputs_B.sha256
